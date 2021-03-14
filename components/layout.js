@@ -5,7 +5,6 @@ import Navigation from './navigation';
 export default function Layout ({children}) {
     return(
         <div className="layout">
-            <Navigation/>
             {children}
             <Footer/>
         </div>
