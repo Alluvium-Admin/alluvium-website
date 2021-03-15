@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '../../components/navigation'
+import SupportSubmenu from '../../components/supportSubmenu'
 
 export default function Contact() {
     return(
@@ -13,6 +14,7 @@ export default function Contact() {
             </Head>
             <Navigation/>
             <main className="contactUsPage">
+                <SupportSubmenu/>
                 <div className="contactImg">
                     <Image src='/assets/test.png' width={600} height={400}/>
                 </div>

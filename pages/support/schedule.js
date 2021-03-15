@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Navigation from '../../components/navigation'
+import SupportSubmenu from '../../components/supportSubmenu'
 
 export default function ScheduleForm(){
     return(
@@ -11,6 +12,7 @@ export default function ScheduleForm(){
             </Head>
             <Navigation/>
             <main className="scheduleForm">
+                <SupportSubmenu/>
                 <div className="scheduleFormHeader">
                     <p className="title">Would you like to chat with a professional?</p>
                 </div>
