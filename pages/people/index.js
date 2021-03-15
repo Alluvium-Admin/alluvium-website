@@ -3,116 +3,10 @@ import Link from 'next/link'
 import Profile from '../../components/profile'
 import styles from '../../styles/Home.module.css'
 import Navigation from '../../components/navigation'
+import { server } from '../../config'
 
-const alluviansData = [
-  {
-    firstName:"taiwo",
-    lastName:"ojo",
-    role:"Founder/Team lead",
-    email:"taiwo@alluvium.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"ibukun",
-    lastName:"akilo",
-    role:"Founder/Team Lead",
-    email:"ibukunakilo@gmail.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"enyioma",
-    lastName:"osondu",
-    role:"Backend engineer",
-    email:"enyioma.osondu@geniesys.co.uk",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"stanley",
-    lastName:"onwuka",
-    role:"Frontend engineer",
-    email:"stanley@geniesys.co.uk",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"ayodamola",
-    lastName:"alonge",
-    role:"UI/UX Designer",
-    email:"pelumi@geniesys.co.uk",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"damilola",
-    lastName:"daramola",
-    role:"Employee",
-    email:"daramola@geniesys.co.uk",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"adeola",
-    lastName:"lawal",
-    role:"Employee",
-    email:"adeola@geniesys.co.uk",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"isaac",
-    lastName:"temidayo",
-    role:"Employee",
-    email:"isaac@geniesys.co.uk",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"precious",
-    lastName:"charles",
-    role:"Employee",
-    email:"charlespreciousa@gmail.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"francis",
-    lastName:"okeke",
-    role:"Employee",
-    email:"okeke98@gmail.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"idiongette",
-    lastName:"enimini",
-    role:"Employee",
-    email:"idiongette@alluvium.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"yusuf",
-    lastName:"braimoh",
-    role:"Employee",
-    email:"yusuf@alluvium.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"georgette",
-    lastName:"idrissou",
-    role:"Employee",
-    email:"georgette@alluvium.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"anjola",
-    lastName:"oyelakin",
-    role:"Employee",
-    email:"anjolly@alluvium.com",
-    imgUrl:"/assets/test.png"
-  },
-  {
-    firstName:"adegboyega",
-    lastName:"adesanya",
-    role:"Employee",
-    email:"adeadesanya2015@gmail.com",
-    imgUrl:"/assets/test.png"
-  },
-]
 
-export default function People() {
+export default function People({people}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -125,7 +19,7 @@ export default function People() {
             <div className='pageTitle'>
               <h4>People of Alluvium</h4>
               <div className="hireUsLink">
-                <Link href="">+ Hire us</Link>
+                <Link href="/">+ Hire us</Link>
               </div>
             </div>
             <h2 className="title">Alluvians? You guessed right!</h2>
@@ -133,7 +27,7 @@ export default function People() {
           </section>
           <section className="alluviansGallery">
             {
-              alluviansData.map((alluvian,idx)=>{
+              people.map((alluvian,idx)=>{
                 return(
                   <Profile
                     firstName={ alluvian.firstName }
@@ -170,4 +64,15 @@ export default function People() {
       </main>
     </div>
   )
+}
+
+export const getStaticProps = async () =>{
+  const res = await fetch(`${server}/api/people`)
+  const people = await res.json()
+
+  return {
+      props:{
+        people
+      }
+  }
 }

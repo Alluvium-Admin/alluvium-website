@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import Navigation from '../../components/navigation'
-import FaqPage from '../../components/faqPage';
+import FaqPage from '../../components/faqPage'
+import SupportSubmenu from '../../components/supportSubmenu'
+import { server } from '../../config'
 
-export default function Support() {
+export default function Support({faqs}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,14 +14,22 @@ export default function Support() {
       </Head>
       <Navigation/>
       <main>
-        <div className="supportSubmenu">
-          <button>+ Schedule a meeting</button>
-          <button>+ Contact us</button>
-        </div>
+        <SupportSubmenu/>
         <div className="supportDisplay">
-          <FaqPage/>
+          <FaqPage faqs={ faqs } />
         </div>
       </main>
     </div>
   )
+}
+
+export const getStaticProps = async () =>{
+  const res = await fetch(`${server}/api/faqs`)
+  const faqs = await res.json() 
+
+  return {
+    props:{
+      faqs
+    }
+  }
 }

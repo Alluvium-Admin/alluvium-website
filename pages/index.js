@@ -4,41 +4,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navigation from '../components/navigation';
 import ProjectPreview from '../components/projectPreview';
+import { server } from '../config'
 
-const featuresData = [
-  {
-    title:"Secure",
-    subtitle:"Data Security is so important to us that Everyone in our company is GDPR certified, even the janitor.",
-    iconLink:"/assets/Secure.svg"
-  },
-  {
-    title:"Simple-UX",
-    subtitle:"We do our best to make sure the customer do not notice changes in their user experience, post migration",
-    iconLink:"/assets/Simple.svg"
-  },
-  {
-    title:"Scalable",
-    subtitle:"Build, rinse, repeat",
-    iconLink:"/assets/Scalable.svg"
-  },
-]
-
-const previewData = [
-  {
-    title:"Cloud Counter",
-    subtitle:"Employ our fast and efficient cloud counter to keep count of your resources ",
-    imgLink:"/assets/Secure.svg",
-    projectLink:""
-  },
-  {
-    title:"CJR: Compare Jira Resources",
-    subtitle:"Compare Jira Resources is an efficient way to check that you have fully migrated",
-    imgLink:"/assets/Simple.svg",
-    projectLink:""
-  },
-]
-
-export default function Home() {
+export default function Home({products,features}) {
   return (
     <div>
       <Head>
@@ -74,7 +42,7 @@ export default function Home() {
               <h3 className="featuresTitle">Alluvium</h3>
               <ul className="featureList">
                 {
-                  featuresData.map((feature,index)=>{
+                  features.map((feature,index)=>{
                     return(
                       <li className="feature" key={index}>
                         <div className="featureImg">
@@ -94,13 +62,13 @@ export default function Home() {
           <section className="projects">
             <div className="projectList">
                 {
-                  previewData.map((project,index)=>{
+                  products.slice(0,2).map((project,index)=>{
                     return(
                       <ProjectPreview 
                         title={ project.title } 
                         subtitle={ project.subtitle } 
                         imgLink={ project.imgLink }
-                        projectLink={ project.projectLink }
+                        projectName={ project.projectName }
                         key={ index }
                       />
                     )
@@ -108,10 +76,25 @@ export default function Home() {
                 }
             </div>
             <div className="allProjectsBtn">
-              <Link href="/projects">+ See more works</Link>
+              <Link href="/products">+ See more works</Link>
             </div>
           </section>
       </main>
     </div>
   )
+}
+
+export const getStaticProps = async () =>{
+  const res = await fetch(`${server}/api/products`)
+  const featuresRes = await fetch(`${server}/api/features`)
+
+  const products = await res.json()
+  const features = await featuresRes.json()
+
+  return {
+    props:{
+      products,
+      features
+    }
+  }
 }

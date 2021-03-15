@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function ProjectPreview({title,subtitle,imgLink,projectLink}) {
+export default function ProjectPreview({title,subtitle,imgLink,projectName}) {
     return(
         <div className="projectPreview">
             <div className="previewImg">
@@ -14,7 +14,7 @@ export default function ProjectPreview({title,subtitle,imgLink,projectLink}) {
                     <p className="previewSubtitle">{subtitle}</p>
                 </div>
                 <div className="projectLink">
-                    <Link href={projectLink}>+ See full project</Link>
+                    <Link href='/products/[projectName]' as={`/products/${projectName}`} >+ See full project</Link>
                 </div>
             </div>
         </div>

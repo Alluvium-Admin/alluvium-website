@@ -3,23 +3,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navigation from '../../components/navigation'
 import styles from '../../styles/Home.module.css'
+import { server } from '../../config'
 
-const galleryLinks = [
-  {
-    imgName:"/assets/featuresImg.png",
-    imgAlt:"reel",
-    width:200,
-    height:200
-  },
-  {
-    imgName:"/assets/featuresImg.png",
-    imgAlt:"reel",
-    width:200,
-    height:200
-  },
-]
 
-export default function Reel() {
+export default function Reel({gallery}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -33,7 +20,7 @@ export default function Reel() {
         </div>
         <div className="photoGallery">
           {
-            galleryLinks.map((photo,index)=>{
+            gallery.map((photo,index)=>{
               const {imgName,imgAlt,width,height}=photo
               return(
                 <div className="photo" key={index}>
@@ -43,8 +30,18 @@ export default function Reel() {
             })
           }
         </div>
-
       </main>
     </div>
   )
+}
+
+export const getStaticProps = async () =>{
+  const res = await fetch(`${server}/api/gallery`)
+  const gallery = await res.json()
+
+  return{
+    props:{
+      gallery
+    }
+  }
 }
