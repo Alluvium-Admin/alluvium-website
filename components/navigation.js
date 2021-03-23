@@ -8,14 +8,14 @@ import Search from "./search";
 export default function Navigation () {
     return(
         <div className={styles.navigationMenu}>
-            <div className="logo">
+            <div className={styles.logo}>
                 <Link href="/">
                     <img src="/assets/alluvium-logo.svg" alt="logo"/>
                     {/* <Image src="/assets/alluvium-logo.svg" width={150} height={29.06} alt="logo"/> */}
                 </Link>
             </div>
-            <nav className="navigation">
-                <ul className="desktop-menu">
+            <nav className={styles.navigation}>
+                <ul className={styles.desktopMenu}>
                     <li><Link href="/products">Our Projects</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
                     <li><Link href="/people">Alluvians</Link></li>
@@ -28,7 +28,7 @@ export default function Navigation () {
                     <li><Link href="/support">Support</Link></li>
                 </ul>
             </nav>
-            <div className="menu-btn">
+            <div className={styles.menuBtn}>
 
             </div>
             <Search/>

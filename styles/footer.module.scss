@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+    .newsletterSection{
+        position: relative;
+        min-height: 623px;
+
+        .newsletter{
+            display: flex;
+            flex-direction: row;
+            z-index: 2;
+        }
+
+        .newsletterTitle{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 75px;
+            line-height: 114%;
+            color: #fff;
+        }
+
+        .background{
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+    }
+}

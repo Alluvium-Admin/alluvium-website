@@ -10,7 +10,7 @@ export default function People({people}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Alluvium</title>
+        <title>Team | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation/>

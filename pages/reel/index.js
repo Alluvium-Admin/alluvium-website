@@ -10,7 +10,7 @@ export default function Reel({gallery}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Alluvium</title>
+        <title>Project Reel | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation/>

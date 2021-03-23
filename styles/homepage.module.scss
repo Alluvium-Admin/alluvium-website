@@ -1,0 +1,29 @@
+.landingPage{
+    .heroSection{
+        position: relative;
+        min-height: 880px;
+
+        .heroContent{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            z-index: 2;
+            color: #fff;
+
+            .bigText{
+                p{
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 75px;
+                    line-height: 114%;
+                }
+            }
+        }
+
+        .heroImg{
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+    } 
+}

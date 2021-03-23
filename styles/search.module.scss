@@ -1,0 +1,28 @@
+.search{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    .searchInput{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        input{
+            background-color: transparent;
+            border: none;
+            color: #fff;
+
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #fff;
+                
+            }
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: #fff;
+            }
+                &::-ms-input-placeholder { /* Microsoft Edge */
+                    color: #fff;
+            }
+        }
+    }
+}

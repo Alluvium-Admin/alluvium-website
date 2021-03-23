@@ -9,7 +9,7 @@ export default function Products({products}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Alluvium</title>
+        <title>Products | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation/>

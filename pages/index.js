@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/homepage.module.scss'
 import Navigation from '../components/navigation';
 import ProjectPreview from '../components/projectPreview';
 import { server } from '../config'
@@ -10,14 +10,14 @@ export default function Home({products,features}) {
   return (
     <div>
       <Head>
-        <title>Alluvium</title>
+        <title>Home | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation/>
-      <main className="landingPage">
-          <section className="heroSection">
-            <div className="heroContent">
-              <div className="bigText">
+      <main className={styles.landingPage}>
+          <section className={styles.heroSection}>
+            <Navigation/>
+            <div className={styles.heroContent}>
+              <div className={styles.bigText}>
                 <p>We are problem solvers</p>
               </div>
               <div className="mainText">
@@ -26,12 +26,12 @@ export default function Home({products,features}) {
                   complete data migration in half the time for half the cost.
                 </p>
                 <div className="projectsBtn">
-                  <Link href="/projects">+ See our projects</Link>
+                  <Link href="/products">+ See our projects</Link>
                 </div>
               </div>
             </div>
-            <div className="heroImg">
-
+            <div className={styles.heroImg}>
+              <Image src="/assets/hero.png" width={ 1392 } height={ 882.5 } alt="heroBackground"/>
             </div>
           </section>
           <section className="featureSection">

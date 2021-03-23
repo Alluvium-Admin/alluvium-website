@@ -7,7 +7,7 @@ export default function ScheduleForm(){
     return(
         <div className="schedulePage">
             <Head>
-                <title>Alluvium</title>
+                <title>Schedule Meeting | Alluvium</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navigation/>

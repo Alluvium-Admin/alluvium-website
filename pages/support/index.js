@@ -9,7 +9,7 @@ export default function Support({faqs}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Alluvium</title>
+        <title>Support | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation/>

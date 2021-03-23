@@ -9,7 +9,7 @@ export default function Contact() {
     return(
         <div className="contactPage">
             <Head>
-                <title>Alluvium</title>
+                <title>Contact | Alluvium</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navigation/>
