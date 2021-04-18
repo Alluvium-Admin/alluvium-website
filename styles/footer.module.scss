@@ -10,6 +10,9 @@
         .newsletter{
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            margin: 2rem 3rem;
+            padding: 1rem;
             z-index: 2;
         }
 
@@ -19,12 +22,115 @@
             font-size: 75px;
             line-height: 114%;
             color: #fff;
+            max-width: 400px;
+            width: 40%;
+        }
+
+        .newsletterInput{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            background-color: #fff;
+            align-self: center;
+            width: 60%;
+            max-width: 563px;
+            padding: 1rem;
+
+            input{
+                border: none;
+                width: 80%;
+                padding: 0.5rem;
+            }
+
+            .newsletterSubmitBtn{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 20%;
+                max-width: 80px;
+                background-color: #fff;
+                padding: 0.3rem 0.1rem;
+                cursor: pointer;
+                border: none;
+                border-bottom: 1px solid #000;
+                
+                p{
+                    font-size: 15px;
+                }
+
+                .btnArrow{
+                    transform: translateX(0);
+                    transition: 0.2s;
+                }
+
+                &:hover{
+                    .btnArrow{
+                        transform: translateX(4px);
+                    }
+                }
+            }
         }
 
         .background{
             position: absolute;
             top: 0;
             z-index: -1;
+        }
+    }
+
+    .footerMain{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footerBody{
+        display: flex;
+        flex-direction: column;
+        
+
+        .footerLists{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .footerList{
+            margin: 0.7rem;
+            .footerListTitle{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 19px;
+            }
+            ul{
+                list-style: none;
+                text-align: left;
+                margin: 0.9rem 0;
+                li{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+
+    .pageFooter{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        width: 80%;
+
+        .themeSwitch{
+            align-self: flex-end;
+            padding: 2rem;
+        }
+        .copyrights{
+            margin: 2rem 0;
         }
     }
 }

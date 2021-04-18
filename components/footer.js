@@ -24,50 +24,56 @@ export default function Footer() {
                     <Image src="/assets/footer.png" width={ 1392 } height={ 623 } />
                 </div>
             </div>
-            <div className={styles.footerBody}>
-                <div className={styles.footerLogo}>
+            <div className={styles.footerMain}>
+                <div className={styles.footerBody}>
+                    <div className={styles.footerLogo}>
 
+                    </div>
+                    <div className={styles.footerLists}>
+                        <div className={styles.footerList}>
+                            <h4 className={styles.footerListTitle}>What we do</h4>
+                            <ul>
+                                <li className={styles.footerListItem}><Link href="/projects">Our Products</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">Projects Reel</Link></li>
+                            </ul>
+                        </div>
+                        <div className={styles.footerList}>
+                            <h4 className={styles.footerListTitle}>Who are we?</h4>
+                            <ul>
+                                <li className={styles.footerListItem}><Link href="/projects">About us</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li>
+                            </ul>
+                        </div>
+                        <div className={styles.footerList}>
+                            <h4 className={styles.footerListTitle}>Contact</h4>
+                            <ul>
+                                <li className={styles.footerListItem}><Link href="/projects">LinkedIn</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">Facebook</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">Twitter</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li>
+                            </ul>
+                        </div>
+                        <div className={styles.footerList}>
+                            <h4 className={styles.footerListTitle}>Support</h4>
+                            <ul>
+                                <li className={styles.footerListItem}><Link href="/projects">Ask about our rates</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">Contact us</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">FAQs</Link></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className={styles.footerLists}>
-                    <div className={styles.footerList}>
-                        <h4 className={styles.footerListTitle}>What we do</h4>
-                        <ul>
-                            <li className={styles.footerListItem}><Link href="/projects">Our Products</Link></li>
-                            <li className={styles.footerListItem}><Link href="/reel">Projects Reel</Link></li>
-                        </ul>
+                <div className={styles.pageFooter}>
+                    <div className={styles.themeSwitch}>
+                        <Switch/>
                     </div>
-                    <div className={styles.footerList}>
-                        <h4 className={styles.footerListTitle}>Who are we?</h4>
-                        <ul>
-                            <li className={styles.footerListItem}><Link href="/projects">About us</Link></li>
-                            <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li>
-                        </ul>
+                    <hr className={styles.underline}/>
+                    <div className={styles.copyrights}>
+                        <p>Copyright.©2021 Alluvium Ltd. All rights reserved</p>
                     </div>
-                    <div className={styles.footerList}>
-                        <h4 className={styles.footerListTitle}>Contact</h4>
-                        <ul>
-                            <li className={styles.footerListItem}><Link href="/projects">LinkedIn</Link></li>
-                            <li className={styles.footerListItem}><Link href="/reel">Facebook</Link></li>
-                            <li className={styles.footerListItem}><Link href="/reel">Twitter</Link></li>
-                            <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li>
-                        </ul>
-                    </div>
-                    <div className={styles.footerList}>
-                        <h4 className={styles.footerListTitle}>Support</h4>
-                        <ul>
-                            <li className={styles.footerListItem}><Link href="/projects">Ask about our rates</Link></li>
-                            <li className={styles.footerListItem}><Link href="/reel">Contact us</Link></li>
-                            <li className={styles.footerListItem}><Link href="/reel">FAQs</Link></li>
-                        </ul>
-                    </div>
-                </div>
-                <div className={styles.themeSwitch}>
-                    <Switch/>
                 </div>
             </div>
-            <div className={styles.copyrights}>
-                <p>Copyright.©2021 Alluvium Ltd. All rights reserved</p>
-            </div>
+            
         </footer>
     )
 }

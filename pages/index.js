@@ -20,12 +20,12 @@ export default function Home({products,features}) {
               <div className={styles.bigText}>
                 <p>We are problem solvers</p>
               </div>
-              <div className="mainText">
-                <p className="subtitle">
+              <div className={styles.mainText}>
+                <p className={styles.subtitle}>
                   We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers 
                   complete data migration in half the time for half the cost.
                 </p>
-                <div className="projectsBtn">
+                <div className={styles.projectsBtn}>
                   <Link href="/products">+ See our projects</Link>
                 </div>
               </div>
@@ -34,23 +34,23 @@ export default function Home({products,features}) {
               <Image src="/assets/hero.png" width={ 1392 } height={ 882.5 } alt="heroBackground"/>
             </div>
           </section>
-          <section className="featureSection">
-            <div className="featureSectionImg">
+          <section className={styles.featureSection}>
+            <div className={styles.featureSectionImg}>
               <Image src="/assets/featuresImg.png" width={506} height={506}/>
             </div>
-            <div className="features">
-              <h3 className="featuresTitle">Alluvium</h3>
-              <ul className="featureList">
+            <div className={styles.features}>
+              <h3 className={styles.featuresTitle}>Our Values</h3>
+              <ul className={styles.featureList}>
                 {
                   features.map((feature,index)=>{
                     return(
-                      <li className="feature" key={index}>
-                        <div className="featureImg">
+                      <li className={styles.feature} key={index}>
+                        <div className={styles.featureImg}>
                           <Image src={feature.iconLink} width={57} height={57}/>
                         </div>
-                        <div className="featureContent">
-                          <h4 className="featureTitle">{feature.title}</h4>
-                          <p className="featureSubtitle">{feature.subtitle}</p>
+                        <div className={styles.featureContent}>
+                          <h4 className={styles.featureTitle}>{feature.title}</h4>
+                          <p className={styles.featureSubtitle}>{feature.subtitle}</p>
                         </div>
                       </li>
                     )
@@ -59,8 +59,8 @@ export default function Home({products,features}) {
               </ul>
             </div>
           </section>
-          <section className="projects">
-            <div className="projectList">
+          <section className={styles.projects}>
+            <div className={styles.projectList}>
                 {
                   products.slice(0,2).map((project,index)=>{
                     return(
@@ -70,12 +70,13 @@ export default function Home({products,features}) {
                         imgLink={ project.imgLink }
                         projectName={ project.projectName }
                         key={ index }
+                        onHomepage={true}
                       />
                     )
                   })
                 }
             </div>
-            <div className="allProjectsBtn">
+            <div className={styles.allProjectsBtn}>
               <Link href="/products">+ See more works</Link>
             </div>
           </section>

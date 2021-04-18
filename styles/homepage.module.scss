@@ -2,20 +2,61 @@
     .heroSection{
         position: relative;
         min-height: 880px;
+        margin: 0 1.5rem;
 
         .heroContent{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
             z-index: 2;
             color: #fff;
+            margin: 3rem 0;
 
             .bigText{
+                padding: 2rem;
+                max-width: 350px;
                 p{
                     font-style: normal;
                     font-weight: 600;
                     font-size: 75px;
                     line-height: 114%;
+                }
+            }
+
+            .mainText{
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                max-width: 400px;
+                .subtitle{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 17px;
+                    line-height: 29px;
+                } 
+                .projectsBtn{
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 18px;
+                    align-self: flex-end;
+                    margin: 3rem 0 0 0;
+                    width: fit-content;
+
+                    &::after{
+                        display: block;
+                        content: "";
+                        border: 2px solid #fff;
+                        background: #fff;
+                        width: 100%;
+                        transition: .2s;
+                    }
+        
+                    &:hover{
+                        &::after{
+                            width: 0;
+                            visibility: hidden;
+                        }   
+                    }
                 }
             }
         }
@@ -26,4 +67,80 @@
             z-index: -1;
         }
     } 
+
+    .featureSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .features{
+            align-self: center;
+        }
+
+        .featuresTitle{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .featureList{
+            list-style: none;
+
+            .feature{
+                display: flex;
+                flex-direction: row;
+                margin:1rem 0;
+
+                .featureImg{
+                    align-self: center;
+                }
+                
+                .featureContent{
+                    max-width: 400px;
+                    margin: 0 1.31rem;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: column;
+        background: #F7F7F7;
+        margin: 0 1.5rem;
+        padding: 2rem 3rem 1.1rem 3rem;
+
+        .projectList{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;  
+        }
+
+        .allProjectsBtn{
+            margin: 3rem 0 0 0;
+            width: fit-content;
+            transition: .2s;
+
+            &::after{
+                display: block;
+                content: "";
+                border: 2px solid #1B3854;
+                background: #1B3854;
+                width: 100%;
+                transition: .2s;
+            }
+
+            &:hover{
+                &::after{
+                    width: 0;
+                    visibility: hidden;
+                }   
+            }
+        }
+    }
 }
