@@ -1,0 +1,48 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    margin: 0.8rem;
+    width: 100%;
+    max-width: 250px;
+
+    .profilePicture{
+        width: 100%;
+        max-width: 250px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+        margin: 0.7rem 0;
+
+        .fullname{
+            padding: 0.2rem 0;
+
+            .firstname{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 23px;
+                line-height: 24px;
+            }
+
+            .lastname{
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 23px;
+                line-height: 24px;
+            }
+        }
+
+        .role,.email{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 0.726);
+        }
+    }
+}

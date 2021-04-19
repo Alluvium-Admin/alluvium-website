@@ -7,7 +7,7 @@ export default function ProjectPreview({title,subtitle,imgLink,projectName,onHom
     return(
         <div className={onHomepage ? styles.projectHomePreview : styles.projectPreview}>
             <div className={styles.previewImg}>
-                <Image src={imgLink} width={13} height={14.69}/>
+                <Image src={imgLink} width={150} height={150}/>
             </div>
             <div className={styles.previewContent}>
                 <div className={styles.previewDetails}>

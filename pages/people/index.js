@@ -1,31 +1,31 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Profile from '../../components/profile'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/peoplepage.module.scss'
 import Navigation from '../../components/navigation'
 import { server } from '../../config'
 
 
 export default function People({people}) {
   return (
-    <div className={styles.container}>
+    <div className={styles.peoplePage}>
       <Head>
         <title>Team | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation/>
+      <Navigation theme={"dark"}/>
       <main>
-          <section className="alluviansPageHeader">
-            <div className='pageTitle'>
+          <section className={styles.alluviansPageHeader}>
+            <div className={styles.pageTitle}>
               <h4>People of Alluvium</h4>
-              <div className="hireUsLink">
+              <div className={styles.hireUsLink}>
                 <Link href="/">+ Hire us</Link>
               </div>
             </div>
-            <h2 className="title">Alluvians? You guessed right!</h2>
-            <p className="subtitle">We’re a force field of different bodies and lorem ipsum dolot amer, supraem tullet viem</p>
+            <h2 className={styles.title}>Alluvians? You guessed right!</h2>
+            <p className={styles.subtitle}>We’re a force field of different bodies and lorem ipsum dolot amer, supraem tullet viem</p>
           </section>
-          <section className="alluviansGallery">
+          <section className={styles.alluviansGallery}>
             {
               people.map((alluvian,idx)=>{
                 return(
@@ -41,24 +41,26 @@ export default function People({people}) {
               })
             }
           </section>
-          <section className="scheduleMeetingLink">
-            <div className="scheduleMeetingHeader">
-              <p className="title">
+          <section className={styles.scheduleMeetingLink}>
+            <div className={styles.scheduleMeetingHeader}>
+              <p className={styles.title}>
                 Launching a new product? Re-vitalising existing 
                 application? Want to spark new emotions?
               </p>
-              <p className="subtitle">
+              <p className={styles.subtitle}>
                 We can help you through the thought process, help you align your ideas with 
                 proper execution.
               </p>
             </div>
-            <div className="contactInfo">
-              <p className="mailContact">
-                Send a mail to: <Link href="/">work@alluvium.com</Link>
-              </p>
-              <p className="mailContact">
-                Enquiries? Mail to: <Link href="/">enquiries@alluvium.com</Link>
-              </p>
+            <div className={styles.contactInfo}>
+              <div className={styles.mailContact}>
+                <p>Send a mail to:</p>
+                <Link href="/">work@alluvium.com</Link>
+              </div>
+              <div className={styles.mailContact}>
+                <p>Enquiries? Mail to: </p>
+                <Link href="/">enquiries@alluvium.com</Link>
+              </div>
             </div>
           </section>
       </main>

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0.8rem;
 
     .newsletterSection{
         position: relative;
@@ -88,17 +89,22 @@
     .footerBody{
         display: flex;
         flex-direction: column;
+
+        .footerLogo{
+            margin: 2% 8%;
+        }
         
 
         .footerLists{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            // justify-content: center;
+            
         }
 
         .footerList{
-            margin: 0.7rem;
+            margin: 2% 8%;
             .footerListTitle{
                 font-style: normal;
                 font-weight: bold;
@@ -123,7 +129,7 @@
         display: flex;
         flex-direction: column;
         margin: 2rem auto;
-        width: 80%;
+        width: 84%;
 
         .themeSwitch{
             align-self: flex-end;

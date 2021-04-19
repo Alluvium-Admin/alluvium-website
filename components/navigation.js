@@ -5,7 +5,7 @@ import styles from '../styles/navigation.module.scss';
 import Search from "./search";
 
 
-export default function Navigation () {
+export default function Navigation ({theme}) {
     return(
         <div className={styles.navigationMenu}>
             <div className={styles.logo}>
@@ -15,7 +15,7 @@ export default function Navigation () {
                 </Link>
             </div>
             <nav className={styles.navigation}>
-                <ul className={styles.desktopMenu}>
+                <ul className={ theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
                     <li><Link href="/products">Our Projects</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
                     <li><Link href="/people">Alluvians</Link></li>
@@ -31,7 +31,7 @@ export default function Navigation () {
             <div className={styles.menuBtn}>
 
             </div>
-            <Search/>
+            <Search theme={theme}/>
 
         </div>
         

@@ -2,29 +2,29 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navigation from '../../components/navigation'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/reelpage.module.scss'
 import { server } from '../../config'
 
 
 export default function Reel({gallery}) {
   return (
-    <div className={styles.container}>
+    <div className={styles.reelPage}>
       <Head>
         <title>Project Reel | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation/>
+      <Navigation theme={"dark"}/>
       <main>
-        <div className="hireUsLink">
+        <div className={styles.hireUsLink}>
           <Link href="/enquiries"> + Hire us</Link>
         </div>
-        <div className="photoGallery">
+        <div className={styles.photoGallery}>
           {
             gallery.map((photo,index)=>{
-              const {imgName,imgAlt,width,height}=photo
+              const {imgLink,imgAlt}=photo
               return(
-                <div className="photo" key={index}>
-                  <Image src={imgName} width={width} height={height} alt={imgAlt} />
+                <div className={styles.photo} key={index}>
+                 <img src={imgLink} alt={imgAlt}/>
                 </div>
               )
             })

@@ -27,7 +27,7 @@ export default function Footer() {
             <div className={styles.footerMain}>
                 <div className={styles.footerBody}>
                     <div className={styles.footerLogo}>
-
+                        <img src="/assets/alluvium-logo.svg" alt="logo"/>
                     </div>
                     <div className={styles.footerLists}>
                         <div className={styles.footerList}>

@@ -1,19 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from '../styles/profile.module.scss'
+
 
 export default function Profile({firstName,lastName,role,email,pictureLink}){
     return(
-        <div className="profile">
-            <div className="profilePicture">
-                <Image src={pictureLink} width={100} height={100}/>
+        <div className={styles.profile}>
+            <div className={styles.profilePicture}>
+                <Image src={pictureLink} width={243} height={257}/>
             </div>
-            <div className="details">
-                <p className="fullname">
-                    <span className="firstname">{firstName}, </span>
-                    <span className="lastname">{lastName}</span>
+            <div className={styles.details}>
+                <p className={styles.fullname}>
+                    <span className={styles.firstname}>{firstName}, </span>
+                    <span className={styles.lastname}>{lastName}</span>
                 </p>
-                <p className="role">{role}</p>
-                <p className="email">{email}</p>
+                <p className={styles.role}>{role}</p>
+                <p className={styles.email}>{email}</p>
             </div>
         </div>
     )

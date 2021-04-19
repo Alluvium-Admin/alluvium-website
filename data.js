@@ -87,17 +87,30 @@ export const previewData =
 export const galleryLinks = 
 [
     {
-      imgName:"/assets/featuresImg.png",
+      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1592767289/Hestia/Images/julian-wan-WNoLnJo7tS8-unsplash_d9svhx.jpg",
       imgAlt:"reel",
-      width:200,
-      height:200
     },
     {
-      imgName:"/assets/featuresImg.png",
+      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1592767289/Hestia/Images/edward-cisneros-_H6wpor9mjs-unsplash_q68xcz.jpg",
       imgAlt:"reel",
-      width:200,
-      height:200
     },
+    {
+      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1587939498/Hestia/Images/aw-creative-fAcloeaPA_c-unsplash_bzycze.png",
+      imgAlt:"reel",
+    },
+    {
+      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1587939496/Hestia/Images/alex-nemo-hanse-gA3YJpTWJSs-unsplash_1_kzsvem.png",
+      imgAlt:"reel",
+    },
+    {
+      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1587939496/Hestia/Images/alex-nemo-hanse-gA3YJpTWJSs-unsplash_1_kzsvem.png",
+      imgAlt:"reel",
+    },
+    {
+      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1592767289/Hestia/Images/edward-cisneros-_H6wpor9mjs-unsplash_q68xcz.jpg",
+      imgAlt:"reel",
+    },
+
 ]
 
 export const alluviansData = 

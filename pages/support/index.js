@@ -12,7 +12,7 @@ export default function Support({faqs}) {
         <title>Support | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation/>
+      <Navigation theme={"dark"} />
       <main>
         <SupportSubmenu/>
         <div className="supportDisplay">

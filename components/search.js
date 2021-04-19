@@ -2,12 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/search.module.scss';
 
-export default function Search() {
+export default function Search({theme}) {
     return(
-        <div className={styles.search}>
+        <div className={ theme === "dark" ? styles.searchDark : styles.search}>
             <div className={styles.searchInput}>
                 <div className={styles.searchIcon}>
-                    <Image src="/assets/search.svg" width={14} height={14.69}/>
+                    {
+                        theme === "dark" ? <Image src="/assets/search_dark.svg" width={16} height={14}/> : <Image src="/assets/search.svg" width={16} height={14}/>
+                    }
+                   
                 </div>
                 <input type="text" placeholder="Search projects"/>
             </div>
