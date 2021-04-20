@@ -1,0 +1,61 @@
+.supportSubmenu{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 3rem;
+    align-self: flex-end;
+
+    .option{
+        display: inline-block;
+        margin: 0 0.7rem;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 23px;
+        cursor: pointer;
+        transition: 0.2s;
+        padding: 0 0.2rem;
+
+        &::after{
+            display: block;
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            transition: 0.3s;
+        }
+
+        span{
+            margin-right: 0.2rem;
+        }
+
+        &:hover{
+            &::after{
+                width: 100%;
+            }
+            
+        }
+    }
+
+    .activeOption{
+        display: inline-block;
+        margin: 0 0.7rem;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 23px;
+        cursor: pointer;
+        padding: 0 0.2rem;
+
+        span{
+            margin-right: 0.2rem;
+        }
+
+        &::after{
+            display: block;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+        }
+    }
+}

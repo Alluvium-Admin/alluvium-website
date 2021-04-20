@@ -1,0 +1,50 @@
+.shareOption{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.267);
+    padding: 1rem 3rem;
+
+    .shareLink{
+        margin: 0.7rem 0;
+
+        a,button{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            cursor: pointer;
+
+            &::after{
+                content: "";
+                display: block;
+                background: #000;
+                height: 2px;
+                width: 0;
+                transition: 0.3s;
+            }
+            
+        }
+
+        &:hover{
+            a,button{
+                &::after{
+                    width: 100%;
+                }
+                
+            }
+        }
+
+
+
+        button{
+            background: none;
+            border: none;
+        }
+    }
+}
+
+.hideShareOption{
+    display: none;
+}

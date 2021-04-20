@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/projectpreview.module.scss';
 
-export default function ProjectPreview({title,subtitle,imgLink,projectName,onHomepage}) {
+export default function ProjectPreview({title,subtitle,imgLink,projectName,location}) {
+    const [ previewStyle, setPreviewStyle ] = useState(styles.projectHomePreview);
+    
+    useEffect(()=>{
+        if(location === "home"){
+            setPreviewStyle(styles.projectHomePreview);
+        } else if(location === "products"){
+            setPreviewStyle(styles.projectPreview);
+        } else if(location === "more_projects" ){
+            setPreviewStyle(styles.projectMpPreview)
+        }
+    },[])
+    
     return(
-        <div className={onHomepage ? styles.projectHomePreview : styles.projectPreview}>
+        <div className={previewStyle}>
             <div className={styles.previewImg}>
                 <Image src={imgLink} width={150} height={150}/>
             </div>

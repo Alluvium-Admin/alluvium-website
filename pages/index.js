@@ -70,7 +70,7 @@ export default function Home({products,features}) {
                         imgLink={ project.imgLink }
                         projectName={ project.projectName }
                         key={ index }
-                        onHomepage={true}
+                        location={"home"}
                       />
                     )
                   })

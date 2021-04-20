@@ -34,7 +34,7 @@ export default function Products({products}) {
                     imgLink={ project.imgLink }
                     projectName={ project.projectName }
                     key={ project.id }
-                    onHomepage={false}
+                    location={"products"}
                   />
                 )
                 

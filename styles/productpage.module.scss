@@ -1,0 +1,141 @@
+.productPage{
+    .product{
+        .productHeader{
+            display: flex;
+            flex-direction: column;
+            margin: 0 3rem;
+            .productName{
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 24px;
+                width: fit-content;
+                padding: 0.5rem 0;
+            }
+
+            .productTitle{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 50px;
+                line-height: 125.5%;
+                margin: 1rem 0;
+                
+            }
+
+            .shareOptions{
+                position: relative;
+                margin: 1rem 0;
+                .shareBtn{
+                    display: flex;
+                    flex-direction: row;
+                    width: fit-content;
+                    background:none;
+                    border: none;
+                    align-items: center;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 23px;
+                    cursor: pointer;
+                    border-bottom: 2px solid #000;
+                    transition: 0.2s;
+    
+                    &:hover{
+                        border-bottom: 2px solid #fff;
+                    }
+                    span{
+                        align-self: center;
+                    }
+    
+                    p{
+                        margin: 0 0.2rem;
+                    }
+                }
+            }
+            
+
+            .productSubtitle{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 35px;
+                line-height: 50px;
+                max-width: 930px;
+                margin: 1rem 0;
+            }
+
+            .productDetails{
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .productLead,
+            .client,
+            .date
+            {
+                display: flex;
+                flex-direction: column;
+                margin: 2% 6% 2% 0 ;
+
+                p{
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .product{
+            .productImg{
+                margin: 1rem 2rem;
+            }
+            .productInfo{
+                margin: 2% 8%;
+
+                p{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 30px;
+                }
+            }
+
+            .moreImgs{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 1% 8%;
+            }
+
+            .keyPoints{
+                margin: 1% 8%;
+                .title{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 35px;
+                    line-height: 150%;
+                }
+
+                ol{
+                    margin: 1rem;
+
+                    li{
+                        margin: 0.3rem 0;
+                    }
+                }
+            }
+
+        }
+        .moreProjects{
+            margin: 0 8%;
+
+            .title{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 35px;
+                line-height: 150%;
+            }
+
+            .projects{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

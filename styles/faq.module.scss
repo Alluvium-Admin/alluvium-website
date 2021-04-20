@@ -1,0 +1,65 @@
+.faq{
+    display: flex;
+    flex-direction: column;
+    background: #F6F6F6;
+    border: 0.5px solid #00000065;
+    padding: 0.5rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover{
+        background: #e0e0e0;
+        border-color: #000;
+    }
+
+    .faqTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem;
+        align-items: center;
+
+        h3{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 35px;
+            line-height: 50px;
+        }
+
+        .dropdownIconReturn{
+            transform: rotate(0);
+            transition: 0.3s;
+        }
+
+        .dropdownIconFlip{
+            transform: rotate(180deg);
+            transition: 0.3s;
+        }
+
+
+    }
+
+    .hideFaqBody{
+        height: 0;
+        overflow: hidden;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 40px;
+        max-width: 786px;
+        padding: 0;
+        transition: 0.3s;
+    }
+
+    .showFaqBody{
+        height: auto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 40px;
+        max-width: 786px;
+        padding: 1rem 1.5rem;
+        transition: 0.3s;
+    }
+}

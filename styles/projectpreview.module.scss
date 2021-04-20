@@ -126,3 +126,64 @@
     }
 
 }
+
+.projectMpPreview{
+    display: flex;
+    flex-direction: column;
+    background: #009BC0;
+    max-width: 534px;
+    margin: 0.5rem 1rem;
+
+    .previewContent{
+        color: #fff;
+        .previewDetails{
+            margin: 0.5rem;
+            padding: 0.6rem;
+            .previewTitle{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 51px;
+                
+            }
+
+            .previewSubtitle{
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 24px;
+                margin: 1.1rem 0;
+            }
+        }
+
+        .projectLink{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 19px;
+            width: fit-content;
+            cursor: pointer;
+            padding: 0.4rem;
+            margin: 1rem 0.7rem;
+
+            &::after{
+                display: block;
+                content: "";
+                height: 0.5px;
+                background-color: #fff;
+                width: 100%;
+                color: #fff;
+                border: 0.5px solid #fff;
+                transition: .2s;
+                
+            }
+
+            &:hover{
+                &::after{
+                    width: 0;
+                    visibility: hidden;
+                }   
+            }
+        }
+    }
+}
