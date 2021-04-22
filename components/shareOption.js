@@ -17,10 +17,10 @@ export default function ShareOption ({server,router,shareOptions}){
     return(
         <div className={ shareOptions ? styles.shareOption : styles.hideShareOption}>
             <div className={styles.shareLink}>
-                <a target="_blank" href={`https://twitter.com/intent/tweet?text=Check%20this%out`} passHref={true}> + Share on Twitter </a>
+                <a target="_blank" href={`https://twitter.com/share?text=Check out this project&url=${server+router.asPath}`}> + Share on Twitter </a>
             </div>
             <div className={styles.shareLink}>
-                <a target="_blank" href="/"> + Share on Facebook</a>
+                <a target="_blank" href={`https://www.facebook.com/sharer/sharer.php?u=${server+router.asPath}`}> + Share on Facebook</a>
             </div>
             <div className={styles.shareLink}>
                 <button onClick={copyLink}> + Copy link</button>
