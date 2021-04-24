@@ -3,7 +3,8 @@ import Link from 'next/link'
 import Profile from '../../components/profile'
 import styles from '../../styles/peoplepage.module.scss'
 import Navigation from '../../components/navigation'
-import { server } from '../../config'
+// import { baseURL } from '../../config'
+import { alluviansData } from '../../data'
 
 
 export default function People({people}) {
@@ -69,12 +70,9 @@ export default function People({people}) {
 }
 
 export const getStaticProps = async () =>{
-  const res = await fetch(`${server}/api/people`)
-  const people = await res.json()
-
   return {
       props:{
-        people
+        people:alluviansData
       }
   }
 }

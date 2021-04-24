@@ -19,7 +19,7 @@ export default function ProjectPreview({title,subtitle,imgLink,projectName,locat
     return(
         <div className={previewStyle}>
             <div className={styles.previewImg}>
-                <Image src={imgLink} width={150} height={150}/>
+                <Image src={imgLink} width={600} height={400}/>
             </div>
             <div className={styles.previewContent}>
                 <div className={styles.previewDetails}>

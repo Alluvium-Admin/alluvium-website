@@ -3,7 +3,8 @@ import styles from '../../styles/supportpage.module.scss'
 import Navigation from '../../components/navigation'
 import FaqPage from '../../components/faqPage'
 import SupportSubmenu from '../../components/supportSubmenu'
-import { server } from '../../config'
+// import { baseURL } from '../../config'
+import { faqData } from '../../data'
 
 export default function Support({faqs}) {
   return (
@@ -24,12 +25,10 @@ export default function Support({faqs}) {
 }
 
 export const getStaticProps = async () =>{
-  const res = await fetch(`${server}/api/faqs`)
-  const faqs = await res.json() 
 
   return {
     props:{
-      faqs
+      faqs: faqData
     }
   }
 }

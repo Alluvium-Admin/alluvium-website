@@ -3,7 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navigation from '../../components/navigation'
 import styles from '../../styles/reelpage.module.scss'
-import { server } from '../../config'
+// import { baseURL } from '../../config'
+import { galleryLinks } from '../../data'
 
 
 export default function Reel({gallery}) {
@@ -36,12 +37,9 @@ export default function Reel({gallery}) {
 }
 
 export const getStaticProps = async () =>{
-  const res = await fetch(`${server}/api/gallery`)
-  const gallery = await res.json()
-
   return{
     props:{
-      gallery
+      gallery:galleryLinks
     }
   }
 }

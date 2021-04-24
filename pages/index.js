@@ -4,9 +4,13 @@ import Image from 'next/image'
 import styles from '../styles/homepage.module.scss'
 import Navigation from '../components/navigation';
 import ProjectPreview from '../components/projectPreview';
-import { server } from '../config'
+// import useSWR from 'swr';
+// import { baseURL } from '../config'
+import { productData,featuresData } from '../data'
 
-export default function Home({products,features}) {
+
+export default function Home({products,features}){
+  console.log(process.cwd());
   return (
     <div>
       <Head>
@@ -86,16 +90,10 @@ export default function Home({products,features}) {
 }
 
 export const getStaticProps = async () =>{
-  const res = await fetch(`${server}/api/products`)
-  const featuresRes = await fetch(`${server}/api/features`)
-
-  const products = await res.json()
-  const features = await featuresRes.json()
-
   return {
     props:{
-      products,
-      features
+      products: productData,
+      features: featuresData
     }
   }
 }
