@@ -9,7 +9,7 @@ import ProjectPreview from '../components/projectPreview';
 import { productData,featuresData } from '../data'
 
 
-export default function Home({products,features}){
+export default function Home({projects,features}){
   console.log(process.cwd());
   return (
     <div>
@@ -30,7 +30,7 @@ export default function Home({products,features}){
                   complete data migration in half the time for half the cost.
                 </p>
                 <div className={styles.projectsBtn}>
-                  <Link href="/products">+ See our projects</Link>
+                  <Link href="/projects">+ See our projects</Link>
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function Home({products,features}){
           <section className={styles.projects}>
             <div className={styles.projectList}>
                 {
-                  products.slice(0,2).map((project,index)=>{
+                  projects.slice(0,2).map((project,index)=>{
                     return(
                       <ProjectPreview 
                         title={ project.title } 
@@ -81,7 +81,7 @@ export default function Home({products,features}){
                 }
             </div>
             <div className={styles.allProjectsBtn}>
-              <Link href="/products">+ See more works</Link>
+              <Link href="/projects">+ See more works</Link>
             </div>
           </section>
       </main>
@@ -92,7 +92,7 @@ export default function Home({products,features}){
 export const getStaticProps = async () =>{
   return {
     props:{
-      products: productData,
+      projects: productData,
       features: featuresData
     }
   }
