@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { server } from '../../config'
+// import { baseURL } from '../../config'
 import ProjectPreview from '../../components/projectPreview'
 import Navigation from '../../components/navigation'
 import styles from '../../styles/productspage.module.scss'
+import { productData } from '../../data'
 
 export default function Products({products}) {
   return (
@@ -62,12 +63,9 @@ export default function Products({products}) {
 }
 
 export const getStaticProps = async () =>{
-  const res = await fetch(`${server}/api/products`)
-  const products = await res.json()
-
   return{
     props:{
-      products
+      products:productData,
     }
   }
 }

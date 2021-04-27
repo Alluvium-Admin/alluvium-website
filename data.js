@@ -4,7 +4,7 @@ export const productData =
       id:1,
       title:"Cloud Counter",
       subtitle:"Employ our fast and efficient cloud counter to keep count of your resources",
-      imgLink:"/assets/Secure.svg",
+      imgLink:"/assets/test.png",
       projectName:"cloud_counter",
       details:{
         productName:"Cloud Counter",
@@ -27,7 +27,7 @@ export const productData =
       id:2,
       title:"CJR: Compare Jira Resources",
       subtitle:"Compare Jira Resources is an efficient way to check that you have fully migrated",
-      imgLink:"/assets/Simple.svg",
+      imgLink:"/assets/test.png",
       projectName:"cjr",
       details:{
         productName:"CJR",
@@ -73,13 +73,13 @@ export const previewData =
     {
       title:"Cloud Counter",
       subtitle:"Employ our fast and efficient cloud counter to keep count of your resources ",
-      imgLink:"/assets/Secure.svg",
+      imgLink:"/assets/test.png",
       projectName:"cloud_counter"
     },
     {
       title:"CJR: Compare Jira Resources",
       subtitle:"Compare Jira Resources is an efficient way to check that you have fully migrated",
-      imgLink:"/assets/Simple.svg",
+      imgLink:"/assets/test.png",
       projectName:"cjr"
     },
 ]

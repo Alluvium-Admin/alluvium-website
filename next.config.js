@@ -20,6 +20,10 @@ module.exports = {
 }
 
 module.exports = {
+  basePath: '/docs',
+}
+
+module.exports = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

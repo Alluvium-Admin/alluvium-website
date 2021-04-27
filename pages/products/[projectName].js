@@ -2,11 +2,12 @@ import React,{ useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { server } from '../../config'
+import { baseURL } from '../../config'
 import Navigation from '../../components/navigation'
 import ProjectPreview from '../../components/projectPreview'
 import styles from '../../styles/productpage.module.scss';
 import ShareOption from '../../components/shareOption';
+import { productData } from '../../data'
 
 
 export default function Product({product,products}){
@@ -33,7 +34,7 @@ export default function Product({product,products}){
                         </button>
                         <ShareOption
                             shareOptions={ shareOptions }
-                            server={ server }
+                            baseURL={ baseURL }
                             router={ router }  
                         />
                     </div>
@@ -105,33 +106,20 @@ export default function Product({product,products}){
 }
 
 
-// export const getServerSideProps = async (context) =>{
-
-// }
-
-export const getStaticProps = async (context) =>{
-    const res = await fetch(`${server}/api/products/${context.params.projectName}`)
-    const productRes = await fetch(`${server}/api/products`)
-
-    const product = await res.json()
-    const products = await productRes.json()
-
+export const getStaticProps = async ({params}) =>{
+    const productsArr = productData.filter(p =>p.projectName.toString() === params.projectName )
     return {
         props:{
-            product,
-            products
+            product:productsArr[0],
+            products:productData
         }
     }
 }
 
 export const getStaticPaths = async ()=>{
-    const res = await fetch(`${server}/api/products`)
-
-    const products = await res.json()
-
-    const ids = products.map((product)=>product.projectName)
-    
-    const paths = ids.map((id)=>({params: { projectName: id.toString() }}))
+    const paths = productData.map(product=>
+        ({params: { projectName: product.projectName.toString() }
+    }))
 
     return{
         paths,
