@@ -5,7 +5,7 @@ export const productData =
       title:"Cloud Counter",
       subtitle:"Employ our fast and efficient cloud counter to keep count of your resources",
       imgLink:"/assets/test.png",
-      projectName:"cloud_counter",
+      projectName:"cloud-counter",
       details:{
         productName:"Cloud Counter",
         productTitle:"Resource count? No worries.",

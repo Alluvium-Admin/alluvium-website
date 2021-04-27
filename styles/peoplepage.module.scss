@@ -1,7 +1,6 @@
 .peoplePage{
     main{
-        
-
+        scroll-behavior: smooth;
         .alluviansPageHeader{
             margin: 1.5rem 3.5rem;
             .pageTitle{
@@ -20,6 +19,7 @@
 
                 .hireUsLink{
                     align-self: flex-end;
+                    scroll-behavior: smooth;
         
                     &::after{
                         display: block;

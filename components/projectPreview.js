@@ -19,7 +19,7 @@ export default function ProjectPreview({title,subtitle,imgLink,projectName,locat
     return(
         <div className={previewStyle}>
             <div className={styles.previewImg}>
-                <Image src={imgLink} width={600} height={400}/>
+                <Image src={imgLink} width={727.48} height={576}/>
             </div>
             <div className={styles.previewContent}>
                 <div className={styles.previewDetails}>
@@ -27,7 +27,7 @@ export default function ProjectPreview({title,subtitle,imgLink,projectName,locat
                     <p className={styles.previewSubtitle}>{subtitle}</p>
                 </div>
                 <div className={styles.projectLink}>
-                    <Link href='/products/[projectName]' as={`/products/${projectName}`} >+ See full project</Link>
+                    <Link href='/projects/[projectName]' as={`/projects/${projectName}`} >+ See full project</Link>
                 </div>
             </div>
         </div>

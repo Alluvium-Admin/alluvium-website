@@ -10,8 +10,8 @@ import ShareOption from '../../components/shareOption';
 import { productData } from '../../data'
 
 
-export default function Product({product,products}){
-    const { details } = product;
+export default function Project({project,projects}){
+    const { details } = project;
     const [ shareOptions, setShareOptions ] = useState(false);
     const router = useRouter();
 
@@ -85,7 +85,7 @@ export default function Product({product,products}){
                     <h3 className={styles.title}>More projects</h3>
                     <div className={styles.projects}>
                         {
-                            products.map((project)=>{
+                            projects.map((project)=>{
                                 return(
                                     <ProjectPreview
                                         title={ project.title } 
@@ -110,8 +110,8 @@ export const getStaticProps = async ({params}) =>{
     const productsArr = productData.filter(p =>p.projectName.toString() === params.projectName )
     return {
         props:{
-            product:productsArr[0],
-            products:productData
+            project:productsArr[0],
+            projects:productData
         }
     }
 }

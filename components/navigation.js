@@ -16,13 +16,13 @@ export default function Navigation ({theme}) {
             </div>
             <nav className={styles.navigation}>
                 <ul className={ theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
-                    <li><Link href="/products">Our Projects</Link></li>
+                    <li><Link href="/projects">Our Projects</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
                     <li><Link href="/people">Alluvians</Link></li>
                     <li><Link href="/support">Support</Link></li>
                 </ul>
                 <ul className={styles.mobileMenu}>
-                    <li><Link href="/products">Our Projects</Link></li>
+                    <li><Link href="/projects">Our Projects</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
                     <li><Link href="/people">Alluvians</Link></li>
                     <li><Link href="/support">Support</Link></li>
