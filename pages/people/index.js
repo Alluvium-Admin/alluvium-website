@@ -20,7 +20,7 @@ export default function People({people}) {
             <div className={styles.pageTitle}>
               <h4>People of Alluvium</h4>
               <div className={styles.hireUsLink}>
-                <Link href="/">+ Hire us</Link>
+                <Link href="/people#schedule">+ Hire us</Link>
               </div>
             </div>
             <h2 className={styles.title}>Alluvians? You guessed right!</h2>
@@ -42,7 +42,7 @@ export default function People({people}) {
               })
             }
           </section>
-          <section className={styles.scheduleMeetingLink}>
+          <section className={styles.scheduleMeetingLink} id="schedule">
             <div className={styles.scheduleMeetingHeader}>
               <p className={styles.title}>
                 Launching a new product? Re-vitalising existing 

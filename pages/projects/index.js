@@ -6,11 +6,11 @@ import Navigation from '../../components/navigation'
 import styles from '../../styles/productspage.module.scss'
 import { productData } from '../../data'
 
-export default function Products({products}) {
+export default function Projects({projects}) {
   return (
     <div className={styles.productsPage}>
       <Head>
-        <title>Products | Alluvium</title>
+        <title>Projects | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation theme={"dark"}/>
@@ -27,7 +27,7 @@ export default function Products({products}) {
           </section>
           <section className={styles.projects}>
             {
-              products.map((project)=>{
+              projects.map((project)=>{
                 return(
                   <ProjectPreview
                     title={ project.title } 
@@ -65,7 +65,7 @@ export default function Products({products}) {
 export const getStaticProps = async () =>{
   return{
     props:{
-      products:productData,
+      projects:productData,
     }
   }
 }
