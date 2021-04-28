@@ -17,6 +17,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-input-switch": "^2.2.2",
+    "react-toast-notifications": "^2.4.4",
     "sass": "^1.32.8",
     "swr": "^0.5.5"
   },
