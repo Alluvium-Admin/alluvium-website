@@ -1,8 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
 import styles from '../styles/shareoptions.module.scss'
+import { useToasts } from 'react-toast-notifications'
 
 export default function ShareOption ({server,router,shareOptions}){
+    const { addToast } = useToasts()
+    
     const copyLink = () =>{
         let link = server+router.asPath;
         let urlInput = document.body.appendChild(document.createElement('input'))
@@ -11,7 +13,8 @@ export default function ShareOption ({server,router,shareOptions}){
         urlInput.select();
         document.execCommand("copy")
         urlInput.parentNode.removeChild(urlInput);
-        alert("Copied");
+        addToast('Copied to Clipboard', { appearance: 'success' });
+        
     }
 
     return(

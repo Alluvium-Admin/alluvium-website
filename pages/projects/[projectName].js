@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { baseURL } from '../../config'
+import { server } from '../../config'
 import Navigation from '../../components/navigation'
 import ProjectPreview from '../../components/projectPreview'
 import styles from '../../styles/productpage.module.scss';
@@ -34,7 +34,7 @@ export default function Project({project,projects}){
                         </button>
                         <ShareOption
                             shareOptions={ shareOptions }
-                            baseURL={ baseURL }
+                            server={ server }
                             router={ router }  
                         />
                     </div>

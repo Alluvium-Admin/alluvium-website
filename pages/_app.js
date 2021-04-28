@@ -1,12 +1,15 @@
 import '../styles/globals.css'
 import Layout from '../components/layout';
+import { ToastProvider } from 'react-toast-notifications';
 
 function MyApp({ Component, pageProps }) {
 
   return( 
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ToastProvider placement="top-center">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ToastProvider>
   )
 }
 
