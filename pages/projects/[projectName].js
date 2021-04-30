@@ -91,6 +91,7 @@ export default function Project({project,projects}){
                                         title={ project.title } 
                                         subtitle={ project.subtitle } 
                                         imgLink={ project.imgLink }
+                                        previewImgLink={ project.previewImgLink }
                                         projectName={ project.projectName }
                                         key={ project.id }
                                         location={"more_projects"}

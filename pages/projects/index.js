@@ -33,6 +33,7 @@ export default function Projects({projects}) {
                     title={ project.title } 
                     subtitle={ project.subtitle } 
                     imgLink={ project.imgLink }
+                    previewImgLink={ project.previewImgLink }
                     projectName={ project.projectName }
                     key={ project.id }
                     location={"products"}

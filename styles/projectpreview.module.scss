@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     background: #DCF1F6;
+    width: 100%;
     max-width: 534px;
     margin: 0.5rem 1rem;
 
@@ -9,8 +10,20 @@
         margin: 1.5rem 1rem 0.5rem 1rem;
     }
 
+    .previewImg{
+        align-self: center;
+        align-content: center;
+        padding: 0.8rem;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 
     .previewContent{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
         .previewDetails{
             margin: 0.5rem;
             padding: 0.6rem;
@@ -69,12 +82,23 @@
     background: #F6F6F6;
     border: 0.5px solid #9C9FA1;
     margin: 2.5rem 1rem;
-    min-height: 540px;
+    max-width: 1236px;
+
+    .previewImg{
+        max-width: 726px;
+        align-self: center;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 
     .previewContent{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 2rem 0;
+        padding: 0.5rem;
 
         .previewDetails{
             padding: 0.5rem;
@@ -130,11 +154,24 @@
 .projectMpPreview{
     display: flex;
     flex-direction: column;
-    background: #009BC0;
-    max-width: 534px;
+    background: rgba(0, 155, 192, 1);
+    max-width: 500px;
     margin: 0.5rem 1rem;
 
+    .previewImg{
+        width: 100%;
+        align-self: center;
+        padding: 0.8rem;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
     .previewContent{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
         color: #fff;
         .previewDetails{
             margin: 0.5rem;

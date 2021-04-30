@@ -23,18 +23,8 @@
         h3{
             font-style: normal;
             font-weight: 600;
-            font-size: 35px;
+            font-size: 30px;
             line-height: 50px;
-        }
-
-        .dropdownIconReturn{
-            transform: rotate(0);
-            transition: 0.3s;
-        }
-
-        .dropdownIconFlip{
-            transform: rotate(180deg);
-            transition: 0.3s;
         }
 
 
@@ -62,4 +52,20 @@
         padding: 1rem 1.5rem;
         transition: 0.3s;
     }
+
+    .dropdownIconReturn{
+        svg{
+            transform: rotate(0);
+            transition: 0.3s;
+        }
+    }
+    
+    .dropdownIconFlip{
+        svg{
+            transform: rotate(180deg);
+            transition: 0.3s;
+        }
+        
+    }
 }
+

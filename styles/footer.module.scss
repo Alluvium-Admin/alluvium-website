@@ -6,15 +6,21 @@
 
     .newsletterSection{
         position: relative;
+        height: 100%;
         min-height: 623px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1619712838/Alluvium%20Website/footer_z5rxxp.png");
+        background-attachment: fixed;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+
 
         .newsletter{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin: 2rem 3rem;
-            padding: 1rem;
+            padding: 2rem 1rem;
             z-index: 2;
+            height: 100%;
         }
 
         .newsletterTitle{
@@ -25,6 +31,7 @@
             color: #fff;
             max-width: 400px;
             width: 40%;
+            padding: 1rem 0;
         }
 
         .newsletterInput{
@@ -77,6 +84,7 @@
             position: absolute;
             top: 0;
             z-index: -1;
+            display: none;
         }
     }
 
