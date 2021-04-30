@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/projectpreview.module.scss';
 
-export default function ProjectPreview({title,subtitle,imgLink,projectName,location}) {
+export default function ProjectPreview({title,subtitle,previewImgLink,imgLink,projectName,location}) {
     const [ previewStyle, setPreviewStyle ] = useState(styles.projectHomePreview);
     
     useEffect(()=>{
@@ -19,7 +19,7 @@ export default function ProjectPreview({title,subtitle,imgLink,projectName,locat
     return(
         <div className={previewStyle}>
             <div className={styles.previewImg}>
-                <Image src={imgLink} width={727.48} height={576}/>
+                { location === "products" ? <img src={imgLink} alt={`${title}`}/> : <img src={previewImgLink} alt={`${title}`}/>}
             </div>
             <div className={styles.previewContent}>
                 <div className={styles.previewDetails}>

@@ -4,7 +4,8 @@ export const productData =
       id:1,
       title:"Cloud Counter",
       subtitle:"Employ our fast and efficient cloud counter to keep count of your resources",
-      imgLink:"/assets/test.png",
+      previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_9_ylxuxh.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_vazuey.jpg",
       projectName:"cloud-counter",
       details:{
         productName:"Cloud Counter",
@@ -27,7 +28,8 @@ export const productData =
       id:2,
       title:"CJR: Compare Jira Resources",
       subtitle:"Compare Jira Resources is an efficient way to check that you have fully migrated",
-      imgLink:"/assets/test.png",
+      previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_8_nzueg1.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_clfwev.jpg",
       projectName:"cjr",
       details:{
         productName:"CJR",

@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Switch from 'react-input-switch';
 import styles from '../styles/footer.module.scss';
 
 export default function Footer() {
+    const [value, setValue] = useState(true);
+    useEffect(()=>{
+        localStorage.setItem("light-mode", JSON.stringify(value))
+    },[value])
+    
+
     return(
         <footer className={ styles.footer }>
             <div className={styles.newsletterSection}>
@@ -65,7 +71,26 @@ export default function Footer() {
                 </div>
                 <div className={styles.pageFooter}>
                     <div className={styles.themeSwitch}>
-                        <Switch/>
+                        <Switch
+                            on={true} 
+                            off={false}
+                            value={value}
+                            onChange={setValue}
+                            styles={{
+                                track: {
+                                    backgroundColor: 'white'
+                                },
+                                trackChecked: {
+                                    backgroundColor: 'black'
+                                },
+                                button: {
+                                    backgroundColor: 'black'
+                                },
+                                buttonChecked: {
+                                    backgroundColor: 'white'
+                                }
+                            }}
+                        />
                     </div>
                     <hr className={styles.underline}/>
                     <div className={styles.copyrights}>

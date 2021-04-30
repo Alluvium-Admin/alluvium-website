@@ -1,3 +1,4 @@
+import { useState,useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -10,7 +11,12 @@ import { productData,featuresData } from '../data'
 
 
 export default function Home({projects,features}){
-  console.log(process.cwd());
+  const [ lightTheme,setLightTheme ] = useState('')
+  useEffect(()=>{
+    const theme = localStorage.getItem("light-mode");
+    setLightTheme(JSON.parse(theme))
+    console.log(lightTheme)
+  },[])
   return (
     <div>
       <Head>
@@ -18,7 +24,7 @@ export default function Home({projects,features}){
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.landingPage}>
-          <section className={styles.heroSection}>
+          <section className={ styles.heroSection }>
             <Navigation/>
             <div className={styles.heroContent}>
               <div className={styles.bigText}>
@@ -35,7 +41,8 @@ export default function Home({projects,features}){
               </div>
             </div>
             <div className={styles.heroImg}>
-              <Image src="/assets/hero.png" width={ 1392 } height={ 882.5 } alt="heroBackground"/>
+              {/* <Image src="/assets/hero.png" width={ 1392 } height={ 882.5 } alt="heroBackground"/> */}
+              {/* <img src="https://res.cloudinary.com/geniesys/image/upload/v1619712841/Alluvium%20Website/hero_fsfn9s.png" alt="heroBackground"/> */}
             </div>
           </section>
           <section className={styles.featureSection}>
@@ -72,6 +79,7 @@ export default function Home({projects,features}){
                         title={ project.title } 
                         subtitle={ project.subtitle } 
                         imgLink={ project.imgLink }
+                        previewImgLink={ project.previewImgLink }
                         projectName={ project.projectName }
                         key={ index }
                         location={"home"}
@@ -93,7 +101,7 @@ export const getStaticProps = async () =>{
   return {
     props:{
       projects: productData,
-      features: featuresData
+      features: featuresData,
     }
   }
 }
