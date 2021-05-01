@@ -157,35 +157,35 @@ export const alluviansData =
       lastName:"daramola",
       role:"Employee",
       email:"daramola@geniesys.co.uk",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795283/Alluvium%20Website/Team/Damilola_Daramola_gedasq.jpg"
     },
     {
       firstName:"adeola",
       lastName:"lawal",
       role:"Employee",
       email:"adeola@geniesys.co.uk",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795293/Alluvium%20Website/Team/Adeola_Lawal_ytx5s7.jpg"
     },
     {
       firstName:"isaac",
       lastName:"temidayo",
       role:"Employee",
       email:"isaac@geniesys.co.uk",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795283/Alluvium%20Website/Team/Isaac_Temidayo_cv0iir.jpg"
     },
     {
       firstName:"precious",
       lastName:"charles",
       role:"Employee",
       email:"charlespreciousa@gmail.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795290/Alluvium%20Website/Team/Precious_Charles_oq7v0r.jpg"
     },
     {
       firstName:"francis",
       lastName:"okeke",
       role:"Employee",
       email:"okeke98@gmail.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619848865/Alluvium%20Website/Team/Francis_Okeke_v0k3at.jpg"
     },
     {
       firstName:"idiongette",
@@ -199,7 +199,7 @@ export const alluviansData =
       lastName:"braimoh",
       role:"Employee",
       email:"yusuf@alluvium.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795291/Alluvium%20Website/Team/Yusuf_Braimoh_qv2r7b.jpg"
     },
     {
       firstName:"georgette",
@@ -213,14 +213,14 @@ export const alluviansData =
       lastName:"oyelakin",
       role:"Employee",
       email:"anjolly@alluvium.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619848109/Alluvium%20Website/Team/Anjola_Oyelakin_b7ttj3.jpg"
     },
     {
       firstName:"adegboyega",
       lastName:"adesanya",
       role:"Employee",
       email:"adeadesanya2015@gmail.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795287/Alluvium%20Website/Team/Adeboyega_Adesanya_oblsm6.jpg"
     },
 ]
 

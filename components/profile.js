@@ -7,7 +7,7 @@ export default function Profile({firstName,lastName,role,email,pictureLink}){
     return(
         <div className={styles.profile}>
             <div className={styles.profilePicture}>
-                <Image src={pictureLink} width={243} height={257}/>
+                <img src={pictureLink} alt={`${firstName +" "+ lastName}`}/>
             </div>
             <div className={styles.details}>
                 <p className={styles.fullname}>
