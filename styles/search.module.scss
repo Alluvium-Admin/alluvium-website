@@ -1,7 +1,17 @@
+@import 'lib/breakpoints';
+
 .search{
     display: flex;
     flex-direction: column;
     align-self: center;
+
+    @include media("<phone"){
+        display: none;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        display: none;
+    }
 
     .searchInput{
         display: flex;
@@ -41,6 +51,14 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+
+    @include media("<phone"){
+        display: none;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        display: none;
+    }
 
     .searchInput{
         display: flex;

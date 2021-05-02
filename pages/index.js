@@ -24,27 +24,27 @@ export default function Home({projects,features}){
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.landingPage}>
-          <section className={ styles.heroSection }>
-            <Navigation/>
-            <div className={styles.heroContent}>
-              <div className={styles.bigText}>
-                <p>We are problem solvers</p>
-              </div>
-              <div className={styles.mainText}>
-                <p className={styles.subtitle}>
-                  We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers 
-                  complete data migration in half the time for half the cost.
-                </p>
-                <div className={styles.projectsBtn}>
-                  <Link href="/projects">+ See our projects</Link>
+          <section className={styles.hero}>
+            <div className={ styles.heroSection }>
+              <div className={styles.heroContainer}>
+                <Navigation/>
+                <div className={styles.heroContent}>
+                  <div className={styles.bigText}>
+                    <p>We are problem solvers</p>
+                  </div>
+                  <div className={styles.mainText}>
+                    <p className={styles.subtitle}>
+                      We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers 
+                      complete data migration in half the time for half the cost.
+                    </p>
+                    <div className={styles.projectsBtn}>
+                      <Link href="/projects">+ See our projects</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className={styles.heroImg}>
-              {/* <Image src="/assets/hero.png" width={ 1392 } height={ 882.5 } alt="heroBackground"/> */}
-              {/* <img src="https://res.cloudinary.com/geniesys/image/upload/v1619712841/Alluvium%20Website/hero_fsfn9s.png" alt="heroBackground"/> */}
-            </div>
-          </section>
+          </section>      
           <section className={styles.featureSection}>
             <div className={styles.featureSectionImg}>
               <Image src="/assets/featuresImg.png" width={506} height={506}/>
