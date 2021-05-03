@@ -24,7 +24,7 @@ export default function Home({projects,features}){
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.landingPage}>
-          <section className={styles.hero}>
+          {/* <section className={styles.hero}> */}
             <div className={ styles.heroSection }>
               <div className={styles.heroContainer}>
                 <Navigation/>
@@ -44,7 +44,7 @@ export default function Home({projects,features}){
                 </div>
               </div>
             </div>
-          </section>      
+          {/* </section>       */}
           <section className={styles.featureSection}>
             <div className={styles.featureSectionImg}>
               <Image src="/assets/featuresImg.png" width={506} height={506}/>

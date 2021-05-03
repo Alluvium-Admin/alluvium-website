@@ -2,7 +2,7 @@ import React from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/navigation.module.scss';
-import Search from "./search";
+import Search, { MobileSearch } from "./search";
 
 
 export default function Navigation ({theme}) {
@@ -22,7 +22,7 @@ export default function Navigation ({theme}) {
                     <li><Link href="/support">Support</Link></li>
                 </ul>
                 <div className={styles.mobileMenu}>
-                    <Search theme={theme}/>
+                    <MobileSearch theme={theme}/>
                     <ul>
                         <li><Link href="/projects">+ Our Projects</Link></li>
                         <li><Link href="/reel">+ Project Reel</Link></li>

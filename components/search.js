@@ -8,9 +8,26 @@ export default function Search({theme}) {
             <div className={styles.searchInput}>
                 <div className={styles.searchIcon}>
                     {
-                        theme === "dark" ? <Image src="/assets/search_dark.svg" width={16} height={14}/> : <Image src="/assets/search.svg" width={16} height={14}/>
+                        theme === "dark" ? <Image src="/assets/search_dark.svg" width={16} height={16}/> : <Image src="/assets/search.svg" width={16} height={16}/>
                     }
                    
+                </div>
+                <input type="text" placeholder="Search projects"/>
+            </div>
+            <div className={styles.searchResults}>
+
+            </div>
+        </div>
+    )
+}
+
+
+export function MobileSearch({theme}) {
+    return(
+        <div className={ theme === "dark" ? styles.mobileSearchDark : styles.mobileSearch}>
+            <div className={styles.searchInput}>
+                <div className={styles.searchIcon}>
+                    <Image src="/assets/search_dark.svg" width={16} height={16}/>
                 </div>
                 <input type="text" placeholder="Search projects"/>
             </div>

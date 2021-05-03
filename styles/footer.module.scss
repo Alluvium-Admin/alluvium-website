@@ -1,9 +1,19 @@
+@import "lib/breakpoints.scss";
+
 .footer{
     display: flex;
     flex-direction: column;
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 0.8rem;
     overflow-x: hidden;
+
+    @include media("<=phone"){
+        margin: 0;
+    }
+
+    @include media(">phone","<=desktop"){
+        margin: 0;
+    }
 
     .newsletterSection{
         position: relative;
@@ -16,6 +26,14 @@
         transform:skew(0,7deg);
         transform-origin: right center;
         background-repeat: no-repeat;
+
+        @include media("<=phone"){
+            min-height: unset;
+        }
+
+        @include media(">phone","<=tablet"){
+            min-height: unset;
+        }
         
 
         .newsletter{
@@ -27,6 +45,24 @@
             z-index: 2;
             height: 100%;
             transform:skew(0,-7deg);
+
+            @include media("<=phone"){
+                flex-direction: column;
+                margin: 2rem 0.5rem;
+                padding: 3rem 0.2rem;
+            }
+
+            @include media(">phone","<=custom-view-2"){
+                flex-direction: column;
+                margin: 2rem 1.5rem;
+                padding: 4rem 1.5rem;
+            }
+
+            @include media(">custom-view-2","<=desktop"){
+                flex-direction: row;
+                margin: 2rem 1.5rem;
+                padding: 4rem 1.5rem;
+            }
         }
 
         .newsletterTitle{
@@ -38,6 +74,24 @@
             max-width: 400px;
             width: 40%;
             padding: 1rem 0;
+
+            @include media("<=phone"){
+                font-size: 40px;
+                width: 90%;
+                max-width: unset;
+            }
+
+            @include media(">phone","<=tablet"){
+                font-size: 50px;
+                width: 100%;
+                max-width: unset;
+            }
+
+            @include media(">tablet","<=custom-view-2"){
+                font-size: 60px;
+                width: 100%;
+                max-width: unset;
+            }
         }
 
         .newsletterInput{
@@ -50,10 +104,32 @@
             max-width: 563px;
             padding: 1rem;
 
+            @include media("<=phone"){
+                width: 100%;
+                max-width: unset;
+                margin: 1.5rem 0;
+            }
+
+            @include media(">phone","<=custom-view-2"){
+                width: 100%;
+                max-width: unset;
+                margin: 1.5rem 0;
+            }
+
             input{
                 border: none;
                 width: 80%;
                 padding: 0.5rem;
+
+                @include media("<=phone"){
+                    width: 100%;
+                    padding: 0.5rem 0.2rem;
+                }
+    
+                @include media(">phone","<=custom-view-2"){
+                    width: 100%;
+                    padding: 0.5rem 0.3rem;
+                }
             }
 
             .newsletterSubmitBtn{
@@ -104,8 +180,20 @@
         display: flex;
         flex-direction: column;
 
+        @include media("<=phone"){
+            margin: 1rem 0;
+        }
+
+        @include media(">phone","<=tablet"){
+            margin: 1.5rem 0;
+        }
+
         .footerLogo{
             margin: 2% 8%;
+
+            @include media("<=phone"){
+                margin: 2% 5%;
+            }
         }
         
 
@@ -114,11 +202,21 @@
             flex-direction: row;
             flex-wrap: wrap;
             // justify-content: center;
+
+            @include media("<=phone"){
+                flex-wrap: nowrap;
+                flex-direction: column;
+                margin-top: 1rem;
+            }
             
         }
 
         .footerList{
             margin: 2% 8%;
+
+            @include media("<=phone"){
+                margin: 2% 5%;
+            }
             .footerListTitle{
                 font-style: normal;
                 font-weight: bold;
@@ -145,12 +243,32 @@
         margin: 2rem auto;
         width: 84%;
 
+        @include media("<=phone"){
+            width: 90%;
+        }
+
         .themeSwitch{
             align-self: flex-end;
             padding: 2rem;
         }
         .copyrights{
             margin: 2rem 0;
+
+            p{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 19px;
+
+                @include media("<=phone"){
+                    font-size: 14px;
+                }
+        
+                @include media(">phone","<=tablet"){
+                    font-size: 14px;
+                }
+            }
+
         }
     }
 }
