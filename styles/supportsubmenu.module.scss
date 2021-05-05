@@ -1,8 +1,18 @@
+@import "lib/breakpoints";
+
 .supportSubmenu{
     display: flex;
     flex-direction: row;
     margin: 2rem 3rem;
     align-self: flex-end;
+
+    @include media("<phone"){
+        margin: 2rem 0.3rem;
+    }
+
+    @include media(">=phone","<=custom-view-4"){
+        margin: 2rem 1rem;
+    }
 
     .option{
         display: inline-block;
@@ -14,6 +24,16 @@
         cursor: pointer;
         transition: 0.2s;
         padding: 0 0.2rem;
+
+        @include media("<phone"){
+            font-size:14px;
+            white-space: nowrap;
+        }
+    
+        @include media(">=phone","<=custom-view-4"){
+            font-size:15px;
+            white-space: nowrap;
+        }
 
         &::after{
             display: block;
@@ -45,6 +65,16 @@
         line-height: 23px;
         cursor: pointer;
         padding: 0 0.2rem;
+
+        @include media("<phone"){
+            font-size:14px;
+            white-space: nowrap;
+        }
+    
+        @include media(">=phone","<=custom-view-4"){
+            font-size:15px;
+            white-space: nowrap;
+        }
 
         span{
             margin-right: 0.2rem;

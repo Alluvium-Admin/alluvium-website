@@ -1,3 +1,5 @@
+@import'lib/breakpoints.scss';
+
 .reelPage{
     main{
         display: flex;
@@ -34,6 +36,18 @@
             grid-template-rows: 325px 325px 120px;
             margin: 1.5rem auto 80px;
             max-width: 90vw;
+
+            @include media("<phone"){
+                max-width: unset;
+                grid-template-columns: repeat(2,1fr);
+                width:100%;
+            }
+        
+            @include media(">=phone","<=custom-view-4"){
+                max-width: unset;
+                grid-template-columns: repeat(2,1fr);
+                width:100%;
+            }
 
             .photo{
                 img{

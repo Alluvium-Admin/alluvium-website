@@ -80,13 +80,11 @@
         }
     }
 
-    .menuBtn{
+    button{
+        border: none;
+        background:none;
         display: none;
-        width: 30px;
-        flex-direction: column;
-        margin: 0.5rem;
-        align-self: center;
-        cursor: pointer;
+        padding: 0;
 
         @include media("<phone"){
             display: flex;
@@ -95,6 +93,29 @@
         @include media(">=phone","<=custom-view-1"){
             display: flex;
         }
+    }
+
+    .closeBtn{
+        .barOne{
+            transform: rotate(45deg) translateX(-1px);
+        }
+
+        .barTwo{
+            display:none !important;
+        }
+
+        .barThree{
+            transform: rotate( -45deg ) translateY(-6px) translateX(5px);
+        }
+    }
+
+    .menuBtn{
+        display: block;
+        width: 30px;
+        flex-direction: column;
+        margin: 0.5rem;
+        align-self: center;
+        cursor: pointer;
 
         .barOne,.barTwo,.barThree{
             display: block;
@@ -105,17 +126,68 @@
             border-radius:50px;
         }
     }
+
+    .menuBtnDark{
+        display: block;
+        width: 30px;
+        flex-direction: column;
+        margin: 0.5rem;
+        align-self: center;
+        cursor: pointer;
+        border: none;
+        background:none;
+
+
+        .barOne,.barTwo,.barThree{
+            display: block;
+            height:4px;
+            width: 100%;
+            margin: 0.18rem 0;
+            background:#172f46;
+            border-radius:50px;
+        }
+    }
+    
+    .hideMobileMenu{
+        display: block;
+        background: #1B3854;
+        position: absolute;
+        left: 0;
+        height:0;
+        overflow-x: hidden;
+        z-index: -1;
+        padding:0;
+        width:0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.411);
+        margin: 0 auto;
+
+        ul{
+            margin: 1rem 0;
+
+            li{
+                margin: 0.7rem 0;
+                padding: 0.4rem;
+                color: #fff;
+
+                &:hover{
+                    color: rgba(255, 255, 255, 0.521);
+                }
+            }
+        }
+
+    }
     
     .mobileMenu{
-        display: none;
+        display: block;
         background: #1B3854;
-        position: fixed;
+        position: absolute;
         left: 0;
+        top: 76px;
         z-index: 4;
         padding: 2rem;
         width:100%;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.411);
-
+        margin: 0 auto;
         ul{
             margin: 1rem 0;
 

@@ -1,3 +1,5 @@
+@import "lib/breakpoints";
+
 .faq{
     display: flex;
     flex-direction: column;
@@ -20,14 +22,43 @@
         padding: 1.5rem;
         align-items: center;
 
+        @include media("<phone"){
+            padding: 0.5rem;
+        }
+
+        @include media(">=phone","<=custom-view-3"){
+            padding: 1rem;
+        }
+
         h3{
             font-style: normal;
             font-weight: 600;
             font-size: 30px;
             line-height: 50px;
+
+            @include media("<phone"){
+                font-size:18px;
+                margin-right: 0.3rem;
+                line-height: 30px;
+            }
+    
+            @include media(">=phone","<=custom-view-3"){
+                font-size:22px;
+                margin-right: 0.5rem;
+                line-height: 30px;
+            }
         }
 
-
+        .dropdownIconReturn{
+            transform: rotateZ(0);
+            transition: 0.3s;
+        }
+        
+        .dropdownIconFlip{
+            transform: rotateZ(180deg);
+            transition: 0.3s;
+            
+        }
     }
 
     .hideFaqBody{
@@ -40,6 +71,16 @@
         max-width: 786px;
         padding: 0;
         transition: 0.3s;
+
+        @include media("<phone"){
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        @include media(">=phone","<=custom-view-3"){
+            font-size: 18px;
+            line-height: 35px;
+        }
     }
 
     .showFaqBody{
@@ -51,21 +92,18 @@
         max-width: 786px;
         padding: 1rem 1.5rem;
         transition: 0.3s;
+
+        @include media("<phone"){
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        @include media(">=phone","<=custom-view-3"){
+            font-size: 18px;
+            line-height: 35px;
+        }
     }
 
-    .dropdownIconReturn{
-        svg{
-            transform: rotate(0);
-            transition: 0.3s;
-        }
-    }
     
-    .dropdownIconFlip{
-        svg{
-            transform: rotate(180deg);
-            transition: 0.3s;
-        }
-        
-    }
 }
 

@@ -1,3 +1,5 @@
+@import "lib/breakpoints.scss";
+
 .shareOption{
     display: flex;
     flex-direction: column;
@@ -5,6 +7,14 @@
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.267);
     padding: 1rem 3rem;
+
+    @include media("<phone"){
+        padding: 0.7rem;
+    }
+
+    @include media(">=phone", "<=custom-view-4"){
+        padding: 1rem 2rem;
+    }
 
     .shareLink{
         margin: 0.7rem 0;
@@ -15,6 +25,14 @@
             font-size: 18px;
             line-height: 23px;
             cursor: pointer;
+
+            @include media("<phone"){
+                font-size:16px;
+            }
+        
+            @include media(">=phone", "<=custom-view-4"){
+                font-size:17px;
+            }
 
             &::after{
                 content: "";

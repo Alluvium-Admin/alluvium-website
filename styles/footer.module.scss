@@ -152,6 +152,14 @@
                 .btnArrow{
                     transform: translateX(0);
                     transition: 0.2s;
+
+                    @include media("<phone"){
+                        display: none;
+                    }
+        
+                    @include media(">=phone","<=tablet"){
+                        display: none;
+                    }
                 }
 
                 &:hover{

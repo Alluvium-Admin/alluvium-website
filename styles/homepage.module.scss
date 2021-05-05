@@ -29,8 +29,8 @@
         
         .heroContainer{
             height: 100%;
-            transform:skew(0,-7deg) translateY(10%);
-
+            transform:skew(0,-7deg) translateY(9%);
+            // transform:skew(0,-7deg) translateY(70px);
             @include media("<phone"){
                 transform:skew(0,-7deg) translateY(4%);
             }
@@ -185,10 +185,12 @@
         .featureSectionImg{
             @include media("<phone"){
                 align-self: center;
+                margin: 3.5rem 0.5rem;
             }
     
             @include media(">=phone","<=custom-view-2"){
                 align-self: center;
+                margin: 3.5rem 1rem;
             }
             
         }

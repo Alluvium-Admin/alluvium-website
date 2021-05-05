@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../styles/shareoptions.module.scss'
 import { useToasts } from 'react-toast-notifications'
 
-export default function ShareOption ({server,router,shareOptions}){
+export default function ShareOption ({server,router,shareOptions, setShareOptions}){
     const { addToast } = useToasts()
     
     const copyLink = () =>{
@@ -14,7 +14,7 @@ export default function ShareOption ({server,router,shareOptions}){
         document.execCommand("copy")
         urlInput.parentNode.removeChild(urlInput);
         addToast('Copied to Clipboard', { appearance: 'success' });
-        
+        setShareOptions(false);
     }
 
     return(

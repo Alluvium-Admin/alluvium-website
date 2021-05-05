@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from '../styles/navigation.module.scss';
 import Search, { MobileSearch } from "./search";
 
 
 export default function Navigation ({theme}) {
+    const [ displayMobileMenu, setDisplayMobileMenu ] = useState(false);
+    const toggleMenu = () =>{
+        setDisplayMobileMenu(!displayMobileMenu);
+    }
+    
     return(
         <div className={styles.navigationMenu}>
             <div className={styles.logo}>
                 <Link href="/">
-                    <img src="/assets/alluvium-logo.svg" alt="logo"/>
+                    {
+                        theme === "dark" ? <img src="/assets/alluvium-logo-dark.svg" alt="logo"/> :  <img src="/assets/alluvium-logo.svg" alt="logo"/>
+                    }
                     {/* <Image src="/assets/alluvium-logo.svg" width={150} height={29.06} alt="logo"/> */}
                 </Link>
             </div>
@@ -21,9 +27,10 @@ export default function Navigation ({theme}) {
                     <li><Link href="/people">Alluvians</Link></li>
                     <li><Link href="/support">Support</Link></li>
                 </ul>
-                <div className={styles.mobileMenu}>
+                <div className={ displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu }>
                     <MobileSearch theme={theme}/>
                     <ul>
+                        <li><Link href="/">+ Home</Link></li>
                         <li><Link href="/projects">+ Our Projects</Link></li>
                         <li><Link href="/reel">+ Project Reel</Link></li>
                         <li><Link href="/people">+ Alluvians</Link></li>
@@ -31,11 +38,13 @@ export default function Navigation ({theme}) {
                     </ul>
                 </div>
             </nav>
-            <div className={styles.menuBtn}>
-                <div className={styles.barOne}></div>
-                <div className={styles.barTwo}></div>
-                <div className={styles.barThree}></div>
-            </div>
+                <button onClick={ toggleMenu } className={ displayMobileMenu === true ? styles.closeBtn : null }>
+                <div className={ theme === "dark" ? styles.menuBtnDark : styles.menuBtn}>
+                    <div className={styles.barOne}></div>
+                    <div className={styles.barTwo}></div>
+                    <div className={styles.barThree}></div>
+                </div>
+            </button>
             <Search theme={theme}/>
 
         </div>

@@ -1,3 +1,5 @@
+@import "lib/breakpoints";
+
 .schedulePage{
     .scheduleForm{
         display: flex;
@@ -6,11 +8,30 @@
         .scheduleFormHeader{
             max-width: 880px;
             margin: 1rem 3rem;
+
+            @include media("<phone"){
+                margin: 1rem 0.5rem;
+            }
+
+            @include media(">=phone","<=tablet"){
+                margin: 1rem;
+            }
+
             .title{
                 font-style: normal;
                 font-weight: bold;
                 font-size: 80px;
                 line-height: 125.5%;
+
+                @include media("<phone"){
+                    font-size: 35px;
+                    line-height: 105.5%;
+                }
+    
+                @include media(">=phone","<=tablet"){
+                    font-size: 50px;
+                    line-height: 105.5%;
+                }
             }
         }
 
@@ -20,6 +41,15 @@
             margin: 1rem 0;
             max-width: 830px;
             margin: 1rem 3rem;
+
+            @include media("<phone"){
+                margin: 1rem 0.4rem;
+            }
+
+            @include media(">=phone","<=tablet"){
+                margin: 1rem ;
+            }
+
             .formInput{
                 display: flex;
                 flex-direction: column;
@@ -65,6 +95,14 @@
                 border-bottom: 2px solid #000;
                 transition: 0.3s;
                 padding: 0.2rem;
+
+                @include media("<phone"){
+                    font-size: 16px;
+                }
+    
+                @include media(">=phone","<=tablet"){
+                    font-size: 17px;
+                }
 
                 &:hover{
                     border-bottom: 2px solid #fff;

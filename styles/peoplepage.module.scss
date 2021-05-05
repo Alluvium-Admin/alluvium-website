@@ -1,3 +1,5 @@
+@import "lib/breakpoints.scss";
+
 .peoplePage{
     main{
         scroll-behavior: smooth;
@@ -77,6 +79,14 @@
                     font-size: 50px;
                     line-height: 120%;
                     margin: 1rem 0;
+
+                    @include media("<phone"){
+                        font-size: 25px;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 30px;
+                    }
                 }
 
                 .subtitle{
@@ -86,6 +96,14 @@
                     line-height: 120%;
                     color: #4FBAD3;
                     margin: 1rem 0;
+
+                    @include media("<phone"){
+                        font-size: 20px;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 25px;
+                    }
                 }
                 
             }
@@ -95,13 +113,43 @@
                 flex-direction: row;
                 justify-content: space-between;
                 max-width: 70vw;
+
+                @include media("<phone"){
+                    max-width: 100vw;
+                    flex-direction: column;
+                }
+            
+                @include media(">=phone","<=tablet"){
+                    max-width: 100vw;
+                    flex-direction: column;
+                }
+
                 .mailContact{
                     margin: 0 0.5rem;
+
+                    @include media("<phone"){
+                        margin: 1rem 0.2rem;
+                        text-align: center;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        margin: 1rem 0.2rem;
+                        text-align: center;
+                    }
+
                     p{
                         font-style: normal;
                         font-weight: normal;
                         font-size: 33px;
                         line-height: 150%;
+
+                        @include media("<phone"){
+                            font-size: 22px;
+                        }
+                    
+                        @include media(">=phone","<=custom-view-1"){
+                            font-size: 27px;
+                        }
                     }   
                     a{
                         font-style: normal;
@@ -110,6 +158,14 @@
                         line-height: 150%;
                         text-decoration: underline;
                         transition: all 0.3s;
+
+                        @include media("<phone"){
+                            font-size: 22px;
+                        }
+                    
+                        @include media(">=phone","<=custom-view-1"){
+                            font-size: 27px;
+                        }
 
                         &:hover{
                             text-decoration: none;

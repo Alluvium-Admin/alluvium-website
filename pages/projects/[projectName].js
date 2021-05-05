@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { server } from '../../config'
 import Navigation from '../../components/navigation'
 import ProjectPreview from '../../components/projectPreview'
-import styles from '../../styles/productpage.module.scss';
+import styles from '../../styles/projectpage.module.scss';
 import ShareOption from '../../components/shareOption';
 import { productData } from '../../data'
 
@@ -34,6 +34,7 @@ export default function Project({project,projects}){
                         </button>
                         <ShareOption
                             shareOptions={ shareOptions }
+                            setShareOptions={ setShareOptions }
                             server={ server }
                             router={ router }  
                         />
