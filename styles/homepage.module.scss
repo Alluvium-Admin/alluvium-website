@@ -30,13 +30,22 @@
         .heroContainer{
             height: 100%;
             // transform:skew(0,-7deg) translateY(9%);
-            transform:skew(0,-7deg) translateY(70px);
+            transform:skew(0,-7deg) translateY(80px);
             @include media("<phone"){
-                transform:skew(0,-7deg) translateY(4%);
+                transform:skew(0,-7deg) translateY(70px);
             }
     
             @include media(">=phone","<=custom-view-2"){
-                transform:skew(0,-7deg) translateY(8%);
+                transform:skew(0,-7deg) translateY(80px);
+
+            }
+
+            @include media(">=custom-view-2","<=desktop"){
+                transform:skew(0,-7deg) translateY(90px);
+            }
+
+            @include media(">desktop"){
+                transform:skew(0,-7deg) translateY(100px);
             }
         }
 
