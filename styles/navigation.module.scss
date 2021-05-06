@@ -178,7 +178,7 @@
     }
     
     .mobileMenu{
-        display: block;
+        display: none;
         background: #1B3854;
         position: absolute;
         left: 0;
@@ -188,6 +188,21 @@
         width:100%;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.411);
         margin: 0 auto;
+
+        @include media("<phone"){
+            display: block;
+            padding:1rem 0.2rem;
+        }
+
+        @include media(">=phone","<custom-view-4"){
+            display: block;
+            padding:1.5rem 0.5rem;
+        }
+
+        @include media(">=custom-view-4","<=custom-view-1"){
+            display: block;
+        }
+
         ul{
             margin: 1rem 0;
 
