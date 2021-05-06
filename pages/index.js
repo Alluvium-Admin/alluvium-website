@@ -36,8 +36,7 @@ export default function Home({projects,features}){
                     <p>We are problem solvers</p>
                   </div>
                   <div className={styles.mainText}>
-                  Save cost: To count all Jira schemes and database items, you need to call more than two dozens API endpoints.
-              <p className={styles.subtitle}>
+                    <p className={styles.subtitle}>
                       We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers 
                       complete data migration in half the time for half the cost.
                     </p>
