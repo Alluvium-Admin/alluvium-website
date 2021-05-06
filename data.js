@@ -3,24 +3,35 @@ export const productData =
     {
       id:1,
       title:"Cloud Counter",
-      subtitle:"Employ our fast and efficient cloud counter to keep count of your resources",
+      subtitle:"The future is cloud",
       previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_9_ylxuxh.png",
       imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_vazuey.jpg",
       projectName:"cloud-counter",
       details:{
+        productHeader:"The future is cloud",
+        productBg:"#009BC0",
         productName:"Cloud Counter",
         productTitle:"Resource count? No worries.",
         productSubtitle: "Get The Most out of Jira Software Cloud with our Quick and Easy Resource Counter.",
         productLead:"Taiwo Ojo",
         client:"alluvium",
         date: "September 2020",
-        productImg: '/assets/test.png',
-        productInfo: "Sollicitudin risus aenean et, tellus tellus hendrerit senectus in. Quis senectus quam sed nunc id vulputate purus. Volutpat sit pretium a vitae. Eget sapien leo purus non libero, purus nunc, sit sed. In lobortis morbi at cras ultrices tristique. Aliquam in proin sed ultricies dignissim orci aliquet. Sagittis, massa nam dui quis est praesent. Eu quisque sed tincidunt nisl. At nulla blandit urna aenean. Diam auctor libero egestas fermentum metus condimentum nisi aenean urna. Ultrices iaculis leo id tempus magna orci. Eleifend risus, integer mauris consectetur at purus facilisis proin facilisi. Convallis egestas porta ullamcorper habitant viverra feugiat. Pellentesque orci consequat porttitor aenean sit nam velit viverra rhoncus. Velit, enim et massa sed diam neque amet aenean interdum. Et, in amet tempor, dui, tempus blandit sit egestas. Eu sollicitudin quisque neque, mi duis tellus ornare fermentum. Tempor nibh sed proin amet enim ut egestas gravida pretium. Et vehicula semper quam nulla. Orci orci eget tellus id. Tincidunt imperdiet dui etiam tellus. Aenean adipiscing commodo, augue purus in donec tellus augue. Sit tellus vitae rhoncus sed at urna, nibh vitae habitant. Elit, rhoncus, fringilla aenean mauris nunc sapien nibh nunc. Mauris pulvinar est venenatis diam pharetra venenatis suspendisse donec. Ac risus etiam pretium tincidunt. Mauris sapien fames senectus elementum phasellus sed nec at. Faucibus diam est eu et in eget potenti risus adipiscing. Eu enim auctor non dignissim. Velit ac at morbi vitae gravida adipiscing elit odio cras. Ultrices tristique ullamcorper lorem egestas etiam a. Tristique ullamcorper",
-        moreImgs: [ "/assets/test.png","/assets/test.png" ],
+        productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1620327020/Alluvium%20Website/Projects/Product%20Images/Laptop_avn5u8.png',
+        productInfo: "Employ our fast and efficient Cloud Counter to keep count of your resources.",
+        moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1620327024/Alluvium%20Website/Projects/Product%20Images/Mask_Group_bcrdcv.png" ],
         keyPoints: [
-          "Quis nisl elementum nunc in. Egestas urna consectetur risus neque, euismod aliquam dictum. Mi at scelerisque tristique",
-          "Matoque vulputate pellentesque felis. Dignissim aliquet amet, sit augue diam. Massa hac lorem iaculis senectus diam feugiat tristique.",
-          "Tugue purus in donec tellus augue. Sit tellus vitae rho"
+          {
+            title: "One Click Count",
+            body: "Save time: Think about how long it might take you to do a count of all schemes, projects, issues and other database items."
+          },
+          {
+            title: "Schemes Count",
+            body:  "Avoid pain: Do you know how painful it is to have multiple duplicate schemes and resources?"
+          },
+          {
+            title: "JIRA Service Desk Count",
+            body:  "Save cost: To count all Jira schemes and database items, you need to call more than two dozens API endpoints."
+          },
         ],
       },
     },
@@ -32,19 +43,30 @@ export const productData =
       imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_clfwev.jpg",
       projectName:"cjr",
       details:{
+        productHeader:"Compare Now and Thank Us later!",
+        productBg:"#1B3854",
         productName:"CJR",
         productTitle:"Compare Jira Resources",
         productSubtitle: "Validate success of your migration, Compare Source & For Accuracy of Jira.",
         productLead:"Taiwo Ojo",
         client:"alluvium",
         date: "November 2020",
-        productImg: '/assets/test.png',
-        productInfo: "Sollicitudin risus aenean et, tellus tellus hendrerit senectus in. Quis senectus quam sed nunc id vulputate purus. Volutpat sit pretium a vitae. Eget sapien leo purus non libero, purus nunc, sit sed. In lobortis morbi at cras ultrices tristique. Aliquam in proin sed ultricies dignissim orci aliquet. Sagittis, massa nam dui quis est praesent. Eu quisque sed tincidunt nisl. At nulla blandit urna aenean. Diam auctor libero egestas fermentum metus condimentum nisi aenean urna. Ultrices iaculis leo id tempus magna orci. Eleifend risus, integer mauris consectetur at purus facilisis proin facilisi. Convallis egestas porta ullamcorper habitant viverra feugiat. Pellentesque orci consequat porttitor aenean sit nam velit viverra rhoncus. Velit, enim et massa sed diam neque amet aenean interdum. Et, in amet tempor, dui, tempus blandit sit egestas. Eu sollicitudin quisque neque, mi duis tellus ornare fermentum. Tempor nibh sed proin amet enim ut egestas gravida pretium. Et vehicula semper quam nulla. Orci orci eget tellus id. Tincidunt imperdiet dui etiam tellus. Aenean adipiscing commodo, augue purus in donec tellus augue. Sit tellus vitae rhoncus sed at urna, nibh vitae habitant. Elit, rhoncus, fringilla aenean mauris nunc sapien nibh nunc. Mauris pulvinar est venenatis diam pharetra venenatis suspendisse donec. Ac risus etiam pretium tincidunt. Mauris sapien fames senectus elementum phasellus sed nec at. Faucibus diam est eu et in eget potenti risus adipiscing. Eu enim auctor non dignissim. Velit ac at morbi vitae gravida adipiscing elit odio cras. Ultrices tristique ullamcorper lorem egestas etiam a. Tristique ullamcorper",
-        moreImgs: [ "/assets/test.png","/assets/test.png" ],
+        productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Group_8_1_pmmdib.png',
+        productInfo: "Compare Jira Resources is an efficient way to check that you have fully migrated.",
+        moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_g5xrph.png" ],
         keyPoints: [
-          "Quis nisl elementum nunc in. Egestas urna consectetur risus neque, euismod aliquam dictum. Mi at scelerisque tristique",
-          "Matoque vulputate pellentesque felis. Dignissim aliquet amet, sit augue diam. Massa hac lorem iaculis senectus diam feugiat tristique.",
-          "Tugue purus in donec tellus augue. Sit tellus vitae rho"
+          {
+            title: "Validate Success of your Migration",
+            body: "Optimize your migration, by validating that all data has been successfully migrated."
+          },
+          {
+            title: "Compare Source/Target Before Consolidation",
+            body: "Allow accuracy and error free comparison of your data while on the source platform, transferring to the target platform."
+          },
+          {
+            title: "Check Two Jira Instances Delta",
+            body: "Compare Jira instances in real time using our compare tool."
+          },
         ],
       },
     },
@@ -89,30 +111,25 @@ export const previewData =
 export const galleryLinks = 
 [
     {
-      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1592767289/Hestia/Images/julian-wan-WNoLnJo7tS8-unsplash_d9svhx.jpg",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322222/Alluvium%20Website/Reel%20Media/IMG_5881_es0nme.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1592767289/Hestia/Images/edward-cisneros-_H6wpor9mjs-unsplash_q68xcz.jpg",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322222/Alluvium%20Website/Reel%20Media/IMG_5900_v2nop8.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1587939498/Hestia/Images/aw-creative-fAcloeaPA_c-unsplash_bzycze.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322217/Alluvium%20Website/Reel%20Media/IMG_5899_qw4aef.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1587939496/Hestia/Images/alex-nemo-hanse-gA3YJpTWJSs-unsplash_1_kzsvem.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322215/Alluvium%20Website/Reel%20Media/IMG_5885_avznyo.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1587939496/Hestia/Images/alex-nemo-hanse-gA3YJpTWJSs-unsplash_1_kzsvem.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322219/Alluvium%20Website/Reel%20Media/IMG_5895_e3emd2.png",
       imgAlt:"reel",
     },
-    {
-      imgLink:"https://res.cloudinary.com/ecx/image/upload/v1592767289/Hestia/Images/edward-cisneros-_H6wpor9mjs-unsplash_q68xcz.jpg",
-      imgAlt:"reel",
-    },
-
 ]
 
 export const alluviansData = 
