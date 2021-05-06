@@ -47,13 +47,13 @@ export default function Footer() {
                             <h4 className={styles.footerListTitle}>Who are we?</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/projects">About us</Link></li>
-                                <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li>
+                                {/* <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li> */}
                             </ul>
                         </div>
                         <div className={styles.footerList}>
                             <h4 className={styles.footerListTitle}>Contact</h4>
                             <ul>
-                                <li className={styles.footerListItem}><Link href="/projects">LinkedIn</Link></li>
+                                <li className={styles.footerListItem}><Link href="/reel">LinkedIn</Link></li>
                                 <li className={styles.footerListItem}><Link href="/reel">Facebook</Link></li>
                                 <li className={styles.footerListItem}><Link href="/reel">Twitter</Link></li>
                                 <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li>
@@ -62,15 +62,15 @@ export default function Footer() {
                         <div className={styles.footerList}>
                             <h4 className={styles.footerListTitle}>Support</h4>
                             <ul>
-                                <li className={styles.footerListItem}><Link href="/projects">Ask about our rates</Link></li>
-                                <li className={styles.footerListItem}><Link href="/reel">Contact us</Link></li>
-                                <li className={styles.footerListItem}><Link href="/reel">FAQs</Link></li>
+                                <li className={styles.footerListItem}><Link href="/support/contact">Ask about our rates</Link></li>
+                                <li className={styles.footerListItem}><Link href="/support/contact">Contact us</Link></li>
+                                <li className={styles.footerListItem}><Link href="/support">FAQs</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className={styles.pageFooter}>
-                    <div className={styles.themeSwitch}>
+                    {/* <div className={styles.themeSwitch}>
                         <Switch
                             on={true} 
                             off={false}
@@ -91,7 +91,7 @@ export default function Footer() {
                                 }
                             }}
                         />
-                    </div>
+                    </div> */}
                     <hr className={styles.underline}/>
                     <div className={styles.copyrights}>
                         <p>Copyright.©2021 Alluvium Ltd. All rights reserved</p>
