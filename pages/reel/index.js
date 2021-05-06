@@ -17,7 +17,7 @@ export default function Reel({gallery}) {
       <Navigation theme={"dark"}/>
       <main>
         <div className={styles.hireUsLink}>
-          <Link href="/enquiries"> + Hire us</Link>
+          <Link href="/support"> + Hire us</Link>
         </div>
         <div className={styles.photoGallery}>
           {

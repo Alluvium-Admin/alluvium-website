@@ -1,13 +1,24 @@
+@import "lib/breakpoints";
+
 .navigationMenu{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
     align-items: center;
     margin: 0 1.5rem 1rem 1.5rem;
     padding: 2rem 0 0 0;
     border-bottom: 1px solid #C4C4C4;
 
+    @include media("<phone"){
+        margin: 0 0 1rem 0;
+    }
 
+    @include media(">=phone","<=tablet"){
+        margin: 0 0.5rem 1rem 0.5rem;
+    }
+
+    
     .logo{
         padding: 0.2rem;
         max-width: 150px;
@@ -34,6 +45,14 @@
         width: 100%;
         padding: 0 0.2rem;
 
+        @include media("<phone"){
+            display: none;
+        }
+
+        @include media(">=phone","<=custom-view-1"){
+            display: none;
+        }
+
         li{
             margin: 0 10%;
             padding: 0.3rem;
@@ -45,19 +64,158 @@
             white-space: nowrap;
             transition: 0.2s;
 
+            @include media("<phone"){
+                margin: 0 6%;
+            }
+    
+            @include media(">=phone","<=custom-view-2"){
+                margin: 0 6%;
+            }
+
             &:hover{
-                font-size: 16px;
-                font-weight: bold;
+
+                transform: translateY(-5px);
+                
             }
         }
     }
 
-    .menuBtn{
+    button{
+        border: none;
+        background:none;
         display: none;
+        padding: 0;
+
+        @include media("<phone"){
+            display: flex;
+        }
+
+        @include media(">=phone","<=custom-view-1"){
+            display: flex;
+        }
+    }
+
+    .closeBtn{
+        .barOne{
+            transform: rotate(45deg) translateX(-1px);
+        }
+
+        .barTwo{
+            display:none !important;
+        }
+
+        .barThree{
+            transform: rotate( -45deg ) translateY(-6px) translateX(5px);
+        }
+    }
+
+    .menuBtn{
+        display: block;
+        width: 30px;
+        flex-direction: column;
+        margin: 0.5rem;
+        align-self: center;
+        cursor: pointer;
+
+        .barOne,.barTwo,.barThree{
+            display: block;
+            height:4px;
+            width: 100%;
+            margin: 0.15rem 0;
+            background:#fff;
+            border-radius:50px;
+        }
+    }
+
+    .menuBtnDark{
+        display: block;
+        width: 30px;
+        flex-direction: column;
+        margin: 0.5rem;
+        align-self: center;
+        cursor: pointer;
+        border: none;
+        background:none;
+
+
+        .barOne,.barTwo,.barThree{
+            display: block;
+            height:4px;
+            width: 100%;
+            margin: 0.18rem 0;
+            background:#172f46;
+            border-radius:50px;
+        }
+    }
+    
+    .hideMobileMenu{
+        display: block;
+        background: #1B3854;
+        position: absolute;
+        left: 0;
+        height:0;
+        overflow-x: hidden;
+        z-index: -1;
+        padding:0;
+        width:0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.411);
+        margin: 0 auto;
+
+        ul{
+            margin: 1rem 0;
+
+            li{
+                margin: 0.7rem 0;
+                padding: 0.4rem;
+                color: #fff;
+
+                &:hover{
+                    color: rgba(255, 255, 255, 0.521);
+                }
+            }
+        }
+
     }
     
     .mobileMenu{
         display: none;
+        background: #1B3854;
+        position: absolute;
+        left: 0;
+        top: 76px;
+        z-index: 4;
+        padding: 2rem;
+        width:100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.411);
+        margin: 0 auto;
+
+        @include media("<phone"){
+            display: block;
+            padding:1rem 0.2rem;
+        }
+
+        @include media(">=phone","<custom-view-4"){
+            display: block;
+            padding:1.5rem 0.5rem;
+        }
+
+        @include media(">=custom-view-4","<=custom-view-1"){
+            display: block;
+        }
+
+        ul{
+            margin: 1rem 0;
+
+            li{
+                margin: 0.7rem 0;
+                padding: 0.4rem;
+                color: #fff;
+
+                &:hover{
+                    color: rgba(255, 255, 255, 0.521);
+                }
+            }
+        }
     }
 }
 
@@ -69,6 +227,14 @@
     align-self: center;
     width: 100%;
     padding: 0 0.2rem;
+
+    @include media("<phone"){
+        display: none;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        display: none;
+    }
 
     li{
         margin: 0 10%;
@@ -82,8 +248,7 @@
         transition: 0.2s;
 
         &:hover{
-            font-size: 16px;
-            font-weight: bold;
+            transform: translateY(-5px); 
         }
     }
 }

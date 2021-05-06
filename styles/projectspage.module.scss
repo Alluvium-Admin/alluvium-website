@@ -1,9 +1,19 @@
+@import "lib/breakpoints.scss";
+
 .productsPage{
     main{
         .projectPageTitle{
             display: flex;
             flex-direction: column;
             margin: 5rem 0;
+
+            @include media("<phone"){
+                margin: 3rem 0;
+            }
+        
+            @include media(">=phone","<=custom-view-1"){
+                margin: 4rem 0;
+            }
 
             .subtitle{
                 align-self: center;
@@ -14,6 +24,14 @@
                     line-height: 24px;
                     text-align: center;
                     text-transform: uppercase;
+
+                    @include media("<phone"){
+                        font-size: 16px;
+                    }
+                
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size: 17px;
+                    }
                 }
             }
             .titleGroup{
@@ -26,6 +44,14 @@
                     font-size: 50px;
                     line-height: 150%;
                     text-align: center;
+
+                    @include media("<phone"){
+                        font-size: 25px;
+                    }
+                
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size: 35px;
+                    }
                 }
             }
         }
@@ -33,6 +59,16 @@
         .projects{
             margin: 1.5rem;
             padding: 2rem;
+
+            @include media("<phone"){
+                margin: 0.5rem 0;
+                padding: 1rem 0.3rem;
+            }
+        
+            @include media(">=phone","<=custom-view-4"){
+                margin: 0.7rem ;
+                padding: 1.5rem 0.5rem;
+            }
         }
 
         .scheduleMeetingLink{
@@ -49,6 +85,14 @@
                     font-size: 50px;
                     line-height: 120%;
                     margin: 1rem 0;
+
+                    @include media("<phone"){
+                        font-size: 25px;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 30px;
+                    }
                 }
 
                 .subtitle{
@@ -58,6 +102,14 @@
                     line-height: 120%;
                     color: #4FBAD3;
                     margin: 1rem 0;
+
+                    @include media("<phone"){
+                        font-size: 20px;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 25px;
+                    }
                 }
                 
             }
@@ -68,6 +120,14 @@
                 font-size: 18px;
                 line-height: 23px;
                 width: fit-content;
+
+                @include media("<phone"){
+                    font-size: 16px;
+                }
+            
+                @include media(">=phone","<=tablet"){
+                    font-size: 17px;
+                }
 
                 &::after{
                     display: block;

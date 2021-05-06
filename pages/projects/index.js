@@ -3,7 +3,7 @@ import Link from 'next/link'
 // import { baseURL } from '../../config'
 import ProjectPreview from '../../components/projectPreview'
 import Navigation from '../../components/navigation'
-import styles from '../../styles/productspage.module.scss'
+import styles from '../../styles/projectspage.module.scss'
 import { productData } from '../../data'
 
 export default function Projects({projects}) {

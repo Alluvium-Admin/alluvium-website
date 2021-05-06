@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { server } from '../../config'
 import Navigation from '../../components/navigation'
 import ProjectPreview from '../../components/projectPreview'
-import styles from '../../styles/productpage.module.scss';
+import styles from '../../styles/projectpage.module.scss';
 import ShareOption from '../../components/shareOption';
 import { productData } from '../../data'
 
@@ -34,6 +34,7 @@ export default function Project({project,projects}){
                         </button>
                         <ShareOption
                             shareOptions={ shareOptions }
+                            setShareOptions={ setShareOptions }
                             server={ server }
                             router={ router }  
                         />
@@ -55,8 +56,9 @@ export default function Project({project,projects}){
                     </div>
                 </section>
                 <section className={styles.product}>
-                    <div className={styles.productImg}>
-                        <Image src={details.productImg} width={1440} height={580}/>
+                    <div style={{backgroundColor: details.productBg}} className={styles.productPageHeader}>
+                        <img src={details.productImg} alt={`${details.productName}`}/>
+                        <h3>{details.productHeader}</h3>
                     </div>
                     <div className={styles.productInfo}>
                         <p>{details.productInfo}</p>
@@ -64,7 +66,7 @@ export default function Project({project,projects}){
                     <div className={styles.moreImgs}>
                         {
                             details.moreImgs.map((img,index)=>{
-                                <Image src={img} width={200} height={100} key={index}/>
+                                <img src={img} key={index} alt={`${details.productName}`}/>
                             })
                         }
                     </div>
@@ -74,7 +76,10 @@ export default function Project({project,projects}){
                             {
                                 details.keyPoints.map((keyPoint,index)=>{
                                     return(
-                                        <li key={index}>{keyPoint}</li>
+                                        <li key={index}>
+                                            <h3>{keyPoint.title}</h3>
+                                            <p>{keyPoint.body}</p>
+                                        </li>
                                     )
                                 })
                             }

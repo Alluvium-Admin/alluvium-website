@@ -1,33 +1,93 @@
+@import "lib/breakpoints.scss";
+
 .landingPage{
 //     background-color: #000;
 //   color: #fff;
+    
     .heroSection{
         position: relative;
-        min-height: 100%;
+        min-height: 840px;
         height:100vh;
-        margin: 0 1.5rem;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1619712841/Alluvium%20Website/hero_fsfn9s.png");
-        // box-shadow:inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+        margin:0 1.5rem ;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1619952404/Alluvium%20Website/hero_fsfn9s.jpg");
         background-size: cover;
-        background-attachment: fixed;
+        // background-attachment: fixed;
         background-repeat: no-repeat;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+        border-radius: 0 0 17px 17px;
+        transform:skew(0,7deg);
+        transform-origin: right center;
+
+        @include media("<phone"){
+            margin: 0;
+            min-height: 750px;
+        }
+
+        @include media(">=phone","<=custom-view-2"){
+            margin: 0;
+            min-height: 800px;
+        }
+        
+        .heroContainer{
+            height: 100%;
+            // transform:skew(0,-7deg) translateY(9%);
+            transform:skew(0,-7deg) translateY(70px);
+            @include media("<phone"){
+                transform:skew(0,-7deg) translateY(4%);
+            }
+    
+            @include media(">=phone","<=custom-view-2"){
+                transform:skew(0,-7deg) translateY(8%);
+            }
+        }
+
         .heroContent{
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             z-index: 2;
             color: #fff;
-            margin: 3rem 0;
+            margin: 5rem 0;
+
+            @include media("<phone"){
+                flex-direction: column;
+                margin: 2.2rem 0;
+
+            }
+    
+            @include media(">=phone","<=custom-view-3"){
+                flex-direction: column;
+                margin: 3.5rem 0;
+
+            }
+            
 
             .bigText{
                 padding: 2rem;
                 max-width: 350px;
+
+                @include media("<phone"){
+                    max-width: unset;
+                    padding: 0.5rem;
+                }
+        
+                @include media(">=phone","<=custom-view-3"){
+                    max-width: unset;
+                    padding: 0.8rem 1rem;
+                }
+
                 p{
                     font-style: normal;
                     font-weight: 600;
                     font-size: 75px;
                     line-height: 114%;
+
+                    @include media("<phone"){
+                        font-size: 45px;
+                    }
+            
+                    @include media(">=phone","<=custom-view-3"){
+                        font-size: 65px;
+                    }
                 }
             }
 
@@ -36,11 +96,34 @@
                 flex-direction: column;
                 align-self: center;
                 max-width: 400px;
+
+                @include media("<phone"){
+                    width: 90%;
+                    max-width: unset;
+                    align-self: unset;
+                }
+        
+                @include media(">=phone","<=custom-view-3"){
+                    width: 80%;
+                    max-width: unset;
+                    align-self: unset;
+                }
+
                 .subtitle{
                     font-style: normal;
                     font-weight: 300;
                     font-size: 17px;
                     line-height: 29px;
+
+                    @include media("<phone"){
+                        font-size: 15px;
+                        padding: 0.5rem;
+                    }
+            
+                    @include media(">=phone","<=custom-view-3"){
+                        font-size: 16px;
+                        padding: 0.8rem 1rem;
+                    }
                 } 
                 .projectsBtn{
                     font-weight: 600;
@@ -90,8 +173,38 @@
         justify-content: space-around;
         margin: 5rem 0;
 
+        @include media("<phone"){
+            flex-direction:column ;
+            margin: 3rem 0;
+        }
+
+        @include media(">=phone","<=custom-view-2"){
+            flex-direction:column ;
+            margin: 3.5rem 0;
+        }
+        .featureSectionImg{
+            @include media("<phone"){
+                align-self: center;
+                margin: 3.5rem 0.5rem;
+            }
+    
+            @include media(">=phone","<=custom-view-2"){
+                align-self: center;
+                margin: 3.5rem 1rem;
+            }
+            
+        }
+
         .features{
             align-self: center;
+
+            @include media("<phone"){
+                margin: 1.4rem 0;
+            }
+    
+            @include media(">=phone","<=custom-view-2"){
+                margin: 1.4rem 0;
+            }
         }
 
         .featuresTitle{
@@ -99,6 +212,16 @@
             font-weight: 600;
             font-size: 30px;
             line-height: 35px;
+
+            @include media("<phone"){
+                text-align: center;
+                font-size: 20px;
+            }
+    
+            @include media(">=phone","<=custom-view-2"){
+                text-align: center;
+                font-size: 25px;
+            }
         }
 
         .featureList{
@@ -109,8 +232,32 @@
                 flex-direction: row;
                 margin:1rem 0;
 
+                @include media("<phone"){
+                    flex-direction: column ;
+                    margin:1.5rem 0;
+                }
+        
+                @include media(">=phone","<=custom-view-2"){
+                    flex-direction: column ;
+                    margin:1.5rem 0;
+                }
+
                 .featureImg{
                     align-self: center;
+
+                    img{
+                        width:100%
+                    }
+
+                    @include media("<phone"){
+                        flex-direction: column ;
+                        margin:0.5rem;
+                    }
+            
+                    @include media(">=phone","<=custom-view-2"){
+                        flex-direction: column ;
+                        margin:0.5rem 1rem;
+                    }
                 }
                 
                 .featureContent{
@@ -120,6 +267,14 @@
                     font-weight: 300;
                     font-size: 15px;
                     line-height: 35px;
+
+                    @include media("<phone"){
+                        text-align: center;
+                    }
+            
+                    @include media(">=phone","<=custom-view-2"){
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -132,10 +287,32 @@
         margin: 0 1.5rem;
         padding: 2rem 3rem 1.1rem 3rem;
 
+        @include media("<phone"){
+            margin: 0;
+            padding: 2rem 0.5rem 1.1rem 0.5rem;
+        }
+
+        @include media(">=phone","<=desktop"){
+            margin: 0;
+            padding: 2rem 0.8rem 1.1rem 0.8rem;
+        }
+
         .projectList{
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;  
+            flex-wrap: wrap;
+            
+            @include media("<phone"){
+                flex-direction: column ;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+    
+            @include media(">=phone","<=desktop"){
+                flex-direction: column ;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
         }
 
         .allProjectsBtn{

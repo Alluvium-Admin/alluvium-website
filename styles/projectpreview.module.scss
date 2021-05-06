@@ -1,3 +1,5 @@
+@import "lib/breakpoints";
+
 .projectHomePreview{
     display: flex;
     flex-direction: column;
@@ -5,10 +7,6 @@
     width: 100%;
     max-width: 534px;
     margin: 0.5rem 1rem;
-
-    &:nth-child(even){
-        margin: 1.5rem 1rem 0.5rem 1rem;
-    }
 
     .previewImg{
         align-self: center;
@@ -32,6 +30,16 @@
                 font-weight: bold;
                 font-size: 40px;
                 line-height: 51px;
+
+                @include media("<phone"){
+                    font-size: 22px;
+                    line-height:30px;
+                }
+            
+                @include media(">=phone","<=custom-view-4"){
+                    font-size: 30px;
+                    line-height:30px;
+                }
                 
             }
 
@@ -84,6 +92,16 @@
     margin: 2.5rem 1rem;
     max-width: 1236px;
 
+    @include media("<phone"){
+        flex-direction: column;
+        margin: 1rem 0.4rem;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        flex-direction: column;
+        margin: 2rem 0.7rem;
+    }
+
     .previewImg{
         max-width: 726px;
         align-self: center;
@@ -108,6 +126,14 @@
                 font-weight: bold;
                 font-size: 35px;
                 line-height: 150%;
+
+                @include media("<phone"){
+                    font-size: 22px;
+                }
+            
+                @include media(">=phone","<=custom-view-4"){
+                    font-size: 30px;
+                }
             }
 
             .previewSubtitle{
@@ -181,6 +207,16 @@
                 font-weight: bold;
                 font-size: 40px;
                 line-height: 51px;
+
+                @include media("<phone"){
+                    font-size: 22px;
+                    line-height:30px;
+                }
+            
+                @include media(">=phone","<=tablet"){
+                    font-size: 30px;
+                    line-height:30px;
+                }
                 
             }
 

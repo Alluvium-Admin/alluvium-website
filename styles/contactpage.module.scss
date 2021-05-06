@@ -1,8 +1,18 @@
+@import "lib/breakpoints";
+
 .contactPage{
     .contactUsPage{
         display: flex;
         flex-direction: column;
         margin: 0.5rem 1rem;
+
+        @include media("<phone"){
+            margin: 0.5rem 0;
+        }
+
+        @include media(">=phone","<=tablet"){
+            margin: 0.5rem;
+        }
 
         .contactDetails{
             display: flex;
@@ -10,13 +20,40 @@
             justify-content: space-evenly;
             margin: 2rem 0;
             padding: 0.5rem;
+
+            @include media("<phone"){
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            @include media(">=phone","<=tablet"){
+                flex-direction: column;
+                text-align: center;
+            }
+
             .emailContact{
                 max-width: 400px;
+
+                @include media("<phone"){
+                    max-width: unset;
+                }
+        
+                @include media(">=phone","<=tablet"){
+                    max-width: unset;
+                }
                 h3{
                     font-style: normal;
                     font-weight: bold;
                     font-size: 35px;
                     line-height: 137.5%;
+
+                    @include media("<phone"){
+                        font-size:20px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size:30px;
+                    }
                 }
                 p{
                     font-style: normal;
@@ -25,8 +62,22 @@
                     line-height: 150%;
                     margin-top: 3rem;
 
+                    @include media("<phone"){
+                        font-size: 16px;
+                        margin-top: 1rem;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size: 18px;
+                        margin-top: 1rem;
+                    }
+
                     a{
                         text-decoration: underline;
+                        
+                        &:hover{
+                            text-decoration: none;
+                        }
                     }
                 }
                 
@@ -35,11 +86,29 @@
                 display: flex;
                 flex-direction: column;
                 max-width: 250px;
+
+                @include media("<phone"){
+                    max-width: unset;
+                    margin: 1rem 0;
+                }
+        
+                @include media(">=phone","<=tablet"){
+                    max-width: unset;
+                    margin: 1rem 0;
+                }
                 h3{
                     font-style: normal;
                     font-weight: bold;
                     font-size: 35px;
                     line-height: 137.5%;
+
+                    @include media("<phone"){
+                        font-size: 20px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size: 30px;
+                    }
                     
                 }
                 p{
@@ -48,6 +117,14 @@
                     font-size: 20px;
                     line-height: 150%;
                     margin: 0.5rem 0;
+
+                    @include media("<phone"){
+                        font-size: 16px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size: 18px;
+                    }
                 }
                 a{
                     font-style: normal;
@@ -55,6 +132,18 @@
                     font-size: 20px;
                     line-height: 150%;
                     text-decoration: underline;
+
+                    @include media("<phone"){
+                        font-size: 16px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size: 18px;
+                    }
+
+                    &:hover{
+                        text-decoration: none;
+                    }
                 }
             }
         }
