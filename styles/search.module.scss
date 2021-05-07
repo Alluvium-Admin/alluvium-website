@@ -7,6 +7,7 @@
     align-self: center;
     min-width: unset;
     transition: all 0.3s;
+    z-index: 1;
 
     @include media("<phone"){
         display: none;
@@ -60,6 +61,7 @@
         max-width:600px;
         width:100%;
         transition: 0.2s;
+        
 
 
         .errorText{
@@ -121,6 +123,7 @@
     align-self: center;
     min-width: unset;
     transition: all 0.2s;
+    z-index: 1;
 
     @include media("<phone"){
         display: none;
@@ -293,6 +296,7 @@
         // margin: 0 3%;
         transition: 0.2s;
         align-self: center;
+        z-index: 2;
 
 
         .errorText{
