@@ -32,11 +32,11 @@
             // transform:skew(0,-7deg) translateY(9%);
             transform:skew(0,-7deg) translateY(80px);
             @include media("<phone"){
-                transform:skew(0,-7deg) translateY(70px);
+                transform:skew(0,-7deg) translateY(60px);
             }
     
             @include media(">=phone","<=custom-view-2"){
-                transform:skew(0,-7deg) translateY(80px);
+                transform:skew(0,-7deg) translateY(70px);
 
             }
 

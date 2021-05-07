@@ -69,7 +69,7 @@ export function MobileSearch({theme}) {
     })
 
     useEffect(()=>{
-        setSearchResults(productData.filter(project=>{ return project.projectName.toLowerCase().match( new RegExp(searchInput,"g"))}))
+        setSearchResults(productData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
     },[searchInput])
 
     return(
