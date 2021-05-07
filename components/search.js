@@ -15,7 +15,7 @@ export default function Search({theme}) {
     })
 
     useEffect(()=>{
-        setSearchResults(productData.filter(project=>{ return project.projectName.toLowerCase().match( new RegExp(searchInput,"g"))}))
+        setSearchResults(productData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
     },[searchInput])
 
     // const searchResults = productData.filter(project=>{ project.projectName.toLowerCase().includes(searchInput.toLowerCase())}
