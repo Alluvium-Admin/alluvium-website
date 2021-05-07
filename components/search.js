@@ -1,10 +1,11 @@
-import React, { useState,useEffect }from 'react';
+import React, { useState,useEffect } from 'react';
 import Image from 'next/image';
 import styles from '../styles/search.module.scss';
 import { productData } from '../data';
 import Link from 'next/link';
 
 export default function Search({theme}) {
+    const [ searchData, setSearchData ] = useState([])
     const [ searchInput, setSearchInput ] = useState("")
     const [ searchResults, setSearchResults ] = useState([])
 
@@ -15,7 +16,11 @@ export default function Search({theme}) {
     })
 
     useEffect(()=>{
-        setSearchResults(productData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
+        setSearchData(productData)
+    })
+
+    useEffect(()=>{
+        setSearchResults(searchData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
     },[searchInput])
 
     // const searchResults = productData.filter(project=>{ project.projectName.toLowerCase().includes(searchInput.toLowerCase())}
@@ -59,6 +64,7 @@ export default function Search({theme}) {
 
 
 export function MobileSearch({theme}) {
+    const [ searchData, setSearchData ] = useState([])
     const [ searchInput, setSearchInput ] = useState("")
     const [ searchResults, setSearchResults ] = useState([])
 
@@ -69,7 +75,11 @@ export function MobileSearch({theme}) {
     })
 
     useEffect(()=>{
-        setSearchResults(productData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
+        setSearchData(productData)
+    })
+
+    useEffect(()=>{
+        setSearchResults(searchData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
     },[searchInput])
 
     return(
