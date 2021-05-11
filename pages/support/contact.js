@@ -22,7 +22,7 @@ export default function Contact() {
                 <div className={styles.contactDetails}>
                     <div className={styles.emailContact}>
                         <h3>Launching a new product? Got enquiries?</h3>
-                        <p>Send a mail to: <Link href="/">hello@alluvium.net</Link></p>
+                        <p>Send a mail to: <a target="_blank" href="mailto:hello@alluvium.net" rel="noopener noreferrer">hello@alluvium.net</a></p>
                     </div>
                     <div className={styles.mailingAddress}>
                         <h3>Mailing Address:</h3>

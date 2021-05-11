@@ -24,16 +24,16 @@ export default function Navigation ({theme}) {
                 <ul className={ theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
                     <li><Link href="/projects">Our Projects</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
-                    {/* <li><Link href="/people">Alluvians</Link></li> */}
+                    <li><Link href="/people">Alluvians</Link></li>
                     <li><Link href="/support">Support</Link></li>
                 </ul>
                 <div className={ displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu }>
-                    <MobileSearch theme={theme}/>
+                    {/* <MobileSearch theme={theme}/> */}
                     <ul>
                         <li><Link href="/">+ Home</Link></li>
                         <li><Link href="/projects">+ Our Projects</Link></li>
                         <li><Link href="/reel">+ Project Reel</Link></li>
-                        {/* <li><Link href="/people">+ Alluvians</Link></li> */}
+                        <li><Link href="/people">+ Alluvians</Link></li>
                         <li><Link href="/support">+ Support</Link></li>
                     </ul>
                 </div>
