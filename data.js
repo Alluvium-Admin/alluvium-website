@@ -139,14 +139,14 @@ export const alluviansData =
       lastName:"ojo",
       role:"Founder/Team lead",
       email:"taiwo@alluvium.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620748223/Alluvium%20Website/Team/Rectangle_52_i7pfgi.jpg"
     },
     {
       firstName:"ibukun",
       lastName:"akilo",
       role:"Product office and Compliance",
       email:"ibukunakilo@gmail.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620748223/Alluvium%20Website/Team/IMG-20210219-WA0026_f2wvpn.jpg"
     },
     {
       firstName:"enyioma",
@@ -273,22 +273,22 @@ export const faqData =
 [
     {
       id: 1,
-      question:"Do you work for European brands only?",
-      answer:"No! Our services are extended to other parts of the world. We have good success running through Africa, parts of America and other continents."
+      question:"How do I use Alluvium products?",
+      answer:"You can view and purchase our applications on the Atlassian marketplace"
     },
     {
       id:2,
-      question:"How long does it take to complete projects?",
-      answer:"No! Our services are extended to other parts of the world. We have good success running through Africa, parts of America and other continents."
+      question:"Can I trust my data is in safe hands?",
+      answer:"Yes, you can be assured that your data is being handled by professionals who have GDPR certifications. Our staff from top to bottom fully understand the responsibility of third party data processing."
     },
     {
       id:3,
-      question:"How much does it cost to develop a software?",
-      answer:"No! Our services are extended to other parts of the world. We have good success running through Africa, parts of America and other continents."
+      question:"How can I contact Alluvium?",
+      answer:"Send us an e-mail at admin@taiwoojo.com."
     },
     {
       id:4,
-      question:"Can i get my job done in a week?",
-      answer:"No! Our services are extended to other parts of the world. We have good success running through Africa, parts of America and other continents."
+      question:"How does Alluvium bill its clients?",
+      answer:"We use a workflow system on Jira that tracks the process and time spent on your projects which allows for transparency."
     },
 ]
