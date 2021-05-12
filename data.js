@@ -3,7 +3,7 @@ export const productData =
     {
       id:1,
       title:"Cloud Counter",
-      subtitle:"The future is cloud",
+      subtitle:"Employ our fast and efficient Cloud Counter to keep count of your resources.",
       previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_9_ylxuxh.png",
       imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_vazuey.jpg",
       projectName:"cloud-counter",
@@ -92,21 +92,6 @@ export const featuresData =
     },
 ]
   
-export const previewData = 
-[
-    {
-      title:"Cloud Counter",
-      subtitle:"Employ our fast and efficient cloud counter to keep count of your resources ",
-      imgLink:"/assets/test.png",
-      projectName:"cloud_counter"
-    },
-    {
-      title:"CJR: Compare Jira Resources",
-      subtitle:"Compare Jira Resources is an efficient way to check that you have fully migrated",
-      imgLink:"/assets/test.png",
-      projectName:"cjr"
-    },
-]
 
 export const galleryLinks = 
 [
@@ -284,7 +269,7 @@ export const faqData =
     {
       id:3,
       question:"How can I contact Alluvium?",
-      answer:"Send us an e-mail at admin@taiwoojo.com."
+      answer:"Send us an e-mail at info@alluvium.net."
     },
     {
       id:4,

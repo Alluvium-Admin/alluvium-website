@@ -230,16 +230,26 @@
                 font-weight: bold;
                 font-size: 15px;
                 line-height: 19px;
+
             }
             ul{
                 list-style: none;
                 text-align: left;
-                margin: 0.9rem 0;
+                margin: 0.5rem 0;
                 li{
                     font-style: normal;
                     font-weight: normal;
                     font-size: 15px;
-                    line-height: 19px;
+                    line-height: 24px;
+                    color:rgba(0, 0, 0, 0.795);
+
+                    @include media("<=phone"){
+                        font-size: 14px;
+                    }
+            
+                    @include media(">phone","<=tablet"){
+                        font-size: 14px;
+                    }
                 }
             }
         }

@@ -4,17 +4,17 @@ import Image from 'next/image'
 import Navigation from '../../components/navigation'
 import styles from '../../styles/reelpage.module.scss'
 // import { baseURL } from '../../config'
-import { galleryLinks } from '../../data'
+import { galleryLinks, productData } from '../../data'
 
 
-export default function Reel({gallery}) {
+export default function Reel({gallery,products}) {
   return (
     <div className={styles.reelPage}>
       <Head>
         <title>Project Reel | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation theme={"dark"}/>
+      <Navigation theme={"dark"} products={products}/>
       <main>
         <div className={styles.hireUsLink}>
           <Link href="/support"> + Hire us</Link>
@@ -39,7 +39,8 @@ export default function Reel({gallery}) {
 export const getStaticProps = async () =>{
   return{
     props:{
-      gallery:galleryLinks
+      gallery:galleryLinks,
+      products: productData
     }
   }
 }

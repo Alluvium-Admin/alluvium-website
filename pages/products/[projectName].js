@@ -1,17 +1,16 @@
 import React,{ useState } from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { server } from '../../config'
 import Navigation from '../../components/navigation'
-import ProjectPreview from '../../components/projectPreview'
-import styles from '../../styles/projectpage.module.scss';
+import ProductPreview from '../../components/productPreview'
+import styles from '../../styles/productpage.module.scss';
 import ShareOption from '../../components/shareOption';
 import { productData } from '../../data'
 
 
-export default function Project({project,projects}){
-    const { details } = project;
+export default function Product({product,products}){
+    const { details } = product;
     const [ shareOptions, setShareOptions ] = useState(false);
     const router = useRouter();
 
@@ -22,7 +21,7 @@ export default function Project({project,projects}){
                 <title>{details.productName} | Alluvium</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navigation theme={"dark"}/>
+            <Navigation theme={"dark"} products={products}/>
             <main className={styles.product}>
                 <section className={styles.productHeader}>
                     <h5 className={styles.productName}>{details.productName}</h5>
@@ -30,7 +29,7 @@ export default function Project({project,projects}){
                     <div className={styles.shareOptions}>
                         <button className={styles.shareBtn} onClick={()=>setShareOptions(shareOptions=>!shareOptions)}>
                             <span>+</span>
-                            <p>Share Project</p>
+                            <p>Share Product</p>
                         </button>
                         <ShareOption
                             shareOptions={ shareOptions }
@@ -87,19 +86,19 @@ export default function Project({project,projects}){
                     </div>
                 </section>
                 <section className={styles.moreProjects}>
-                    <h3 className={styles.title}>More projects</h3>
+                    <h3 className={styles.title}>More products</h3>
                     <div className={styles.projects}>
                         {
-                            projects.map((project)=>{
+                            products.map((project)=>{
                                 return(
-                                    <ProjectPreview
+                                    <ProductPreview
                                         title={ project.title } 
                                         subtitle={ project.subtitle } 
                                         imgLink={ project.imgLink }
                                         previewImgLink={ project.previewImgLink }
                                         projectName={ project.projectName }
                                         key={ project.id }
-                                        location={"more_projects"}
+                                        location={"more_products"}
                                     />
                                 )
                             })
@@ -116,8 +115,8 @@ export const getStaticProps = async ({params}) =>{
     const productsArr = productData.filter(p =>p.projectName.toString() === params.projectName )
     return {
         props:{
-            project:productsArr[0],
-            projects:productData
+            product:productsArr[0],
+            products:productData
         }
     }
 }

@@ -1,9 +1,9 @@
 import React, { useState,useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../styles/projectpreview.module.scss';
+import styles from '../styles/productpreview.module.scss';
 
-export default function ProjectPreview({title,subtitle,previewImgLink,imgLink,projectName,location}) {
+export default function ProductPreview({title,subtitle,previewImgLink,imgLink,projectName,location}) {
     const [ previewStyle, setPreviewStyle ] = useState(styles.projectHomePreview);
     
     useEffect(()=>{
@@ -11,7 +11,7 @@ export default function ProjectPreview({title,subtitle,previewImgLink,imgLink,pr
             setPreviewStyle(styles.projectHomePreview);
         } else if(location === "products"){
             setPreviewStyle(styles.projectPreview);
-        } else if(location === "more_projects" ){
+        } else if(location === "more_products" ){
             setPreviewStyle(styles.projectMpPreview)
         }
     },[])
@@ -27,7 +27,7 @@ export default function ProjectPreview({title,subtitle,previewImgLink,imgLink,pr
                     <p className={styles.previewSubtitle}>{subtitle}</p>
                 </div>
                 <div className={styles.projectLink}>
-                    <Link href='/projects/[projectName]' as={`/projects/${projectName}`} >+ See full project</Link>
+                    <Link href='/products/[projectName]' as={`/products/${projectName}`} >+ See full product</Link>
                 </div>
             </div>
         </div>

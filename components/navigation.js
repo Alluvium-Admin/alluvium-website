@@ -4,7 +4,7 @@ import styles from '../styles/navigation.module.scss';
 import Search, { MobileSearch } from "./search";
 
 
-export default function Navigation ({theme}) {
+export default function Navigation ({theme,products}) {
     const [ displayMobileMenu, setDisplayMobileMenu ] = useState(false);
     const toggleMenu = () =>{
         setDisplayMobileMenu(!displayMobileMenu);
@@ -22,16 +22,16 @@ export default function Navigation ({theme}) {
             </div>
             <nav className={styles.navigation}>
                 <ul className={ theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
-                    <li><Link href="/projects">Our Projects</Link></li>
+                    <li><Link href="/products">Our Products</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
                     <li><Link href="/people">Alluvians</Link></li>
                     <li><Link href="/support">Support</Link></li>
                 </ul>
                 <div className={ displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu }>
-                    {/* <MobileSearch theme={theme}/> */}
+                    <MobileSearch theme={theme} products={products}/>
                     <ul>
                         <li><Link href="/">+ Home</Link></li>
-                        <li><Link href="/projects">+ Our Projects</Link></li>
+                        <li><Link href="/products">+ Our Products</Link></li>
                         <li><Link href="/reel">+ Project Reel</Link></li>
                         <li><Link href="/people">+ Alluvians</Link></li>
                         <li><Link href="/support">+ Support</Link></li>
@@ -45,7 +45,7 @@ export default function Navigation ({theme}) {
                     <div className={styles.barThree}></div>
                 </div>
             </button>
-            <Search theme={theme}/>
+            <Search theme={theme} products={products}/>
 
         </div>
         
