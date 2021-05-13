@@ -39,14 +39,14 @@ export default function Footer() {
                         <div className={styles.footerList}>
                             <h4 className={styles.footerListTitle}>What we do</h4>
                             <ul>
-                                <li className={styles.footerListItem}><Link href="/projects">Our Products</Link></li>
+                                <li className={styles.footerListItem}><Link href="/products">Our Products</Link></li>
                                 <li className={styles.footerListItem}><Link href="/reel">Projects Reel</Link></li>
                             </ul>
                         </div>
                         <div className={styles.footerList}>
                             <h4 className={styles.footerListTitle}>Who are we?</h4>
                             <ul>
-                                <li className={styles.footerListItem}><Link href="/projects">About us</Link></li>
+                                <li className={styles.footerListItem}><Link href="/products">About us</Link></li>
                                 {/* <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li> */}
                             </ul>
                         </div>

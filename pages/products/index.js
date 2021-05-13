@@ -1,19 +1,19 @@
 import Head from 'next/head'
 import Link from 'next/link'
 // import { baseURL } from '../../config'
-import ProjectPreview from '../../components/projectPreview'
+import ProductPreview from '../../components/productPreview'
 import Navigation from '../../components/navigation'
-import styles from '../../styles/projectspage.module.scss'
+import styles from '../../styles/productspage.module.scss'
 import { productData } from '../../data'
 
-export default function Projects({projects}) {
+export default function Products({products}) {
   return (
     <div className={styles.productsPage}>
       <Head>
-        <title>Projects | Alluvium</title>
+        <title>Products | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation theme={"dark"}/>
+      <Navigation theme={"dark"} products={products}/>
       <main>
           <section className={styles.projectPageTitle}>
             <div className={styles.subtitle}>
@@ -27,9 +27,9 @@ export default function Projects({projects}) {
           </section>
           <section className={styles.projects}>
             {
-              projects.map((project)=>{
+              products.map((project)=>{
                 return(
-                  <ProjectPreview
+                  <ProductPreview
                     title={ project.title } 
                     subtitle={ project.subtitle } 
                     imgLink={ project.imgLink }
@@ -55,7 +55,7 @@ export default function Projects({projects}) {
               </p>
             </div>
             <div className={styles.linkBtn}>
-              + <Link href="/contact">Schedule a meeting</Link>
+              + <Link href="/support/contact">Schedule a meeting</Link>
             </div>
           </section>
       </main>
@@ -66,7 +66,7 @@ export default function Projects({projects}) {
 export const getStaticProps = async () =>{
   return{
     props:{
-      projects:productData,
+      products:productData,
     }
   }
 }

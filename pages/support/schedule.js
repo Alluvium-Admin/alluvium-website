@@ -3,15 +3,16 @@ import Head from 'next/head'
 import Navigation from '../../components/navigation'
 import SupportSubmenu from '../../components/supportSubmenu'
 import styles from '../../styles/schedule.module.scss'
+import { productData } from '../../data'
 
-export default function ScheduleForm(){
+export default function ScheduleForm({products}){
     return(
         <div className={styles.schedulePage}>
             <Head>
                 <title>Schedule Meeting | Alluvium</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navigation theme={"dark"}/>
+            <Navigation theme={"dark"} products={products}/>
             <main className={styles.scheduleForm}>
                 <SupportSubmenu/>
                 <div className={styles.scheduleFormHeader}>
@@ -38,6 +39,14 @@ export default function ScheduleForm(){
                 </form>
             </main>
         </div>
-        
     )
 }
+
+
+export const getStaticProps = async () =>{
+    return{
+      props:{
+        products:productData,
+      }
+    }
+  }

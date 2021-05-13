@@ -4,17 +4,17 @@ import Profile from '../../components/profile'
 import styles from '../../styles/peoplepage.module.scss'
 import Navigation from '../../components/navigation'
 // import { baseURL } from '../../config'
-import { alluviansData } from '../../data'
+import { alluviansData, productData} from '../../data'
 
 
-export default function People({people}) {
+export default function People({people,products}) {
   return (
     <div className={styles.peoplePage}>
       <Head>
         <title>Team | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation theme={"dark"}/>
+      <Navigation theme={"dark"} products={products}/>
       <main>
           <section className={styles.alluviansPageHeader}>
             <div className={styles.pageTitle}>
@@ -56,11 +56,11 @@ export default function People({people}) {
             <div className={styles.contactInfo}>
               <div className={styles.mailContact}>
                 <p>Send a mail to:</p>
-                <Link href="/">work@alluvium.com</Link>
+                <a target="_blank" href="mailto:work@alluvium.com" rel="noopener noreferrer">work@alluvium.com</a>
               </div>
               <div className={styles.mailContact}>
                 <p>Enquiries? Mail to: </p>
-                <Link href="/">enquiries@alluvium.com</Link>
+                <a target="_blank" href="mailto:enquiries@alluvium.com" rel="noopener noreferrer">enquiries@alluvium.com</a>
               </div>
             </div>
           </section>
@@ -72,7 +72,8 @@ export default function People({people}) {
 export const getStaticProps = async () =>{
   return {
       props:{
-        people:alluviansData
+        people:alluviansData,
+        products: productData
       }
   }
 }

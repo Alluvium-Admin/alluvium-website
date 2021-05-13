@@ -5,15 +5,16 @@ import Link from 'next/link'
 import Navigation from '../../components/navigation'
 import SupportSubmenu from '../../components/supportSubmenu'
 import styles from '../../styles/contactpage.module.scss'
+import { productData } from '../../data'
 
-export default function Contact() {
+export default function Contact({products}) {
     return(
         <div className={styles.contactPage}>
             <Head>
                 <title>Contact | Alluvium</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navigation theme={"dark"}/>
+            <Navigation theme={"dark"} products={products}/>
             <main className={styles.contactUsPage}>
                 <SupportSubmenu/>
                 <div className={styles.contactImg}>
@@ -22,7 +23,7 @@ export default function Contact() {
                 <div className={styles.contactDetails}>
                     <div className={styles.emailContact}>
                         <h3>Launching a new product? Got enquiries?</h3>
-                        <p>Send a mail to: <Link href="/">hello@alluvium.net</Link></p>
+                        <p>Send a mail to: <a target="_blank" href="mailto:hello@alluvium.net" rel="noopener noreferrer">hello@alluvium.net</a></p>
                     </div>
                     <div className={styles.mailingAddress}>
                         <h3>Mailing Address:</h3>
@@ -34,3 +35,12 @@ export default function Contact() {
         </div>
     )
 }
+
+
+export const getStaticProps = async () =>{
+    return{
+      props:{
+        products:productData,
+      }
+    }
+  }

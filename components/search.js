@@ -1,32 +1,32 @@
 import React, { useState,useEffect } from 'react';
 import Image from 'next/image';
 import styles from '../styles/search.module.scss';
-import { productData } from '../data';
 import Link from 'next/link';
 
-export default function Search({theme}) {
-    const [ searchData, setSearchData ] = useState([])
+export default function Search({theme,products}) {
+    const [searchData, setSearchData] = useState([]);
     const [ searchInput, setSearchInput ] = useState("")
     const [ searchResults, setSearchResults ] = useState([])
+
+    useState(()=>{
+        setSearchData(products)
+    },[products])
+
 
     useEffect(()=>{
         if(searchInput === ""){
             setSearchResults([])
         }
-    })
-
-    useEffect(()=>{
-        setSearchData(productData)
-    })
+    },[searchInput])
 
     useEffect(()=>{
         setSearchResults(searchData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
     },[searchInput])
 
+
     // const searchResults = productData.filter(project=>{ project.projectName.toLowerCase().includes(searchInput.toLowerCase())}
     // )
 
-    console.log(searchResults)
     return(
         <div style={{minWidth: searchInput === "" ? "unset" : "20vw"}} className={ theme === "dark" ? styles.searchDark : styles.search}>
             <div className={styles.searchInput}>
@@ -36,18 +36,18 @@ export default function Search({theme}) {
                     }
                    
                 </div>
-                <input type="text" placeholder="Search projects" onChange={(e)=>setSearchInput(e.target.value)}/>
+                <input type="text" placeholder="Search products" onChange={(e)=>setSearchInput(e.target.value)}/>
             </div>
             <div style={{display: searchInput === "" ? "none" : "block" }} className={styles.searchResults}>
                 {
                     searchResults.length === 0 
                     ?
-                        <p className={styles.errorText}>No projects found</p>
+                        <p className={styles.errorText}>No products found</p>
                     :
                         searchResults.map((searchResult)=>{
                             return(
-                                <div className={ styles.searchResult }>
-                                    <Link href='/projects/[projectName]' as={`/projects/${searchResult.projectName}`} >
+                                <div className={ styles.searchResult } key={searchResult.id}>
+                                    <Link href='/products/[projectName]' as={`/products/${searchResult.projectName}`} >
                                         <div className={styles.resultDetails}>
                                             <h3>{searchResult.details.productName}</h3>
                                             <p>{searchResult.details.productSubtitle}</p>
@@ -63,7 +63,7 @@ export default function Search({theme}) {
 }
 
 
-export function MobileSearch({theme}) {
+export function MobileSearch({products}) {
     const [ searchData, setSearchData ] = useState([])
     const [ searchInput, setSearchInput ] = useState("")
     const [ searchResults, setSearchResults ] = useState([])
@@ -72,11 +72,11 @@ export function MobileSearch({theme}) {
         if(searchInput === ""){
             setSearchResults([])
         }
-    })
+    },[searchInput])
 
-    useEffect(()=>{
-        setSearchData(productData)
-    })
+    useState(()=>{
+        setSearchData(products)
+    },[products])
 
     useEffect(()=>{
         setSearchResults(searchData.filter(project=>{ return project.details.productName.toLowerCase().match( new RegExp(searchInput,"g"))}))
@@ -88,18 +88,18 @@ export function MobileSearch({theme}) {
                 <div className={styles.searchIcon}>
                     <Image src="/assets/search_dark.svg" width={16} height={16}/>
                 </div>
-                <input type="text" placeholder="Search projects" onChange={(e)=>setSearchInput(e.target.value)}/>
+                <input type="text" placeholder="Search products" onChange={(e)=>setSearchInput(e.target.value)}/>
             </div>
             <div style={{display: searchInput === "" ? "none" : "block" }} className={styles.searchResults}>
                 {
                     searchResults.length === 0 
                     ?
-                        <p className={styles.errorText}>No projects found</p>
+                        <p className={styles.errorText}>No products found</p>
                     :
                         searchResults.map((searchResult)=>{
                             return(
-                                <div className={ styles.searchResult }>
-                                    <Link href='/projects/[projectName]' as={`/projects/${searchResult.projectName}`} >
+                                <div className={ styles.searchResult } key={searchResult.id}>
+                                    <Link href='/products/[projectName]' as={`/products/${searchResult.projectName}`} >
                                         <div className={styles.resultDetails}>
                                             <h3>{searchResult.details.productName}</h3>
                                             <p>{searchResult.details.productSubtitle}</p>
@@ -113,3 +113,4 @@ export function MobileSearch({theme}) {
         </div>
     )
 }
+

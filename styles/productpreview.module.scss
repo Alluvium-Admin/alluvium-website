@@ -61,6 +61,7 @@
             cursor: pointer;
             padding: 0.4rem;
             margin: 1rem 0.7rem;
+            white-space: nowrap;
 
             &::after{
                 display: block;
@@ -154,6 +155,8 @@
         cursor: pointer;
         padding: 0.4rem;
         margin: 1rem 0.7rem;
+        white-space: nowrap;
+
 
         &::after{
             display: block;
@@ -180,12 +183,12 @@
 .projectMpPreview{
     display: flex;
     flex-direction: column;
-    background: rgba(0, 155, 192, 1);
+    background: #F6F6F6;
     max-width: 500px;
     margin: 0.5rem 1rem;
 
     .previewImg{
-        width: 100%;
+        width: 80%;
         align-self: center;
         padding: 0.8rem;
         img{
@@ -199,6 +202,8 @@
         flex-direction: column;
         justify-content: space-between;
         color: #fff;
+        background: rgba(0, 155, 192, 1);
+
         .previewDetails{
             margin: 0.5rem;
             padding: 0.6rem;
@@ -238,6 +243,7 @@
             cursor: pointer;
             padding: 0.4rem;
             margin: 1rem 0.7rem;
+            white-space: nowrap;
 
             &::after{
                 display: block;
