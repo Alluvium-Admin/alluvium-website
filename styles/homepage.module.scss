@@ -30,7 +30,7 @@
         }
         
         .heroContainer{
-            height: 100%;
+            height: 100vh;
             // transform:skew(0,-7deg) translateY(9%);
             transform:skew(0,-7deg) translateY(70px);
             @include media("<phone"){
