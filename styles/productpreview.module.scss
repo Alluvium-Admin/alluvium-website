@@ -9,12 +9,15 @@
     margin: 0.5rem 1rem;
 
     .previewImg{
+        display:block;
         align-self: center;
         align-content: center;
-        padding: 0.8rem;
+        padding: 0.5rem;
+        width:100%;
         img{
             width: 100%;
             object-fit: cover;
+            margin:auto;
         }
     }
 
