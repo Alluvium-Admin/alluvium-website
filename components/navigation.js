@@ -28,7 +28,7 @@ export default function Navigation ({theme,products}) {
                     <li><Link href="/support">Support</Link></li>
                 </ul>
                 <div className={ displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu }>
-                    {/* <MobileSearch theme={theme} products={products}/> */}
+                    <MobileSearch theme={theme} products={products}/>
                     <ul>
                         <li><Link href="/">+ Home</Link></li>
                         <li><Link href="/products">+ Our Products</Link></li>
