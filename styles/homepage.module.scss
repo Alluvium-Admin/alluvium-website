@@ -19,26 +19,26 @@
 
         @include media("<phone"){
             margin: 0;
-            min-height: 750px;
+            min-height: unset;
             height:100%;
         }
 
         @include media(">=phone","<=custom-view-2"){
             margin: 0;
-            min-height: 800px;
+            min-height: unset;
             height:100%;
         }
         
         .heroContainer{
             height: 100%;
             // transform:skew(0,-7deg) translateY(9%);
-            transform:skew(0,-7deg) translateY(80px);
+            transform:skew(0,-7deg) translateY(70px);
             @include media("<phone"){
                 transform:skew(0,-7deg) translateY(60px);
             }
     
             @include media(">=phone","<=custom-view-2"){
-                transform:skew(0,-7deg) translateY(70px);
+                transform:skew(0,-7deg) translateY(50px);
 
             }
 
@@ -115,7 +115,7 @@
                 }
         
                 @include media(">=phone","<=custom-view-3"){
-                    width: 80%;
+                    width: 95%;
                     max-width: unset;
                     align-self: unset;
                 }

@@ -10,6 +10,7 @@ export const productData =
       details:{
         productHeader:"The future is cloud",
         productBg:"#009BC0",
+        videosBtnBg:"#1B3854",
         productName:"Cloud Counter",
         productTitle:"Resource count? No worries.",
         productSubtitle: "Get The Most out of Jira Software Cloud with our Quick and Easy Resource Counter.",
@@ -18,6 +19,8 @@ export const productData =
         date: "September 2020",
         productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1620327020/Alluvium%20Website/Projects/Product%20Images/Laptop_avn5u8.png',
         productInfo: "Employ our fast and efficient Cloud Counter to keep count of your resources.",
+        ytLink:"https://youtube.com",
+        productLink:"https://marketplace.atlassian.com/apps/1223585/cloud-counter?hosting=cloud&tab=overview",
         moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1620327024/Alluvium%20Website/Projects/Product%20Images/Mask_Group_bcrdcv.png" ],
         keyPoints: [
           {
@@ -45,6 +48,7 @@ export const productData =
       details:{
         productHeader:"Compare Now and Thank Us later!",
         productBg:"#1B3854",
+        videosBtnBg:"#009BC0",
         productName:"CJR",
         productTitle:"Compare Jira Resources",
         productSubtitle: "Validate success of your migration, Compare Source & For Accuracy of Jira.",
@@ -53,6 +57,8 @@ export const productData =
         date: "November 2020",
         productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Group_8_1_pmmdib.png',
         productInfo: "Compare Jira Resources is an efficient way to check that you have fully migrated.",
+        ytLink:"https://youtube.com",
+        productLink:"https://marketplace.atlassian.com/apps/1223507/compare-jira-resource?hosting=cloud&tab=overview",
         moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_g5xrph.png" ],
         keyPoints: [
           {

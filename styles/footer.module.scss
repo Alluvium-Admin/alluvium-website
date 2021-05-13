@@ -243,6 +243,10 @@
                     line-height: 24px;
                     color:rgba(0, 0, 0, 0.795);
 
+                    &:hover{
+                        color: #000;
+                    }
+
                     @include media("<=phone"){
                         font-size: 14px;
                     }

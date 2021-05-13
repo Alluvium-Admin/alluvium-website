@@ -24,22 +24,35 @@ export default function Product({product,products}){
             <Navigation theme={"dark"} products={products}/>
             <main className={styles.product}>
                 <section className={styles.productHeader}>
-                    <h5 className={styles.productName}>{details.productName}</h5>
-                    <h2 className={styles.productTitle}>{details.productTitle}</h2>
-                    <div className={styles.shareOptions}>
-                        <button className={styles.shareBtn} onClick={()=>setShareOptions(shareOptions=>!shareOptions)}>
-                            <span>+</span>
-                            <p>Share Product</p>
-                        </button>
-                        <ShareOption
-                            shareOptions={ shareOptions }
-                            setShareOptions={ setShareOptions }
-                            server={ server }
-                            router={ router }  
-                        />
+                    <div style={{backgroundColor: details.productBg}} className={styles.productPageHeader}>
+                        <img src={details.productImg} alt={`${details.productName}`}/>
+                        <div className={styles.productUsage}>
+                            <h3>{details.productHeader}</h3>
+                            <div className={styles.usageBtns}>
+                                <a href={details.productLink} className={styles.tryBtn} target="_blank" rel="noopener noreferrer">Check it out</a>
+                                <a href={details.ytLink} className={styles.videosBtn} style={{background: details.videosBtnBg}} target="_blank" rel="noopener noreferrer">Watch Videos</a>
+                            </div>
+                        </div>
                     </div>
-                    <h4 className={styles.productSubtitle}>{details.productSubtitle}</h4>
-                    <div className={styles.productDetails}>
+                    <div className={styles.productPageDetails}>
+                        <h5 className={styles.productName}>{details.productName}</h5>
+                        <h2 className={styles.productTitle}>{details.productHeader}</h2>
+                        <div className={styles.shareOptions}>
+                            <button className={styles.shareBtn} onClick={()=>setShareOptions(shareOptions=>!shareOptions)}>
+                                <span>+</span>
+                                <p>Share Product</p>
+                            </button>
+                            <ShareOption
+                                shareOptions={ shareOptions }
+                                setShareOptions={ setShareOptions }
+                                server={ server }
+                                router={ router }  
+                            />
+                        </div>
+                        <h4 className={styles.productSubtitle}>{product.subtitle}</h4>
+                    </div>
+                    
+                    {/* <div className={styles.productDetails}>
                         <div className={styles.productLead}>
                             <h3>Product Lead</h3>
                             <p>{details.productLead}</p>
@@ -52,14 +65,10 @@ export default function Product({product,products}){
                             <h3>Date</h3>
                             <p>{details.date}</p>
                         </div>
-                    </div>
+                    </div> */}
                 </section>
                 <section className={styles.product}>
-                    <div style={{backgroundColor: details.productBg}} className={styles.productPageHeader}>
-                        <img src={details.productImg} alt={`${details.productName}`}/>
-                        <h3>{details.productHeader}</h3>
-                    </div>
-                    <div className={styles.productInfo}>
+                    {/* <div className={styles.productInfo}>
                         <p>{details.productInfo}</p>
                     </div>
                     <div className={styles.moreImgs}>
@@ -68,10 +77,10 @@ export default function Product({product,products}){
                                 <img src={img} key={index} alt={`${details.productName}`}/>
                             })
                         }
-                    </div>
+                    </div> */}
                     <div className={styles.keyPoints}>
                         <h3 className={styles.title}>Key points</h3>
-                        <ol>
+                        <ul>
                             {
                                 details.keyPoints.map((keyPoint,index)=>{
                                     return(
@@ -82,7 +91,11 @@ export default function Product({product,products}){
                                     )
                                 })
                             }
-                        </ol>
+                        </ul>
+                    </div>
+                    <div className={styles.usageBtns}>
+                        <a href={details.productLink} className={styles.tryBtn} target="_blank" rel="noopener noreferrer">Check it out</a>
+                        <a href={details.ytLink} className={styles.videosBtn} target="_blank" rel="noopener noreferrer">Watch Videos</a>
                     </div>
                 </section>
                 <section className={styles.moreProjects}>
