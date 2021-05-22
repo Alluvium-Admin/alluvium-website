@@ -3,9 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Switch from 'react-input-switch';
 import styles from '../styles/footer.module.scss';
+import { useToasts } from 'react-toast-notifications';
 
 export default function Footer() {
     const [value, setValue] = useState(true);
+    const { addToast } = useToasts()
     useEffect(()=>{
         localStorage.setItem("light-mode", JSON.stringify(value))
     },[value])
@@ -18,7 +20,9 @@ export default function Footer() {
                     <p className={styles.newsletterTitle}>Get access to our Newsletter</p>
                     <div className={styles.newsletterInput}>
                         <input type="email" placeholder="Enter your e-mail address"/>
-                        <button className={styles.newsletterSubmitBtn}>
+                        <button
+                         onClick={ ()=>addToast("Currently unavailable, Check back later",{appearance:'info',autoDismiss:true}) }   
+                         className={styles.newsletterSubmitBtn}>
                             <p>Shoot</p>
                             <div className={styles.btnArrow}>
                                 <Image src="/assets/arrow.svg" width={ 19 } height={ 8 }/>
