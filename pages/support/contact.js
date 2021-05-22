@@ -28,7 +28,7 @@ export default function Contact({products}) {
                     <div className={styles.mailingAddress}>
                         <h3>Mailing Address:</h3>
                         <p>689 Heathrow, cantebury, London, Lagos.</p>
-                        <Link href="/">+234 816 133 5033</Link>
+                        <Link href="tel:+234-816-133-5033">+234 816 133 5033</Link>
                     </div>
                 </div>
             </main>

@@ -53,10 +53,10 @@ export default function Footer() {
                         <div className={styles.footerList}>
                             <h4 className={styles.footerListTitle}>Contact</h4>
                             <ul>
-                                <li className={styles.footerListItem}><Link href="/reel">LinkedIn</Link></li>
+                                <li className={styles.footerListItem}><a href="https://www.linkedin.com/company/alluvium-hq/">LinkedIn</a></li>
                                 <li className={styles.footerListItem}><a href="https://www.facebook.com/alluviumhq/?ti=as">Facebook</a></li>
                                 <li className={styles.footerListItem}><a href="https://twitter.com/alluviumhq?s=08">Twitter</a></li>
-                                <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li>
+                                {/* <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li> */}
                             </ul>
                         </div>
                         <div className={styles.footerList}>
