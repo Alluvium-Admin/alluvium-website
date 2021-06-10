@@ -23,7 +23,7 @@ export default function Navigation ({theme,products}) {
             <nav className={styles.navigation}>
                 <ul className={ theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
                     <li><Link href="/products">Our Products</Link></li>
-                    {/* <li><Link href="/reel">Project Reel</Link></li> */}
+                    <li><Link href="/reel">Project Reel</Link></li>
                     {/* <li><Link href="/people">Alluvians</Link></li> */}
                     <li><Link href="/support">Support</Link></li>
                 </ul>
@@ -32,7 +32,7 @@ export default function Navigation ({theme,products}) {
                     <ul>
                         <li><Link href="/">+ Home</Link></li>
                         <li><Link href="/products">+ Our Products</Link></li>
-                        {/* <li><Link href="/reel">+ Project Reel</Link></li> */}
+                        <li><Link href="/reel">+ Project Reel</Link></li>
                         {/* <li><Link href="/people">+ Alluvians</Link></li> */}
                         <li><Link href="/support">+ Support</Link></li>
                     </ul>
