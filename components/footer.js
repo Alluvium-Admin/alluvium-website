@@ -17,8 +17,8 @@ export default function Footer() {
         <footer className={ styles.footer }>
             <div className={styles.newsletterSection}>
                 <div className={styles.newsletter}>
-                    <p className={styles.newsletterTitle}>Get access to our Newsletter</p>
-                    <div className={styles.newsletterInput}>
+                    <p className={styles.newsletterTitle} data-aos="fade-right">Get access to our Newsletter</p>
+                    <div className={styles.newsletterInput} data-aos="fade-left">
                         <input type="email" placeholder="Enter your e-mail address"/>
                         <button
                          onClick={ ()=>addToast("Currently unavailable, Check back later",{appearance:'info',autoDismiss:true}) }   
@@ -40,22 +40,22 @@ export default function Footer() {
                         <img src="/assets/alluvium-logo-dark.svg" alt="logo"/>
                     </div>
                     <div className={styles.footerLists}>
-                        <div className={styles.footerList}>
+                        <div className={styles.footerList} data-aos="fade-up">
                             <h4 className={styles.footerListTitle}>What we do</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/products">Our Products</Link></li>
                                 <li className={styles.footerListItem}><Link href="/reel">Projects Reel</Link></li>
                             </ul>
                         </div>
-                        <div className={styles.footerList}>
+                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="300">
                             <h4 className={styles.footerListTitle}>Who are we?</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/products">About us</Link></li>
                                 {/* <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li> */}
                             </ul>
                         </div>
-                        <div className={styles.footerList}>
-                            <h4 className={styles.footerListTitle}>Contact</h4>
+                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="400">
+                            <h4 className={styles.footerListTitle}>Follow us</h4>
                             <ul>
                                 <li className={styles.footerListItem}><a href="https://www.linkedin.com/company/alluvium-hq/">LinkedIn</a></li>
                                 <li className={styles.footerListItem}><a href="https://www.facebook.com/alluviumhq/?ti=as">Facebook</a></li>
@@ -63,7 +63,7 @@ export default function Footer() {
                                 {/* <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li> */}
                             </ul>
                         </div>
-                        <div className={styles.footerList}>
+                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="500">
                             <h4 className={styles.footerListTitle}>Support</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/support/contact">Ask about our rates</Link></li>

@@ -25,12 +25,12 @@ export default function Product({product,products}){
             <main className={styles.product}>
                 <section className={styles.productHeader}>
                     <div style={{backgroundColor: details.productBg}} className={styles.productPageHeader}>
-                        <img src={details.productImg} alt={`${details.productName}`}/>
-                        <div className={styles.productUsage}>
+                        <img src={details.productImg} alt={`${details.productName}`} data-aos="fade-right"/>
+                        <div className={styles.productUsage} data-aos="fade-right">
                             <h3>{details.productHeader}</h3>
                             <div className={styles.usageBtns}>
-                                <a href={details.productLink} className={styles.tryBtn} target="_blank" rel="noopener noreferrer">Check it out</a>
-                                <a href={details.ytLink} className={styles.videosBtn} style={{background: details.videosBtnBg}} target="_blank" rel="noopener noreferrer">Watch Videos</a>
+                                <a href={details.productLink} className={styles.tryBtn} target="_blank" rel="noopener noreferrer" data-aos-delay="300" data-aos="fade-down">Check it out</a>
+                                <a href={details.ytLink} className={styles.videosBtn} style={{background: details.videosBtnBg}} target="_blank" rel="noopener noreferrer" data-aos-delay="500" data-aos="fade-down">Watch Videos</a>
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ export default function Product({product,products}){
                                         subtitle={ project.subtitle } 
                                         imgLink={ project.imgLink }
                                         previewImgLink={ project.previewImgLink }
-                                        projectName={ project.projectName }
+                                        productName={ project.projectName }
                                         key={ project.id }
                                         location={"more_products"}
                                     />

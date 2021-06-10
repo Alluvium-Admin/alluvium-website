@@ -22,6 +22,7 @@ export default function Home({products,features}){
   },[])
 
 
+
   return (
     <div>
       <Head>
@@ -35,10 +36,10 @@ export default function Home({products,features}){
             <div className={styles.heroContainer}>
               <Navigation products={products}/>
               <div className={styles.heroContent}>
-                <div className={styles.bigText}>
+                <div data-aos="fade-right" className={styles.bigText}>
                   <p>We are problem solvers</p>
                 </div>
-                <div className={styles.mainText}>
+                <div data-aos="fade-left" className={styles.mainText}>
                   <p className={styles.subtitle}>
                     We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that deliver complete data migration in half the time for half the cost.
                   </p>
@@ -50,7 +51,7 @@ export default function Home({products,features}){
             </div>
           </section>
           <section className={styles.featureSection}>
-            <div className={styles.featureSectionImg}>
+            <div className={styles.featureSectionImg} data-aos="zoom-in">
               <Image src="/assets/featuresImg.png" width={506} height={506}/>
             </div>
             <div className={styles.features}>
@@ -59,7 +60,7 @@ export default function Home({products,features}){
                 {
                   features.map((feature,index)=>{
                     return(
-                      <li className={styles.feature} key={index}>
+                      <li className={styles.feature} key={index} data-aos-delay={`${300 * index}`} data-aos="fade-down">
                         <div className={styles.featureImg}>
                           <Image src={feature.iconLink} width={57} height={57}/>
                         </div>
@@ -84,9 +85,10 @@ export default function Home({products,features}){
                         subtitle={ project.subtitle } 
                         imgLink={ project.imgLink }
                         previewImgLink={ project.previewImgLink }
-                        projectName={ project.projectName }
+                        productName={ project.projectName }
                         key={ index }
                         location={"home"}
+                        index={ index }
                       />
                     )
                   })

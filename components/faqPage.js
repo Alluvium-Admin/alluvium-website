@@ -17,7 +17,7 @@ export default function FaqPage({faqs}){
               Frequently Asked Questions
             </h4>
           </div>
-          <div className={styles.faqCollection}>
+          <div className={styles.faqCollection} data-aos-delay="300" data-aos="fade-down">
             {
               faqs.map((faq,index)=>{
                 return(
