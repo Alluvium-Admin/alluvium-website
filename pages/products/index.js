@@ -16,13 +16,13 @@ export default function Products({products}) {
       <Navigation theme={"dark"} products={products}/>
       <main>
           <section className={styles.projectPageTitle}>
-            <div className={styles.subtitle}>
+            <div className={styles.subtitle} data-aos="fade-down" data-aos-delay="400">
               <p>we help you</p>
             </div>
             <div className={styles.titleGroup}>
-              <p className={styles.title}>Analyze your ideas.</p>
-              <p className={styles.title}>Create unique experiences.</p>
-              <p className={styles.title}>Strengthen your Customer base.</p>
+              <p className={styles.title} data-aos="fade-down" data-aos-delay="600">Analyze your ideas.</p>
+              <p className={styles.title}  data-aos="fade-down" data-aos-delay="800">Create unique experiences.</p>
+              <p className={styles.title}  data-aos="fade-down" data-aos-delay="1000">Strengthen your Customer base.</p>
             </div>
           </section>
           <section className={styles.projects}>
@@ -34,7 +34,7 @@ export default function Products({products}) {
                     subtitle={ project.subtitle } 
                     imgLink={ project.imgLink }
                     previewImgLink={ project.previewImgLink }
-                    projectName={ project.projectName }
+                    productName={ project.projectName }
                     key={ project.id }
                     location={"products"}
                   />
@@ -45,16 +45,16 @@ export default function Products({products}) {
           </section>
           <section className={styles.scheduleMeetingLink}>
             <div className={styles.scheduleMeetingHeader}>
-              <p className={styles.title}>
+              <p className={styles.title} data-aos="fade-right">
                 Launching a new product? Re-vitalising existing 
                 application? Want to spark new emotions?
               </p>
-              <p className={styles.subtitle}>
+              <p className={styles.subtitle} data-aos="fade-right" data-aos-delay="300">
                 We can help you through the thought process, help you align your ideas with 
                 proper execution.
               </p>
             </div>
-            <div className={styles.linkBtn}>
+            <div className={styles.linkBtn} data-aos="fade-right" data-aos-delay="400">
               + <Link href="/support/contact">Schedule a meeting</Link>
             </div>
           </section>

@@ -21,10 +21,10 @@ const SupportSubmenu = () => {
   
   return (
     <div className={styles.supportSubmenu}>
-      <div className={ currentLocation==="schedule" ? styles.activeOption : styles.option }>
+      {/* <div className={ currentLocation==="schedule" ? styles.activeOption : styles.option }>
         <span>+</span>
         <Link href="/support/schedule">Schedule a meeting </Link>
-      </div>
+      </div> */}
       <div className={ currentLocation==="contact" ? styles.activeOption : styles.option}>
         <span>+</span>
         <Link href="/support/contact">Contact us </Link>

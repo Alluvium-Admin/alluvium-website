@@ -9,12 +9,15 @@
     margin: 0.5rem 1rem;
 
     .previewImg{
+        display:block;
         align-self: center;
         align-content: center;
-        padding: 0.8rem;
+        padding: 0.5rem;
+        width:100%;
         img{
             width: 100%;
             object-fit: cover;
+            margin:auto;
         }
     }
 
@@ -203,6 +206,7 @@
         justify-content: space-between;
         color: #fff;
         background: rgba(0, 155, 192, 1);
+        height: 100%;
 
         .previewDetails{
             margin: 0.5rem;

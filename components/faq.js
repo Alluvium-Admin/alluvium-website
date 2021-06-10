@@ -4,7 +4,7 @@ import styles from '../styles/faq.module.scss'
 export default function Faq({id,title,body,toggleFaq,faqState}){
     
     return(
-        <div className={styles.faq} onClick={()=>toggleFaq(id)}>
+        <div className={styles.faq} onClick={()=>toggleFaq(id)} >
            <div className={styles.faqTitle}>
                <h3>{title}</h3>
                <div className={ faqState[id] ? styles.dropdownFlip : styles.dropdownReturn}>

@@ -21,14 +21,14 @@ export default function Contact({products}) {
                     <Image src='/assets/contactImg.png' width={1392} height={461}/>
                 </div>
                 <div className={styles.contactDetails}>
-                    <div className={styles.emailContact}>
+                    <div className={styles.emailContact} data-aos="fade-right">
                         <h3>Launching a new product? Got enquiries?</h3>
                         <p>Send a mail to: <a target="_blank" href="mailto:hello@alluvium.net" rel="noopener noreferrer">hello@alluvium.net</a></p>
                     </div>
-                    <div className={styles.mailingAddress}>
+                    <div className={styles.mailingAddress} data-aos="fade-left">
                         <h3>Mailing Address:</h3>
                         <p>689 Heathrow, cantebury, London, Lagos.</p>
-                        <Link href="/">+234 816 133 5033</Link>
+                        <Link href="tel:+234-816-133-5033">+234 816 133 5033</Link>
                     </div>
                 </div>
             </main>

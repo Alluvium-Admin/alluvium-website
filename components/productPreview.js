@@ -1,9 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from '../styles/productpreview.module.scss';
 
-export default function ProductPreview({title,subtitle,previewImgLink,imgLink,projectName,location}) {
+export default function ProductPreview({title,subtitle,previewImgLink,imgLink,productName,location,index}) {
     const [ previewStyle, setPreviewStyle ] = useState(styles.projectHomePreview);
     
     useEffect(()=>{
@@ -17,7 +16,7 @@ export default function ProductPreview({title,subtitle,previewImgLink,imgLink,pr
     },[])
     
     return(
-        <div className={previewStyle}>
+        <div className={previewStyle} data-aos-delay={`${300 * index}`} data-aos="fade-up">
             <div className={styles.previewImg}>
                 { location === "products" ? <img src={imgLink} alt={`${title}`}/> : <img src={previewImgLink} alt={`${title}`}/>}
             </div>
@@ -27,7 +26,7 @@ export default function ProductPreview({title,subtitle,previewImgLink,imgLink,pr
                     <p className={styles.previewSubtitle}>{subtitle}</p>
                 </div>
                 <div className={styles.projectLink}>
-                    <Link href='/products/[projectName]' as={`/products/${projectName}`} >+ See full product</Link>
+                    <Link href='/products/[productName]' as={`/products/${productName}`} >+ See full product</Link>
                 </div>
             </div>
         </div>

@@ -3,9 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Switch from 'react-input-switch';
 import styles from '../styles/footer.module.scss';
+import { useToasts } from 'react-toast-notifications';
 
 export default function Footer() {
     const [value, setValue] = useState(true);
+    const { addToast } = useToasts()
     useEffect(()=>{
         localStorage.setItem("light-mode", JSON.stringify(value))
     },[value])
@@ -15,10 +17,12 @@ export default function Footer() {
         <footer className={ styles.footer }>
             <div className={styles.newsletterSection}>
                 <div className={styles.newsletter}>
-                    <p className={styles.newsletterTitle}>Get access to our Newsletter</p>
-                    <div className={styles.newsletterInput}>
+                    <p className={styles.newsletterTitle} data-aos="fade-right">Get access to our Newsletter</p>
+                    <div className={styles.newsletterInput} data-aos="fade-left">
                         <input type="email" placeholder="Enter your e-mail address"/>
-                        <button className={styles.newsletterSubmitBtn}>
+                        <button
+                         onClick={ ()=>addToast("Currently unavailable, Check back later",{appearance:'info',autoDismiss:true}) }   
+                         className={styles.newsletterSubmitBtn}>
                             <p>Shoot</p>
                             <div className={styles.btnArrow}>
                                 <Image src="/assets/arrow.svg" width={ 19 } height={ 8 }/>
@@ -36,30 +40,30 @@ export default function Footer() {
                         <img src="/assets/alluvium-logo-dark.svg" alt="logo"/>
                     </div>
                     <div className={styles.footerLists}>
-                        <div className={styles.footerList}>
+                        <div className={styles.footerList} data-aos="fade-up">
                             <h4 className={styles.footerListTitle}>What we do</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/products">Our Products</Link></li>
                                 <li className={styles.footerListItem}><Link href="/reel">Projects Reel</Link></li>
                             </ul>
                         </div>
-                        <div className={styles.footerList}>
+                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="300">
                             <h4 className={styles.footerListTitle}>Who are we?</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/products">About us</Link></li>
                                 {/* <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li> */}
                             </ul>
                         </div>
-                        <div className={styles.footerList}>
-                            <h4 className={styles.footerListTitle}>Contact</h4>
+                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="400">
+                            <h4 className={styles.footerListTitle}>Follow us</h4>
                             <ul>
-                                <li className={styles.footerListItem}><Link href="/reel">LinkedIn</Link></li>
-                                <li className={styles.footerListItem}><Link href="/reel">Facebook</Link></li>
-                                <li className={styles.footerListItem}><Link href="/reel">Twitter</Link></li>
-                                <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li>
+                                <li className={styles.footerListItem}><a href="https://www.linkedin.com/company/alluvium-hq/">LinkedIn</a></li>
+                                <li className={styles.footerListItem}><a href="https://www.facebook.com/alluviumhq/?ti=as">Facebook</a></li>
+                                <li className={styles.footerListItem}><a href="https://twitter.com/alluviumhq?s=08">Twitter</a></li>
+                                {/* <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li> */}
                             </ul>
                         </div>
-                        <div className={styles.footerList}>
+                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="500">
                             <h4 className={styles.footerListTitle}>Support</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/support/contact">Ask about our rates</Link></li>

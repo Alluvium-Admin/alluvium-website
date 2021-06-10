@@ -102,23 +102,31 @@ export const featuresData =
 export const galleryLinks = 
 [
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322222/Alluvium%20Website/Reel%20Media/IMG_5881_es0nme.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_8_qsipfn.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322222/Alluvium%20Website/Reel%20Media/IMG_5900_v2nop8.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322217/Alluvium%20Website/Reel%20Media/IMG_5899_qw4aef.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_1_jzxm17.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322215/Alluvium%20Website/Reel%20Media/IMG_5885_avznyo.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_150_uy4lto.png",
       imgAlt:"reel",
     },
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1620322219/Alluvium%20Website/Reel%20Media/IMG_5895_e3emd2.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_149_ilxyhz.png",
+      imgAlt:"reel",
+    },
+    {
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_167_u9k5d5.png",
+      imgAlt:"reel",
+    },
+    {
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_155_udrnhb.png",
       imgAlt:"reel",
     },
 ]
