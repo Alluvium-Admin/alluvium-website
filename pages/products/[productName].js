@@ -125,7 +125,7 @@ export default function Product({product,products}){
 
 
 export const getStaticProps = async ({params}) =>{
-    const productsArr = productData.filter(p =>p.projectName.toString() === params.projectName )
+    const productsArr = productData.filter(p =>p.projectName.toString() === params.productName )
     return {
         props:{
             product:productsArr[0],
@@ -136,7 +136,7 @@ export const getStaticProps = async ({params}) =>{
 
 export const getStaticPaths = async ()=>{
     const paths = productData.map(product=>
-        ({params: { projectName: product.projectName.toString() }
+        ({params: { productName: product.projectName.toString() }
     }))
 
     return{

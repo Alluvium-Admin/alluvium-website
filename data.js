@@ -76,6 +76,48 @@ export const productData =
         ],
       },
     },
+    {
+      id:3,
+      title:"Scrum Companion",
+      subtitle:"Scrum Companion is a modern and efficient collaborative platform which enables your team to view and manage raw data all in one single click.",
+      previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623696322/Alluvium%20Website/Projects/Preview%20Images/SC_img_preview_had8g1.png",
+      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623697052/Alluvium%20Website/Projects/Product%20Images/Screenshot_149_h0v05r.png",
+      projectName:"sc",
+      details:{
+        productHeader:"View and manage your team's raw data.",
+        productBg:"#1D1554",
+        videosBtnBg:"#2B11E1",
+        productName:"Scrum Companion",
+        productTitle:"Scrum Companion",
+        productSubtitle: "Transform your workflow and improve your productivity with Scrum Companion today.",
+        productLead:"Taiwo Ojo",
+        client:"alluvium",
+        date: "November 2020",
+        productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1623696343/Alluvium%20Website/Projects/Product%20Images/SC_img_h9rj3w.png',
+        productInfo: "Scrum Companion is a modern and efficient collaborative platform which enables your team to view and manage raw data all in one single click.",
+        ytLink:"https://youtube.com",
+        productLink:"https://scrumcompanion.net/",
+        moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1623696973/Alluvium%20Website/Projects/Product%20Images/Screenshot_148_nkv1xo.png","https://res.cloudinary.com/geniesys/image/upload/v1623696973/Alluvium%20Website/Projects/Product%20Images/Screenshot_153_b2xfw7.png" ],
+        keyPoints: [
+          {
+            title: "Visualize your workflow",
+            body: "Bring your projects to life anytime, anywhere, offline with available data for continuous workflow."
+          },
+          {
+            title: "Extract and export your projects to CSV format",
+            body: "Extract data from any Jira project to CSV, allowing external access to data from team projects outside Jira."
+          },
+          {
+            title: "Clone data for projects",
+            body: "Clone data from any team project all in one single project with ease and no complications."
+          },
+          {
+            title: "Migrate project in Jira",
+            body: "Moving data from one team project to the other with simple migration of any Jira data."
+          },
+        ],
+      },
+    },
 ]
 
 
