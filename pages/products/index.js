@@ -43,6 +43,20 @@ export default function Products({products}) {
               })
             }
           </section>
+          <section className={styles.statusPageLink}>
+            <div className={styles.productImgs} data-aos="fade-left">
+              {/* <img src={ "https://res.cloudinary.com/geniesys/image/upload/v1625122880/Alluvium%20Website/Apple_iMac_27__Mockup_duqhbr.png" } className={styles.productImg} />
+              <img src={"https://res.cloudinary.com/geniesys/image/upload/v1625122881/Alluvium%20Website/Macbook_Pro_Tilted_Screen_Mockup_hqiiks.png"} className={styles.productImg}/>
+              <img src={"https://res.cloudinary.com/geniesys/image/upload/v1625122880/Alluvium%20Website/iMac_Pro_Front_View_Mockup_irki32.png"} className={styles.productImg}/> */}
+              <img className={styles.productImg} src={"https://res.cloudinary.com/geniesys/image/upload/v1625169799/Alluvium%20Website/Group_1_nterzr.png"}/>
+            </div>
+            <div className={styles.statusLink}>
+              <h3 className={styles.linkTitle} data-aos="fade-down">Check the status of our products</h3>
+              <div className={styles.linkBtn} data-aos="fade-down" data-aos-delay="100">
+                + <Link href="/products/statuspage">Click here</Link>
+              </div>  
+            </div>
+          </section>
           <section className={styles.scheduleMeetingLink}>
             <div className={styles.scheduleMeetingHeader}>
               <p className={styles.title} data-aos="fade-right">

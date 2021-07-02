@@ -332,4 +332,35 @@ export const faqData =
       question:"How does Alluvium bill its clients?",
       answer:"We use a workflow system on Jira that tracks the process and time spent on your projects which allows for transparency."
     },
+  ]
+
+export const statusInitialData = [
+  {
+    product: "Scrum Companion",
+    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625165749/Alluvium%20Website/Products%20Logos/logo_icon_hcw0gl.png",
+    statusLink: "https://api.scrumcompanion.net/health-check",
+    breakdown: {
+      "Cache": { "message": "Operational", "statusColor": "green" }, "Database": { "message": "Operational", "statusColor": "green" }, "Jira Software": { "message": "Operational", "statusColor": "green" }, "Database Migrations": { "message": "Operational", "statusColor": "green" }
+    },
+    status: "All Systems Operational",
+    statusColor: "green"
+  },
+  {
+    product: "Cloud Counter",
+    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625165783/Alluvium%20Website/Products%20Logos/Logo_cbqpo6.svg",
+    statusLink: "https://api.jiracounter.net/health-check",
+    breakdown: { "Cache": { "message": "Operational", "statusColor": "green" }, "Worker": { "message": "Operational", "statusColor": "green" }, "Confluence": { "message": "Operational", "statusColor": "green" }, "Database": { "message": "Operational", "statusColor": "green" }, "Jira Software": { "message": "Operational", "statusColor": "green" }, "Database Migrations": { "message": "Operational", "statusColor": "green" }, "Broker": { "message": "Operational", "statusColor": "green" } },
+    status: "All Systems Operational",
+    statusColor: "green"
+  },
+  {
+    product: "Compare Jira Resources",
+    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625166016/Alluvium%20Website/Products%20Logos/cjr_logo_mnk5vy_vcivz9.svg",
+    statusLink: "https://api.comparejiraresources.net/health-check",
+    breakdown: {
+      "Cache": { "message": "Operational", "statusColor": "green" }, "Database": { "message": "Operational", "statusColor": "green" }, "Jira Software": { "message": "Operational", "statusColor": "green" }, "Database Migrations": { "message": "Operational", "statusColor": "green" }
+    },
+    status: "All Systems Operational",
+    statusColor: "green"
+  }
 ]
