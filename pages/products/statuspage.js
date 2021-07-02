@@ -1,12 +1,42 @@
 import Head from 'next/head';
+import { useEffect, useState } from "react";
 import Link from 'next/link';
 import Navigation from '../../components/navigation';
 import LoadingScreen from 'components/loading';
 import ProductStatus from 'components/productStatus';
 import styles from "../../styles/statuspage.module.scss";
-import { productData,statusInitialData } from '../../data';
+import { productData, statusInitialData } from '../../data';
+import axios from "axios";
 
-export default function StatusPage({ products,statusInitialData }) {
+export default function StatusPage({ products }) {
+
+    const [ loading, setLoading ] = useState(true);
+    const [ productData, setProductData ] = useState(statusInitialData);
+
+
+    useEffect(() => {
+        async function getProductStatus(product) {
+            return await axios.get(product.statusLink);
+        }
+
+        Promise.all(
+            productData.map(data => getProductStatus(data))
+        ).then(
+            responses => {
+                const newArr = [];
+                responses.forEach((response, idx) => {
+                    const updatedObject = {
+                        ...productData[idx],
+                        statusData: response.data
+                    }
+                    newArr.push(updatedObject);
+                })
+                setProductData(newArr);
+                setLoading(false);
+            }
+        )
+    }, []);
+
     
     return (
         <div className={styles.statusPage}>
@@ -21,9 +51,9 @@ export default function StatusPage({ products,statusInitialData }) {
                     <p className={styles.subtitle}>Check out the functionality of all our available products.</p>
                 </section>
                 <section className={styles.productList}>
-                    <LoadingScreen/>
                     {
-                        statusInitialData.map((product,idx) => {
+                        loading ? <LoadingScreen/> :
+                        productData.map((product,idx) => {
                             return (
                                 <ProductStatus product={product} key={ idx }/>
                             )

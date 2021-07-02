@@ -3,23 +3,23 @@ import axios from 'axios';
 import Link from 'next/link';
 import styles from '../styles/productstatus.module.scss'
 
-export default function ProductStatus({product,statusData}) {
+export default function ProductStatus({ product }) {
     useEffect(() => {
         console.log(product);
-        console.log(statusData);
+        console.log(product.statusData);
     })
 
     return (
         <div className={styles.productStatus}>
             <div className={styles.productHeader}>
                 <div className={styles.productIcon}>
-                    <img src={product.productIconLink}/>
+                    <img src={product.productIcon}/>
                 </div>
                 <div className={styles.productDetails}>
-                    <h3 className={styles.productTitle}>{ product.productName }</h3>
+                    <h3 className={styles.productTitle}>{ product.product }</h3>
                     <div className={styles.operationStatus}>
                         <div className={styles.opertionIndicator}></div>
-                        <h5></h5>
+                        <h5>{ JSON.stringify(product.statusData) }</h5>
                     </div>
                 </div>
             </div>
@@ -34,15 +34,4 @@ export default function ProductStatus({product,statusData}) {
             </div>
         </div>
     )
-}
-
-export const getStaticProps = async () => {
-    const res = await axios.get(product.statusLink);
-    const data = await res.json();
-    return {
-        props:{
-            statusData: data,
-            product: product
-        }
-    }
 }
