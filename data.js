@@ -341,13 +341,13 @@ export const statusInitialData = [
     statusLink: "https://api.scrumcompanion.net/health-check",
   },
   {
+    product: "Compare Jira Resources",
+    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625166016/Alluvium%20Website/Products%20Logos/cjr_logo_mnk5vy_vcivz9.svg",
+    statusLink: "https://api.comparejiraresources.net/health-check",
+  },
+  {
     product: "Cloud Counter",
     productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625165783/Alluvium%20Website/Products%20Logos/Logo_cbqpo6.svg",
     statusLink: "https://api.jiracounter.net/health-check",
   },
-  {
-    product: "Compare Jira Resources",
-    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625166016/Alluvium%20Website/Products%20Logos/cjr_logo_mnk5vy_vcivz9.svg",
-    statusLink: "https://api.comparejiraresources.net/health-check",
-  }
 ]
