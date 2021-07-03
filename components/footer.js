@@ -45,6 +45,7 @@ export default function Footer() {
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/products">Our Products</Link></li>
                                 <li className={styles.footerListItem}><Link href="/reel">Projects Reel</Link></li>
+                                <li className={styles.footerListItem}><Link href="/products/statuspage">Products Status</Link></li>
                             </ul>
                         </div>
                         <div className={styles.footerList} data-aos="fade-up" data-aos-delay="300">
