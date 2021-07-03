@@ -1,10 +1,20 @@
+@import "lib/breakpoints.scss";
+
 .productStatus{
     max-width:520px;
     margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.329);
+    border: 1px solid rgba(0, 0, 0, 0.151);
     padding:0.7rem;
     border-radius: 10px;
     width: 100%;
+
+    @include media("<phone"){
+        margin: 1rem 0;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        margin: 1rem 0;
+    }
 
     .productHeader{
         display: flex;
@@ -23,6 +33,14 @@
 
             .productTitle{
                 font-size: 28px;
+
+                @include media("<phone"){
+                    font-size: 20px;
+                }
+            
+                @include media(">=phone","<=custom-view-1"){
+                    font-size: 24px;
+                }
             }
 
             .operationStatus{
@@ -63,6 +81,14 @@
 
             .statusMessage{
                 font-weight:500;
+
+                @include media("<phone"){
+                    font-size: 16px;
+                }
+            
+                @include media(">=phone","<=custom-view-1"){
+                    font-size: 18px;
+                }
             }
         }
 
@@ -80,7 +106,15 @@
 
             .statusText{
                 margin: 0 0.4rem;
-                font-weight: 400; 
+                font-weight: 400;
+
+                @include media("<phone"){
+                    font-size: 14px;
+                }
+            
+                @include media(">=phone","<=custom-view-1"){
+                    font-size: 16px;
+                }
             }
         }
     }

@@ -75,10 +75,28 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding: 2rem 0;
+            padding: 2rem 1rem;
+            margin: 1rem auto;
+
+            @include media("<phone"){
+                flex-direction: column;
+            }
+        
+            @include media(">=phone","<=custom-view-1"){
+                flex-direction: column;
+            }
 
             .productImgs{
+                align-self: center;
                 max-width: 400px;
+
+                @include media("<phone"){
+                    max-width: 500px;
+                }
+            
+                @include media(">=phone","<=custom-view-1"){
+                    max-width: 500px;
+                }
 
                 .productImg{
                     width: 100%;
@@ -87,9 +105,31 @@
 
             .statusLink{
                 align-self: center;
+                margin: 0 1rem;
+
+                @include media("<phone"){
+                    text-align: center;
+                    margin: 2rem 1rem;
+                }
+            
+                @include media(">=phone","<=custom-view-1"){
+                    text-align: center;
+                    margin: 2rem 1rem;
+                }
                 .linkTitle{
                     font-size: 40px;
                     width: 90%;
+                    
+
+                    @include media("<phone"){
+                        font-size: 20px;
+                        width: 100%;
+                    }
+                
+                    @include media(">=phone","<=custom-view-1"){
+                        width: 100%;
+                        font-size: 30px;
+                    }
 
                     span{
                         color:#4FBAD3;
