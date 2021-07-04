@@ -104,7 +104,6 @@
             }
 
             .statusLink{
-                align-self: center;
                 margin: 0 1rem;
 
                 @include media("<phone"){
@@ -117,6 +116,7 @@
                     margin: 2rem 1rem;
                 }
                 .linkTitle{
+                    text-align: left;
                     font-size: 40px;
                     width: 90%;
                     
