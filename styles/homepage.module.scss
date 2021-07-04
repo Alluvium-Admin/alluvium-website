@@ -1,8 +1,6 @@
 @import "lib/breakpoints.scss";
 
 .landingPage{
-//     background-color: #000;
-//   color: #fff;
     
     .heroSection{
         position: relative;
@@ -11,7 +9,6 @@
         margin:0 1.5rem ;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1619952404/Alluvium%20Website/hero_fsfn9s.jpg");
         background-size: cover;
-        // background-attachment: fixed;
         background-repeat: no-repeat;
         border-radius: 0 0 17px 17px;
         transform:skew(0,7deg);
@@ -67,8 +64,8 @@
     
             @include media(">=phone","<=custom-view-3"){
                 flex-direction: column;
-                margin: 3.5rem 0;
-
+                margin: 2.7rem 0;
+                align-items: center;
             }
             
 

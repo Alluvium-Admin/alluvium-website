@@ -47,8 +47,8 @@ export default function StatusPage({ products }) {
             <Navigation theme={"dark"} products={products}/>
             <main>
                 <section className={styles.statusPageHeader}>
-                    <h2 className={styles.title}>Products Statuspage</h2>
-                    <p className={styles.subtitle}>Check out the functionality of all our available products.</p>
+                    <h2 data-aos="fade-right"  className={styles.title}>Products Statuspage</h2>
+                    <p data-aos="fade-right" className={styles.subtitle}>Check out the functionality of all our available products.</p>
                 </section>
                 <section className={styles.productList}>
                     {
