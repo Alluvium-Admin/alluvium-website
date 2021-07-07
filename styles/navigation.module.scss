@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    z-index: 2;
     align-items: center;
     margin: 0 1.5rem 1rem 1.5rem;
     padding: 2rem 0 0 0;
@@ -85,6 +86,7 @@
         background:none;
         display: none;
         padding: 0;
+        transition: 0.2s;
 
         @include media("<phone"){
             display: flex;
@@ -96,6 +98,7 @@
     }
 
     .closeBtn{
+        transition: 0.2s;
         .barOne{
             transform: rotate(45deg) translateX(-1px);
         }
@@ -116,6 +119,7 @@
         margin: 0.5rem;
         align-self: center;
         cursor: pointer;
+        transition: 0.2s;
 
         .barOne,.barTwo,.barThree{
             display: block;
@@ -136,6 +140,7 @@
         cursor: pointer;
         border: none;
         background:none;
+        transition: 0.2s;
 
 
         .barOne,.barTwo,.barThree{

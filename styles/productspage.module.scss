@@ -71,6 +71,109 @@
             }
         }
 
+        .statusPageLink{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 2rem 1rem;
+            margin: 1rem auto;
+
+            @include media("<phone"){
+                flex-direction: column;
+            }
+        
+            @include media(">=phone","<=custom-view-1"){
+                flex-direction: column;
+            }
+
+            .productImgs{
+                align-self: center;
+                max-width: 400px;
+
+                @include media("<phone"){
+                    max-width: 500px;
+                }
+            
+                @include media(">=phone","<=custom-view-1"){
+                    max-width: 500px;
+                }
+
+                .productImg{
+                    width: 100%;
+                }
+            }
+
+            .statusLink{
+                margin: 0 1rem;
+
+                @include media("<phone"){
+                    text-align: center;
+                    margin: 2rem 1rem;
+                }
+            
+                @include media(">=phone","<=custom-view-1"){
+                    text-align: center;
+                    margin: 2rem 1rem;
+                }
+                .linkTitle{
+                    text-align: left;
+                    font-size: 40px;
+                    width: 90%;
+                    
+
+                    @include media("<phone"){
+                        font-size: 20px;
+                        width: 100%;
+                    }
+                
+                    @include media(">=phone","<=custom-view-1"){
+                        width: 100%;
+                        font-size: 30px;
+                    }
+
+                    span{
+                        color:#4FBAD3;
+                    }
+                } 
+
+                .linkBtn{
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 23px;
+                    width: fit-content;
+                    margin-top: 1rem;
+                    
+                    @include media("<phone"){
+                        font-size: 16px;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 17px;
+                    }
+
+                    &::after{
+                        display: block;
+                        content: "";
+                        height: 0.5px;
+                        background-color: #000;
+                        width: 100%;
+                        color: #000;
+                        border: 0.5px solid #000;
+                        transition: .2s;
+                        
+                    }
+            
+                    &:hover{
+                        &::after{
+                            width: 0;
+                            visibility: hidden;
+                        }   
+                    }
+                }
+            }
+        }
+
         .scheduleMeetingLink{
             background: #F6F6F6;
             padding: 8% 8% 5% 8%;
