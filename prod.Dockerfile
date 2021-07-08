@@ -2,6 +2,9 @@ FROM node:lts
 
 WORKDIR /usr/app/
 
+ARG NEXT_PUBLIC_GA_ID
+ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
+
 COPY package.json package-lock.json ./
 
 RUN npm install -g npm
@@ -17,13 +20,9 @@ RUN npm prune --production
 
 FROM node:alpine
 
-ARG NEXT_PUBLIC_GA_ID
-
 WORKDIR /usr/app/
 
 ENV NODE_ENV production
-
-ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
 
 # RUN addgroup -g 1001 -S nodejs
 
