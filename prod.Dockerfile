@@ -21,6 +21,8 @@ WORKDIR /usr/app/
 
 ENV NODE_ENV production
 
+ENV NEXT_PUBLIC_GA_ID
+
 # RUN addgroup -g 1001 -S nodejs
 
 # RUN adduser -S nextjs -u 1001
