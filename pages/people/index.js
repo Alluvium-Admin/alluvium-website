@@ -5,6 +5,7 @@ import styles from '../../styles/peoplepage.module.scss'
 import Navigation from '../../components/navigation'
 // import { baseURL } from '../../config'
 import { alluviansData, productData} from '../../data'
+import Verification from 'components/verification'
 
 
 export default function People({people,products}) {
@@ -65,6 +66,7 @@ export default function People({people,products}) {
             </div>
           </section>
       </main>
+      <Verification/>
     </div>
   )
 }

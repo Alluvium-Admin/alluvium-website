@@ -102,7 +102,7 @@ export default function Product({product,products}){
                     <h3 className={styles.title}>More products</h3>
                     <div className={styles.projects}>
                         {
-                            products.map((project)=>{
+                            products.filter((project)=>project.details.productName !== details.productName).map((project)=>{
                                 return(
                                     <ProductPreview
                                         title={ project.title } 

@@ -197,7 +197,13 @@
         }
 
         .footerLogo{
+            max-width: 150px;
             margin: 2% 8%;
+            cursor: pointer;
+
+            img{
+                width: 100%;
+            }
 
             @include media("<=phone"){
                 margin: 2% 5%;
