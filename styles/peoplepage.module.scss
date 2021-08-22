@@ -140,7 +140,7 @@
                     p{
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 33px;
+                        font-size: 28px;
                         line-height: 150%;
 
                         @include media("<phone"){
@@ -148,13 +148,13 @@
                         }
                     
                         @include media(">=phone","<=custom-view-1"){
-                            font-size: 27px;
+                            font-size: 24px;
                         }
                     }   
                     a{
                         font-style: normal;
                         font-weight: bold;
-                        font-size: 33px;
+                        font-size: 28px;
                         line-height: 150%;
                         text-decoration: underline;
                         transition: all 0.3s;
@@ -165,7 +165,7 @@
                         }
                     
                         @include media(">=phone","<=custom-view-1"){
-                            font-size: 27px;
+                            font-size: 24px;
                         }
 
                         &:hover{

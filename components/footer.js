@@ -36,9 +36,9 @@ export default function Footer() {
             </div>
             <div className={styles.footerMain}>
                 <div className={styles.footerBody}>
-                    <div className={styles.footerLogo}>
-                        <img src="/assets/alluvium-logo-dark.svg" alt="logo"/>
-                    </div>
+                    <Link href="/" >
+                        <img className={styles.footerLogo} src="/assets/alluvium-logo-dark.svg" alt="logo"/>
+                    </Link>
                     <div className={styles.footerLists}>
                         <div className={styles.footerList} data-aos="fade-up">
                             <h4 className={styles.footerListTitle}>What we do</h4>
@@ -67,7 +67,6 @@ export default function Footer() {
                         <div className={styles.footerList} data-aos="fade-up" data-aos-delay="500">
                             <h4 className={styles.footerListTitle}>Support</h4>
                             <ul>
-                                <li className={styles.footerListItem}><Link href="/support/contact">Ask about our rates</Link></li>
                                 <li className={styles.footerListItem}><Link href="/support/contact">Contact us</Link></li>
                                 <li className={styles.footerListItem}><Link href="/support">FAQs</Link></li>
                             </ul>

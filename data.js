@@ -140,38 +140,57 @@ export const featuresData =
     },
 ]
   
-
 export const galleryLinks = 
 [
+  {
+    productName: "Scrum Companion",
+    imgs: [
+      {
+        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_150_uy4lto.png",
+        imgAlt: "SC"        
+      },
+      {
+        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_155_udrnhb.png",
+        imgAlt: "SC"        
+      },
+      {
+        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_167_u9k5d5.png",
+        imgAlt: "SC"        
+      }
+    ]
+  },
+  {
+  productName: "Compare Jira Resources",
+  imgs: [
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_8_qsipfn.png",
-      imgAlt:"reel",
+      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_8_qsipfn.png",
+      imgAlt: "CJR"        
     },
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
-      imgAlt:"reel",
+      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
+      imgAlt: "CJR"        
     },
     {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_1_jzxm17.png",
-      imgAlt:"reel",
+      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
+      imgAlt: "CJR"        
     },
-    {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_150_uy4lto.png",
-      imgAlt:"reel",
-    },
-    {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_149_ilxyhz.png",
-      imgAlt:"reel",
-    },
-    {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_167_u9k5d5.png",
-      imgAlt:"reel",
-    },
-    {
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_155_udrnhb.png",
-      imgAlt:"reel",
-    },
+  ]
+  },
+  {
+    productName: "Cloud Counter",
+    imgs: [
+      {
+        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_1_jzxm17.jpg",
+        imgAlt: "CC"        
+      },
+      {
+        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_9_fekb5e.png",
+        imgAlt: "CC"        
+      },
+    ]
+  },
 ]
+
 
 export const alluviansData = 
 [
@@ -201,7 +220,7 @@ export const alluviansData =
       lastName:"onwuka",
       role:"Frontend engineer",
       email:"stanley@geniesys.co.uk",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620684087/Alluvium%20Website/Team/IMG_7486_jpsxai.jpg"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1627320553/Alluvium%20Website/Team/Onwuka_Stanley_eulzcx.jpg"
     },
     {
       firstName:"ayodamola",
@@ -325,7 +344,7 @@ export const faqData =
     {
       id:3,
       question:"How can I contact Alluvium?",
-      answer:"Send us an e-mail at info@alluvium.net."
+      answer:"Send us an e-mail at contact@alluvium.net."
     },
     {
       id:4,

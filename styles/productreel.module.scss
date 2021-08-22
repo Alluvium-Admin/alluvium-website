@@ -1,0 +1,35 @@
+@import "lib/breakpoints.scss";
+
+.productReel{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .productTitle{
+        font-size: 35px;
+        margin: 1rem 0;
+    }
+
+    .productImages{
+        display: flex;
+        flex-direction: row;
+        // flex-wrap: wrap;
+        align-self: center;
+        align-items: center;
+        width: 100%;
+        max-width: 90vw;
+        overflow-x: hidden;
+        padding: 1rem;
+        background: #eeeeee;
+
+
+        .productImg{
+            max-width: 400px;
+            margin: 1rem;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -49,7 +49,7 @@
                 h3{
                     font-style: normal;
                     font-weight: bold;
-                    font-size: 35px;
+                    font-size: 30px;
                     line-height: 137.5%;
 
                     @include media("<phone"){
@@ -57,15 +57,15 @@
                     }
             
                     @include media(">=phone","<=tablet"){
-                        font-size:30px;
+                        font-size:28px;
                     }
                 }
                 p{
                     font-style: normal;
                     font-weight: 300;
-                    font-size: 20px;
-                    line-height: 150%;
-                    margin-top: 3rem;
+                    font-size: 18px;
+                    line-height: 100%;
+                    margin-top: 2rem;
 
                     @include media("<phone"){
                         font-size: 16px;
@@ -104,24 +104,25 @@
                 h3{
                     font-style: normal;
                     font-weight: bold;
-                    font-size: 35px;
-                    line-height: 137.5%;
+                    font-size: 30px;
+                    line-height: 130%;
 
                     @include media("<phone"){
                         font-size: 20px;
                     }
             
                     @include media(">=phone","<=tablet"){
-                        font-size: 30px;
+                        font-size: 28px;
                     }
                     
                 }
                 p{
                     font-style: normal;
                     font-weight: 300;
-                    font-size: 20px;
+                    font-size: 18px;
                     line-height: 150%;
                     margin: 0.5rem 0;
+                    max-width: 80%;
 
                     @include media("<phone"){
                         font-size: 16px;
@@ -134,7 +135,7 @@
                 a{
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 20px;
+                    font-size: 18px;
                     line-height: 150%;
                     text-decoration: underline;
 
