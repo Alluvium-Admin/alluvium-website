@@ -16,7 +16,7 @@ export default function Contact({products}) {
             </Head>
             <Navigation theme={"dark"} products={products}/>
             <main className={styles.contactUsPage}>
-                <SupportSubmenu/>
+                {/* <SupportSubmenu/> */}
                 <div className={styles.contactImg}>
                     <Image src='/assets/contactImg.png' width={1392} height={461}/>
                 </div>
@@ -27,7 +27,7 @@ export default function Contact({products}) {
                     </div>
                     <div className={styles.mailingAddress} data-aos="fade-left">
                         <h3>Mailing Address:</h3>
-                        <p>130 Old St London, EC1V 9BD, UK.</p>
+                        <p>Kemp House 160, City Road London, EC1V 2NX</p>
                         {/* <Link href="tel:+234-816-133-5033">+234 816 133 5033</Link> */}
                     </div>
                 </div>
