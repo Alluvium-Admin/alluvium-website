@@ -192,140 +192,145 @@ export const galleryLinks =
 ]
 
 
-export const alluviansData = 
-[
+export const teamData =
+  [
     {
-      firstName:"taiwo",
-      lastName:"ojo",
-      role:"Founder/Team lead",
-      email:"taiwo@alluvium.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620748223/Alluvium%20Website/Team/Rectangle_52_i7pfgi.jpg"
+      firstName: "taiwo",
+      lastName: "ojo",
+      role: "Founder/Team lead",
+      email: "taiwo@alluvium.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228177/Alluvium%20Website/Team%28new%29/taiwo.png",
+      dept: "executive"
     },
     {
-      firstName:"ibukun",
-      lastName:"akilo",
-      role:"Product office and Compliance",
-      email:"ibukunakilo@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620748223/Alluvium%20Website/Team/IMG-20210219-WA0026_f2wvpn.jpg"
+      firstName: "wale",
+      lastName: "ojo",
+      role: "Product Manager",
+      email: "taiwo@alluvium.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/wale.png",
+      dept: "executive"
     },
     {
-      firstName:"enyioma",
-      lastName:"osondu",
-      role:"Software engineer",
-      email:"enyioma.osondu@geniesys.co.uk",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620161012/Alluvium%20Website/Team/Enyioma_Osondu_ergjta.jpg"
+      firstName: "ibukun",
+      lastName: "akilo",
+      role: "Compliance",
+      email: "ibukunakilo@gmail.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/dami.png",
+      dept: "Product Office"
     },
     {
-      firstName:"stanley",
-      lastName:"onwuka",
-      role:"Frontend engineer",
-      email:"stanley@geniesys.co.uk",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1627320553/Alluvium%20Website/Team/Onwuka_Stanley_eulzcx.jpg"
+      firstName: "enyioma",
+      lastName: "osondu",
+      role: "Software engineer",
+      email: "enyioma.osondu@geniesys.co.uk",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634242542/Alluvium%20Website/Team%28new%29/Enyioma.png",
+      dept: "Engineering team"
     },
     {
-      firstName:"ayodamola",
-      lastName:"alonge",
-      role:"UI/UX Designer",
-      email:"pelumi@geniesys.co.uk",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620681470/Alluvium%20Website/Team/Pelumi_Alonge_mgtutu.jpg"
+      firstName: "stanley",
+      lastName: "onwuka",
+      role: "Frontend engineer",
+      email: "stanley@geniesys.co.uk",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/stanley.png",
+      dept: "Cosmetics team"
     },
     {
-      firstName:"damilola",
-      lastName:"daramola",
-      role:"(Product office) Sales and Marketing",
-      email:"daramola@geniesys.co.uk",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795283/Alluvium%20Website/Team/Damilola_Daramola_gedasq.jpg"
+      firstName: "sherif",
+      lastName: "siyanbola",
+      role: "UI/UX Designer",
+      email: "sherif@geniesys.co.uk",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237743/Alluvium%20Website/Team%28new%29/sherif.png",
+      dept: "Cosmetics team"
+    
     },
     {
-      firstName:"adeola",
-      lastName:"lawal",
-      role:"Tools and System Migration",
-      email:"adeola@geniesys.co.uk",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795293/Alluvium%20Website/Team/Adeola_Lawal_ytx5s7.jpg"
+      firstName: "rebecca",
+      lastName: "adisa",
+      role: "UI/UX Designer",
+      email: "rebecca@geniesys.co.uk",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228176/Alluvium%20Website/Team%28new%29/rebecca.png",
+      dept: "Cosmetics team"
+    
+    },
+    {
+      firstName: "adeola",
+      lastName: "lawal",
+      role: "Tools and System Migration",
+      email: "adeola@geniesys.co.uk",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/adeola.png",
+      dept: "Engineering team"
     },
     {
       firstName:"isaac",
       lastName:"temidayo",
-      role:"Jira Expert and Developer",
+      role:"Jira Expert",
       email:"isaac@geniesys.co.uk",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795283/Alluvium%20Website/Team/Isaac_Temidayo_cv0iir.jpg"
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237742/Alluvium%20Website/Team%28new%29/isaac.png",
+      dept: "Engineering team"
     },
     {
       firstName:"precious",
       lastName:"charles",
-      role:"Tools and System Migration",
+      role:"Tools and System Support",
       email:"charlespreciousa@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795290/Alluvium%20Website/Team/Precious_Charles_oq7v0r.jpg"
-    },
-    {
-      firstName:"francis",
-      lastName:"okeke",
-      role:"Tools and System Migration",
-      email:"okeke98@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619848865/Alluvium%20Website/Team/Francis_Okeke_v0k3at.jpg"
-    },
-    {
-      firstName:"idiongette",
-      lastName:"enimini",
-      role:"Product office support",
-      email:"idiongette@alluvium.com",
-      imgUrl:"/assets/test.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/precious.png",
+      dept: "Engineering team"
     },
     {
       firstName:"yusuf",
       lastName:"braimoh",
-      role:"Software Developer",
+      role:"Software Engineer",
       email:"yusuf@alluvium.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795291/Alluvium%20Website/Team/Yusuf_Braimoh_qv2r7b.jpg"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228180/Alluvium%20Website/Team%28new%29/yusuf.png",
+      dept: "Engineering team"
     },
     {
       firstName:"georgette",
       lastName:"idrissou",
-      role:"Founder/Team Lead",
+      role:"Sales and Marketing",
       email:"georgette@alluvium.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620161287/Alluvium%20Website/Team/Georgette_Idrissou_1_fib5ke.png"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/georgette.png",
+      dept: "Marketing team"
     },
     {
       firstName:"anjola",
       lastName:"oyelakin",
       role:"Graphics Designer",
       email:"anjolly@alluvium.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619848109/Alluvium%20Website/Team/Anjola_Oyelakin_b7ttj3.jpg"
-    },
-    {
-      firstName:"adegboyega",
-      lastName:"adesanya",
-      role:"Business Analyst",
-      email:"adeadesanya2015@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795287/Alluvium%20Website/Team/Adeboyega_Adesanya_oblsm6.jpg"
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228181/Alluvium%20Website/Team%28new%29/anjola.png",
+      dept: "Cosmetics team"
     },
     {
       firstName:"folakemi",
       lastName:"adedayo",
       role:"Graphic designer (intern)",
       email:"adedayofolakemi23@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620161023/Alluvium%20Website/Team/Adedayo_Folakemi_molmcp.jpg"
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/folakemi.png",
+      dept: "Cosmetics team"
     },
     {
       firstName:"oluwatishe",
       lastName:"afolabi",
-      role:"Product Office - Sales and Marketing",
+      role:"Sales and Marketing",
       email:"afolabitemitay64@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620682696/Alluvium%20Website/Team/Oluwatishe_Afolabi_u44nvd.jpg"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/tishe.png",
+      dept: "Marketing team"
     },
     {
       firstName:"babade",
       lastName:"adewole",
-      role:"Product Office support",
+      role:"Software developer",
       email:"adesiteadewole@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1620161016/Alluvium%20Website/Team/Babs_Adewole_t0kvhb.jpg"
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228184/Alluvium%20Website/Team%28new%29/babade.png",
+      dept: "Engineering team"
     },
     {
       firstName:"fatai",
       lastName:"ogundele",
       role:"Software / Web Developer",
       email:"ogundele.fatai.k@gmail",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1619795284/Alluvium%20Website/Team/Fatai_Ogundele_iazjcx.jpg"
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/fatai.png",
+      dept: "Engineering team"
     },
 ]
 
