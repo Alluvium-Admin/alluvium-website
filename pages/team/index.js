@@ -5,7 +5,6 @@ import styles from '../../styles/teampage.module.scss'
 import Navigation from '../../components/navigation'
 // import { baseURL } from '../../config'
 import { teamData, productData} from '../../data'
-import Verification from 'components/verification'
 
 
 export default function Team({team,products}) {
@@ -97,7 +96,6 @@ export default function Team({team,products}) {
             </div>
           </section>
       </main>
-      <Verification/>
     </div>
   )
 }
