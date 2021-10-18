@@ -1,5 +1,5 @@
-import { alluviansData } from '../../../data';
+import { teamData } from '../../../data';
 
 export default function handler(req,res){
-    res.status(200).json(alluviansData);
+    res.status(200).json(teamData);
 }
