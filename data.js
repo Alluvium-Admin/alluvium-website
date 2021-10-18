@@ -200,15 +200,19 @@ export const teamData =
       role: "Founder/Team lead",
       email: "taiwo@alluvium.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228177/Alluvium%20Website/Team%28new%29/taiwo.png",
-      dept: "executive"
+      dept: "executive",
+      fruit: "",
+      hobbies: ""
     },
     {
       firstName: "wale",
-      lastName: "ojo",
+      lastName: "ojolo",
       role: "Product Manager",
       email: "taiwo@alluvium.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/wale.png",
-      dept: "executive"
+      dept: "executive",
+      fruit: "",
+      hobbies: ""
     },
     {
       firstName: "ibukun",
@@ -216,7 +220,9 @@ export const teamData =
       role: "Compliance",
       email: "ibukunakilo@gmail.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/dami.png",
-      dept: "Product Office"
+      dept: "Product Office",
+      fruit: "strawberry",
+      hobbies: "Learning, Manga, Anime"
     },
     {
       firstName: "enyioma",
@@ -224,7 +230,9 @@ export const teamData =
       role: "Software engineer",
       email: "enyioma.osondu@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634242542/Alluvium%20Website/Team%28new%29/Enyioma.png",
-      dept: "Engineering team"
+      dept: "Engineering team",
+      fruit: "pineapple",
+      hobbies: "Automation, Gaming, Anime"
     },
     {
       firstName: "stanley",
@@ -232,7 +240,9 @@ export const teamData =
       role: "Frontend engineer",
       email: "stanley@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/stanley.png",
-      dept: "Cosmetics team"
+      dept: "Cosmetics team",
+      fruit: "dates",
+      hobbies: "music, series, basketball"
     },
     {
       firstName: "sherif",
@@ -240,7 +250,9 @@ export const teamData =
       role: "UI/UX Designer",
       email: "sherif@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237743/Alluvium%20Website/Team%28new%29/sherif.png",
-      dept: "Cosmetics team"
+      dept: "Cosmetics team",
+      fruit: "Watermelon - Rich in minerals and a great post workout snack",
+      hobbies: "Hiking, Movies, Podcasts, Games"
     
     },
     {
@@ -249,7 +261,9 @@ export const teamData =
       role: "UI/UX Designer",
       email: "rebecca@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228176/Alluvium%20Website/Team%28new%29/rebecca.png",
-      dept: "Cosmetics team"
+      dept: "Cosmetics team",
+      fruit: "Watermelon - It germinate and grow everywhere I go",
+      hobbies: "Nature, Movies, Reading books"
     
     },
     {
@@ -258,7 +272,9 @@ export const teamData =
       role: "Tools and System Migration",
       email: "adeola@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/adeola.png",
-      dept: "Engineering team"
+      dept: "Engineering team",
+      fruit: "Pineapple",
+      hobbies: "Music, Games, Book, Food"
     },
     {
       firstName:"isaac",
@@ -266,7 +282,9 @@ export const teamData =
       role:"Jira Expert",
       email:"isaac@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237742/Alluvium%20Website/Team%28new%29/isaac.png",
-      dept: "Engineering team"
+      dept: "Engineering team",
+      fruit: "Banana",
+      hobbies: "Music, Learning, Sports"
     },
     {
       firstName:"precious",
@@ -274,7 +292,9 @@ export const teamData =
       role:"Tools and System Support",
       email:"charlespreciousa@gmail.com",
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/precious.png",
-      dept: "Engineering team"
+      dept: "Engineering team",
+      fruit: "Apple - Fresh, Beautiful, Sweet, Easy going and Sociable",
+      hobbies: "Tech, Movies, Music, Cooking"
     },
     {
       firstName:"yusuf",
@@ -282,7 +302,9 @@ export const teamData =
       role:"Software Engineer",
       email:"yusuf@alluvium.com",
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228180/Alluvium%20Website/Team%28new%29/yusuf.png",
-      dept: "Engineering team"
+      dept: "Engineering team",
+      fruit: "Apple",
+      hobbies: "Books, Anime, Podcasts"
     },
     {
       firstName:"georgette",
@@ -290,7 +312,9 @@ export const teamData =
       role:"Sales and Marketing",
       email:"georgette@alluvium.com",
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/georgette.png",
-      dept: "Marketing team"
+      dept: "Marketing team",
+      fruit: "Coconut - hard outside and soft inside. Plus, it’s useful in all aspects.",
+      hobbies: "Food, Travel, Sports, People"
     },
     {
       firstName:"anjola",
@@ -298,7 +322,9 @@ export const teamData =
       role:"Graphics Designer",
       email:"anjolly@alluvium.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228181/Alluvium%20Website/Team%28new%29/anjola.png",
-      dept: "Cosmetics team"
+      dept: "Cosmetics team",
+      fruit: "Guava - It thrives in any soil ",
+      hobbies: "Movies, Games"
     },
     {
       firstName:"folakemi",
@@ -306,7 +332,9 @@ export const teamData =
       role:"Graphic designer (intern)",
       email:"adedayofolakemi23@gmail.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/folakemi.png",
-      dept: "Cosmetics team"
+      dept: "Cosmetics team",
+      fruit: "Watermelon ",
+      hobbies: "Graphics, Traveling, Cooking"
     },
     {
       firstName:"oluwatishe",
@@ -314,7 +342,9 @@ export const teamData =
       role:"Sales and Marketing",
       email:"afolabitemitay64@gmail.com",
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/tishe.png",
-      dept: "Marketing team"
+      dept: "Marketing team",
+      fruit: "Pineapple",
+      hobbies: "Learning, Cooking, Traveling, Singing"
     },
     {
       firstName:"babade",
@@ -322,7 +352,9 @@ export const teamData =
       role:"Software developer",
       email:"adesiteadewole@gmail.com",
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228184/Alluvium%20Website/Team%28new%29/babade.png",
-      dept: "Engineering team"
+      dept: "Engineering team",
+      fruit: "Pineapple",
+      hobbies: "Traveling"
     },
     {
       firstName:"fatai",
@@ -330,7 +362,9 @@ export const teamData =
       role:"Software / Web Developer",
       email:"ogundele.fatai.k@gmail",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/fatai.png",
-      dept: "Engineering team"
+      dept: "Engineering team",
+      fruit: "Orange",
+      hobbies: "Games, Learning, Coding"
     },
 ]
 

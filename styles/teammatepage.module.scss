@@ -1,0 +1,69 @@
+.teammatePageContainer{
+    .teammatePage{
+        .teammate{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 90%;
+
+            .teammateFavorites{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background: #009BC0;
+                width: 60%;
+
+                .teammateFavorite{
+                    align-self: center ;
+                    max-width: 500px;
+
+                    .question{
+                        font-weight: bold;
+                        font-size: 48.9476px;
+                        line-height: 70px;
+                        color: #FFFFFF;
+                    }
+
+                    .answer{
+                        font-weight: 500;
+                        font-size: 32px;
+                        line-height: 51px;
+                        color: #1B3854;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            .teammateProfile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40%;
+
+                .teammateImg{
+                    max-width: 800px;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .teammateInfo{
+                    text-align: center;
+
+                    .name{
+                        text-transform: capitalize ;
+                        font-weight: 600;
+                        color: #000000;
+                    }
+
+                    .role,
+                    .dept{
+                        font-weight: normal;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}
