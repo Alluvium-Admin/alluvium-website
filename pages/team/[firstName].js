@@ -32,7 +32,7 @@ export default function Teammate({ teamMate, products }) {
                             <p className={styles.answer}>{ hobbies }</p>
                         </div>
                     </div>
-                    <div className={styles.teammateProfile} data-aos="fade-left">
+                    <div className={styles.teammateProfile} data-aos="zoom-in">
                         <div className={styles.teammateImg}>
                             <img src={imgUrl} alt={`${firstName} ${lastName}`} />
                         </div>
