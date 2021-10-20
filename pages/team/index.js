@@ -5,7 +5,6 @@ import styles from '../../styles/teampage.module.scss'
 import Navigation from '../../components/navigation'
 // import { baseURL } from '../../config'
 import { teamData, productData} from '../../data'
-import Verification from 'components/verification'
 
 
 export default function Team({team,products}) {
@@ -24,10 +23,10 @@ export default function Team({team,products}) {
                 <Link href="/team#schedule">+ Hire us</Link>
               </div>
             </div>
-            <h2 className={styles.title}>Meet our Team</h2>
-            <p className={styles.subtitle}>Meet a few new friendly faces with 100% dedication to your technological needs and success.</p>
+            <h2 className={styles.title} data-aos="fade-right">Meet our Team</h2>
+            <p className={styles.subtitle} data-aos-delay={"200"} data-aos="fade-right">Meet a few new friendly faces with 100% dedication to your technological needs and success.</p>
           </section>
-          <section className={styles.alluviansGallery}>
+          <section className={styles.alluviansGallery} data-aos-delay={"300"} data-aos="fade-up">
             <div className={styles.dept}>
               <h3 className={styles.deptTitle}>Engineering Team</h3>
               <div className={styles.deptMembers}>
@@ -97,7 +96,6 @@ export default function Team({team,products}) {
             </div>
           </section>
       </main>
-      <Verification/>
     </div>
   )
 }
