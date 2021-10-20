@@ -43,9 +43,6 @@ export default function Teammate({ teamMate, products }) {
                         </div>
                     </div>
                 </section>
-                <section className={styles.products}>
-
-                </section>
             </main>
         </div>
     )
