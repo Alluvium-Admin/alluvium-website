@@ -51,7 +51,7 @@ export default function Teammate({ teamMate, products }) {
 
 
 export const getStaticProps = async ({params}) =>{
-    const teamArr = teamData.filter(alluvian =>alluvian.firstName.toString() === params.firstName )
+    const teamArr = teamData.filter(alluvian =>alluvian.alluvianTag.toString() === params.alluvianTag )
     return {
         props:{
             teamMate: teamArr[0],
@@ -62,7 +62,7 @@ export const getStaticProps = async ({params}) =>{
 
 export const getStaticPaths = async ()=>{
     const paths = teamData.map(alluvian=>
-        ({params: { firstName: alluvian.firstName.toString() }
+        ({params: { alluvianTag: alluvian.alluvianTag.toString() }
     }))
 
     return{
