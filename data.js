@@ -202,7 +202,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228177/Alluvium%20Website/Team%28new%29/taiwo.png",
       dept: "executive",
       fruit: "",
-      hobbies: ""
+      hobbies: "",
+      alluvianTag: "taiwoojo"
     },
     {
       firstName: "wale",
@@ -212,7 +213,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/wale.png",
       dept: "executive",
       fruit: "",
-      hobbies: ""
+      hobbies: "",
+      alluvianTag: "waleojolo"
     },
     {
       firstName: "ibukun",
@@ -222,7 +224,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/dami.png",
       dept: "Product Office",
       fruit: "strawberry",
-      hobbies: "Learning, Manga, Anime"
+      hobbies: "Learning, Manga, Anime",
+      alluvianTag: "ibukunakilo"
     },
     {
       firstName: "enyioma",
@@ -232,7 +235,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634242542/Alluvium%20Website/Team%28new%29/Enyioma.png",
       dept: "Engineering team",
       fruit: "pineapple",
-      hobbies: "Automation, Gaming, Anime"
+      hobbies: "Automation, Gaming, Anime",
+      alluvianTag: "enyiomaosondu"
     },
     {
       firstName: "stanley",
@@ -242,7 +246,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/stanley.png",
       dept: "Cosmetics team",
       fruit: "dates",
-      hobbies: "music, series, basketball"
+      hobbies: "music, series, basketball",
+      alluvianTag: "stanleyonwuka" 
     },
     {
       firstName: "sherif",
@@ -252,7 +257,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237743/Alluvium%20Website/Team%28new%29/sherif.png",
       dept: "Cosmetics team",
       fruit: "Watermelon - Rich in minerals and a great post workout snack",
-      hobbies: "Hiking, Movies, Podcasts, Games"
+      hobbies: "Hiking, Movies, Podcasts, Games",
+      alluvianTag: "sherifsiyanbola"
     
     },
     {
@@ -263,8 +269,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228176/Alluvium%20Website/Team%28new%29/rebecca.png",
       dept: "Cosmetics team",
       fruit: "Watermelon - It germinate and grow everywhere I go",
-      hobbies: "Nature, Movies, Reading books"
-    
+      hobbies: "Nature, Movies, Reading books",
+      alluvianTag: "rebeccaadisa"
     },
     {
       firstName: "adeola",
@@ -274,7 +280,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/adeola.png",
       dept: "Engineering team",
       fruit: "Pineapple",
-      hobbies: "Music, Games, Book, Food"
+      hobbies: "Music, Games, Book, Food",
+      alluvianTag: "adeolalawal"
     },
     {
       firstName:"isaac",
@@ -284,7 +291,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237742/Alluvium%20Website/Team%28new%29/isaac.png",
       dept: "Engineering team",
       fruit: "Banana",
-      hobbies: "Music, Learning, Sports"
+      hobbies: "Music, Learning, Sports",
+      alluvianTag: "isaactemidayo"
     },
     {
       firstName:"precious",
@@ -294,7 +302,8 @@ export const teamData =
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/precious.png",
       dept: "Engineering team",
       fruit: "Apple - Fresh, Beautiful, Sweet, Easy going and Sociable",
-      hobbies: "Tech, Movies, Music, Cooking"
+      hobbies: "Tech, Movies, Music, Cooking",
+      alluvianTag: "preciouscharles"
     },
     {
       firstName:"yusuf",
@@ -304,7 +313,8 @@ export const teamData =
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228180/Alluvium%20Website/Team%28new%29/yusuf.png",
       dept: "Engineering team",
       fruit: "Apple",
-      hobbies: "Books, Anime, Podcasts"
+      hobbies: "Books, Anime, Podcasts",
+      alluvianTag: "yusufbraimoh"
     },
     {
       firstName:"georgette",
@@ -314,7 +324,8 @@ export const teamData =
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/georgette.png",
       dept: "Marketing team",
       fruit: "Coconut - hard outside and soft inside. Plus, it’s useful in all aspects.",
-      hobbies: "Food, Travel, Sports, People"
+      hobbies: "Food, Travel, Sports, People",
+      alluvianTag: "georgetteidrissou"
     },
     {
       firstName:"anjola",
@@ -324,7 +335,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228181/Alluvium%20Website/Team%28new%29/anjola.png",
       dept: "Cosmetics team",
       fruit: "Guava - It thrives in any soil ",
-      hobbies: "Movies, Games"
+      hobbies: "Movies, Games",
+      alluvianTag: "anjolaoyelakin"
     },
     {
       firstName:"folakemi",
@@ -334,7 +346,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/folakemi.png",
       dept: "Cosmetics team",
       fruit: "Watermelon ",
-      hobbies: "Graphics, Traveling, Cooking"
+      hobbies: "Graphics, Traveling, Cooking",
+      alluvianTag: "folakemiadedayo"
     },
     {
       firstName:"oluwatishe",
@@ -344,7 +357,8 @@ export const teamData =
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/tishe.png",
       dept: "Marketing team",
       fruit: "Pineapple",
-      hobbies: "Learning, Cooking, Traveling, Singing"
+      hobbies: "Learning, Cooking, Traveling, Singing",
+      alluvianTag: "oluwatisheafolabi"
     },
     {
       firstName:"babade",
@@ -354,7 +368,8 @@ export const teamData =
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228184/Alluvium%20Website/Team%28new%29/babade.png",
       dept: "Engineering team",
       fruit: "Pineapple",
-      hobbies: "Traveling"
+      hobbies: "Traveling",
+      alluvianTag: "babadeadewole"
     },
     {
       firstName:"fatai",
@@ -364,7 +379,8 @@ export const teamData =
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/fatai.png",
       dept: "Engineering team",
       fruit: "Orange",
-      hobbies: "Games, Learning, Coding"
+      hobbies: "Games, Learning, Coding",
+      alluvianTag: "fataiogundele"
     },
 ]
 

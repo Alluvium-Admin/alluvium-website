@@ -4,10 +4,10 @@ import styles from '../styles/profile.module.scss'
 
 
 export default function Profile({alluvian}){
-    const { firstName, lastName, role, email, imgUrl, dept } = alluvian;
+    const { firstName, lastName, role, email, imgUrl, dept, alluvianTag } = alluvian;
 
     return (
-        <Link href="/team/[firstName]" as={`/team/${firstName}`} className={styles.profileContainer}>
+        <Link href="/team/[alluvianTag]" as={`/team/${alluvianTag}`} className={styles.profileContainer}>
             <div className={styles.profile}>
                 <div className={styles.profilePicture}>
                     <img src={imgUrl} alt={`${firstName +" "+ lastName}`}/>
