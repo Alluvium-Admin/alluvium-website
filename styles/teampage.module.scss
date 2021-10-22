@@ -57,6 +57,7 @@
                 font-weight: bold;
                 font-size: 50px;
                 line-height: 125.5%;
+                text-align: center;
 
                 @include media("<phone"){
                     font-size: 30px;
@@ -72,6 +73,8 @@
                 font-weight: 500;
                 font-size: 35px;
                 line-height: 50px;
+                text-align: center;
+
 
                 @include media("<phone"){
                     font-size: 20px;

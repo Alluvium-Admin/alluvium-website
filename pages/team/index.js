@@ -18,13 +18,13 @@ export default function Team({team,products}) {
       <main>
           <section className={styles.alluviansPageHeader}>
             <div className={styles.pageTitle}>
-              <h4>Our Team</h4>
+              <h4></h4>
               <div className={styles.hireUsLink}>
                 <Link href="/team#schedule">+ Hire us</Link>
               </div>
             </div>
-            <h2 className={styles.title} data-aos="fade-right">Meet our Team</h2>
-            <p className={styles.subtitle} data-aos-delay={"200"} data-aos="fade-right">Meet a few new friendly faces with 100% dedication to your technological needs and success.</p>
+            <h2 className={styles.title} data-aos="fade-down">Meet our Team</h2>
+            <p className={styles.subtitle} data-aos-delay={"200"} data-aos="fade-down">Meet a few new friendly faces with 100% dedication to your technological needs and success.</p>
           </section>
           <section className={styles.alluviansGallery} data-aos-delay={"300"} data-aos="fade-up">
             <div className={styles.dept}>
@@ -87,11 +87,11 @@ export default function Team({team,products}) {
             <div className={styles.contactInfo}>
               <div className={styles.mailContact}>
                 <p>Send a mail to:</p>
-                <a target="_blank" href="mailto:work@alluvium.com" rel="noopener noreferrer">work@alluvium.com</a>
+                <a target="_blank" href="mailto:contact@alluvium.net" rel="noopener noreferrer">contact@alluvium.net</a>
               </div>
               <div className={styles.mailContact}>
                 <p>Enquiries? Mail to: </p>
-                <a target="_blank" href="mailto:enquiries@alluvium.com" rel="noopener noreferrer">enquiries@alluvium.com</a>
+                <a target="_blank" href="mailto:contact@alluvium.net" rel="noopener noreferrer">contact@alluvium.net</a>
               </div>
             </div>
           </section>
