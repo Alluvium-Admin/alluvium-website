@@ -52,7 +52,7 @@ export default function Footer() {
                             <h4 className={styles.footerListTitle}>Who are we?</h4>
                             <ul>
                                 <li className={styles.footerListItem}><Link href="/products">About us</Link></li>
-                                {/* <li className={styles.footerListItem}><Link href="/reel">Alluvians</Link></li> */}
+                                <li className={styles.footerListItem}><Link href="/team">Alluvians</Link></li>
                             </ul>
                         </div>
                         <div className={styles.footerList} data-aos="fade-up" data-aos-delay="400">

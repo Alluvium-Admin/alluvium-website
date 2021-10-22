@@ -10,7 +10,7 @@
             font-weight: bold;
             font-size: 65px;
             line-height: 125.5%;
-            max-width: 721px;
+            text-align: center;
 
             @include media("<phone"){
                 font-size: 40px;
