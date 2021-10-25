@@ -275,7 +275,7 @@ export const teamData =
     {
       firstName: "adeola",
       lastName: "lawal",
-      role: "Tools and System Migration",
+      role: "Tools and System Support",
       email: "adeola@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/adeola.png",
       dept: "Engineering team",
@@ -297,7 +297,7 @@ export const teamData =
     {
       firstName:"precious",
       lastName:"charles",
-      role:"Tools and System Support",
+      role:"Tools and Systems Support",
       email:"charlespreciousa@gmail.com",
       imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/precious.png",
       dept: "Engineering team",
@@ -330,7 +330,7 @@ export const teamData =
     {
       firstName:"anjola",
       lastName:"oyelakin",
-      role:"Graphics Designer",
+      role:"Graphic Designer",
       email:"anjolly@alluvium.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228181/Alluvium%20Website/Team%28new%29/anjola.png",
       dept: "Cosmetics team",
