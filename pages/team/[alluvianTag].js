@@ -23,11 +23,11 @@ export default function Teammate({ teamMate, products }) {
             <main className={styles.teammatePage}>
                 <section className={styles.teammate}>
                     <div className={styles.teammateFavorites}>
-                        <div className={styles.teammateFavorite} data-aos-delay={"300"} data-aos="fade-down">
+                        <div className={styles.teammateFavorite}>
                             <h3 className={styles.question}>If you were a fruit what would you be?</h3>
                             <p className={styles.answer}>{ fruit }</p>
                         </div>
-                        <div className={styles.teammateFavorite} data-aos-delay={"500"} data-aos="fade-down">
+                        <div className={styles.teammateFavorite}>
                             <h3 className={styles.question}>When I’m not working I enjoy -</h3>
                             <p className={styles.answer}>{ hobbies }</p>
                         </div>
