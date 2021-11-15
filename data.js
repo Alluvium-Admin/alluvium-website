@@ -221,7 +221,7 @@ export const teamData =
       lastName: "akilo",
       role: "Compliance",
       email: "ibukunakilo@gmail.com",
-      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/dami.png",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1635971306/Alluvium%20Website/Team%28new%29/dami.png",
       dept: "Product Office",
       fruit: "strawberry",
       hobbies: "Learning, Manga, Anime",
@@ -285,14 +285,14 @@ export const teamData =
     },
     {
       firstName:"isaac",
-      lastName:"temidayo",
+      lastName:"adebayo",
       role:"Jira Expert",
       email:"isaac@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237742/Alluvium%20Website/Team%28new%29/isaac.png",
       dept: "Engineering team",
       fruit: "Banana",
       hobbies: "Music, Learning, Sports",
-      alluvianTag: "isaactemidayo"
+      alluvianTag: "isaacadebayo"
     },
     {
       firstName:"precious",
@@ -321,7 +321,7 @@ export const teamData =
       lastName:"idrissou",
       role:"Sales and Marketing",
       email:"georgette@alluvium.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/georgette.png",
+      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1635971307/Alluvium%20Website/Team%28new%29/georgette.png",
       dept: "Marketing team",
       fruit: "Coconut - hard outside and soft inside. Plus, it’s useful in all aspects.",
       hobbies: "Food, Travel, Sports, People",
@@ -371,17 +371,17 @@ export const teamData =
       hobbies: "Traveling",
       alluvianTag: "babadeadewole"
     },
-    {
-      firstName:"fatai",
-      lastName:"ogundele",
-      role:"Software / Web Developer",
-      email:"ogundele.fatai.k@gmail",
-      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/fatai.png",
-      dept: "Engineering team",
-      fruit: "Orange",
-      hobbies: "Games, Learning, Coding",
-      alluvianTag: "fataiogundele"
-    },
+    // {
+    //   firstName:"fatai",
+    //   lastName:"ogundele",
+    //   role:"Software / Web Developer",
+    //   email:"ogundele.fatai.k@gmail",
+    //   imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/fatai.png",
+    //   dept: "Engineering team",
+    //   fruit: "Orange",
+    //   hobbies: "Games, Learning, Coding",
+    //   alluvianTag: "fataiogundele"
+    // },
 ]
 
 export const faqData = 
