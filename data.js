@@ -285,14 +285,14 @@ export const teamData =
     },
     {
       firstName:"isaac",
-      lastName:"temidayo",
+      lastName:"adebayo",
       role:"Jira Expert",
       email:"isaac@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237742/Alluvium%20Website/Team%28new%29/isaac.png",
       dept: "Engineering team",
       fruit: "Banana",
       hobbies: "Music, Learning, Sports",
-      alluvianTag: "isaactemidayo"
+      alluvianTag: "isaacadebayo"
     },
     {
       firstName:"precious",
@@ -371,17 +371,17 @@ export const teamData =
       hobbies: "Traveling",
       alluvianTag: "babadeadewole"
     },
-    {
-      firstName:"fatai",
-      lastName:"ogundele",
-      role:"Software / Web Developer",
-      email:"ogundele.fatai.k@gmail",
-      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/fatai.png",
-      dept: "Engineering team",
-      fruit: "Orange",
-      hobbies: "Games, Learning, Coding",
-      alluvianTag: "fataiogundele"
-    },
+    // {
+    //   firstName:"fatai",
+    //   lastName:"ogundele",
+    //   role:"Software / Web Developer",
+    //   email:"ogundele.fatai.k@gmail",
+    //   imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/fatai.png",
+    //   dept: "Engineering team",
+    //   fruit: "Orange",
+    //   hobbies: "Games, Learning, Coding",
+    //   alluvianTag: "fataiogundele"
+    // },
 ]
 
 export const faqData = 
