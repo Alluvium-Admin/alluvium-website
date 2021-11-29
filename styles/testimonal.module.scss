@@ -1,0 +1,48 @@
+.testimonalContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+
+    .testimonalImg{
+        max-width: 130px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .testimonalDesc{
+        margin: 0 1.5rem;
+
+        .testimonalReview{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13.7856px;
+            line-height: 21px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .name{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13.7856px;
+            line-height: 21px;
+            color: #1B3854;
+            margin: 0.6rem 0;
+
+
+            &::before{
+                content: "";
+                width: 50%;
+                max-width: 90px;
+                margin-right: 0.7rem ;
+                height: 2px;
+                background-color: #1B3854;
+            }
+        }
+    }
+}

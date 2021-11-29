@@ -1,16 +1,30 @@
+@import "lib/breakpoints";
+
 .projectHomePreview{
     display: flex;
     flex-direction: column;
     background: #DCF1F6;
+    width: 100%;
     max-width: 534px;
     margin: 0.5rem 1rem;
 
-    &:nth-child(even){
-        margin: 1.5rem 1rem 0.5rem 1rem;
+    .previewImg{
+        display:block;
+        align-self: center;
+        align-content: center;
+        padding: 0.5rem;
+        width:100%;
+        img{
+            width: 100%;
+            object-fit: cover;
+            margin:auto;
+        }
     }
 
-
     .previewContent{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
         .previewDetails{
             margin: 0.5rem;
             padding: 0.6rem;
@@ -19,6 +33,16 @@
                 font-weight: bold;
                 font-size: 40px;
                 line-height: 51px;
+
+                @include media("<phone"){
+                    font-size: 22px;
+                    line-height:30px;
+                }
+            
+                @include media(">=phone","<=custom-view-4"){
+                    font-size: 30px;
+                    line-height:30px;
+                }
                 
             }
 
@@ -40,6 +64,7 @@
             cursor: pointer;
             padding: 0.4rem;
             margin: 1rem 0.7rem;
+            white-space: nowrap;
 
             &::after{
                 display: block;
@@ -69,12 +94,33 @@
     background: #F6F6F6;
     border: 0.5px solid #9C9FA1;
     margin: 2.5rem 1rem;
-    min-height: 540px;
+    max-width: 1236px;
+
+    @include media("<phone"){
+        flex-direction: column;
+        margin: 1rem 0.4rem;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        flex-direction: column;
+        margin: 2rem 0.7rem;
+    }
+
+    .previewImg{
+        max-width: 726px;
+        align-self: center;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 
     .previewContent{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 2rem 0;
+        padding: 0.5rem;
 
         .previewDetails{
             padding: 0.5rem;
@@ -84,6 +130,14 @@
                 font-weight: bold;
                 font-size: 35px;
                 line-height: 150%;
+
+                @include media("<phone"){
+                    font-size: 22px;
+                }
+            
+                @include media(">=phone","<=custom-view-4"){
+                    font-size: 30px;
+                }
             }
 
             .previewSubtitle{
@@ -104,6 +158,8 @@
         cursor: pointer;
         padding: 0.4rem;
         margin: 1rem 0.7rem;
+        white-space: nowrap;
+
 
         &::after{
             display: block;
@@ -130,12 +186,28 @@
 .projectMpPreview{
     display: flex;
     flex-direction: column;
-    background: #009BC0;
-    max-width: 534px;
+    background: #F6F6F6;
+    max-width: 500px;
     margin: 0.5rem 1rem;
 
+    .previewImg{
+        width: 80%;
+        align-self: center;
+        padding: 0.8rem;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
     .previewContent{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
         color: #fff;
+        background: rgba(0, 155, 192, 1);
+        height: 100%;
+
         .previewDetails{
             margin: 0.5rem;
             padding: 0.6rem;
@@ -144,6 +216,16 @@
                 font-weight: bold;
                 font-size: 40px;
                 line-height: 51px;
+
+                @include media("<phone"){
+                    font-size: 22px;
+                    line-height:30px;
+                }
+            
+                @include media(">=phone","<=tablet"){
+                    font-size: 30px;
+                    line-height:30px;
+                }
                 
             }
 
@@ -165,6 +247,7 @@
             cursor: pointer;
             padding: 0.4rem;
             margin: 1rem 0.7rem;
+            white-space: nowrap;
 
             &::after{
                 display: block;

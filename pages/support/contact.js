@@ -5,32 +5,42 @@ import Link from 'next/link'
 import Navigation from '../../components/navigation'
 import SupportSubmenu from '../../components/supportSubmenu'
 import styles from '../../styles/contactpage.module.scss'
+import { productData } from '../../data'
 
-export default function Contact() {
+export default function Contact({products}) {
     return(
         <div className={styles.contactPage}>
             <Head>
                 <title>Contact | Alluvium</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navigation theme={"dark"}/>
+            <Navigation theme={"dark"} products={products}/>
             <main className={styles.contactUsPage}>
-                <SupportSubmenu/>
+                {/* <SupportSubmenu/> */}
                 <div className={styles.contactImg}>
                     <Image src='/assets/contactImg.png' width={1392} height={461}/>
                 </div>
                 <div className={styles.contactDetails}>
-                    <div className={styles.emailContact}>
+                    <div className={styles.emailContact} data-aos="fade-right">
                         <h3>Launching a new product? Got enquiries?</h3>
-                        <p>Send a mail to: <Link href="/">hello@alluvium.net</Link></p>
+                        <p>Send a mail to: <a target="_blank" href="mailto:contact@alluvium.net" rel="noopener noreferrer">contact@alluvium.net</a></p>
                     </div>
-                    <div className={styles.mailingAddress}>
+                    <div className={styles.mailingAddress} data-aos="fade-left">
                         <h3>Mailing Address:</h3>
-                        <p>689 Heathrow, cantebury, London, Lagos.</p>
-                        <Link href="/">+234 816 133 5033</Link>
+                        <p>Kemp House 160, City Road London, EC1V 2NX</p>
+                        {/* <Link href="tel:+234-816-133-5033">+234 816 133 5033</Link> */}
                     </div>
                 </div>
             </main>
         </div>
     )
 }
+
+
+export const getStaticProps = async () =>{
+    return{
+      props:{
+        products:productData,
+      }
+    }
+  }

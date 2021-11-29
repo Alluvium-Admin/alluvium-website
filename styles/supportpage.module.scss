@@ -1,7 +1,21 @@
+@import 'lib/breakpoints';
+
 .supportPage{
     main{
         display: flex;
         flex-direction: column;
         margin: 1rem 3rem;
+
+        @include media("<phone"){
+            margin: 1rem;
+        }
+
+        @include media(">=phone","<=tablet"){
+            margin: 1rem 0;
+        }
+    
+        @include media(">=tablet","<=custom-view-1"){
+            margin: 1rem 1.5rem;
+        }
     }
 }

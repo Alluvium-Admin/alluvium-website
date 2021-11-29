@@ -1,72 +1,249 @@
+@import "lib/breakpoints.scss";
+
 .productPage{
     .product{
         .productHeader{
             display: flex;
             flex-direction: column;
-            margin: 0 3rem;
-            .productName{
-                font-style: normal;
-                font-weight: 300;
-                font-size: 15px;
-                line-height: 24px;
-                width: fit-content;
-                padding: 0.5rem 0;
-            }
+            width: 100%;
 
-            .productTitle{
-                font-style: normal;
-                font-weight: bold;
-                font-size: 50px;
-                line-height: 125.5%;
+            .productPageHeader{
+                display:flex;
+                flex-direction:row;
+                justify-content:space-around;
                 margin: 1rem 0;
-                
-            }
+                padding: 2.5rem 0.5rem;
 
-            .shareOptions{
-                position: relative;
-                margin: 1rem 0;
-                .shareBtn{
-                    display: flex;
-                    flex-direction: row;
-                    width: fit-content;
-                    background:none;
-                    border: none;
-                    align-items: center;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 18px;
-                    line-height: 23px;
-                    cursor: pointer;
-                    border-bottom: 2px solid #000;
-                    transition: 0.2s;
-                    outline: 0.2px dotted #000;
+                @include media("<phone"){
+                    flex-direction:column;
+                }
     
-                    &:hover{
-                        border-bottom: 2px solid #fff;
+                @include media(">=phone","<=custom-view-2"){
+                    flex-direction:column;
+                }
+
+                img{
+                    max-width:686px;
+                    padding:0.5rem;
+                    width:90%;
+
+                    @include media("<phone"){
+                        align-self:center;
                     }
-                    span{
-                        align-self: center;
-                    }
-    
-                    p{
-                        margin: 0 0.2rem;
+        
+                    @include media(">=phone","<=custom-view-2"){
+                        align-self:center;
                     }
                 }
-            }
-            
+                .productUsage{
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-between;
 
-            .productSubtitle{
-                font-style: normal;
-                font-weight: 500;
-                font-size: 35px;
-                line-height: 50px;
-                max-width: 930px;
-                margin: 1rem 0;
+                    h3{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 65px;
+                        line-height: 125.5%;
+                        color: #FFFFFF;
+                        align-self:center;
+                        margin:0.5rem;
+                        max-width:448px;
+    
+                        @include media("<phone"){
+                            font-size: 30px;
+                            margin:1rem 0;
+                            text-align:center;
+                            max-width:unset;
+                        }
+    
+                        @include media(">=phone","<tablet"){
+                            font-size: 40px;
+                            margin:1rem 0;
+                            text-align:center;
+                            max-width:unset;
+
+                        }
+            
+                        @include media(">=tablet","<=custom-view-2"){
+                            font-size: 55px;
+                            margin:1rem 0;
+                            text-align:center;
+                            max-width:unset;
+                        }
+                    }
+
+                    .usageBtns{
+                        display: flex;
+                        flex-direction:row;
+                        // justify-content:space-evenly;
+
+                        @include media("<phone"){
+                            align-self: center;
+                            flex-direction: column;
+                        }
+            
+                        @include media(">=phone","<=custom-view-2"){
+                            align-self: center;
+                        }        
+
+                        .tryBtn,
+                        .videosBtn{
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            border-radius: 10px;
+                            padding: 0.6rem 1.2rem;
+                            text-transform: uppercase;
+                            font-size:15px;
+                            margin:1rem;
+                            cursor: pointer;
+                            text-decoration: none;
+                            white-space: nowrap;
+
+                            &:hover{
+                                box-shadow: none;
+                            }
+                        }
+
+                        .tryBtn{
+                            background: #FFFFFF;
+                            color: #009BC0;
+                        }
+
+                        .videosBtn{
+                            color:#fff;
+
+                            @include media("<phone"){
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                
+
+            }
+
+            .productPageDetails{
+                margin: 0 3rem;
+
+                @include media("<phone"){
+                    margin: 0 0.3rem;
+                }
+
+                @include media(">=phone","<=custom-view-4"){
+                    margin: 0 1.5rem;
+                }
+
+                .productName{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 24px;
+                    width: fit-content;
+                    padding: 0.5rem 0;
+    
+                    @include media("<phone"){
+                        font-size: 14px;
+                    }
+        
+                }
+    
+                .productTitle{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 50px;
+                    line-height: 125.5%;
+                    margin: 1rem 0;
+    
+                    @include media("<phone"){
+                        font-size: 25px;
+                    }
+        
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size: 35px;
+                    }
+                    
+                }
+    
+                .shareOptions{
+                    position: relative;
+                    margin: 2.5rem 0;
+                    .shareBtn{
+                        display: flex;
+                        flex-direction: row;
+                        width: fit-content;
+                        background:none;
+                        border: none;
+                        align-items: center;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 23px;
+                        cursor: pointer;
+                        border-bottom: 2px solid #000;
+                        transition: 0.2s;
+                        outline: none;
+                        
+                        
+                        @include media("<phone"){
+                            font-size: 16px;
+                        }
+            
+                        @include media(">=phone","<=custom-view-4"){
+                            font-size: 17px;
+                        }
+    
+                        &:hover{
+                            border-bottom: 2px solid #fff;
+                        }
+    
+                        &:focus{
+                            outline: 0.2px dotted #000;
+                        }
+    
+                        span{
+                            align-self: center;
+                        }
+        
+                        p{
+                            margin: 0 0.2rem;
+                        }
+                    }
+                }
+                
+    
+                .productSubtitle{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 35px;
+                    line-height: 50px;
+                    max-width: 930px;
+                    margin: 1rem 0;
+    
+                    @include media("<phone"){
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+        
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+    
+                }
             }
 
             .productDetails{
                 display: flex;
                 flex-direction: row;
+
+                @include media("<phone"){
+                    justify-content:space-evenly;
+                }
+    
+                @include media(">=phone","<=custom-view-4"){
+                    justify-content:space-evenly;
+
+                }
             }
             
             .productLead,
@@ -77,24 +254,75 @@
                 flex-direction: column;
                 margin: 2% 6% 2% 0 ;
 
+                @include media("<phone"){
+                    margin: 2% 3%;
+                }
+    
+                @include media(">=phone","<=custom-view-4"){
+                    margin: 2% 3%;
+                }
+
+                h3{
+                    @include media("<phone"){
+                        font-size: 15px;
+                    }
+        
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size: 16px;
+                    }
+                }
+
                 p{
                     text-transform: uppercase;
+
+                    @include media("<phone"){
+                        font-size: 15px;
+                    }
+        
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size: 16px;
+                    }
                 }
             }
         }
 
         .product{
-            .productImg{
-                margin: 1rem 2rem;
+            margin: 0 3rem;
+
+            @include media("<phone"){
+                margin: 0 0.3rem;
             }
+
+            @include media(">=phone","<=custom-view-4"){
+                margin: 0 1.5rem;
+            }
+            
             .productInfo{
-                margin: 2% 8%;
+                margin: 4% 8%;
+
+                @include media("<phone"){
+                    margin: 3% 4%;
+                }
+    
+                @include media(">=phone","<=custom-view-4"){
+                    margin: 3% 6%;
+                }
 
                 p{
                     font-style: normal;
-                    font-weight: 300;
-                    font-size: 15px;
-                    line-height: 30px;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 40px;
+
+                    @include media("<phone"){
+                        font-size:18px;
+                        line-height:30px;
+                    }
+        
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size:25px;
+                        line-height:30px;
+                    }
                 }
             }
 
@@ -105,37 +333,141 @@
             }
 
             .keyPoints{
-                margin: 1% 8%;
+                margin: 2rem 0;
                 .title{
                     font-style: normal;
                     font-weight: bold;
                     font-size: 35px;
                     line-height: 150%;
+
+                    @include media("<phone"){
+                        font-size:18px;
+                    }
+        
+                    @include media(">=phone","<=custom-view-4"){
+                        font-size:25px
+                    }
                 }
 
-                ol{
+                ul{
                     margin: 1rem;
 
                     li{
-                        margin: 0.3rem 0;
+                        margin: 1.5rem 0;
+
+                        @include media("<phone"){
+                            margin: 0.7rem 0;
+                            font-size: 15px;
+                        }
+            
+                        @include media(">=phone","<=custom-view-4"){
+                            margin: 0.9rem 0;
+                            font-size: 15px;
+                        }
+
+                        h3{
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 17px;
+                            line-height: 30px;
+                        }
+
+                        p{
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 15px;
+                            line-height: 30px;
+                        }
                     }
                 }
             }
 
+            .usageBtns{
+                display: flex;
+                flex-direction:row;
+
+                @include media("<phone"){
+                    flex-direction: column;
+                }
+                // justify-content:space-evenly;
+
+                .tryBtn,
+                .videosBtn{
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    padding: 0.6rem 1.2rem;
+                    text-transform: uppercase;
+                    font-size:15px;
+                    margin:1rem;
+                    cursor: pointer;
+                    text-decoration: none;
+                    white-space: nowrap;
+
+                    @include media("<phone"){
+                        align-self: center;
+                    }
+
+                    &:hover{
+                        box-shadow: none;
+                    }
+                }
+
+                .tryBtn{
+                    background: #009BC0;
+                    color: #fff;
+                }
+
+                .videosBtn{
+                    color: #009BC0;
+                    background-color: #fff;
+                    border: 2px solid #009BC0;
+                }
+            }
         }
         .moreProjects{
-            margin: 0 8%;
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 3rem;
+
+            @include media("<phone"){
+                margin: 0.6rem 0.3rem;
+            }
+
+            @include media(">=phone","<=custom-view-4"){
+                margin: 0.8rem 1.5rem;
+            }
 
             .title{
                 font-style: normal;
                 font-weight: bold;
                 font-size: 35px;
                 line-height: 150%;
+
+                @include media("<phone"){
+                    font-size:18px;
+                }
+    
+                @include media(">=phone","<=custom-view-4"){
+                    font-size:25px
+                }
             }
 
             .projects{
                 display: flex;
+                // flex-direction:row;
+                align-self: center;
                 flex-wrap: wrap;
+                margin: 1.5rem 0;
+
+                @include media("<phone"){
+                    flex-direction: column ;
+                    
+                }
+            
+                @include media(">=phone","<=tablet"){
+                    flex-direction: column ;
+                    
+                }
             }
         }
     }

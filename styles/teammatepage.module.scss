@@ -1,0 +1,183 @@
+@import "lib/breakpoints.scss";
+
+.teammatePageContainer{
+    .teammatePage{
+        .teammate{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 90%;
+
+            @include media("<custom-view-4"){
+                flex-direction: column-reverse;
+                max-width: 100%;
+            }
+        
+            @include media(">=custom-view-4","<=tablet"){
+                max-width: 90%;
+            }
+        
+            @include media(">=tablet","<=desktop"){
+                max-width: 90%;
+            }
+
+            .teammateFavorites{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background: #009BC0;
+                width: 60%;
+                position: relative;
+                overflow: hidden;
+                padding: 4.5rem 1rem;
+
+                @include media("<custom-view-4"){
+                    width: 100%;
+                }
+            
+                @include media(">=custom-view-4","<=tablet"){
+                    width: 100%;
+                }
+
+                @include media(">=tablet","<=desktop"){
+                    width: 60%;
+                    position: unset;
+                    overflow: unset;
+                }
+
+
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 120px;
+                    background-color: #fff;
+                    position: absolute;
+                    right: -620px;
+                    top: 30px;
+                    transform: rotateZ(9deg);
+
+                    @include media("<tablet"){
+                        display: none;
+
+                    }
+                
+                    @include media(">=tablet","<=desktop"){
+                        display: none;
+                    }
+                }
+
+                .teammateFavorite{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center ;
+                    max-width: 480px;
+                    margin: 1.5rem 0;
+
+                    @include media("<custom-view-4"){
+                        text-align: center;
+                        align-items: center ;
+                    }
+                
+                    @include media(">=custom-view-4","<=tablet"){
+                        width: 100%;
+                    }
+
+                    .question{
+                        font-weight: bold;
+                        font-size: 48.9476px;
+                        line-height: 70px;
+                        color: #FFFFFF;
+
+                        @include media("<tablet"){
+                            font-size: 30px;
+                            line-height: 40px;
+                        }
+                    
+                        @include media(">=tablet","<=desktop"){
+                            font-size: 40px;
+                            line-height: 60px;
+                        }
+                    }
+
+                    .answer{
+                        font-weight: 500;
+                        font-size: 32px;
+                        line-height: 51px;
+                        color: #1B3854;
+                        text-transform: capitalize;
+
+                        @include media("<tablet"){
+                            font-size: 24px;
+                            line-height: 40px;
+                        }
+                    
+                        @include media(">=tablet","<=desktop"){
+                            font-size: 28px;
+                            line-height: 50px;
+                        }
+                    }
+                }
+            }
+
+            .teammateProfile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                width: 40%;
+                margin: 1rem 0;
+
+                @include media("<custom-view-4"){
+                    width: 100%;
+                    justify-content: center;
+
+                }
+            
+                @include media(">=custom-view-4","<=tablet"){
+                    width: 100%;
+                    justify-content: center;
+
+                }
+            
+                @include media(">=tablet","<=desktop"){
+                    justify-content: center;
+                }
+
+                .teammateImg{
+                    max-width: 800px;
+
+                    @include media("<custom-view-4"){
+                        min-width: 230px;
+
+                    }
+                
+                    @include media(">=custom-view-4","<=tablet"){
+                        min-width: 230px;
+                    }
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .teammateInfo{
+                    text-align: center;
+
+                    .name{
+                        text-transform: capitalize ;
+                        font-weight: 600;
+                        color: #000000;
+                    }
+
+                    .role,
+                    .dept{
+                        font-weight: normal;
+                        color: #000000;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}

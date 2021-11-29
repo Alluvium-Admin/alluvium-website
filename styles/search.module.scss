@@ -1,7 +1,21 @@
+@import 'lib/breakpoints';
+
 .search{
     display: flex;
     flex-direction: column;
+    position: relative;
     align-self: center;
+    min-width: unset;
+    transition: all 0.3s;
+    z-index: 1;
+
+    @include media("<phone"){
+        display: none;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        display: none;
+    }
 
     .searchInput{
         display: flex;
@@ -21,6 +35,7 @@
             border: none;
             color: #fff;
             margin: 0 0.5rem;
+            width:100%;
 
             &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
                 color: #fff;
@@ -34,13 +49,89 @@
             }
         }
     }
+
+    .searchResults{
+        display:flex;
+        flex-direction:column;
+        position: absolute;
+        top: 30px;
+        background:#1b3854f3;
+        padding: 1rem 0.5rem;
+        border-radius:0 0 15px 15px;
+        max-width:600px;
+        width:100%;
+        transition: 0.2s;
+        
+
+
+        .errorText{
+            font-size:14px;
+            font-weight:100px;
+            font-style:italic;
+            color:rgba(255, 255, 255, 0.753);
+        }
+
+        .searchResult{
+            padding:0.5rem;
+            cursor:pointer;
+            transition: 0.2s;
+
+            &::after{
+                display:block;
+                content:"";
+                background:#fff;
+                height:1px;
+                margin: 0 auto;
+                width:0;
+                transition: 0.2s;
+
+            }
+
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+
+            .resultDetails{
+                overflow: hidden;
+                padding:0.2rem;
+                h3{
+                    color:#fff;
+                    font-size:18px;
+                }
+
+                p{
+                    font-size:12px;
+                    white-space: nowrap; 
+                    max-width: 200px;
+                    overflow: hidden;
+                    color: rgb(126, 126, 126);
+                    text-overflow: ellipsis; 
+                }
+            }
+
+        }
+    }
 }
 
 
 .searchDark{
     display: flex;
     flex-direction: column;
+    position: relative;
     align-self: center;
+    min-width: unset;
+    transition: all 0.2s;
+    z-index: 1;
+
+    @include media("<phone"){
+        display: none;
+    }
+
+    @include media(">=phone","<=custom-view-1"){
+        display: none;
+    }
 
     .searchInput{
         display: flex;
@@ -64,6 +155,7 @@
             font-weight: normal;
             font-size: 15px;
             line-height: 19px;
+            width: 100%;
 
             &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
                 color: #000;
@@ -77,5 +169,231 @@
             }
         }
     }
+
+    .searchResults{
+        display:flex;
+        flex-direction:column;
+        position: absolute;
+        top: 30px;
+        background:#1b3854f3;
+        padding: 1rem 0.5rem;
+        border-radius:0 0 15px 15px;
+        max-width:600px;
+        width:100%;
+        transition: 0.2s;
+
+
+        .errorText{
+            font-size:14px;
+            font-weight:100px;
+            font-style:italic;
+            color:rgba(255, 255, 255, 0.753);
+        }
+
+        .searchResult{
+            padding:0.5rem;
+            cursor:pointer;
+            transition: 0.2s;
+
+            &::after{
+                display:block;
+                content:"";
+                background:#fff;
+                height:1px;
+                margin: 0 auto;
+                width:0;
+                transition: 0.2s;
+
+            }
+
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+
+            .resultDetails{
+                overflow: hidden;
+                padding:0.2rem;
+                h3{
+                    color:#fff;
+                    font-size:18px;
+                }
+
+                p{
+                    font-size:12px;
+                    white-space: nowrap; 
+                    max-width: 200px;
+                    overflow: hidden;
+                    color: rgb(126, 126, 126);
+                    text-overflow: ellipsis; 
+                }
+            }
+
+        }
+    }
 }
 
+
+// Mobile Search Component
+
+.mobileSearch{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+
+
+    .searchInput{
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+        padding: 0.7rem;
+        border-radius: 15px;
+
+        .searchIcon{
+            margin: 0 0.1rem;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        input{
+            background-color: transparent;
+            border: none;
+            color: #000;
+            margin: 0 0.5rem;
+            width: 100%;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 19px;
+            outline: 0.3px dotted #000;
+
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #000;
+                
+            }
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: #000;
+            }
+                &::-ms-input-placeholder { /* Microsoft Edge */
+                    color: #000;
+            }
+        }
+    }
+
+    .searchResults{
+        display:flex;
+        flex-direction:column;
+        position: absolute;
+        top: 42px;
+        background:#060c13f3;
+        padding: 1rem 0.5rem;
+        border-radius:0 0 15px 15px;
+        width:100%;
+        // margin: 0 3%;
+        transition: 0.2s;
+        align-self: center;
+        z-index: 2;
+
+
+        .errorText{
+            font-size:14px;
+            font-weight:100px;
+            font-style:italic;
+            color:rgba(255, 255, 255, 0.753);
+        }
+
+        .searchResult{
+            padding:0.5rem;
+            cursor:pointer;
+            transition: 0.2s;
+
+            &::after{
+                display:block;
+                content:"";
+                background:#fff;
+                height:1px;
+                margin: 0 auto;
+                width:0;
+                transition: 0.2s;
+
+            }
+
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+
+            .resultDetails{
+                overflow: hidden;
+                padding:0.2rem;
+                h3{
+                    color:#fff;
+                    font-size:18px;
+                }
+
+                p{
+                    font-size:12px;
+                    white-space: nowrap; 
+                    max-width: 500px;
+                    overflow: hidden;
+                    color: rgb(126, 126, 126);
+                    text-overflow: ellipsis; 
+                }
+            }
+
+        }
+    }
+}
+
+
+// .mobileSearchDark{
+//     display: flex;
+//     flex-direction: column;
+//     align-self: center;
+//     position: relative;
+
+//     .searchInput{
+//         display: flex;
+//         flex-direction: row;
+//         background: #fff;
+//         padding: 0.7rem;
+//         border-radius: 15px;
+
+//         .searchIcon{
+//             margin: 0 0.5rem;
+
+//             img{
+//                 width: 100%;
+//             }
+//         }
+
+//         input{
+//             background-color: transparent;
+//             border: none;
+//             color: #000;
+//             margin: 0 0.5rem;
+//             font-style: normal;
+//             font-weight: normal;
+//             font-size: 15px;
+//             line-height: 19px;
+//             width: 100%;
+//             outline: 0.3px dotted #000;
+
+//             &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+//                 color: #000;
+                
+//             }
+//                 &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+//                     color: #000;
+//             }
+//                 &::-ms-input-placeholder { /* Microsoft Edge */
+//                     color: #000;
+//             }
+//         }
+//     }
+// }
