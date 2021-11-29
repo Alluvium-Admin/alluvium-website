@@ -14,7 +14,7 @@ export default function Products({products}) {
         <Navigation theme={"dark"} products={products}/>
         <main>
             <section className={styles.ourStory}>
-                <h2 className={styles.ourStoryTitle}>Our Story</h2>
+                <h2 className={styles.ourStoryTitle} data-aos="fade-down">Our Story</h2>
                 <div className={styles.ourStoryBody}>
                     <div className={styles.ourStoryContent}>
                         <p>
@@ -36,7 +36,7 @@ export default function Products({products}) {
                             We routinely put back into the customers' pockets, 15 – 45% of their annual licence costs, by consolidating and scaling their use of Jira, Confluence, Bitbucket and other Atlassian products, from multiple Atlassian and third-party applications. 
                         </p>  
                     </div>
-                    <div className={styles.ourStoryImg}>
+                    <div className={styles.ourStoryImg} data-aos-delay={"200"} data-aos="zoom-in">
                         <img src={require('../../public/assets/engineer.svg')} />        
                     </div>
                 </div>
@@ -44,13 +44,13 @@ export default function Products({products}) {
             <section className={styles.reasonsSection}>
                 <h2 className={styles.reasonsSectionTitle}>Reasons to go with us ?</h2>
                 <div className={styles.reasonsList}>
-                    <div className={styles.reason}>
+                    <div className={styles.reason} data-aos="fade-up">
                         <h3 className={styles.title}>Digital Transformation Experience</h3>
                         <p className={styles.description}>
                             Server to Cloud is the future, let us get you there securely, simply and at scale.
                         </p>
                     </div>
-                    <div className={styles.reason}>
+                    <div className={styles.reason} data-aos-delay={"200"} data-aos="fade-up">
                         <h3 className={styles.title}>Global Presence</h3>
                         <div className={styles.description}>
                             <p>Industry leading Experience across all Atlassian Migration use cases</p>
@@ -62,7 +62,7 @@ export default function Products({products}) {
                             </ol>
                         </div>
                     </div>
-                    <div className={styles.reason}>
+                    <div className={styles.reason} data-aos-delay={"300"} data-aos="fade-up">
                         <h3 className={styles.title}>Speed and Scale</h3>
                         <p className={styles.description}>
                             Agile Introduction and Scaling
@@ -73,7 +73,7 @@ export default function Products({products}) {
                     <img src={require('../../public/assets/coworking.svg')} alt="coworking"/>   
                 </div>  
             </section>
-            <section className={styles.cultureMattersSection}>
+            <section className={styles.cultureMattersSection} data-aos="fade-up">
                 <h2 className={styles.cultureMattersSectionTitle}>Culture Matters</h2>
                 <div className={styles.cultureMattersContainer}>
                     <p>Distributed team of British trained Atlassian Engineers with highest GDPR Data Protection qualifications working remotely from British Computers.</p> 
@@ -82,7 +82,7 @@ export default function Products({products}) {
             <section className={styles.foundersSection}>
                 <h2 className={styles.foundersSectionTitle}>Meet the Founders</h2>
                 <div className={styles.founders}>
-                    <div className={styles.founder}>
+                    <div className={styles.founder} data-aos="fade-up">
                         <div className={styles.founderImg}>
                             <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638165393/Alluvium%20Website/Team(new)/jt_pics_2-removebg-preview_1_ft8jdd.png" alt="Taiwo"/>
                         </div>
@@ -95,7 +95,7 @@ export default function Products({products}) {
                             </p>      
                         </div>
                     </div>
-                    <div className={styles.founder}>
+                    <div className={styles.founder} data-aos="fade-up">
                         <div className={styles.founderImg}>
                             <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638165393/Alluvium%20Website/Team(new)/oga_wale_white_bg_zhshnj.png" alt="Wale" />
                         </div>
