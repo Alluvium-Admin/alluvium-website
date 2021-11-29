@@ -24,7 +24,8 @@ export default function Navigation ({theme,products}) {
                 <ul className={ theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
                     <li><Link href="/products">Our Products</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
-                    <li><Link href="/team">Our Team</Link></li>
+                    <li><Link href="/about">About us</Link></li>
+                    {/* <li><Link href="/team">Our Team</Link></li> */}
                     <li><Link href="/support">Support</Link></li>
                 </ul>
                 <div className={ displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu }>
@@ -33,7 +34,8 @@ export default function Navigation ({theme,products}) {
                         <li><Link href="/">+ Home</Link></li>
                         <li><Link href="/products">+ Our Products</Link></li>
                         <li><Link href="/reel">+ Project Reel</Link></li>
-                        <li><Link href="/team">+ Our Team</Link></li>
+                        <li><Link href="/about">About us</Link></li>
+                        {/* <li><Link href="/team">+ Our Team</Link></li> */}
                         <li><Link href="/support">+ Support</Link></li>
                     </ul>
                 </div>
