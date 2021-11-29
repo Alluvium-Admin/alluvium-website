@@ -1,3 +1,5 @@
+@import'lib/breakpoints.scss';
+
 .aboutUsPage{
     main{
         padding: 1.5rem;
@@ -11,16 +13,44 @@
                 font-size: 88px;
                 line-height: 132px;
                 color: #1B3854;
+
+                @include media("<phone"){
+                    font-size: 40px;
+                    line-height: 48px;
+                }
+            
+                @include media(">=phone","<=desktop"){
+                    font-size: 64px;
+                    line-height: 80px;
+                }
             }
 
             .ourStoryBody{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+
+                @include media("<phone"){
+                    flex-direction: column-reverse;
+                    align-items: center;
+                }
+            
+                @include media(">=phone","<=desktop"){
+                    flex-direction: column-reverse;
+                    align-items:center;
+                }
                 
 
                 .ourStoryContent{
                     width: 50%;
+
+                    @include media("<phone"){
+                        width: 100%;
+                    }
+                
+                    @include media(">=phone","<=desktop"){
+                        width: 100%;
+                    }
 
                     p{
                         font-style: normal;
@@ -29,6 +59,18 @@
                         line-height: 28px;
                         color: rgba(27, 56, 84, 0.7);
                         margin: 0.4rem 0;
+
+                        @include media("<phone"){
+                            text-align: center;
+                            font-size: 16px;
+                            line-height: auto;
+                        }
+                    
+                        @include media(">=phone","<=desktop"){
+                            text-align: center;
+                            font-size: 18px;
+                            line-height: 25px;
+                        }
                     }
                     
                 }
@@ -57,12 +99,32 @@
                 line-height: 132px;
                 color: #1B3854;
                 text-align: center;
+
+                @include media("<phone"){
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+
+                @include media(">=phone","<=custom-view"){
+                    font-size: 40px;
+                    line-height: 60px;
+                }
             }
 
             .reasonsList{
                 display: flex;
                 flex-wrap: wrap;
                 margin: 3rem 0 0.5rem 0;
+
+                @include media("<phone"){
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                @include media(">=phone","<=custom-view"){
+                    flex-direction: column;
+                    align-items: center;
+                }
 
                 .reason{
                     max-width:400px;
@@ -79,6 +141,27 @@
                         margin-bottom: 5rem;
                     }
 
+                    @include media("<phone"){
+                        &:nth-child(odd){
+                            margin-top: 1rem;
+                        }
+    
+                        &:nth-child(even){
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    @include media(">=phone","<=desktop"){
+                        width: 100%;
+
+                        &:nth-child(odd){
+                            margin-top: 1rem;
+                        }
+    
+                        &:nth-child(even){
+                            margin-bottom: 1rem;
+                        }
+                    }
 
                     .title{
                         font-style: normal;
@@ -86,6 +169,16 @@
                         font-size: 24px;
                         line-height: 36px;
                         color: #1B3854;
+
+                        @include media("<phone"){
+                            font-size: 18px;
+                            line-height: 28px;
+                        }
+        
+                        @include media(">=phone","<=custom-view"){
+                            font-size: 22px;
+                            line-height: 32px;
+                        }
                     }
 
                     .description{
@@ -95,6 +188,16 @@
                         line-height: 26px;
                         color: rgba(27, 56, 84, 0.7);
                         padding: 1.5rem 0;
+
+                        @include media("<phone"){
+                            font-size: 16px;
+                            line-height: 28px;
+                        }
+        
+                        @include media(">=phone","<=custom-view"){
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
 
                         ol{
                             padding: 0.5rem 1rem;
@@ -120,8 +223,18 @@
                 font-size: 48px;
                 line-height: 72px;
                 color: #1B3854;
-                margin: 1rem 0;
+                margin: 2rem 0;
                 text-align: center;
+
+                @include media("<phone"){
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+
+                @include media(">=phone","<=custom-view"){
+                    font-size: 36px;
+                    line-height: 50px;
+                }
             }
 
             .cultureMattersContainer{
@@ -135,6 +248,16 @@
                     line-height: 34px;
                     text-align: center;
                     color: rgba(27, 56, 84, 0.7);
+
+                    @include media("<phone"){
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+    
+                    @include media(">=phone","<=custom-view"){
+                        font-size: 20px;
+                        line-height: 32px;
+                    }
                 }
             }
         }
@@ -143,7 +266,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 1rem 0;
+            margin: 2rem 0;
 
             .foundersSectionTitle{
                 font-style: normal;
@@ -161,6 +284,16 @@
                 margin: 3rem 0;
                 justify-content: space-around;
 
+                @include media("<phone"){
+                    width: 100%;
+                    flex-direction: column;
+                }
+
+                @include media(">=phone","<=custom-view-2"){
+                    width: 100%;
+                    flex-direction: column;
+                }
+
                 .founder{
                     margin: 1rem 1.5rem;
                     display: flex;
@@ -168,6 +301,17 @@
                     align-items: center;
                     text-align: center;
                     width: 45%;
+
+                    @include media("<phone"){
+                        width: 100%;
+                        margin: 2rem 0.5rem;
+                    }
+    
+                    @include media(">=phone","<=custom-view-2"){
+                        width: 90%;
+                        margin: 2rem 0.5rem;
+                    }
+    
 
                     .founderImg{
                         max-width: 300px;
@@ -190,6 +334,16 @@
                             font-size: 30.0443px;
                             line-height: 45px;
                             color: #000000;
+
+                            @include media("<phone"){
+                                font-size: 18px;
+                                line-height: 22px;
+                            }
+            
+                            @include media(">=phone","<=custom-view-2"){
+                                font-size: 24px;
+                                line-height: 38px;
+                            }
                         }
 
                         .founderRole{
@@ -198,6 +352,16 @@
                             font-size: 30.0443px;
                             line-height: 45px;
                             color: #000000;
+
+                            @include media("<phone"){
+                                font-size: 18px;
+                                line-height: 22px;
+                            }
+            
+                            @include media(">=phone","<=custom-view-2"){
+                                font-size: 24px;
+                                line-height: 38px;
+                            }
                         }
                     }
                 }

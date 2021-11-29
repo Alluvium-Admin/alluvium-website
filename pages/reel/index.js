@@ -29,11 +29,11 @@ export default function Reel({ products }) {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2
+          slidesToScroll: 2,
+          initialSlide: 1
         }
       },
       {

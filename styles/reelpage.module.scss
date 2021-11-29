@@ -39,16 +39,45 @@
         }
 
         .reelPageHeader{
-        
             margin: 1rem 0;
             max-width: 85%;
             align-self: center;
+
+            @include media("<phone"){
+                max-width: 100%;
+            }
+        
+            @include media(">=phone","<=custom-view"){
+                max-width: 90%;
+            }
 
             .header{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 margin: 0.5rem 0;
+
+                @include media("<phone"){
+                    .title{
+                        display:none;
+                    }
+                }
+            
+                @include media(">=phone","<=custom-view"){
+                    .title{
+                        display:none;
+                    }
+                }
+
+                .titleImg{
+                    max-width:588px;
+                    padding: 0.4rem;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+                
             }
 
             .sectionRedirect{
@@ -57,6 +86,7 @@
                 align-items: center;
                 margin: 3rem 0;
 
+
                 .sectionRedirectTitle{
                     font-style: normal;
                     font-weight: 600;
@@ -64,11 +94,27 @@
                     line-height: 55px;
                     text-align: center;
                     color: rgba(27, 56, 84, 0.7);
+                    
+                    @include media("<phone"){
+                        font-size: 22px;
+                        line-height: 28px;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 32px;
+                        line-height: 36px;
+                    }
+                
                 }
 
                 .redirectBtn{
                     margin: 2rem 0;
-                    
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover{
+                        transform: translateY(10px);
+                    }
                 }
             }
             
@@ -91,6 +137,16 @@
                     text-align: center;
                     color: #000000;
                     padding: 1rem 0;
+
+                    @include media("<phone"){
+                        font-size: 22px;
+                        line-height: 28px;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 32px;
+                        line-height: 36px;
+                    }
                 }
 
                 .projectReelInfo{
@@ -101,6 +157,18 @@
                     text-align: justify;
                     color: rgba(27, 56, 84, 0.7);
                     padding: 2rem 1rem;
+
+                    @include media("<phone"){
+                        font-size: 16px;
+                        line-height: normal;
+                        padding: 2rem 0.4rem;
+                    }
+                
+                    @include media(">=phone","<=tablet"){
+                        font-size: 18px;
+                        line-height: normal;
+                        padding: 2rem 0.8rem;
+                    }
                 }
             }
         }
@@ -112,12 +180,37 @@
             margin: 2rem 0;
 
             .testimonalSectionTitle{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 font-style: normal;
                 font-weight: 600;
                 font-size: 40px;
                 line-height: 60px;
                 color: #1B3854;
+                text-align: center;
+
+
+                &::after{
+                    content: '';
+                    height: 6px;
+                    background: #1B3854;
+                    border-radius: 8px;
+                    width: 80%;
+                    margin: 0.5rem 0; 
+                }
+
+                @include media("<phone"){
+                    font-size: 22px;
+                    line-height: normal;
+                }
+            
+                @include media(">=phone","<=tablet"){
+                    font-size: 32px;
+                    line-height: normal;
+                }
             }
+
 
             .testimonalSectionList{
                 width: 100%;

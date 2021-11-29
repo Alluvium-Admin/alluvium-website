@@ -36,7 +36,6 @@ export default function Products({products}) {
                             We routinely put back into the customers' pockets, 15 – 45% of their annual licence costs, by consolidating and scaling their use of Jira, Confluence, Bitbucket and other Atlassian products, from multiple Atlassian and third-party applications. 
                         </p>  
                     </div>
-                    
                     <div className={styles.ourStoryImg}>
                         <img src={require('../../public/assets/engineer.svg')} />        
                     </div>
@@ -53,15 +52,15 @@ export default function Products({products}) {
                     </div>
                     <div className={styles.reason}>
                         <h3 className={styles.title}>Global Presence</h3>
-                        <p className={styles.description}>
-                            Industry leading Experience across all Atlassian Migration use cases
+                        <div className={styles.description}>
+                            <p>Industry leading Experience across all Atlassian Migration use cases</p>
                             <ol type="a">
                                 <li>Server to DC</li>
                                 <li>Server to Cloud</li>
                                 <li>Cloud to Server/DC</li>
                                 <li>Any combination of the above</li>
                             </ol>
-                        </p>
+                        </div>
                     </div>
                     <div className={styles.reason}>
                         <h3 className={styles.title}>Speed and Scale</h3>
@@ -85,29 +84,29 @@ export default function Products({products}) {
                 <div className={styles.founders}>
                     <div className={styles.founder}>
                         <div className={styles.founderImg}>
-                            <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638040844/Alluvium%20Website/Team(new)/OGA_JT_PICS_yqonq9.jpg" alt="Taiwo"/>
+                            <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638165393/Alluvium%20Website/Team(new)/jt_pics_2-removebg-preview_1_ft8jdd.png" alt="Taiwo"/>
                         </div>
                         <div className={styles.founderInfo}>
+                            <h3 className={styles.founderName}>Taiwo Ojo</h3>
+                            <h3 className={styles.founderRole}>Co-founder</h3>  
                             <p className={styles.founderDesc}>
                                 With more than a decade, award-winning experience Administering, Engineering, Migrating, Integrating, Upgrading, Security Patching, Scripting, Supporting, and building custom applications, macros and extensions for the Atlassian tool set across Financial Services, FinTech, Health, Fashion, Entertainment, Telecoms, Securities & Exchange, Food and Transport and other industries, Taiwo is a Prince II, Agile and GDPR Practitioner <br/> <br/>
                                 An Arsenal supporter, Taiwo love football, books and food in his leisure time.      
                             </p>      
-                            <h3 className={styles.founderName}>Taiwo Ojo</h3>
-                            <h3 className={styles.founderRole}>Co-founder</h3>  
                         </div>
                     </div>
                     <div className={styles.founder}>
                         <div className={styles.founderImg}>
-                            <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638040840/Alluvium%20Website/Team(new)/WhatsApp_Image_2021-06-06_at_14.11.41_ef1joo.jpg" alt="Wale" />
+                            <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638165393/Alluvium%20Website/Team(new)/oga_wale_white_bg_zhshnj.png" alt="Wale" />
                         </div>
                           <div className={styles.founderInfo}>
+                          <h3 className={styles.founderName}>Wale Olojo</h3>
+                            <h3 className={styles.founderRole}>Co-founder</h3>  
                             <p className={styles.founderDesc}>
                                 An experienced Technical IT Consultant with a proven track record of supporting and delivering major complex end-to-end programmes including large Atlassian Tool migrations, operating within diverse sectors including retail, telecoms, energy and financial services. Highly adept at project, programme, and portfolio management.
                                 Embeds best practices and takes control for the entire lifecycle management from initiation, planning, governance, and stakeholder relationship management, through to progress reporting, risk management, quality assurance and financial controls, to safeguard the delivery of large-scale initiatives.<br/><br/>
                                 Wale also supports Arsenal and enjoys football – real and virtual, and travel.
                             </p>
-                            <h3 className={styles.founderName}>Wale Olojo</h3>
-                            <h3 className={styles.founderRole}>Co-founder</h3>  
                         </div>
                     </div>  
                 </div>  
