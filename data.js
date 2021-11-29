@@ -425,3 +425,36 @@ export const statusInitialData = [
     statusLink: "https://api.jiracounter.net/health-check",
   },
 ]
+
+export const clientTestimonies = [
+  {
+    name: 'Client A',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+    imgLink : 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+  },
+  {
+    name: 'Client B',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+    imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+  },
+  {
+    name: 'Client C',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+    imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+  },
+  {
+    name: 'Client D',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+    imgLink : 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+  },
+  {
+    name: 'Client E',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+    imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+  },
+  {
+    name: 'Client F',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+    imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+  }
+]
