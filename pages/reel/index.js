@@ -59,17 +59,17 @@ export default function Reel({ products }) {
         </div>
         <section className={styles.reelPageHeader}>
           <div className={styles.header}>
-            <div className={styles.title}>
+            <div className={styles.title} data-aos="fade-up">
               <img src={require('../../public/assets/our-projects-title.svg')} alt="Project Reel Title"/>
             </div>
-            <div className={styles.titleImg}>
+            <div className={styles.titleImg} data-aos="fade-down">
               <img src={require('../../public/assets/our-projects-img.svg')} alt="Project Reel"/>
             </div>
           </div>
           <div className={styles.sectionRedirect}>
-            <h3 className={styles.sectionRedirectTitle}>We want you to know you are in safe hands, here’s a preview of previously done projects.</h3>
-            <Link href="#projectReelList" >
-              <img src={require('../../public/assets/scroll-down.svg')} alt="Scroll down" className={styles.redirectBtn}/>
+            <h3 className={styles.sectionRedirectTitle} data-aos="fade-down">We want you to know you are in safe hands, here’s a preview of previously done projects.</h3>
+            <Link href="#projectReelList"  >
+              <img src={require('../../public/assets/scroll-down.svg')} alt="Scroll down" data-aos="fade-up" className={styles.redirectBtn}/>
             </Link>
           </div>
         </section>
