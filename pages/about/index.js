@@ -54,12 +54,12 @@ export default function Products({products}) {
                         <h3 className={styles.title}>Global Presence</h3>
                         <div className={styles.description}>
                             <p>Industry leading Experience across all Atlassian Migration use cases</p>
-                            <ol type="a">
+                            <ul>
                                 <li>Server to DC</li>
                                 <li>Server to Cloud</li>
                                 <li>Cloud to Server/DC</li>
                                 <li>Any combination of the above</li>
-                            </ol>
+                            </ul>
                         </div>
                     </div>
                     <div className={styles.reason} data-aos-delay={"300"} data-aos="fade-up">
