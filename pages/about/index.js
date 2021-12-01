@@ -99,8 +99,8 @@ export default function Products({products}) {
                         <div className={styles.founderImg}>
                             <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638165393/Alluvium%20Website/Team(new)/oga_wale_white_bg_zhshnj.png" alt="Wale" />
                         </div>
-                          <div className={styles.founderInfo}>
-                          <h3 className={styles.founderName}>Wale Olojo</h3>
+                            <div className={styles.founderInfo}>
+                            <h3 className={styles.founderName}>Wale Olojo</h3>
                             <h3 className={styles.founderRole}>Co-founder</h3>  
                             <p className={styles.founderDesc}>
                                 An experienced Technical IT Consultant with a proven track record of supporting and delivering major complex end-to-end programmes including large Atlassian Tool migrations, operating within diverse sectors including retail, telecoms, energy and financial services. Highly adept at project, programme, and portfolio management.

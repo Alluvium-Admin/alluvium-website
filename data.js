@@ -124,19 +124,19 @@ export const productData =
 export const featuresData = 
 [
     {
-        title:"Secure",
+        title:"Data Security",
         subtitle:"Data Security is so important to us that Everyone in our company is GDPR certified, even the janitor.",
-        iconLink:"/assets/Secure.svg"
+        iconLink:"https://res.cloudinary.com/geniesys/image/upload/v1638339237/Alluvium%20Website/Rectangle_2083_sdahun.png"
     },
     {
-        title:"Simple-UX",
+        title:"Simple UX",
         subtitle:"We do our best to make sure the customer do not notice changes in their user experience, post migration",
-        iconLink:"/assets/Simple.svg"
+        iconLink:"https://res.cloudinary.com/geniesys/image/upload/v1638339236/Alluvium%20Website/Rectangle_2082_tpiyra.png"
     },
     {
         title:"Scalable",
         subtitle:"Build, rinse, repeat",
-        iconLink:"/assets/Scalable.svg"
+        iconLink:"https://res.cloudinary.com/geniesys/image/upload/v1638339235/Alluvium%20Website/Rectangle_2084_bjcqsl.png"
     },
 ]
   

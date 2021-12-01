@@ -99,7 +99,7 @@ export default function Reel({ products }) {
             </p>
           </div>
         </section>
-        <section className={styles.testimonalSection}>
+        {/* <section className={styles.testimonalSection}>
           <h4 className={styles.testimonalSectionTitle}>WHAT OUR CLIENTS SAY</h4>
           <div className={styles.testimonalSectionList}>
             <Slider {...settings}>
@@ -110,7 +110,7 @@ export default function Reel({ products }) {
               }
             </Slider>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )
