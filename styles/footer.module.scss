@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'IBM Plex Sans', sans-serif;
-    margin: 0.8rem;
+    // margin: 0.8rem;
     overflow-x: hidden;
 
     @include media("<=phone"){
@@ -19,7 +19,8 @@
         position: relative;
         height: 100%;
         min-height: 630px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1619712838/Alluvium%20Website/footer_z5rxxp.png");
+        background-color: #009BC0;
+        // background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1619712838/Alluvium%20Website/footer_z5rxxp.png");
         // background-attachment: fixed;
         // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
         border-radius: 0 0 17px 17px;

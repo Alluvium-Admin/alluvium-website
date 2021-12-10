@@ -6,8 +6,7 @@
         position: relative;
         min-height: 840px;
         height:100vh;
-        margin:0 1.5rem ;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1619952404/Alluvium%20Website/hero_fsfn9s.jpg");
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1639165842/Alluvium%20Website/hero_new_wvmx3v.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 0 0 17px 17px;
@@ -177,8 +176,7 @@
 
     .featureSection{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
         margin: 5rem 0;
 
         @include media("<phone"){
@@ -190,45 +188,41 @@
             flex-direction:column ;
             margin: 3.5rem 0;
         }
-        .featureSectionImg{
-            @include media("<phone"){
-                align-self: center;
-                margin: 3.5rem 0.5rem;
-            }
-    
-            @include media(">=phone","<=custom-view-2"){
-                align-self: center;
-                margin: 3.5rem 1rem;
-            }
-            
-        }
-
-        .features{
-            align-self: center;
-
-            @include media("<phone"){
-                margin: 1.4rem 0;
-            }
-    
-            @include media(">=phone","<=custom-view-2"){
-                margin: 1.4rem 0;
-            }
-        }
 
         .featuresTitle{
             font-style: normal;
             font-weight: 600;
-            font-size: 30px;
-            line-height: 35px;
+            font-size: 48px;
+            line-height: 62px;
+            text-align: center;
+            margin: 1rem 0 5rem 0;
 
             @include media("<phone"){
                 text-align: center;
-                font-size: 20px;
+                font-size: 30px;
             }
     
             @include media(">=phone","<=custom-view-2"){
                 text-align: center;
-                font-size: 25px;
+                font-size: 40px;
+            }
+        }
+
+        .features{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            align-self: center;
+
+            @include media("<phone"){
+                flex-direction: column;
+                margin: 1.4rem 0;
+            }
+    
+            @include media(">=phone","<=custom-view-2"){
+                flex-direction: column;
+                margin: 1.4rem 0;
             }
         }
 
@@ -238,23 +232,26 @@
             .feature{
                 display: flex;
                 flex-direction: row;
-                margin:1rem 0;
+                margin:3rem 0;
 
                 @include media("<phone"){
                     flex-direction: column ;
-                    margin:1.5rem 0;
+                    margin:2rem 0;
                 }
         
                 @include media(">=phone","<=custom-view-2"){
                     flex-direction: column ;
-                    margin:1.5rem 0;
+                    margin:2.5rem 0;
                 }
 
                 .featureImg{
                     align-self: center;
+                    max-width: 680px;
 
                     img{
-                        width:100%
+                        width:100%;
+                        object-fit: contain;
+                    
                     }
 
                     @include media("<phone"){
@@ -270,11 +267,7 @@
                 
                 .featureContent{
                     max-width: 400px;
-                    margin: 0 1.31rem;
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 15px;
-                    line-height: 35px;
+                    margin: 0 1.5rem;
 
                     @include media("<phone"){
                         text-align: center;
@@ -282,6 +275,32 @@
             
                     @include media(">=phone","<=custom-view-2"){
                         text-align: center;
+                    }
+
+                    .featureTitle{
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 36px;
+                        line-height: 47px;
+                        color: #000000;
+
+                        @include media("<phone"){
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+                
+                        @include media(">=phone","<=custom-view-2"){
+                            font-size: 30px;
+                            line-height: 40px;
+                        }
+                    }
+
+                    .featureSubtitle{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 170%;
+                        color: rgba(61, 61, 61, 0.9);
                     }
                 }
             }

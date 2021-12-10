@@ -51,18 +51,19 @@ export default function Home({products,features}){
             </div>
           </section>
           <section className={styles.featureSection}>
-            <div className={styles.featureSectionImg} data-aos="zoom-in">
-              <Image src="/assets/featuresImg.png" width={506} height={506}/>
-            </div>
+            <h3 className={styles.featuresTitle}>Our Values</h3>
             <div className={styles.features}>
-              <h3 className={styles.featuresTitle}>Our Values</h3>
+              <div className={styles.featureSectionImg} data-aos="zoom-in">
+                <Image src="/assets/featuresImg.png" width={672} height={486}/>
+              </div>
               <ul className={styles.featureList}>
                 {
                   features.map((feature,index)=>{
                     return(
                       <li className={styles.feature} key={index} data-aos-delay={`${300 * index}`} data-aos="fade-down">
                         <div className={styles.featureImg}>
-                          <Image src={feature.iconLink} width={57} height={57}/>
+                          {/* <img src={feature.iconLink} alt={ feature.title }/> */}
+                          {/* <Image src={feature.iconLink} width={471.82} height={531.19}/> */}
                         </div>
                         <div className={styles.featureContent}>
                           <h4 className={styles.featureTitle}>{feature.title}</h4>
