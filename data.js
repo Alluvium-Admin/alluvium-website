@@ -458,3 +458,15 @@ export const clientTestimonies = [
     imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
   }
 ]
+
+export const caseStudiesData = [
+  {
+    id: 1,
+    title: 'Successful Jira Service Management Implementation and a Server to Cloud Migration for an Agricultural business',
+    description: 'Atlassian’s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.',
+    projectName: 'Jira Service Management',
+    projectImgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Group_8_1_pmmdib.png',
+    downloadLink: "/files/COS-Summary-091221-1010.pdf",
+    filename: "COS-Summary-091221-1010",
+  }
+]

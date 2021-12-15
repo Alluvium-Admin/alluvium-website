@@ -55,22 +55,22 @@ export default function Reel({ products }) {
       <Navigation theme={"dark"} products={products}/>
       <main>
         <div className={styles.hireUsLink}>
-          <Link href="/support"> + Hire us</Link>
+          <Link href="/reel/case-studies"> + View Our Case Studies</Link>
         </div>
         <section className={styles.reelPageHeader}>
           <div className={styles.header}>
-            <div className={styles.title} data-aos="fade-up">
-              <img src={require('../../public/assets/our-projects-title.svg')} alt="Project Reel Title"/>
+            <div className={styles.titleContainer} data-aos="fade-down">
+              <div className={styles.title}>
+                <div className={styles.titleVector}>
+                  <img src={require('../../public/assets/our-projects-vector.svg')} alt="Project Reel Title" />
+                </div>
+                <h3>Our <br/> Projects</h3>
+              </div>
+              <p className={styles.subtitle} >We want you to know you are in safe hands, here’s a preview of previously done projects.</p>
             </div>
             <div className={styles.titleImg} data-aos="fade-down">
-              <img src={require('../../public/assets/our-projects-img.svg')} alt="Project Reel"/>
+              <img src="https://res.cloudinary.com/geniesys/image/upload/v1639555142/Alluvium%20Website/our-projects_ffyhox.png" alt="Project Reel"/>
             </div>
-          </div>
-          <div className={styles.sectionRedirect}>
-            <h3 className={styles.sectionRedirectTitle} data-aos="fade-down">We want you to know you are in safe hands, here’s a preview of previously done projects.</h3>
-            <Link href="#projectReelList"  >
-              <img src={require('../../public/assets/scroll-down.svg')} alt="Scroll down" data-aos="fade-up" className={styles.redirectBtn}/>
-            </Link>
           </div>
         </section>
         <section className={styles.projectReelList} id="projectReelList">

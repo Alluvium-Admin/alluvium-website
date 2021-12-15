@@ -1,0 +1,27 @@
+.casestudiesPage{
+
+    main{
+        display: flex;
+        flex-direction: column;
+        margin: 8rem 1rem 3rem 1rem;
+
+        .casestudiesPageTitle{
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 62px;
+            color: #212121;
+            text-align: center;
+        }
+
+        .casestudiesPageDesc{
+            width: 85%;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.76);
+            margin: 2rem 0;
+            align-self: center;
+        }
+    }
+}

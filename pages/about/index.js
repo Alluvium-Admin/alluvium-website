@@ -37,7 +37,7 @@ export default function Products({products}) {
                         </p>  
                     </div>
                     <div className={styles.ourStoryImg} data-aos-delay={"200"} data-aos="zoom-in">
-                        <img src={require('../../public/assets/engineer.svg')} />        
+                        <img src="https://res.cloudinary.com/geniesys/image/upload/v1639534794/Alluvium%20Website/about-us-1_xgrepf.png" alt="our story" />        
                     </div>
                 </div>
             </section>
@@ -70,7 +70,7 @@ export default function Products({products}) {
                     </div>
                 </div>
                 <div className={styles.reasonsImg}>
-                    <img src={require('../../public/assets/coworking.svg')} alt="coworking"/>   
+                    <img src="https://res.cloudinary.com/geniesys/image/upload/v1639534794/Alluvium%20Website/about-us-2_seyz8w.png" alt="coworking"/>   
                 </div>  
             </section>
             <section className={styles.cultureMattersSection} data-aos="fade-up">
@@ -87,26 +87,30 @@ export default function Products({products}) {
                             <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638165393/Alluvium%20Website/Team(new)/jt_pics_2-removebg-preview_1_ft8jdd.png" alt="Taiwo"/>
                         </div>
                         <div className={styles.founderInfo}>
-                            <h3 className={styles.founderName}>Taiwo Ojo</h3>
-                            <h3 className={styles.founderRole}>Co-founder</h3>  
                             <p className={styles.founderDesc}>
                                 With more than a decade, award-winning experience Administering, Engineering, Migrating, Integrating, Upgrading, Security Patching, Scripting, Supporting, and building custom applications, macros and extensions for the Atlassian tool set across Financial Services, FinTech, Health, Fashion, Entertainment, Telecoms, Securities & Exchange, Food and Transport and other industries, Taiwo is a Prince II, Agile and GDPR Practitioner <br/> <br/>
                                 An Arsenal supporter, Taiwo love football, books and food in his leisure time.      
-                            </p>      
+                            </p>
+                            <div className={styles.founderData}>
+                                <h3 className={styles.founderName}>Taiwo Ojo</h3>
+                                <h3 className={styles.founderRole}>Co-founder</h3>    
+                            </div>  
                         </div>
                     </div>
                     <div className={styles.founder} data-aos="fade-up">
                         <div className={styles.founderImg}>
                             <img src="https://res.cloudinary.com/geniesys/image/upload/ar_1:1,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1638165393/Alluvium%20Website/Team(new)/oga_wale_white_bg_zhshnj.png" alt="Wale" />
                         </div>
-                            <div className={styles.founderInfo}>
-                            <h3 className={styles.founderName}>Wale Olojo</h3>
-                            <h3 className={styles.founderRole}>Co-founder</h3>  
+                        <div className={styles.founderInfo}>  
                             <p className={styles.founderDesc}>
                                 An experienced Technical IT Consultant with a proven track record of supporting and delivering major complex end-to-end programmes including large Atlassian Tool migrations, operating within diverse sectors including retail, telecoms, energy and financial services. Highly adept at project, programme, and portfolio management.
                                 Embeds best practices and takes control for the entire lifecycle management from initiation, planning, governance, and stakeholder relationship management, through to progress reporting, risk management, quality assurance and financial controls, to safeguard the delivery of large-scale initiatives.<br/><br/>
                                 Wale also supports Arsenal and enjoys football – real and virtual, and travel.
                             </p>
+                            <div className={styles.founderData}>
+                                <h3 className={styles.founderName}>Wale Olojo</h3>
+                                <h3 className={styles.founderRole}>Co-founder</h3>    
+                            </div>  
                         </div>
                     </div>  
                 </div>  
