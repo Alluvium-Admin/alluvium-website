@@ -4,14 +4,15 @@
     
     .heroSection{
         position: relative;
-        min-height: 840px;
-        height:100vh;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1639165842/Alluvium%20Website/hero_new_wvmx3v.jpg");
+        // min-height: 840px;
+        // height:100vh;
+        // background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1639165842/Alluvium%20Website/hero_new_wvmx3v.jpg");
+        background: linear-gradient(125.32deg, rgba(102, 102, 102, 0.6) 55.82%, rgba(41, 41, 41, 0) 96.59%), url("https://res.cloudinary.com/geniesys/image/upload/v1639165842/Alluvium%20Website/hero_new_wvmx3v.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        border-radius: 0 0 17px 17px;
-        transform:skew(0,7deg);
-        transform-origin: right center;
+        // border-radius: 0 0 17px 17px;
+        // transform:skew(0,7deg);
+        // transform-origin: right center;
 
         @include media("<phone"){
             margin: 0;
@@ -28,32 +29,33 @@
         .heroContainer{
             height: 100vh;
             // transform:skew(0,-7deg) translateY(9%);
-            transform:skew(0,-7deg) translateY(70px);
-            @include media("<phone"){
-                transform:skew(0,-7deg) translateY(60px);
-            }
+            // transform:skew(0,-7deg) translateY(70px);
+            // @include media("<phone"){
+            //     transform:skew(0,-7deg) translateY(60px);
+            // }
     
-            @include media(">=phone","<=custom-view-2"){
-                transform:skew(0,-7deg) translateY(50px);
+            // @include media(">=phone","<=custom-view-2"){
+            //     transform:skew(0,-7deg) translateY(50px);
 
-            }
+            // }
 
-            @include media(">=custom-view-2","<=desktop"){
-                transform:skew(0,-7deg) translateY(90px);
-            }
+            // @include media(">=custom-view-2","<=desktop"){
+            //     transform:skew(0,-7deg) translateY(90px);
+            // }
 
-            @include media(">desktop"){
-                transform:skew(0,-7deg) translateY(100px);
-            }
+            // @include media(">desktop"){
+            //     transform:skew(0,-7deg) translateY(100px);
+            // }
         }
 
         .heroContent{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-evenly;
-            z-index: 2;
+            align-items: flex-start;
+            max-width: 700px;
             color: #fff;
-            margin: 5rem 0;
+            margin: 5rem 2.5rem;
 
             @include media("<phone"){
                 flex-direction: column;
@@ -69,8 +71,8 @@
             
 
             .bigText{
-                padding: 2rem;
-                max-width: 350px;
+                padding: 1rem 2rem;
+                width:100%;
 
                 @include media("<phone"){
                     max-width: unset;
@@ -101,8 +103,10 @@
             .mainText{
                 display: flex;
                 flex-direction: column;
-                align-self: center;
-                max-width: 400px;
+                padding: 1rem 2rem;
+                width:90%;
+
+
 
                 @include media("<phone"){
                     width: 90%;
@@ -132,29 +136,25 @@
                         padding: 0.8rem 1rem;
                     }
                 } 
+
                 .projectsBtn{
                     font-weight: 600;
-                    font-size: 14px;
-                    line-height: 18px;
-                    align-self: flex-end;
-                    margin: 3rem 0 0 0;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    align-self: flex-start;
+                    margin: 5rem 0 0 0;
                     width: fit-content;
-
-                    &::after{
-                        display: block;
-                        content: "";
-                        border: 2px solid #fff;
-                        background: #fff;
-                        width: 100%;
-                        transition: .2s;
-                    }
-        
+                    padding: 1rem;
+                    background: #009BC0;
+                    border-radius: 5px;
+                    transition: .2s;
+                    
                     &:hover{
-                        &::after{
-                            width: 0;
-                            visibility: hidden;
-                        }   
+                        background: #017794;
+
                     }
+
                 }
             }
         }
@@ -363,5 +363,212 @@
                 }   
             }
         }
+    }
+
+    .ourServices{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #F7F9FC;
+        padding: 5rem 0;
+
+        .ourServicesHeader{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0 ;
+
+            .ourServicesTitle{
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 52px;
+                color: #212121;
+                text-align:center;
+            }
+
+            .ourServicesSubtitle{
+                display: none; //to remove placeholder text
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 200%;
+                text-align: center;
+                color: rgba(61, 61, 61, 0.9);
+                max-width: 70%;
+                margin: 1rem 0;
+            }
+        }
+
+        .ourServicesList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            width:100%;
+
+            .service{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #FFFFFF;
+                border-radius: 5px;
+                padding: 1.2rem;
+                max-width: 390px;
+                margin: 1.5rem;
+                border: 8px solid #ffffff00;
+
+                &:hover{
+                    box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
+                    border-top: 8px solid #132230;
+                }
+
+                .serviceIcon{
+                    margin: 1rem 0;
+                }
+
+                .serviceInfo{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    margin: 1rem 0;
+
+                    .serviceTitle{
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #212121;
+                    }
+
+                    .serviceSubtitle{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 170%;
+                        color: rgba(93, 93, 93, 0.9);
+                        margin: 1rem 0;
+                        max-width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .ourMilestones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 0;
+
+        .ourMilestonesHeader{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .ourMilestonesTitle{                    
+                font-style: normal;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 52px;
+                color: #212121;
+            }
+
+            .ourMilestonesSubtitle{
+                display: none; //to remove placeholder text
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 220%;
+                color: rgba(61, 61, 61, 0.9);
+                width: 70%;
+                margin: 2rem 0;
+            }
+        }
+
+        .ourMilestonesList{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 1.5rem 0;
+
+            .milestone{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                margin: 0 2rem;
+
+                .milestoneIcon{
+                    margin: 1rem 0;
+                }
+
+                .milestoneDescription{
+                    text-align: center;
+
+                    .milestoneFigure{
+                        font-weight: 500;
+                        font-size: 48px;
+                        line-height: 62px;
+                        color: #3D3D3D;
+                    }
+
+                    .milestoneName{
+                        color: #3D3D3D;
+                    }
+                }
+            }
+        }
+    }
+
+    .trustedBySection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 3rem 0;
+
+        .trustedBySectionTitle{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 52px;
+            color: #212121;
+        }
+
+        .trustedCompaniesList{
+            height: 250px;
+            margin: 1rem auto;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 95vw;
+
+            .trustedCompanies{
+                display: inline-flex;
+                align-items: center;
+                height: 100%;
+                padding-left: 10%;
+                animation: marquee 20s linear infinite;
+                
+                .trustedCompany{
+                    display: inline-block;
+                    // max-width: 250px;
+                    margin: 0 3rem;
+                }
+            
+            }
+        }
+    }
+}
+
+// Scrolling animation
+
+@keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
     }
 }

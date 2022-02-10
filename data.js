@@ -470,3 +470,81 @@ export const caseStudiesData = [
     filename: "COS-Summary-091221-1010",
   }
 ]
+
+export const ourServicesData = [
+  {
+    id: 1,
+    title: "Atlassian Tools Migration",
+    icon: "/assets/service1.svg",
+    subtitle: "We have deep experience across all migration use cases like Server to Cloud, Cloud to Data Center, Server to Data Center, Cloud to Cloud"
+  },
+  {
+    id: 2,
+    title: "Atlassian Engineering Team",
+    icon: "/assets/service2.svg",
+    subtitle: "We provide distributed Atlassian Engineering teams and embedded Engineers to major Atlassian partners and Enterprise users"
+  },
+]
+
+
+export const milestonesData = [
+  {
+    id: 1,
+    value: "80+",
+    icon: "/assets/milestone_client.svg",
+    category: "Clients"
+  },
+  {
+    id: 2,
+    value: "80+",
+    icon: "/assets/milestone_project.svg",
+    category: "Projects"
+  },
+  {
+    id: 3,
+    value: "20+",
+    icon: "/assets/milestone_countries.svg",
+    category: "Countries"
+  },
+  {
+    id: 4,
+    value: "90%",
+    icon: "/assets/milestone_success.svg",
+    category: "Success rate"
+  },
+]
+
+export const trustedCompaniesData = [
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-1.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-2.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-3.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-4.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-5.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-6.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-7.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-8.svg"
+  },
+]

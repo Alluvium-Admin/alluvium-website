@@ -8,23 +8,43 @@ module.exports = withSass({
   /* bydefault config  option Read For More Optios 
    here https://github.com/vercel/next-plugins/tree/master/packages/next-sass*/
 
-  cssModules: true
-})
-
-
-module.exports = {
-  /* Add Your Scss File Folder Path Here */
+  cssModules: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-}
+})
+
+
+// module.exports = {
+//   /* Add Your Scss File Folder Path Here */
+//   sassOptions: {
+//     includePaths: [path.join(__dirname, 'styles')],
+//   },
+// }
 
 module.exports = {
   basePath: '/docs',
 }
 
-module.exports = {
-  webpack(config) {
+// module.exports = {
+//   webpack(config) {
+//     config.module.rules.push({
+//       test: /\.svg$/,
+//       issuer: {
+//         test: /\.(js|ts)x?$/,
+//       },
+//       use: ['@svgr/webpack'],
+//     });
+
+//     return config;
+//   },
+// };
+
+
+module.exports = withImages({
+  exclude: path.resolve(__dirname, 'public/assets'),
+  webpack(config, options) {
+
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
@@ -33,14 +53,6 @@ module.exports = {
       use: ['@svgr/webpack'],
     });
 
-    return config;
-  },
-};
-
-
-module.exports = withImages({
-  exclude: path.resolve(__dirname, 'src/assets/svg'),
-  webpack(config, options) {
     return config
   }
 })
