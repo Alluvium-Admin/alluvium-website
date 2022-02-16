@@ -7,7 +7,7 @@
         // min-height: 840px;
         // height:100vh;
         // background: linear-gradient(0deg, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("https://res.cloudinary.com/geniesys/image/upload/v1639165842/Alluvium%20Website/hero_new_wvmx3v.jpg");
-        background: linear-gradient(125.32deg, rgba(102, 102, 102, 0.6) 55.82%, rgba(41, 41, 41, 0) 96.59%), url("https://res.cloudinary.com/geniesys/image/upload/v1639165842/Alluvium%20Website/hero_new_wvmx3v.jpg");
+        background: url("https://res.cloudinary.com/geniesys/image/upload/v1639165842/Alluvium%20Website/hero_new_wvmx3v.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         // border-radius: 0 0 17px 17px;
@@ -27,7 +27,7 @@
         }
         
         .heroContainer{
-            height: 100vh;
+            height: 90vh;
             // transform:skew(0,-7deg) translateY(9%);
             // transform:skew(0,-7deg) translateY(70px);
             // @include media("<phone"){
@@ -52,8 +52,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            align-items: flex-start;
-            max-width: 700px;
+            align-items: center;
+            text-align: center;
+            // max-width: 700px;
             color: #fff;
             margin: 5rem 2.5rem;
 
@@ -85,10 +86,10 @@
                 }
 
                 p{
-                    font-style: normal;
                     font-weight: 600;
-                    font-size: 75px;
+                    font-size: 96px;
                     line-height: 114%;
+                    color: #FFFFFF;
 
                     @include media("<phone"){
                         font-size: 45px;
@@ -103,8 +104,9 @@
             .mainText{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 padding: 1rem 2rem;
-                width:90%;
+                width:60%;
 
 
 
@@ -121,10 +123,10 @@
                 }
 
                 .subtitle{
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 17px;
-                    line-height: 29px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #FFFFFF;
 
                     @include media("<phone"){
                         font-size: 15px;
@@ -142,13 +144,14 @@
                     font-size: 16px;
                     line-height: 24px;
                     color: #FFFFFF;
-                    align-self: flex-start;
+                    // align-self: flex-start;
                     margin: 5rem 0 0 0;
                     width: fit-content;
                     padding: 1rem;
                     background: #009BC0;
                     border-radius: 5px;
                     transition: .2s;
+                    cursor: pointer;
                     
                     &:hover{
                         background: #017794;
@@ -553,7 +556,6 @@
                 
                 .trustedCompany{
                     display: inline-block;
-                    // max-width: 250px;
                     margin: 0 3rem;
                 }
             

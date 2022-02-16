@@ -462,12 +462,32 @@ export const clientTestimonies = [
 export const caseStudiesData = [
   {
     id: 1,
-    title: 'Successful Jira Service Management Implementation and a Server to Cloud Migration for an Agricultural business',
+    title: 'A Successful Server to Cloud Migration for an Agricultural business',
     description: 'Atlassian’s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.',
     projectName: 'Jira Service Management',
-    projectImgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Group_8_1_pmmdib.png',
-    downloadLink: "/files/COS-Summary-091221-1010.pdf",
-    filename: "COS-Summary-091221-1010",
+    projectImgLink: '/assets/case-study-1.png',
+    downloadLink: "/files/Case-study-1.pdf",
+    filename: "'A Successful Server to Cloud Migration for an Agricultural business",
+    caseStudyPageName: "a-successful-server-to-cloud-migration-for-an-agricultural-business",
+    details:{
+      caseStudyTitle: 'A Successful Server to Cloud Migration for an Agricultural business',
+      caseStudyImg: "/assets/case-studies/case-study-1-img.png",
+      caseStudyHeaderText: "Atlassian’s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
+      caseStudySituation: "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
+      caseStudyChallenge: "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process. ",
+      caseStudySolutionSubtitle: "Our client needed us to come in and assess the situation by:",
+      caseStudySolutions: [" Presenting a cost-efficient solution", " Deploying and training their staff", " Delivering a secure migration to simplify the internal processes"],
+      caseStudySolutionsParagraphs: [
+        "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
+        "The second option Server to Cloud was chosen by us and approved by the client.",
+        "Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud."
+      ],
+      caseStudyResults: [
+        "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
+        "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
+        "Jira Service Management was chosen as their tickets tracking tool."
+      ],
+    }
   }
 ]
 
@@ -490,28 +510,29 @@ export const ourServicesData = [
 export const milestonesData = [
   {
     id: 1,
-    value: "80+",
+    value: "30+",
     icon: "/assets/milestone_client.svg",
     category: "Clients"
   },
   {
     id: 2,
-    value: "80+",
+    value: "2700",
     icon: "/assets/milestone_project.svg",
     category: "Projects"
   },
   {
     id: 3,
-    value: "20+",
+    value: "10",
     icon: "/assets/milestone_countries.svg",
     category: "Countries"
   },
   {
     id: 4,
-    value: "90%",
+    value: "96%",
     icon: "/assets/milestone_success.svg",
     category: "Success rate"
   },
+
 ]
 
 export const trustedCompaniesData = [

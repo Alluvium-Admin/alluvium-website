@@ -5,12 +5,13 @@ import Switch from 'react-input-switch';
 import styles from '../styles/footer.module.scss';
 import { useToasts } from 'react-toast-notifications';
 
+
 export default function Footer() {
-    const [value, setValue] = useState(true);
-    const { addToast } = useToasts()
-    useEffect(()=>{
-        localStorage.setItem("light-mode", JSON.stringify(value))
-    },[value])
+    // const [value, setValue] = useState(true);
+    // useEffect(()=>{
+    //     localStorage.setItem("light-mode", JSON.stringify(value))
+    // }, [value])
+    const { addToast } = useToasts();
     
 
     return(
@@ -108,7 +109,15 @@ export default function Footer() {
 }
 
 
-export function AltFooter(){
+export function AltFooter() {
+
+    const { addToast } = useToasts();
+
+    function submitNewsletterForm (e) {
+        e.preventDefault();
+        addToast("Currently unavailable, Check back later", { appearance: 'info', autoDismiss: true });
+    }
+    
     return(
         <footer className={styles.altFooter}>
             <div className={styles.getInTouchSection}>
@@ -135,25 +144,25 @@ export function AltFooter(){
                             </li>
                         </ul>
                         <ul className={styles.footerSocials}>
-                            <li className={styles.footerSocialIcon}>
-                                <Link href="/" >
+                            {/* <li className={styles.footerSocialIcon}>
+                                <a href="" >
                                     <img src="/assets/socials/instagram.svg" alt='instagram' />
-                                </Link>
-                            </li>
+                                </a>
+                            </li> */}
                             <li className={styles.footerSocialIcon}>
-                                <Link href="/">
+                                <a href="https://twitter.com/alluviumhq?s=08" target="_blank">
                                     <img src="/assets/socials/twitter.svg" alt='twitter' />
-                                </Link>
+                                </a>
                             </li>
                             <li className={styles.footerSocialIcon}>
-                                <Link href="/">
+                                <a href="https://www.facebook.com/alluviumhq/?ti=as" target="_blank">
                                     <img src="/assets/socials/facebook.svg" alt='facebook' />
-                                </Link>
+                                </a>
                             </li>
                             <li className={styles.footerSocialIcon}>
-                                <Link href="/">
+                                <a href="https://www.linkedin.com/company/alluvium-hq/" target="_blank">
                                     <img src="/assets/socials/linkedin.svg" alt='linkedin' />
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -161,16 +170,16 @@ export function AltFooter(){
                         <h3 className={styles.altFooterMainSectionComponentTitle}>Company</h3>
                         <ul className={styles.altFooterContactList}>
                             <li className={styles.contactListItem}>
-                                <Link href="/">About us</Link>
+                                <Link href="/about">About us</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/">Project Reel</Link>
+                                <Link href="/reel">Project Reel</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/">Case Studies</Link>
+                                <Link href="/reel/case-studies">Case Studies</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/">Support</Link>
+                                <Link href="/support">Support</Link>
                             </li>
                         </ul>
                     </div>
@@ -178,20 +187,20 @@ export function AltFooter(){
                         <h3 className={styles.altFooterMainSectionComponentTitle}>Our Services</h3>
                         <ul className={styles.altFooterContactList}>
                             <li className={styles.contactListItem}>
-                                <Link href="/">Atlassian Tools Migration</Link>
+                                <Link href="/about">Atlassian Tools Migration</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/">Atlassian Engineering Team</Link>
+                                <Link href="/about">Atlassian Engineering Team</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/">Atlassian Marketplace PlugIns</Link>
+                                <Link href="/about">Atlassian Marketplace PlugIns</Link>
                             </li>
                         </ul>
                     </div>
                     <div className={styles.newsLetterComponent}>
                         <h2 className={styles.newsLetterTitle}>Get Access to our Newsletter</h2>
                         <p className={styles.newsLetterSubtitle}>Join hundreds of business and technology in subcribing to Alluvium’s newsletter</p>
-                        <form className={styles.newsLetterForm}>
+                        <form className={styles.newsLetterForm} onSubmit={submitNewsletterForm}>
                             <input type="email" className={styles.emailInput} name="emailInput" placeholder='Email Address'/>
                             <input type="submit" className={styles.formSubmitBtn} value="Sign me up"/>
                         </form>

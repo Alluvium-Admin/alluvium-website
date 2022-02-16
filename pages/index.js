@@ -36,10 +36,10 @@ export default function Home({products,features,ourServices,milestones,trustedCo
             <div className={styles.heroContainer}>
               <Navigation products={products}/>
               <div className={styles.heroContent}>
-                <div data-aos="fade-right" className={styles.bigText}>
+                <div data-aos="fade-up" className={styles.bigText}>
                   <p>We are problem solvers</p>
                 </div>
-                <div data-aos="fade-left" className={styles.mainText}>
+                <div data-aos="fade-down" className={styles.mainText}>
                   <p className={styles.subtitle}>
                     We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that deliver complete data migration in half the time for half the cost.
                   </p>
