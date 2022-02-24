@@ -458,3 +458,114 @@ export const clientTestimonies = [
     imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
   }
 ]
+
+export const caseStudiesData = [
+  {
+    id: 1,
+    title: 'A Successful Server to Cloud Migration for an Agricultural business',
+    description: 'Atlassian’s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.',
+    projectName: 'Jira Service Management',
+    projectImgLink: '/assets/case-study-1.png',
+    downloadLink: "/files/Case-study-1.pdf",
+    filename: "'A Successful Server to Cloud Migration for an Agricultural business",
+    caseStudyPageName: "a-successful-server-to-cloud-migration-for-an-agricultural-business",
+    details:{
+      caseStudyTitle: 'A Successful Server to Cloud Migration for an Agricultural business',
+      caseStudyImg: "/assets/case-studies/case-study-1-img.png",
+      caseStudyHeaderText: "Atlassian’s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
+      caseStudySituation: "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
+      caseStudyChallenge: "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process. ",
+      caseStudySolutionSubtitle: "Our client needed us to come in and assess the situation by:",
+      caseStudySolutions: [" Presenting a cost-efficient solution", " Deploying and training their staff", " Delivering a secure migration to simplify the internal processes"],
+      caseStudySolutionsParagraphs: [
+        "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
+        "The second option Server to Cloud was chosen by us and approved by the client.",
+        "Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud."
+      ],
+      caseStudyResults: [
+        "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
+        "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
+        "Jira Service Management was chosen as their tickets tracking tool."
+      ],
+    }
+  }
+]
+
+export const ourServicesData = [
+  {
+    id: 1,
+    title: "Atlassian Tools Migration",
+    icon: "/assets/service1.svg",
+    subtitle: "We have deep experience across all migration use cases like Server to Cloud, Cloud to Data Center, Server to Data Center, Cloud to Cloud"
+  },
+  {
+    id: 2,
+    title: "Atlassian Engineering Team",
+    icon: "/assets/service2.svg",
+    subtitle: "We provide distributed Atlassian Engineering teams and embedded Engineers to major Atlassian partners and Enterprise users"
+  },
+]
+
+
+export const milestonesData = [
+  {
+    id: 1,
+    value: "30+",
+    icon: "/assets/milestone_client.svg",
+    category: "Clients"
+  },
+  {
+    id: 2,
+    value: "2700",
+    icon: "/assets/milestone_project.svg",
+    category: "Projects"
+  },
+  {
+    id: 3,
+    value: "10",
+    icon: "/assets/milestone_countries.svg",
+    category: "Countries"
+  },
+  {
+    id: 4,
+    value: "96%",
+    icon: "/assets/milestone_success.svg",
+    category: "Success rate"
+  },
+
+]
+
+export const trustedCompaniesData = [
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-1.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-2.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-3.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-4.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-5.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-6.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-7.svg"
+  },
+  {
+    name: "Company",
+    logoIcon: "/assets/company-logos/company-8.svg"
+  },
+]

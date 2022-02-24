@@ -301,3 +301,204 @@
         }
     }
 }
+
+// Footer update
+
+.altFooter{
+    // margin-top: 2rem;
+    .getInTouchSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 4rem 2rem;
+        background: url("../public/assets/contour.svg"), linear-gradient(90deg, rgba(0,155,192,1) 0%, rgba(0,155,192,1) 100%);
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+
+        @include media("<=phone"){
+            background-size: cover;
+
+        }
+    
+        @include media(">phone","<=custom-view-3"){
+            background-size: cover;
+
+        }
+
+        .getInTouchSectionTitle{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 52px;
+            color: #FFFFFF;
+
+            @include media("<=phone"){
+                font-size: 28px;
+                line-height: 36px;
+    
+            }
+        
+            @include media(">phone","<=custom-view-3"){
+                font-size: 34px;
+                line-height: 46px;
+    
+            }
+        }
+
+        a{
+            margin: 3.5rem 0 1rem 0;
+            padding: 0.8rem 1.6rem;
+            background: #FFFFFF;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #009BC0;
+        }
+    }
+
+    .altFooterMainSection{
+        background: #223D55;
+        padding: 3rem 5rem 1rem 5rem;
+
+        .altFooterMainSectionComponents{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            margin: 2rem 0 4rem 0;
+
+            .altFooterMainSectionComponent{
+                display: flex;
+                flex-direction: column;
+                max-width: 266px;
+
+                @include media("<=phone"){
+                    margin: 1.5rem 0;
+                }
+            
+                @include media(">phone","<=desktop"){
+                    margin: 1.5rem 0;
+
+                }
+
+                .altFooterMainSectionComponentTitle{
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 23px;
+                    color: #FFFFFF;
+                }
+
+                .altFooterContactList{
+                    margin: 1.5rem 0;
+                    list-style: none;
+
+                    .contactListItem{
+                        font-size: 16px;
+                        line-height: 21px;
+                        color: rgba(255, 255, 255, 0.8);
+                        margin: 0.5rem 0;
+                        transition: 0.2s;
+
+                        &:hover{
+                            color: rgb(255, 255, 255);
+                        }
+
+                        b{
+                            font-weight: bold;
+                            color: #fff;
+                        }
+                        
+                    }
+
+                }
+
+                .footerSocials{
+                    display: flex;
+                    flex-direction: row;
+                    list-style: none;
+
+                    .footerSocialIcon{
+                        margin-right: 0.5rem ;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .newsLetterComponent{
+                max-width: 410px;
+
+                .newsLetterTitle{
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: #FFFFFF;
+                }
+
+                .newsLetterSubtitle{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: rgba(255, 255, 255, 0.8);
+                    margin: 1.2rem 0 1rem 0;
+                }
+
+                .newsLetterForm{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .emailInput{
+                        padding: 0.6rem 1.5rem;
+                        background: #305373;
+                        border-radius: 5px 0px 0px 5px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: rgba(255, 255, 255, 0.45);
+                        border: none;
+                    }
+
+                    .formSubmitBtn{
+                        padding: 0.8rem 0.7rem;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                        background: #009BC0;
+                        border-radius: 0px 5px 5px 0px;
+                        border: none;
+                        cursor: pointer;
+                        transition: 0.2s;
+
+                        &:hover{
+                            background: #007896;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .underline{
+        border: 1px solid #727272;
+    }
+
+    .copyrights{
+        margin: 1rem 0;
+
+        p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(255, 255, 255, 0.55);
+
+            span{
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+}

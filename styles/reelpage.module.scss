@@ -5,18 +5,18 @@
     main{
         display: flex;
         flex-direction: column;
-        margin: 2rem 3rem;
+        margin: 2rem 0;
 
         @include media("<phone"){
             margin: 1.5rem 0.5rem;
         }
     
         @include media(">=phone","<=custom-view-4"){
-            margin: 2rem;
+            margin: 2rem 0;
         }
         
         .hireUsLink{
-            margin: 1rem 0;
+            margin: 1rem;
             align-self: flex-end;
 
             &::after{
@@ -39,16 +39,19 @@
         }
 
         .reelPageHeader{
-            margin: 1rem 0;
-            max-width: 85%;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 1rem;
             align-self: center;
+            background: rgba(27, 56, 84, 0.09);
 
             @include media("<phone"){
                 max-width: 100%;
             }
         
             @include media(">=phone","<=custom-view"){
-                max-width: 90%;
+                max-width: 100%;
             }
 
             .header{
@@ -56,6 +59,7 @@
                 flex-direction: row;
                 justify-content: space-around;
                 margin: 0.5rem 0;
+
 
                 @include media("<phone"){
                     .title{
@@ -69,9 +73,68 @@
                     }
                 }
 
+                .titleContainer{
+                    margin-top: 3rem;
+                    padding: 2rem;
+                    .title{
+                        display: flex;
+                        flex-direction: row;
+
+                        .titleVector{
+                            max-width: 50px;
+                            align-self: center;
+
+                            img{
+                                width: 100%;
+                            }
+                        }
+
+                        h3{
+                            margin: 0 1rem;
+                            font-weight: 600;
+                            font-size: 35px;
+                            line-height: 43px;
+                            color: #1B3854;
+                        }
+                    }
+                    .subtitle{
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 35px;
+                        line-height: 43px;
+                        text-align: justify;
+                        color: rgba(27, 56, 84, 0.7);
+                        margin-top: 5rem;
+                        width: 80%;
+
+                        @include media("<phone"){
+                            font-size: 22px;
+                            line-height: 28px;
+                            width: 100%;
+                        }
+                    
+                        @include media(">=phone","<=tablet"){
+                            font-size: 32px;
+                            line-height: 36px;
+                            width: 100%;
+
+                        }
+                    
+                    }
+                }
+
                 .titleImg{
                     max-width:588px;
                     padding: 0.4rem;
+
+                    @include media("<phone"){
+                        display: none;
+                    }
+                
+                    @include media(">=phone","<=custom-view-1"){
+                        display: none;
+
+                    }
 
                     img{
                         width: 100%;
@@ -79,55 +142,25 @@
                 }
                 
             }
-
-            .sectionRedirect{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 3rem 0;
-
-
-                .sectionRedirectTitle{
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 40px;
-                    line-height: 55px;
-                    text-align: center;
-                    color: rgba(27, 56, 84, 0.7);
-                    
-                    @include media("<phone"){
-                        font-size: 22px;
-                        line-height: 28px;
-                    }
-                
-                    @include media(">=phone","<=tablet"){
-                        font-size: 32px;
-                        line-height: 36px;
-                    }
-                
-                }
-
-                .redirectBtn{
-                    margin: 2rem 0;
-                    cursor: pointer;
-                    transition: 0.3s;
-
-                    &:hover{
-                        transform: translateY(10px);
-                    }
-                }
-            }
             
         }
 
         .projectReelList{
-            margin: 1rem 0;
+            margin: 1rem 3rem;
+
+            @include media("<phone"){
+                margin: 1rem;
+            }
+        
+            @include media(">=phone","<=tablet"){
+                margin: 1rem 2rem;
+            }
 
             .projectReel{
                 padding: 1rem;
                 margin: 2.5rem 0.5rem;
                 background: #FFFFFF;
-                box-shadow: 0px -19px 4px #00aeffc4;
+                box-shadow: 0px -19px 4px #1B3854;
             
                 .projectReelTitle{
                     font-style: normal;
