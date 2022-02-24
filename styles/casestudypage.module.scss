@@ -31,8 +31,10 @@
                 flex-direction: row;
                 background: #009BC0;
 
+
                 .caseStudyImg{
                     max-width: 1131px;
+                    margin-bottom: -0.3rem;
 
                     
                     @include media("<=phone"){
@@ -113,7 +115,8 @@
                     }
 
                     img{
-                        width: 516px;
+                        width: 505px;
+                        margin-bottom: -0.3rem;
                     }
                 }
             }
@@ -121,6 +124,7 @@
             .caseStudyChallenge{
                 display: flex;
                 flex-direction: row;
+                border-top: 5px solid #ffffff;
 
                 .caseStudyChallengeText{
                     padding: 1.5rem;
@@ -165,6 +169,7 @@
 
                 .caseStudyChallengeImg{
                     width: 516px;
+                    
 
                     
                     @include media("<=phone"){
@@ -176,7 +181,9 @@
                     }
 
                     img{
-                        width: 516px;
+                        width: 505px;
+                        margin-bottom: -0.3rem;
+
 
                     }
                 }
@@ -189,7 +196,7 @@
             background: #009BC0;
 
             .caseStudySolutionsText{
-                padding: 2rem;
+                padding: 1rem 2rem;
 
                 .caseStudySolutionsHeader{
                     margin: 1.5rem 0;
@@ -227,6 +234,8 @@
 
                         img{
                             width: 70px;
+                            margin-bottom: 1.5rem;
+
                         }
                     }
                 }
@@ -249,6 +258,8 @@
 
             .caseStudySolutionsImg{
                 max-width: 516px;
+                margin-bottom: -0.25rem;
+
 
                 @include media("<=phone"){
                     display: none;
@@ -266,6 +277,15 @@
 
         .caseStudyResults{
             padding: 2rem;
+            max-width: 65%;
+
+            @include media("<=phone"){
+                max-width: unset;
+            }
+    
+            @include media(">phone","<=custom-view-5"){
+                max-width: unset;
+            }
 
             .caseStudyResultsTitle{
                 font-weight: bold;
@@ -282,13 +302,14 @@
                     flex-direction: row;
                     align-items: center;
                     font-size: 16px;
-                    line-height: 170%;
+                    line-height: 150%;
                     text-align: justify;
                     color: #000000;
 
                     
                     img{
                         width: 70px;
+                        margin-bottom: 1.5rem;
                     }
                 }
             }

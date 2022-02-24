@@ -76,7 +76,7 @@ export default function CaseStudy({ caseStudy, products }){
                                     return (
                                         <li className={styles.caseStudySolution} key={idx}>
                                             <img src="/assets/pointer-icon.svg" alt="Pointer Icon"/>
-                                            {solution}
+                                            <p>{solution}</p>
                                         </li>
                                     )
                                 })
@@ -104,7 +104,7 @@ export default function CaseStudy({ caseStudy, products }){
                                 return (
                                     <li className={styles.caseStudyResult} key={idx}>
                                         <img src="/assets/pointer-icon.svg" alt="Pointer Icon"/>
-                                        {result}
+                                        <p>{result}</p>
                                     </li>
                                 )
                             })
