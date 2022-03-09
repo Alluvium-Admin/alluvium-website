@@ -463,16 +463,16 @@ export const caseStudiesData = [
   {
     id: 1,
     title: 'A Successful Server to Cloud Migration for an Agricultural business',
-    description: 'Atlassian’s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.',
+    description: 'Atlassian`s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.',
     projectName: 'Jira Service Management',
     projectImgLink: '/assets/case-study-1.png',
-    downloadLink: "/files/Case-study-1.pdf",
-    filename: "'A Successful Server to Cloud Migration for an Agricultural business",
+    downloadLink: "/files/AgroBiz-Server-to-Cloud.pdf",
+    filename: "A Successful Server to Cloud Migration for an Agricultural business",
     caseStudyPageName: "a-successful-server-to-cloud-migration-for-an-agricultural-business",
     details:{
       caseStudyTitle: 'A Successful Server to Cloud Migration for an Agricultural business',
       caseStudyImg: "/assets/case-studies/case-study-1-img.png",
-      caseStudyHeaderText: "Atlassian’s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
+      caseStudyHeaderText: "Atlassian`s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
       caseStudySituation: "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
       caseStudyChallenge: "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process. ",
       caseStudySolutionSubtitle: "Our client needed us to come in and assess the situation by:",
@@ -487,6 +487,36 @@ export const caseStudiesData = [
         "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
         "Jira Service Management was chosen as their tickets tracking tool."
       ],
+      hasPie: false
+    }
+  },
+  {
+    id: 2,
+    title: 'Server to Data Center Migration for Major Insurer',
+    description: 'A major insurance and asset management company needed to improve Atlassian product user experiences and optimize the product`s performances across their entire company, they turned to our team of certified experts with Jira and Confluence knowledge base for a solution.',
+    projectName: 'Server to Data Center Migration for Major Insurer',
+    projectImgLink: '/assets/case-study-2.png',
+    downloadLink: "/files/Server to Data Center Migration for Major Insurer.pdf",
+    filename: "Server to Data Center Migration for Major Insurer",
+    caseStudyPageName: "server-to-data-center-migration-for-major-insurer",
+    details:{
+      caseStudyTitle: 'Server to Data Center Migration for Major Insurer',
+      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
+      caseStudyHeaderText: "A major insurance and asset management company needed to improve Atlassian product user experiences and optimize the product`s performances across their entire company, they turned to our team of certified experts with Jira and Confluence knowledge base for a solution.",
+      caseStudySituation: "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
+      caseStudyChallenge: "Before working with us, our clients` focus was on improving Atlassian product user experiences and optimizing the products' performances. The top challenges our client was facing were as a result of having redundant resources, duplicate resources etc. Furthermore, our client was struggling with performing a successful migration by taking into consideration all possible blockers that might cause a migration failure.",
+      caseStudySolutionSubtitle: "We stood out amongst others owing to the fact that we came to the table with not just a well robust experience in building Jira to support the Agile ways of working but also a strong experience in performing Atlassian products migrations successfully for our clients.",
+      caseStudySolutions: ["Comparing the database count of all Jira and Confluence resources", "Checking for duplicate resources", "Checking that all Apps and macros that can/can`t be migrated plus alternatives.", "Checking, documenting and comparing all references - App links, Webhooks as well as Issue and page Links/references.", "Checking that all Jira / Confluence cross-references are maintained for UAT/Prod.", "Contingency Planning: What happens in a “No-Go” and roll back plans ?", "Risk about communication style with client/customer."],
+      caseStudySolutionsParagraphs: [
+        "We assisted our client with a full Migration plan with detailed risk analysis documentation which called out all things to look out for in pre-and post-migration, and a detailed UAT test plan for a successful migration.",
+        "These results formed a solid and good foundation to inform the migration strategies,plans, methodology and process."
+      ],
+      caseStudyResults: [
+        "Our client saved 40% on license costs",
+        "Improved and unified user experience.",
+        "Scalable administration of the tools."
+      ],
+      hasPie: true
     }
   }
 ]

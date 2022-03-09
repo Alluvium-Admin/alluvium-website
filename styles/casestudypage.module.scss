@@ -277,7 +277,7 @@
 
         .caseStudyResults{
             padding: 2rem;
-            max-width: 65%;
+            // max-width: 65%;
 
             @include media("<=phone"){
                 max-width: unset;
@@ -292,6 +292,20 @@
                 font-size: 28px;
                 line-height: 48px;
                 color: #1B3854;
+            }
+
+            .caseStudyResultsInfo{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .graph{
+                    max-width: 430px;
+
+                    img{
+                        width: 100%;
+                    }
+                }
             }
 
             .caseStudyResultsList{

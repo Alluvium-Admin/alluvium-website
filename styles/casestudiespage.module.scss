@@ -25,7 +25,10 @@
         }
 
         .casestudiesList{
+            display: flex;
+            flex-wrap: wrap;
             padding: 2rem 3rem;
+
         }
     }
 }
