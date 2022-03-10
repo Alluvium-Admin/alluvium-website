@@ -6,7 +6,7 @@ import { productData, caseStudiesData } from '../../../data'
 export default function CaseStudy({ caseStudy, products }){
     
     const { details } = caseStudy;
-    
+
     return (
         <div className={styles.caseStudyPage}>
             <Head>
@@ -98,18 +98,27 @@ export default function CaseStudy({ caseStudy, products }){
                 </section>
                 <section className={styles.caseStudyResults}>
                     <h3 className={styles.caseStudyResultsTitle}>The Result</h3>
-                    <ul className={styles.caseStudyResultsList}>
+                    <div className={styles.caseStudyResultsInfo}>
+                        <ul className={styles.caseStudyResultsList}>
+                            {
+                                details.caseStudyResults.map((result,idx) => {
+                                    return (
+                                        <li className={styles.caseStudyResult} key={idx}>
+                                            <img src="/assets/pointer-icon.svg" alt="Pointer Icon"/>
+                                            <p>{result}</p>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
                         {
-                            details.caseStudyResults.map((result,idx) => {
-                                return (
-                                    <li className={styles.caseStudyResult} key={idx}>
-                                        <img src="/assets/pointer-icon.svg" alt="Pointer Icon"/>
-                                        <p>{result}</p>
-                                    </li>
-                                )
-                            })
+                            details.hasPie &&
+                            <div className={styles.graph}>
+                                <img src="/assets/case-studies/pie.png" alt="Pie"/> 
+                            </div>
                         }
-                    </ul>
+                    </div>
+                    
                 </section>
                 <section className={styles.caseStudyDownload}>
                     <a href={caseStudy.downloadLink} alt={caseStudy.filename} target="_blank" rel="noopener noreferrer">
