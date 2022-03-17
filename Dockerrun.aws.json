@@ -1,7 +1,8 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-        "Name": "863859422390.dkr.ecr.us-west-2.amazonaws.com/alluvium-website:latest"
+        "Name": "863859422390.dkr.ecr.us-west-2.amazonaws.com/alluvium-website:latest",
+        "Update": "true"
     },
     "Ports": [
         {

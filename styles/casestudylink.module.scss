@@ -94,3 +94,45 @@
         
     }
 }
+
+.altCaseStudyLinkContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #009BC0;
+    transition: 0.2s;
+    margin: 1rem;
+    
+    &:hover{
+        box-shadow: 0 6px 12px #009ac033;
+    }
+
+    .altCaseStudyLinkImg{
+        max-width: 235px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .altCaseStudyTitle{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 17px;
+        text-transform: capitalize;
+        color: #1B3854;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    .altCaseStudyLink{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 17px;
+        text-transform: capitalize;
+        color: #1B3854;
+    }
+}

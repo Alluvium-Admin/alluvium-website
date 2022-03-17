@@ -62,7 +62,7 @@ export default function Reel({ products }) {
             <div className={styles.titleContainer} data-aos="fade-down">
               <div className={styles.title}>
                 <div className={styles.titleVector}>
-                  <img src={require('../../public/assets/our-projects-vector.svg')} alt="Project Reel Title" />
+                  <img src={"/assets/our-projects-vector.svg"} alt="Project Reel Title" />
                 </div>
                 <h3>Our <br/> Projects</h3>
               </div>

@@ -2,6 +2,9 @@ FROM node:lts
 
 WORKDIR /usr/app/
 
+ARG NEXT_PUBLIC_GA_ID
+ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
+
 COPY package.json package-lock.json ./
 
 RUN npm install -g npm
