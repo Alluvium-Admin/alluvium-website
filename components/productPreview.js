@@ -26,7 +26,7 @@ export default function ProductPreview({title,subtitle,previewImgLink,imgLink,pr
                     <p className={styles.previewSubtitle}>{subtitle}</p>
                 </div>
                 <div className={styles.projectLink}>
-                    <Link href='/products/[productName]' as={`/products/${productName}`} >+ See full product</Link>
+                    <Link href='/products/[productName]' as={`/products/${productName}`} >+ Read more</Link>
                 </div>
             </div>
         </div>

@@ -5,7 +5,8 @@ import Link from 'next/link';
 
 export default function Search({theme,products}) {
     const [searchData, setSearchData] = useState([]);
-    const [ searchInput, setSearchInput ] = useState("")
+    const [ searchInput, setSearchInput ] = useState("");
+    const [ showSearchInput, setShowSearchInput ] = useState(false);
     const [ searchResults, setSearchResults ] = useState([])
 
     useState(()=>{
@@ -14,9 +15,11 @@ export default function Search({theme,products}) {
 
 
     useEffect(()=>{
-        if(searchInput === ""){
+        if(searchInput === "" || !searchInput){
             setSearchResults([])
+            setTimeout(()=>setShowSearchInput(false), 3000);
         }
+        return clearTimeout()
     },[searchInput])
 
     useEffect(()=>{
@@ -30,13 +33,18 @@ export default function Search({theme,products}) {
     return(
         <div style={{minWidth: searchInput === "" ? "unset" : "20vw"}} className={ theme === "dark" ? styles.searchDark : styles.search}>
             <div className={styles.searchInput}>
-                <div className={styles.searchIcon}>
-                    {
-                        theme === "dark" ? <Image src="/assets/search_dark.svg" width={16} height={16}/> : <Image src="/assets/search.svg" width={16} height={16}/>
-                    }
-                   
-                </div>
-                <input type="text" placeholder="Search products" onChange={(e)=>setSearchInput(e.target.value)}/>
+                {
+                    // {
+                    //     theme === "dark" ? <Image src="/assets/search_dark.svg" width={30} height={30}/> : <Image src="/assets/search.svg" width={30} height={30}/>
+                    // }
+                    !showSearchInput ? 
+                    (<div className={styles.searchIcon} onClick={()=>setShowSearchInput(true)}>
+                    <Image src="/assets/search_dark.svg" width={20} height={20} />
+                       
+                    </div>)
+                    :
+                    (<input type="search" placeholder="Search products" autoFocus onChange={(e)=>setSearchInput(e.target.value)} />)
+                }
             </div>
             <div style={{display: searchInput === "" ? "none" : "block" }} className={styles.searchResults}>
                 {
@@ -47,7 +55,7 @@ export default function Search({theme,products}) {
                         searchResults.map((searchResult)=>{
                             return(
                                 <div className={ styles.searchResult } key={searchResult.id}>
-                                    <Link href='/products/[projectName]' as={`/products/${searchResult.projectName}`} >
+                                    <Link href={`/products/${searchResult.projectName}`} >
                                         <div className={styles.resultDetails}>
                                             <h3>{searchResult.details.productName}</h3>
                                             <p>{searchResult.details.productSubtitle}</p>
