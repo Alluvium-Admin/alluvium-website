@@ -19,6 +19,8 @@ const OnboardingList = ({ products }) => {
         const password = prompt("Enter Password");
         if (password !== "alluviumhq123") {
             alert('Wrong Password');
+            setLoading(false);
+            setData({ message: 'Wrong Password, Kindly refresh your browser to try again', success: false })
         } else {
             // let responseData = null;
             axios.get('/api/user')
@@ -87,6 +89,7 @@ const OnboardingList = ({ products }) => {
                                         <tr>
                                             <th>#</th>
                                             <th>FullName</th>
+                                            <th>Phone</th>
                                             <th>Email</th>
                                             <th>Location</th>
                                             <th>Current Engagement</th>
@@ -101,6 +104,7 @@ const OnboardingList = ({ products }) => {
                                                 <tr key={index}>
                                                     <td>{index + 1}</td>
                                                     <td>{user.fullname}</td>
+                                                    <td>{user.phoneNumber}</td>
                                                     <td>{user.email}</td>
                                                     <td>{user.location}</td>
                                                     <td>{user.currentEngagement}</td>
