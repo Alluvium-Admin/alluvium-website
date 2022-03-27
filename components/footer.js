@@ -181,6 +181,9 @@ export function AltFooter() {
                             <li className={styles.contactListItem}>
                                 <Link href="/support">Support</Link>
                             </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/onboardingList">Login</Link>
+                            </li>
                         </ul>
                     </div>
                     <div className={styles.altFooterMainSectionComponent}>

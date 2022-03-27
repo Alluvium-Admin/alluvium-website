@@ -85,6 +85,7 @@ const Onboarding = ({products}) => {
         }
         <form action="#" onSubmit={handleSubmit} ref={formElem}>
           <input type="text" name="fullname" placeholder="Fullname" id="" onChange={handleChange} required />
+          <input type="email" name="email" placeholder="Email" id="" onChange={handleChange} required />
           <input type="text" name="currentEngagement" placeholder="Current Engagement" id="" onChange={handleChange} required />
           <input type="text" name="location" placeholder="Location" id="" onChange={handleChange} required />
           <select name="traineeProgram" id="" defaultValue='Are you applying for a Trainee Program ?' onChange={handleChange} required>
