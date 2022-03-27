@@ -26,16 +26,17 @@ const OnboardingList = ({ products }) => {
                     // console.log(res);
                     setData(res.data);
                     setUsersInfo(res.data.users);
+                    setLoading(false);
                 })
                 .catch(err => {
                     // console.log(err);
                     setUsersInfo(null);
                     setData({ message: err.message, success: false })
+                    setLoading(false);
                 });
                 // console.log(responseData);
                 // setUsersInfo(null);
         }
-        setLoading(false);
     }, [])
 
 
