@@ -11,6 +11,7 @@ const Onboarding = ({products}) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [responseData, setResponseData] = useState(null);
+  const [hideButton, setHideButton] = useState(false);
   const formElem = useRef(null);
 
   const clearData = () => {
@@ -32,6 +33,7 @@ const Onboarding = ({products}) => {
   }
 
   const handleSubmit = async e => {
+    setHideButton(true);
     console.log(data);
     setLoading(true);
     e.preventDefault();
@@ -40,6 +42,7 @@ const Onboarding = ({products}) => {
       console.log(responseData2);
       setResponseData(responseData2);
     setLoading(false);
+    setHideButton(false);
       // if(responseData2.success){
       //   e.reset();
       // }
@@ -78,9 +81,10 @@ const Onboarding = ({products}) => {
         </div>
         {
           (responseData || loading) && (
-            <div className={`${styles.response} ${responseData ? (responseData.success ? styles.success : styles.danger) :
-             ''}`}>
-              <h3>{loading ? 'Loading' : responseData.message}</h3> <button onClick={()=>clearData()}>x</button>
+            <div className={`${styles.response} ${responseData ? (responseData.success ? styles.success : styles.danger) : ''}`}>
+              <div className={`${styles.responseData} ${responseData ? (responseData.success ? styles.successBG : styles.dangerBG) : ''}`}>
+              <h3>{loading ? 'Loading...' : responseData.message}</h3> <button onClick={()=>clearData()}>x</button>
+              </div>
             </div>
           )
         }
@@ -106,7 +110,7 @@ const Onboarding = ({products}) => {
             <option defaultValue="intermediate (1 year)">Intermediate (1 year)</option>
             <option defaultValue="professional (More than 2 year)">Professional (More than 2 year)</option>
           </select>
-          <input type="submit" value="Submit" />
+          {!hideButton && <input type="submit" value="Submit" />}
         </form>
       </main>
     </div>

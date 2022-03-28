@@ -36,8 +36,8 @@ const OnboardingList = ({ products }) => {
                     setData({ message: err.message, success: false })
                     setLoading(false);
                 });
-                // console.log(responseData);
-                // setUsersInfo(null);
+            // console.log(responseData);
+            // setUsersInfo(null);
         }
     }, [])
 
@@ -75,7 +75,9 @@ const OnboardingList = ({ products }) => {
                     (data || loading) && (
                         <div className={`${styles.response} ${data ? (data.success ? styles.success : styles.danger) :
                             ''}`}>
-                            <h3>{loading ? 'Loading' : data.message}</h3> <button onClick={()=>setData(null)}>x</button>
+                            <div className={`${styles.responseData} ${data ? (data.success ? styles.successBG : styles.dangerBG) : ''}`}>
+                            <h3>{loading ? 'Loading...' : data.message}</h3> <button onClick={() => setData(null)}>x</button>
+                            </div>
                         </div>
                     )
                 }
