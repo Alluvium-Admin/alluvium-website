@@ -11,35 +11,54 @@ const OnboardingList = ({ products }) => {
     const [data, setData] = useState(null);
     const [usersInfo, setUsersInfo] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [access, setAccess] = useState(false);
 
     useEffect(() => {
         setData(null);
         setUsersInfo(null);
         setLoading(true);
+        axios.get('/api/user')
+            .then(res => {
+                // console.log(res);
+                setData(res.data);
+                setUsersInfo(res.data.users);
+                setLoading(false);
+            })
+            .catch(err => {
+                // console.log(err);
+                setUsersInfo(null);
+                setData({ message: err.response.data.message, success: false })
+                setLoading(false);
+            });
         const password = prompt("Enter Password");
         if (password !== "alluviumhq123") {
             alert('Wrong Password');
+            setAccess(false);
             setLoading(false);
             setData({ message: 'Wrong Password, Kindly refresh your browser to try again', success: false })
         } else {
+            setAccess(true);
             // let responseData = null;
-            axios.get('/api/user')
-                .then(res => {
-                    // console.log(res);
-                    setData(res.data);
-                    setUsersInfo(res.data.users);
-                    setLoading(false);
-                })
-                .catch(err => {
-                    // console.log(err);
-                    setUsersInfo(null);
-                    setData({ message: err.message, success: false })
-                    setLoading(false);
-                });
             // console.log(responseData);
             // setUsersInfo(null);
         }
     }, [])
+
+    const deleteUser = async (id) => {
+        await axios.delete(`/api/user/${id}`)
+                .then(res => {
+                    // console.log(res);
+                    setUsersInfo(prev=>prev.filter(user=>user._id !== id));
+                    setData(res.data);
+                    setLoading(false);
+                })
+                .catch(err => {
+                    // console.log(err);
+                    // setUsersInfo(null);
+                    setData({ message: err.response.data.message, success: false })
+                    setLoading(false);
+                });
+    }
 
 
     return (
@@ -83,7 +102,7 @@ const OnboardingList = ({ products }) => {
                 }
 
                 {
-                    usersInfo && (
+                    (access && usersInfo) && (
                         <>
                             <div className={styles.tableHolder}>
                                 <table>
@@ -98,6 +117,7 @@ const OnboardingList = ({ products }) => {
                                             <th>Applying For Trainee Program?</th>
                                             <th>3 Years Availability?</th>
                                             <th>Expirence Level</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -113,6 +133,7 @@ const OnboardingList = ({ products }) => {
                                                     <td>{user.traineeProgram}</td>
                                                     <td>{user.threeYearsAvailability}</td>
                                                     <td>{user.experienceLevel}</td>
+                                                    <td><button onClick={()=>deleteUser(user._id)}>Delete</button></td>
                                                 </tr>
                                             ))
                                         }

@@ -3,11 +3,11 @@ import Image from "next/image";
 import styles from '../styles/onboarding.module.scss'
 import Navigation from "components/navigation";
 import { productData } from "data";
-import {useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 // import { connectToDatabase, saveToDB } from "lib/mongo";
 import axios from 'axios'
 
-const Onboarding = ({products}) => {
+const Onboarding = ({ products }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [responseData, setResponseData] = useState(null);
@@ -26,9 +26,9 @@ const Onboarding = ({products}) => {
   // }, [formElem])
 
   const handleChange = (e) => {
-    const {name, value} = e.target;
-    if(value){
-      setData(prev=>prev? ({...prev, [name]: value}) : {[name]: value});
+    const { name, value } = e.target;
+    if (value) {
+      setData(prev => prev ? ({ ...prev, [name]: value }) : { [name]: value });
     }
   }
 
@@ -37,12 +37,14 @@ const Onboarding = ({products}) => {
     console.log(data);
     setLoading(true);
     e.preventDefault();
-    if(data){
-      const responseData2 = await axios.post('/api/user', data).then(res=>res.data).catch(err=>err);
+    if (data) {
+      const responseData2 = await axios.post('/api/user', data)
+        .then((res) => { console.log(res); return res.data })
+        .catch(err => { console.log(err.response.data); return err.response.data });
       console.log(responseData2);
       setResponseData(responseData2);
-    setLoading(false);
-    setHideButton(false);
+      setLoading(false);
+      setHideButton(false);
       // if(responseData2.success){
       //   e.reset();
       // }
@@ -69,12 +71,12 @@ const Onboarding = ({products}) => {
         <div className={styles.header}>
           <div>
             <Image
-            priority
-            alt="Alluvium university logo"
-            src="/assets/AULogoWhite.svg" 
-            quality={100}
-            height={74}
-            width={79.69}
+              priority
+              alt="Alluvium university logo"
+              src="/assets/AULogoWhite.svg"
+              quality={100}
+              height={74}
+              width={79.69}
             />
           </div>
           <div><h1>Onboarding Form</h1></div>
@@ -83,7 +85,7 @@ const Onboarding = ({products}) => {
           (responseData || loading) && (
             <div className={`${styles.response} ${responseData ? (responseData.success ? styles.success : styles.danger) : ''}`}>
               <div className={`${styles.responseData} ${responseData ? (responseData.success ? styles.successBG : styles.dangerBG) : ''}`}>
-              <h3>{loading ? 'Loading...' : responseData.message}</h3> <button onClick={()=>clearData()}>x</button>
+                <h3>{loading ? 'Loading...' : responseData.message}</h3> <button onClick={() => clearData()}>x</button>
               </div>
             </div>
           )
@@ -120,9 +122,9 @@ const Onboarding = ({products}) => {
 export default Onboarding;
 
 
-export const getStaticProps = async () =>{
+export const getStaticProps = async () => {
   return {
-    props:{
+    props: {
       products: productData
     }
   }
