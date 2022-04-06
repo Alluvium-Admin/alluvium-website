@@ -1,14 +1,15 @@
 import {connectToDatabase} from '../../../lib/mongo'
-import User from '../../../models/user.model'
+// import User from '../../../models/user.model'
+import Applicant from '../../../models/applicants.model'
 
 const handler = async (req, res) => {
     if(req.method === 'DELETE'){
-        await User.findByIdAndDelete(req.query.id)
-        .then(users=>{
+        await Applicant.findByIdAndDelete(req.query.id)
+        .then(applicants=>{
             return res.status(200).json({
             message: `User deleted successfully`,
             success: true,
-            users
+            applicants
         })})
         .catch(err=>{
             console.log(err);
