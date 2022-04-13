@@ -79,7 +79,7 @@ const Onboarding = ({ products }) => {
               width={79.69}
             />
           </div>
-          <div><h1>Onboarding Form</h1></div>
+          <div><h1>Contact Form</h1></div>
         </div>
         {
           (responseData || loading) && (
