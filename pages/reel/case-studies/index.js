@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../../../styles/casestudiespage.module.scss'
 import Navigation from '../../../components/navigation'
 import { productData, caseStudiesData } from '../../../data'
-import CaseStudyLink from 'components/caseStudyLink'
+import {AltCaseStudyLink} from 'components/caseStudyLink'
 
 export default function Support({ products, caseStudies }) {
     return (
@@ -18,7 +18,7 @@ export default function Support({ products, caseStudies }) {
                 <div className={styles.casestudiesList} data-aos="fade-up" data-aos-delay={100}>
                     {
                         caseStudies.map(caseStudy => {
-                            return <CaseStudyLink key={caseStudy.id} caseStudy={ caseStudy }/>
+                            return <AltCaseStudyLink key={caseStudy.id} caseStudy={ caseStudy }/>
                         })
                     }
                 </div>

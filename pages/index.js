@@ -8,10 +8,10 @@ import Navigation from '../components/navigation';
 import ProductPreview from '../components/productPreview';
 // import useSWR from 'swr';
 // import { baseURL } from '../config'
-import { productData,featuresData } from '../data'
+import { productData,featuresData, ourServicesData, milestonesData,trustedCompaniesData } from '../data'
 
 
-export default function Home({products,features}){
+export default function Home({products,features,ourServices,milestones,trustedCompanies}){
   const [ lightTheme,setLightTheme ] = useState('')
 
 
@@ -36,15 +36,15 @@ export default function Home({products,features}){
             <div className={styles.heroContainer}>
               <Navigation products={products}/>
               <div className={styles.heroContent}>
-                <div data-aos="fade-right" className={styles.bigText}>
+                <div data-aos="fade-up" className={styles.bigText}>
                   <p>We are problem solvers</p>
                 </div>
-                <div data-aos="fade-left" className={styles.mainText}>
+                <div data-aos="fade-down" className={styles.mainText}>
                   <p className={styles.subtitle}>
                     We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that deliver complete data migration in half the time for half the cost.
                   </p>
                   <div className={styles.projectsBtn}>
-                    <Link href="/products">+ See our products</Link>
+                    <Link href="/products">View our products</Link>
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function Home({products,features}){
               </ul>
             </div>
           </section>
-          <section className={styles.projects}>
+          {/* <section className={styles.projects}>
             <div className={styles.projectList}>
                 {
                   products.slice(0,2).map((project,index)=>{
@@ -98,7 +98,103 @@ export default function Home({products,features}){
             <div className={styles.allProjectsBtn}>
               <Link href="/products">+ See more works</Link>
             </div>
-          </section>
+        </section> */}
+        <section className={styles.ourServices} id="services">
+          <div className={styles.ourServicesHeader}>
+            <h1 className={styles.ourServicesTitle}>Our Services</h1>
+            <p className={styles.ourServicesSubtitle}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>
+          </div>
+          <div className={styles.ourServicesList}>
+            {
+              ourServices.map((service) => {
+                const { id, title, icon, subtitle } = service;
+
+                return(
+                  <div className={styles.service} key={id}>
+                    <div className={styles.serviceIcon}>
+                      <img src={icon} alt={title}/>
+                    </div>
+                    <div className={styles.serviceInfo}>
+                      <h3 className={styles.serviceTitle}>{ title }</h3>
+                      <p className={styles.serviceSubtitle}>{ subtitle }</p>
+                    </div>
+                    <div className={styles.serviceLink}>
+
+                    </div>
+                  </div>
+                )
+              })
+            }
+            <div className={styles.service} >
+              <div className={styles.serviceIcon}>
+                <img src={"/assets/service3.svg"} alt="Plugins"/>
+              </div>
+              <div className={styles.serviceInfo}>
+                <h3 className={styles.serviceTitle}>Atlassian Marketplace Plugins</h3>
+                <p className={styles.serviceSubtitle}>We engineer and support migration and implementation plugins like
+                  <span className={styles.serviceProductLink}><Link href="/products/sc"> Scrum Companion</Link></span>,
+                  <span className={styles.serviceProductLink}><Link href="/products/cloud-counter"> Cloud Counter</Link></span>,
+                  <span className={styles.serviceProductLink}><Link href="/products/cjr"> Compare Jira Resources</Link></span>,
+                </p>
+              </div>
+              <div className={styles.serviceLink}>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={styles.ourMilestones}>
+          <div className={styles.ourMilestonesHeader} >
+            <h1 className={styles.ourMilestonesTitle}>Our Major Milestones</h1>
+            <p className={styles.ourMilestonesSubtitle}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+          </div>
+          <div className={styles.ourMilestonesList}>
+            {
+              milestones.map((milestone)=>{
+                return(
+                  <div className={styles.milestone} key={milestone.id}>
+                    <div className={styles.milestoneIcon}>
+                      <img src={milestone.icon} alt={milestone.category}/>
+                    </div>
+                    <div className={styles.milestoneDescription}>
+                      <h3 className={styles.milestoneFigure}>{ milestone.value }</h3>
+                      <p className={styles.milestoneName}>{ milestone.category }</p>
+                    </div>
+                  </div>
+                )
+              })
+              
+            }
+          </div>
+        </section>
+        <section className={styles.trustedBySection}>
+          <h1 className={styles.trustedBySectionTitle}>Trusted by</h1>
+          <div className={styles.trustedCompaniesList}>
+            <div className={styles.trustedCompanies}>
+              {
+                trustedCompanies.map((company,idx) => {
+                  return (
+                    <div className={styles.trustedCompany} key={idx}>
+                      <img src={ company.logoIcon } alt={ company.name }/>
+                    </div>
+                  )
+                })
+              }
+
+            </div>
+            <div className={styles.trustedCompanies}>
+              {
+                trustedCompanies.map((company,idx) => {
+                  return (
+                    <div className={styles.trustedCompany} key={idx}>
+                      <img src={ company.logoIcon } alt={ company.name }/>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+        </section>
       </main>
       <script async id="slcLiveChat" src="https://widget.sonetel.com/SonetelWidget.min.js" data-account-id="207734638"></script>
     </div>
@@ -110,6 +206,9 @@ export const getStaticProps = async () =>{
     props:{
       products: productData,
       features: featuresData,
+      ourServices: ourServicesData,
+      milestones: milestonesData,
+      trustedCompanies: trustedCompaniesData
     }
   }
 }

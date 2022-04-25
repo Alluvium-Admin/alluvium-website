@@ -23,5 +23,12 @@
             margin: 2rem 0;
             align-self: center;
         }
+
+        .casestudiesList{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem 3rem;
+
+        }
     }
 }

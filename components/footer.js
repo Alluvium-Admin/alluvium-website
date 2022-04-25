@@ -5,12 +5,13 @@ import Switch from 'react-input-switch';
 import styles from '../styles/footer.module.scss';
 import { useToasts } from 'react-toast-notifications';
 
+
 export default function Footer() {
-    const [value, setValue] = useState(true);
-    const { addToast } = useToasts()
-    useEffect(()=>{
-        localStorage.setItem("light-mode", JSON.stringify(value))
-    },[value])
+    // const [value, setValue] = useState(true);
+    // useEffect(()=>{
+    //     localStorage.setItem("light-mode", JSON.stringify(value))
+    // }, [value])
+    const { addToast } = useToasts();
     
 
     return(
@@ -98,11 +99,121 @@ export default function Footer() {
                     </div> */}
                     <hr className={styles.underline}/>
                     <div className={styles.copyrights}>
-                        <p>Copyright.©2021 Alluvium Ltd. All rights reserved</p>
+                        <p>©2022 Alluvium | All rights reserved</p>
                     </div>
                 </div>
             </div>
             
+        </footer>
+    )
+}
+
+
+export function AltFooter() {
+
+    const { addToast } = useToasts();
+
+    function submitNewsletterForm (e) {
+        e.preventDefault();
+        addToast("Currently unavailable, Check back later", { appearance: 'info', autoDismiss: true });
+    }
+    
+    return(
+        <footer className={styles.altFooter}>
+            <div className={styles.getInTouchSection}>
+                <h1 className={styles.getInTouchSectionTitle}>Have a Project in mind?</h1>
+                <Link href="/support/contact">Get in touch</Link>
+            </div>
+            <div className={styles.altFooterMainSection}>
+                <div className={styles.altFooterMainSectionComponents}>
+                    <div className={styles.altFooterMainSectionComponent}>
+                        <div className={styles.altFooterLogo}>
+                            <img src={"/assets/alluvium-footer-logo.svg"} alt="Footer logo"/>
+                        </div>
+                        <ul className={styles.altFooterContactList}>
+                            <li className={styles.contactListItem}>
+                                <b>Address:</b> Kemp House 160, City Road London, EC1V 2NX.
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <b>Email:</b>
+                                <a href="mailto:contact@alluvium.net"> contact@alluvium.net</a>
+                            </li>
+                            {/* <li className={styles.contactListItem}>
+                                <b>Phone:</b>
+                                <Link href="/"> +44 85001 92539</Link>
+                            </li> */}
+                        </ul>
+                        <ul className={styles.footerSocials}>
+                            {/* <li className={styles.footerSocialIcon}>
+                                <a href="" >
+                                    <img src="/assets/socials/instagram.svg" alt='instagram' />
+                                </a>
+                            </li> */}
+                            <li className={styles.footerSocialIcon}>
+                                <a href="https://twitter.com/alluviumhq?s=08" target="_blank">
+                                    <img src="/assets/socials/twitter.svg" alt='twitter' />
+                                </a>
+                            </li>
+                            <li className={styles.footerSocialIcon}>
+                                <a href="https://www.facebook.com/alluviumhq/?ti=as" target="_blank">
+                                    <img src="/assets/socials/facebook.svg" alt='facebook' />
+                                </a>
+                            </li>
+                            <li className={styles.footerSocialIcon}>
+                                <a href="https://www.linkedin.com/company/alluvium-hq/" target="_blank">
+                                    <img src="/assets/socials/linkedin.svg" alt='linkedin' />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={styles.altFooterMainSectionComponent}>
+                        <h3 className={styles.altFooterMainSectionComponentTitle}>Company</h3>
+                        <ul className={styles.altFooterContactList}>
+                            <li className={styles.contactListItem}>
+                                <Link href="/about">About us</Link>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/reel">Project Reel</Link>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/reel/case-studies">Case Studies</Link>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/support">Support</Link>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/onboardingList">Login</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={styles.altFooterMainSectionComponent}>
+                        <h3 className={styles.altFooterMainSectionComponentTitle}>Our Services</h3>
+                        <ul className={styles.altFooterContactList}>
+                            <li className={styles.contactListItem}>
+                                <Link href="/#services">Atlassian Tools Migration</Link>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/#services">Atlassian Engineering Team</Link>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/products">Atlassian Marketplace PlugIns</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={styles.newsLetterComponent}>
+                        <h2 className={styles.newsLetterTitle}>Get Access to our Newsletter</h2>
+                        <p className={styles.newsLetterSubtitle}>Join hundreds of business and technology in subcribing to Alluvium’s newsletter</p>
+                        <form className={styles.newsLetterForm} onSubmit={submitNewsletterForm}>
+                            <input type="email" className={styles.emailInput} name="emailInput" placeholder='Email Address'/>
+                            <input type="submit" className={styles.formSubmitBtn} value="Sign me up"/>
+                        </form>
+                    </div>
+                </div>
+                <hr className={styles.underline}/>
+                <div className={styles.copyrights}>
+                    <p>© 2022 Alluvium | <span>All rights reserved</span></p>
+                </div>
+            </div>
         </footer>
     )
 }

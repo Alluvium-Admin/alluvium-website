@@ -1,11 +1,11 @@
 import React from 'react';
-import Footer from './footer';
+import { AltFooter } from './footer';
 
 export default function Layout ({children}) {
     return (
         <div>
             {children}
-            <Footer/>
+            <AltFooter/>
         </div>  
     )
 }
