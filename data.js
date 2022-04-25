@@ -574,10 +574,10 @@ export const trustedCompaniesData = [
     name: "Company",
     logoIcon: "/assets/company-logos/company-2.svg"
   },
-  {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-3.svg"
-  },
+  // {
+  //   name: "Company",
+  //   logoIcon: "/assets/company-logos/company-3.svg"
+  // },
   {
     name: "Company",
     logoIcon: "/assets/company-logos/company-4.svg"
@@ -587,8 +587,8 @@ export const trustedCompaniesData = [
     logoIcon: "/assets/company-logos/company-5.svg"
   },
   {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-6.svg"
+    name: "STL",
+    logoIcon: "/assets/company-logos/stl.png"
   },
   {
     name: "Company",
@@ -597,5 +597,13 @@ export const trustedCompaniesData = [
   {
     name: "Company",
     logoIcon: "/assets/company-logos/company-8.svg"
+  },
+  {
+    name: "Stack Intelligence",
+    logoIcon: "/assets/company-logos/stack.png"
+  },
+  {
+    name: "HyperVelocity",
+    logoIcon: "/assets/company-logos/hyper.png"
   },
 ]

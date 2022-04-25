@@ -362,6 +362,14 @@
     .altFooterMainSection{
         background: #223D55;
         padding: 3rem 5rem 1rem 5rem;
+        
+        @include media("<=phone"){
+            padding: 3rem 1rem 1rem 1rem;
+        }
+        
+        @include media(">=phone", "<=custom-view-1") {
+      padding: 3rem 1rem 1rem 1rem;
+  }
 
         .altFooterMainSectionComponents{
             display: flex;
@@ -450,6 +458,11 @@
                     flex-direction: row;
                     align-items: center;
 
+                    @include media("<=phone"){
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+
                     .emailInput{
                         padding: 0.6rem 1.5rem;
                         background: #305373;
@@ -459,8 +472,15 @@
                         line-height: 30px;
                         color: rgba(255, 255, 255, 0.45);
                         border: none;
+                        
+                        @include media("<=phone"){
+                            border-radius: 5px 5px 5px 5px;
+                            width: 100%;
+                            margin-bottom: 7px;
+                        }
+                        
                     }
-
+                    
                     .formSubmitBtn{
                         padding: 0.8rem 0.7rem;
                         font-weight: 500;
@@ -472,6 +492,11 @@
                         border: none;
                         cursor: pointer;
                         transition: 0.2s;
+                        
+                        @include media("<=phone"){
+                            border-radius: 5px 5px 5px 5px;
+                            // width: 100%;
+                        }
 
                         &:hover{
                             background: #007896;
@@ -495,6 +520,10 @@
             font-size: 14px;
             line-height: 18px;
             color: rgba(255, 255, 255, 0.55);
+
+            @include media("<=phone"){
+                text-align: center;
+            }
 
             span{
                 color: rgb(255, 255, 255);

@@ -122,7 +122,7 @@ export function AltFooter() {
         <footer className={styles.altFooter}>
             <div className={styles.getInTouchSection}>
                 <h1 className={styles.getInTouchSectionTitle}>Have a Project in mind?</h1>
-                <Link href="/support">Get in touch</Link>
+                <Link href="/support/contact">Get in touch</Link>
             </div>
             <div className={styles.altFooterMainSection}>
                 <div className={styles.altFooterMainSectionComponents}>
@@ -132,16 +132,16 @@ export function AltFooter() {
                         </div>
                         <ul className={styles.altFooterContactList}>
                             <li className={styles.contactListItem}>
-                                <b>Address:</b> Second Floor, Ravi Chambers, Kavuri Hills, London, United Kingdom.
+                                <b>Address:</b> Kemp House 160, City Road London, EC1V 2NX.
                             </li>
                             <li className={styles.contactListItem}>
                                 <b>Email:</b>
-                                <Link href="/"> contact@alluvium.com</Link>
+                                <a href="mailto:contact@alluvium.net"> contact@alluvium.net</a>
                             </li>
-                            <li className={styles.contactListItem}>
+                            {/* <li className={styles.contactListItem}>
                                 <b>Phone:</b>
                                 <Link href="/"> +44 85001 92539</Link>
-                            </li>
+                            </li> */}
                         </ul>
                         <ul className={styles.footerSocials}>
                             {/* <li className={styles.footerSocialIcon}>
@@ -181,19 +181,22 @@ export function AltFooter() {
                             <li className={styles.contactListItem}>
                                 <Link href="/support">Support</Link>
                             </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/onboardingList">Login</Link>
+                            </li>
                         </ul>
                     </div>
                     <div className={styles.altFooterMainSectionComponent}>
                         <h3 className={styles.altFooterMainSectionComponentTitle}>Our Services</h3>
                         <ul className={styles.altFooterContactList}>
                             <li className={styles.contactListItem}>
-                                <Link href="/about">Atlassian Tools Migration</Link>
+                                <Link href="/#services">Atlassian Tools Migration</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/about">Atlassian Engineering Team</Link>
+                                <Link href="/#services">Atlassian Engineering Team</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/about">Atlassian Marketplace PlugIns</Link>
+                                <Link href="/products">Atlassian Marketplace PlugIns</Link>
                             </li>
                         </ul>
                     </div>
