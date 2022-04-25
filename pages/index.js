@@ -44,7 +44,7 @@ export default function Home({products,features,ourServices,milestones,trustedCo
                     We are Atlassian Products Migration Lab. We produce Tools, Systems and Services that deliver complete data migration in half the time for half the cost.
                   </p>
                   <div className={styles.projectsBtn}>
-                    <Link href="/products">See our products</Link>
+                    <Link href="/products">View our products</Link>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Home({products,features,ourServices,milestones,trustedCo
               <Link href="/products">+ See more works</Link>
             </div>
         </section> */}
-        <section className={styles.ourServices}>
+        <section className={styles.ourServices} id="services">
           <div className={styles.ourServicesHeader}>
             <h1 className={styles.ourServicesTitle}>Our Services</h1>
             <p className={styles.ourServicesSubtitle}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>

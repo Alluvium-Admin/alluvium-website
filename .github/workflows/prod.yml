@@ -1,0 +1,74 @@
+name: CI
+
+env:
+  ECR_REGISTRY: 863859422390.dkr.ecr.us-west-2.amazonaws.com
+  ECR_REPOSITORY: alluvium-website
+  S3_BUCKET_NAME: elasticbeanstalk-us-west-2-863859422390
+  S3_BUCKET_BASE_PATH: s3://elasticbeanstalk-us-west-2-863859422390
+  DEPLOY_PACKAGE_NAME: app_${{ github.sha }}.zip
+
+on:
+  push:
+    branches: [ prod ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
+
+    env:
+      IMAGE_TAG: latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
+      - name: Amazon ECR "Login" Action for GitHub Actions
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build image and push to ECR
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --build-arg NEXT_PUBLIC_GA_ID=${{ secrets.NEXT_PUBLIC_GA_ID }} -f prod.Dockerfile .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
+    needs: [ build ]
+
+    env:
+      ENVIRONMENT_NAME: alluvium-website-production
+      APPLICATION_NAME: alluvium-website
+      S3_KEY: $APPLICATION_NAME/$DEPLOY_PACKAGE_NAME
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
+      - name: Create New Application Version
+        run: |
+          zip -j $DEPLOY_PACKAGE_NAME Dockerrun.aws.json
+          aws s3 cp $DEPLOY_PACKAGE_NAME $S3_BUCKET_BASE_PATH/$APPLICATION_NAME/
+          aws elasticbeanstalk create-application-version \
+            --application-name $APPLICATION_NAME \
+            --source-bundle S3Bucket="${{ env.S3_BUCKET_NAME }}",S3Key="${{ env.S3_KEY }}" \
+            --version-label "version_${{ github.sha }}" \
+            --description "git commit SHA-${{ github.sha }}"
+      - name: Deploy New Application Version
+        run: |
+          aws elasticbeanstalk update-environment \
+            --environment-name $ENVIRONMENT_NAME \
+            --version-label "version_${{ github.sha }}"
