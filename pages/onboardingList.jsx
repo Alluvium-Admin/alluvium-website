@@ -118,7 +118,7 @@ const OnboardingList = ({ products }) => {
                                             <th>Current Engagement</th>
                                             <th>Applying For Trainee Program?</th>
                                             <th>3 Years Availability?</th>
-                                            <th>Expirence Level</th>
+                                            <th>Expirence Level?</th>
                                             <th></th>
                                         </tr>
                                     </thead>
