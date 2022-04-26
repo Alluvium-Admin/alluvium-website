@@ -25,7 +25,7 @@ export default function Navigation({ theme, products }) {
             <nav className={styles.navigation}>
                 <ul className={theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
                     <li><div>
-                        <p onClick={()=>setCurrentDropdown('company')}>Company</p>
+                        {/* <p onClick={()=>setCurrentDropdown('company')}>Company</p> */}
                         <div>
                             <ul className={theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
                                 
@@ -50,9 +50,9 @@ export default function Navigation({ theme, products }) {
                         <li><Link href="/reel">+ Project Reel</Link></li>
                         <li><Link href="/about">+ About us</Link></li>
                         {/* <li><Link href="/team">+ Our Team</Link></li> */}
-                        <li><Link href="/support">+ Support (FAQs)</Link></li>
+                        {/* <li><Link href="/support">+ Support (FAQs)</Link></li> */}
                         <li><a href="https://marketplace.atlassian.com/vendors/1218751/alluvium" target="_blank">Atlassian Marketplace</a></li>
-                        <li><Link href="/onboarding">+ Onboarding</Link></li>
+                        {/* <li><Link href="/onboarding">+ Onboarding</Link></li> */}
                         <li><Link href="/support/contact">+ Contact Us</Link></li>
                     </ul>
                 </div>
