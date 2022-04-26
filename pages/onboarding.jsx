@@ -42,15 +42,16 @@ const Onboarding = ({ products }) => {
   }
 
   const handleSubmit = async e => {
-    if (data.firstname && data.lastname) {
-      setData(prev => prev ? ({ ...prev, fullname: `${data.firstname} ${data.lastname}` }) : { fullname: `${data.firstname} ${data.lastname}` });
+    let newData = {...data};
+    if (newData.firstname && newData.lastname) {
+      newData = { ...newData, fullname: `${newData.firstname} ${newData.lastname}` };
     }
     setHideButton(true);
-    console.log(data);
+    console.log(newData);
     setLoading(true);
     e.preventDefault();
-    if (data) {
-      const responseData2 = await axios.post('/api/user', data)
+    if (newData) {
+      const responseData2 = await axios.post('/api/user', newData)
         .then((res) => { console.log(res); return res.data })
         .catch(err => { console.log(err.response.data); return err.response.data });
       console.log(responseData2);
