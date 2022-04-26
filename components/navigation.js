@@ -6,6 +6,7 @@ import Search, { MobileSearch } from "./search";
 
 export default function Navigation({ theme, products }) {
     const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
+    const [currentDropdown, setCurrentDropdown] = useState('');
     const toggleMenu = () => {
         setDisplayMobileMenu(!displayMobileMenu);
     }
@@ -23,6 +24,14 @@ export default function Navigation({ theme, products }) {
             </div>
             <nav className={styles.navigation}>
                 <ul className={theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
+                    <li><div>
+                        <p onClick={()=>setCurrentDropdown('company')}>Company</p>
+                        <div>
+                            <ul className={theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
+                                
+                            </ul>
+                        </div>
+                        </div></li>
                     <li><Link href="/products">Our Products</Link></li>
                     <li><Link href="/#services">Our Services</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>

@@ -15,14 +15,14 @@ const handler = async (req, res) => {
         userExists = await Applicant.findOne({ email: req.body.email.trim() });
         if(userExists){
             return res.status(403).json({
-                message: `User email ${userExists.email} exits already, Thank you.`,
+                message: `Applicant email ${userExists.email} exits already, Thank you.`,
                 success: false
             })
         }
         const userData = new Applicant({...req.body});
     await userData.save().then(user=>{
         return res.status(201).json({
-            message: `User ${user.fullname} saved successfully, Thank you.`,
+            message: `Hello ${user.fullname}, Thank you for reaching out to us. We'll get in touch with you.`,
             success: true
         })
     }).catch(err=>res.status(400).json({message: err.message, success: false}))

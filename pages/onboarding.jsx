@@ -21,6 +21,14 @@ const Onboarding = ({ products }) => {
     setResponseData(null);
   }
 
+  useEffect(() => {
+    if (data) {
+        if (data.firstname && data.lastname) {
+            setData(prev => prev ? ({ ...prev, fullname: `${data.firstname} ${data.lastname}` }) : { fullname: `${data.firstname} ${data.lastname}` });
+        }
+    }
+}, [data])
+
   // useEffect(()=>{
   //   console.log(formElem.current);
   // }, [formElem])
@@ -55,7 +63,7 @@ const Onboarding = ({ products }) => {
   return (
     <div>
       <Head>
-        <title>Onboarding | Alluvium University</title>
+        <title>Showing Interest | Alluvium University</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -79,7 +87,7 @@ const Onboarding = ({ products }) => {
               width={79.69}
             />
           </div>
-          <div><h1>Contact Form</h1></div>
+          <div><h1>Showing Interest</h1></div>
         </div>
         {
           (responseData || loading) && (
@@ -91,7 +99,8 @@ const Onboarding = ({ products }) => {
           )
         }
         <form action="#" onSubmit={handleSubmit} ref={formElem}>
-          <input type="text" name="fullname" placeholder="Fullname" id="" onChange={handleChange} required />
+          <input type="text" name="firstname" placeholder="First name" id="" onChange={handleChange} required />
+          <input type="text" name="lastname" placeholder="Last name" id="" onChange={handleChange} required />
           <input type="email" name="email" placeholder="Email" id="" onChange={handleChange} required />
           <input type="tel" name="phoneNumber" placeholder="Phone (i.e +234 0812234991)" id="" onChange={handleChange} required />
           <input type="text" name="currentEngagement" placeholder="Current Engagement" id="" onChange={handleChange} required />
