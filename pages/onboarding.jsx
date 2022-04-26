@@ -21,13 +21,13 @@ const Onboarding = ({ products }) => {
     setResponseData(null);
   }
 
-  useEffect(() => {
-    if (data) {
-        if (data.firstname && data.lastname) {
-            setData(prev => prev ? ({ ...prev, fullname: `${data.firstname} ${data.lastname}` }) : { fullname: `${data.firstname} ${data.lastname}` });
-        }
-    }
-}, [data])
+  //   useEffect(() => {
+  //     if (data) {
+  //         if (data.firstname && data.lastname) {
+  //             setData(prev => prev ? ({ ...prev, fullname: `${data.firstname} ${data.lastname}` }) : { fullname: `${data.firstname} ${data.lastname}` });
+  //         }
+  //     }
+  // }, [data])
 
   // useEffect(()=>{
   //   console.log(formElem.current);
@@ -38,9 +38,13 @@ const Onboarding = ({ products }) => {
     if (value) {
       setData(prev => prev ? ({ ...prev, [name]: value }) : { [name]: value });
     }
+
   }
 
   const handleSubmit = async e => {
+    if (data.firstname && data.lastname) {
+      setData(prev => prev ? ({ ...prev, fullname: `${data.firstname} ${data.lastname}` }) : { fullname: `${data.firstname} ${data.lastname}` });
+    }
     setHideButton(true);
     console.log(data);
     setLoading(true);
