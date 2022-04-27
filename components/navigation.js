@@ -39,7 +39,7 @@ export default function Navigation({ theme, products }) {
                     {/* <li><Link href="/team">Our Team</Link></li> */}
                     <li><Link href="/support">Support (FAQs)</Link></li>
                     <li><a href="https://marketplace.atlassian.com/vendors/1218751/alluvium" target="_blank">Atlassian Marketplace</a></li>
-                    <li><Link href="/onboarding">Onboarding</Link></li>
+                    {/* <li><Link href="/onboarding">Onboarding</Link></li> */}
                 </ul>
                 <div className={displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu}>
                     <MobileSearch theme={theme} products={products} />
