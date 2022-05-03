@@ -110,13 +110,15 @@ const OnboardingList = ({ products }) => {
                                         <tr>
                                             <th>#</th>
                                             <th>FullName</th>
+                                            <th>FirstName</th>
+                                            <th>LastName</th>
                                             <th>Phone</th>
                                             <th>Email</th>
                                             <th>Location</th>
                                             <th>Current Engagement</th>
                                             <th>Applying For Trainee Program?</th>
                                             <th>3 Years Availability?</th>
-                                            <th>Expirence Level</th>
+                                            <th>Expirence Level?</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -126,6 +128,8 @@ const OnboardingList = ({ products }) => {
                                                 <tr key={index}>
                                                     <td>{index + 1}</td>
                                                     <td>{user.fullname}</td>
+                                                    <td>{user.firstname}</td>
+                                                    <td>{user.lastname}</td>
                                                     <td>{user.phoneNumber}</td>
                                                     <td>{user.email}</td>
                                                     <td>{user.location}</td>
