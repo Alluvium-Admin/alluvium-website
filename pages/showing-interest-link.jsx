@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from 'react';
 // import { connectToDatabase, saveToDB } from "lib/mongo";
 import axios from 'axios'
 
-const OnboardingList = ({ products }) => {
+const ShowingInterestLink = ({ products }) => {
     const [data, setData] = useState(null);
     const [usersInfo, setUsersInfo] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -64,7 +64,7 @@ const OnboardingList = ({ products }) => {
     return (
         <div>
             <Head>
-                <title>Onboarding List | Alluvium University</title>
+                <title>Showing Interest List | Alluvium University</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
@@ -88,7 +88,7 @@ const OnboardingList = ({ products }) => {
                             width={79.69}
                         />
                     </div>
-                    <div><h1>Onboarding List</h1></div>
+                    <div><h1>Showing Interest List</h1></div>
                 </div>
                 {
                     (data || loading) && (
@@ -152,7 +152,7 @@ const OnboardingList = ({ products }) => {
     );
 };
 
-export default OnboardingList;
+export default ShowingInterestLink;
 
 
 export const getStaticProps = async () => {
