@@ -21,10 +21,13 @@
   // }
   .header {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 30vw;
+    color: #00627a;
     margin: 0 auto;
+    margin-bottom: 20px;
 
     @include media("<phone") {
       flex-direction: column;
@@ -41,9 +44,7 @@
     }
 
     // @include media(">=custom-view-1","<=custom-view-2"){
-    //     // padding: 6px;
-    //     font-size: 12px;
-    //     // margin: 0 0.5rem 1rem 0.5rem;
+    //     flex-direction: row;
     // }
   }
   h1 {

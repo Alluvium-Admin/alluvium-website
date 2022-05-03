@@ -6,6 +6,7 @@ import Search, { MobileSearch } from "./search";
 
 export default function Navigation({ theme, products }) {
     const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
+    const [currentDropdown, setCurrentDropdown] = useState('');
     const toggleMenu = () => {
         setDisplayMobileMenu(!displayMobileMenu);
     }
@@ -23,6 +24,14 @@ export default function Navigation({ theme, products }) {
             </div>
             <nav className={styles.navigation}>
                 <ul className={theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
+                    <li><div>
+                        {/* <p onClick={()=>setCurrentDropdown('company')}>Company</p> */}
+                        <div>
+                            <ul className={theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
+                                
+                            </ul>
+                        </div>
+                        </div></li>
                     <li><Link href="/products">Our Products</Link></li>
                     <li><Link href="/#services">Our Services</Link></li>
                     <li><Link href="/reel">Project Reel</Link></li>
@@ -30,7 +39,7 @@ export default function Navigation({ theme, products }) {
                     {/* <li><Link href="/team">Our Team</Link></li> */}
                     <li><Link href="/support">Support (FAQs)</Link></li>
                     <li><a href="https://marketplace.atlassian.com/vendors/1218751/alluvium" target="_blank">Atlassian Marketplace</a></li>
-                    <li><Link href="/onboarding">Onboarding</Link></li>
+                    {/* <li><Link href="/onboarding">Onboarding</Link></li> */}
                 </ul>
                 <div className={displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu}>
                     <MobileSearch theme={theme} products={products} />
@@ -41,9 +50,9 @@ export default function Navigation({ theme, products }) {
                         <li><Link href="/reel">+ Project Reel</Link></li>
                         <li><Link href="/about">+ About us</Link></li>
                         {/* <li><Link href="/team">+ Our Team</Link></li> */}
-                        <li><Link href="/support">+ Support (FAQs)</Link></li>
+                        {/* <li><Link href="/support">+ Support (FAQs)</Link></li> */}
                         <li><a href="https://marketplace.atlassian.com/vendors/1218751/alluvium" target="_blank">Atlassian Marketplace</a></li>
-                        <li><Link href="/onboarding">+ Onboarding</Link></li>
+                        {/* <li><Link href="/onboarding">+ Onboarding</Link></li> */}
                         <li><Link href="/support/contact">+ Contact Us</Link></li>
                     </ul>
                 </div>
