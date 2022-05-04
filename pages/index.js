@@ -28,8 +28,8 @@ export default function Home({products,features,ourServices,milestones,trustedCo
       <Head>
         <title>Home | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."/>
-        <meta name="keywords" content="alluvium, team alluvium, atlassian products migration lab, atlassian, jira"/>
+        <meta name="description" content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost." />
+        <meta name="keywords" content="Alluvium, alluvium, team alluvium, atlassian products migration lab, atlassian, jira" />
       </Head>
       <main className={styles.landingPage}>
           <section className={ styles.heroSection }>
