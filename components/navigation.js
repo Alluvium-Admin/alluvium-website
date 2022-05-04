@@ -95,8 +95,8 @@ export default function Navigation({ theme, products }) {
                         <li><Link href="/reel">+ Project Reel</Link></li>
                         <li><Link href="/about">+ About us</Link></li>
                         {/* <li><Link href="/team">+ Our Team</Link></li> */}
-                                    <li><a href="university.alluvium.net" target='_blank'>Alluvium University (AU)</a></li>
-                                    <li><Link href="/showing-interest">Show Interest (AU)</Link></li>
+                                    <li><a href="university.alluvium.net" target='_blank'>+ Alluvium University (AU)</a></li>
+                                    <li><Link href="/showing-interest">+ Show Interest (AU)</Link></li>
                         <li><a href="https://marketplace.atlassian.com/vendors/1218751/alluvium" target="_blank">Atlassian Marketplace</a></li>
                         {/* <li><Link href="/onboarding">+ Onboarding</Link></li> */}
                         <li><Link href="/support">+ Support (FAQs)</Link></li>
