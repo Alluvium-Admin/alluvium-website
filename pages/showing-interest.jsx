@@ -4,6 +4,7 @@ import styles from '../styles/onboarding.module.scss'
 import Navigation from "components/navigation";
 import { productData } from "data";
 import { useState, useRef, useEffect } from 'react';
+import { databaseURI } from '../config/index.js';
 // import { connectToDatabase, saveToDB } from "lib/mongo";
 import axios from 'axios'
 
@@ -29,9 +30,11 @@ const Onboarding = ({ products }) => {
   //     }
   // }, [data])
 
-  // useEffect(()=>{
-  //   console.log(formElem.current);
-  // }, [formElem])
+  useEffect(()=>{
+    // console.log(process.env.NEXT_PUBLIC_DB_URI_ORIGIN);
+    // console.log(process.env.NODE_ENV);
+    console.log(databaseURI);
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target;

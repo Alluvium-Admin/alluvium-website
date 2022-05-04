@@ -6,6 +6,6 @@ export const server = dev ? 'http://localhost:3000' : "https://alluvium.net";
 
 export const baseURL = 'http://localhost:3000';
 
-export const databaseURI = dev ? process.env.DB_URI_ORIGIN : process.env.ALLUVIUM_DB_URI;
+export const databaseURI = dev ? process.env.NEXT_PUBLIC_DB_URI_ORIGIN : process.env.NEXT_PUBLIC_ALLUVIUM_DB_URI;
 
 
