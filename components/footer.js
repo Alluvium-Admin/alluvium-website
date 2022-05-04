@@ -185,7 +185,7 @@ export function AltFooter() {
                                 <Link href="/showing-interest">Show interest</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/showing-interest-link">Login</Link>
+                                <Link href="/showing-interest-list">Login</Link>
                             </li>
                         </ul>
                     </div>
