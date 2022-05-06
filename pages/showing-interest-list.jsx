@@ -168,8 +168,8 @@ const ShowingInterestLink = ({ products }) => {
                 {usersInfoPrint &&
                     <div className="container px-5" style={{ width: '80%', margin: '10px auto'}}>
                         <CSVLink data={usersInfoPrint} headers={headers} filename="Showing-Interest.csv">
-                            Download Data
-                            {/* <button className="btn btn-primary text-decoration-none">Download Data</button> */}
+                            {/* Download Data */}
+                            <button className="btn btn-primary text-decoration-none" style={{padding: '10px', outline: 'none', backgroundColor: 'skyblue', borderRadius: '4px', fontWeight: '700'}}>Download Data</button>
                         </CSVLink>
                     </div>
                 }
