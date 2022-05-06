@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from '../styles/onboardingList.module.scss'
 import Navigation from "components/navigation";
 import { productData } from "data";
+import { CSVLink } from 'react-csv';
 import { useState, useRef, useEffect } from 'react';
 // import { connectToDatabase, saveToDB } from "lib/mongo";
 import axios from 'axios'
@@ -10,8 +11,18 @@ import axios from 'axios'
 const ShowingInterestLink = ({ products }) => {
     const [data, setData] = useState(null);
     const [usersInfo, setUsersInfo] = useState(null);
+    const [usersInfoPrint, setUsersInfoPrint] = useState(null);
     const [loading, setLoading] = useState(true);
     const [access, setAccess] = useState(false);
+
+    const headers = [
+        { label: 'Full Name', key: 'fullname' },
+        { label: 'First Name', key: 'firstname' },
+        { label: 'Last Name', key: 'lastname' },
+        { label: 'Email', key: 'email' },
+        { label: 'Phone Number', key: 'phoneNumber' },
+        // { label: 'Date', key: 'date' },
+    ]
 
     useEffect(() => {
         setData(null);
@@ -44,20 +55,27 @@ const ShowingInterestLink = ({ products }) => {
         }
     }, [])
 
+    useEffect(() => {
+        if (usersInfo) {
+            const tempData = usersInfo.map(({ email, firstname, fullname, lastname, phoneNumber }) => ({ email, firstname, fullname, lastname, phoneNumber }))
+            setUsersInfoPrint(tempData);
+        }
+    }, [usersInfo])
+
     const deleteUser = async (id) => {
         await axios.delete(`/api/user/${id}`)
-                .then(res => {
-                    // console.log(res);
-                    setUsersInfo(prev=>prev.filter(user=>user._id !== id));
-                    setData(res.data);
-                    setLoading(false);
-                })
-                .catch(err => {
-                    // console.log(err);
-                    // setUsersInfo(null);
-                    setData({ message: err.response.data.message, success: false })
-                    setLoading(false);
-                });
+            .then(res => {
+                // console.log(res);
+                setUsersInfo(prev => prev.filter(user => user._id !== id));
+                setData(res.data);
+                setLoading(false);
+            })
+            .catch(err => {
+                // console.log(err);
+                // setUsersInfo(null);
+                setData({ message: err.response.data.message, success: false })
+                setLoading(false);
+            });
     }
 
 
@@ -95,7 +113,7 @@ const ShowingInterestLink = ({ products }) => {
                         <div className={`${styles.response} ${data ? (data.success ? styles.success : styles.danger) :
                             ''}`}>
                             <div className={`${styles.responseData} ${data ? (data.success ? styles.successBG : styles.dangerBG) : ''}`}>
-                            <h3>{loading ? 'Loading...' : data.message}</h3> <button onClick={() => setData(null)}>x</button>
+                                <h3>{loading ? 'Loading...' : data.message}</h3> <button onClick={() => setData(null)}>x</button>
                             </div>
                         </div>
                     )
@@ -137,7 +155,7 @@ const ShowingInterestLink = ({ products }) => {
                                                     <td>{user.traineeProgram}</td>
                                                     <td>{user.threeYearsAvailability}</td>
                                                     <td>{user.experienceLevel}</td>
-                                                    <td><button onClick={()=>deleteUser(user._id)}>Delete</button></td>
+                                                    <td><button onClick={() => deleteUser(user._id)}>Delete</button></td>
                                                 </tr>
                                             ))
                                         }
@@ -146,6 +164,14 @@ const ShowingInterestLink = ({ products }) => {
                             </div>
                         </>
                     )
+                }
+                {usersInfoPrint &&
+                    <div className="container px-5" style={{ width: '80%', margin: '10px auto'}}>
+                        <CSVLink data={usersInfoPrint} headers={headers} filename="Showing-Interest.csv">
+                            Download Data
+                            {/* <button className="btn btn-primary text-decoration-none">Download Data</button> */}
+                        </CSVLink>
+                    </div>
                 }
             </main>
         </div>
