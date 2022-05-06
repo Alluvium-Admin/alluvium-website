@@ -21,6 +21,12 @@ const ShowingInterestLink = ({ products }) => {
         { label: 'Last Name', key: 'lastname' },
         { label: 'Email', key: 'email' },
         { label: 'Phone Number', key: 'phoneNumber' },
+        { label: 'Location', key: 'location' },
+        { label: 'Current Engagement', key: 'currentEngagement' },
+        { label: 'Applying For Trainee Program?', key: 'traineeProgram' },
+        { label: '3 Years Availability?', key: 'threeYearsAvailability' },
+        { label: 'Expirience Level?', key: 'experienceLevel' },
+        { label: 'date', key: 'createdAt' },
         // { label: 'Date', key: 'date' },
     ]
 
@@ -57,7 +63,7 @@ const ShowingInterestLink = ({ products }) => {
 
     useEffect(() => {
         if (usersInfo) {
-            const tempData = usersInfo.map(({ email, firstname, fullname, lastname, phoneNumber }) => ({ email, firstname, fullname, lastname, phoneNumber }))
+            const tempData = usersInfo.map(({ email, firstname, fullname, lastname, phoneNumber, location, currentEngagement, traineeProgram, threeYearsAvailability, experienceLevel, createdAt }) => ({ email, firstname, fullname, lastname, phoneNumber, location, currentEngagement, traineeProgram, threeYearsAvailability, experienceLevel, createdAt }))
             setUsersInfoPrint(tempData);
         }
     }, [usersInfo])
@@ -122,8 +128,18 @@ const ShowingInterestLink = ({ products }) => {
                 {
                     (access && usersInfo) && (
                         <>
+                            {usersInfoPrint &&
+                                <div className="container" style={{ width: '80%', margin: '10px auto' }}>
+                                    <div style={{width: 'max-content', marginLeft: 'auto'}}>
+                                    <CSVLink data={usersInfoPrint} headers={headers} filename="Showing-Interest.csv">
+                                        {/* Download Data */}
+                                        <button className="btn btn-primary text-decoration-none" style={{ padding: '10px', outline: 'none', backgroundColor: 'skyblue', borderRadius: '4px', fontWeight: '700' }}>Download Data</button>
+                                    </CSVLink>
+                                    </div>
+                                </div>
+                            }
                             <div className={styles.tableHolder}>
-                                <table>
+                                <table style={{margin: '0px auto'}}>
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -136,7 +152,8 @@ const ShowingInterestLink = ({ products }) => {
                                             <th>Current Engagement</th>
                                             <th>Applying For Trainee Program?</th>
                                             <th>3 Years Availability?</th>
-                                            <th>Expirence Level?</th>
+                                            <th>Experience Level?</th>
+                                            <th>date</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -155,6 +172,7 @@ const ShowingInterestLink = ({ products }) => {
                                                     <td>{user.traineeProgram}</td>
                                                     <td>{user.threeYearsAvailability}</td>
                                                     <td>{user.experienceLevel}</td>
+                                                    <td>{user.createdAt}</td>
                                                     <td><button onClick={() => deleteUser(user._id)}>Delete</button></td>
                                                 </tr>
                                             ))
@@ -165,14 +183,7 @@ const ShowingInterestLink = ({ products }) => {
                         </>
                     )
                 }
-                {usersInfoPrint &&
-                    <div className="container px-5" style={{ width: '80%', margin: '10px auto'}}>
-                        <CSVLink data={usersInfoPrint} headers={headers} filename="Showing-Interest.csv">
-                            {/* Download Data */}
-                            <button className="btn btn-primary text-decoration-none" style={{padding: '10px', outline: 'none', backgroundColor: 'skyblue', borderRadius: '4px', fontWeight: '700'}}>Download Data</button>
-                        </CSVLink>
-                    </div>
-                }
+
             </main>
         </div>
     );
