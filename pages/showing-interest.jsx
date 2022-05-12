@@ -5,8 +5,45 @@ import Navigation from "components/navigation";
 import { productData } from "data";
 import { useState, useRef, useEffect } from 'react';
 import { databaseURI } from '../config/index.js';
+// import Image from "next/image";
 // import { connectToDatabase, saveToDB } from "lib/mongo";
 import axios from 'axios'
+const OurDemands = [
+  'Commit to a 3 year contract',
+  'Commit to learning and flexibility',
+  '3 months on-site training in Ekiti',
+  '9 months apprenticeship (remote/on-site mix)',
+  '24 months internship (remote/on-site mix)'
+];
+const OurOffers = [
+  'YOU ARE EMPLOYED FROM DAY 1',
+  'YOU START EARNING FROM #50,000 PER MONTH',
+  'EQUIPMENTS AND TRAINING',
+  'no CAP ON HOW MUCH YOU CAN EARN WITH BONUSES'
+];
+
+
+const Demands = ({demands}) => {
+  return(
+    <div className={styles.demands}>
+      {
+        demands.map((demand, index)=>
+          <div key={index} className={styles.demand}>
+            <img
+            src={'/assets/test-confirmation/bulletpoint.png'}
+            width={15}
+            height={15}
+            style={{marginTop: '7px'}}
+            // priority
+            layout="fixed"
+             />
+             <p className={styles.demandText}>{demand}</p>
+          </div>
+        )
+      }
+    </div>
+  )
+}
 
 const Onboarding = ({ products }) => {
   const [data, setData] = useState(null);
@@ -84,6 +121,15 @@ const Onboarding = ({ products }) => {
       </Head>
       <Navigation products={products} />
       <main id={styles.main}>
+        <div className={styles.sideBar}>
+          <div className={styles.sideBarContent}>
+          <h1 style={{marginTop: '0px'}}>What we ask ?</h1>
+          <Demands demands={OurDemands} />
+          <h1 style={{marginTop: '50px'}}>What we ask ?</h1>
+          <Demands demands={OurOffers} />
+          </div>
+        </div>
+        <div className={styles.rightbar}>
         <div className={styles.header}>
           <div>
             <Image
@@ -131,6 +177,7 @@ const Onboarding = ({ products }) => {
           </select>
           {!hideButton && <input type="submit" value="Submit" />}
         </form>
+        </div>
       </main>
     </div>
   );
