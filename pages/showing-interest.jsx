@@ -98,7 +98,7 @@ const Onboarding = ({ products }) => {
       const responseData2 = await axios.post('/api/user', newData)
         .then((res) => { return res.data })
         .catch(err => { return err.response.data });
-      console.log(responseData2);
+      // console.log(responseData2);
       setResponseData(responseData2);
       setLoading(false);
       setHideButton(false);
