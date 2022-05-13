@@ -5,6 +5,9 @@ WORKDIR /usr/app/
 ARG NEXT_PUBLIC_GA_ID
 ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
 
+ARG ALLUVIUM_DB_URI
+ENV NEXT_PUBLIC_ALLUVIUM_DB_URI=${ALLUVIUM_DB_URI}
+
 COPY package.json package-lock.json ./
 
 RUN npm install -g npm
@@ -22,10 +25,8 @@ FROM node:alpine
 
 WORKDIR /usr/app/
 
-ARG ALLUVIUM_DB_URI
 
 ENV NODE_ENV production
-ENV NEXT_PUBLIC_ALLUVIUM_DB_URI=${ALLUVIUM_DB_URI}
 
 # RUN addgroup -g 1001 -S nodejs
 
