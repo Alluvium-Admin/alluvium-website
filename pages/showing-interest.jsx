@@ -68,10 +68,14 @@ const Onboarding = ({ products }) => {
   // }, [data])
 
   useEffect(()=>{
-    // console.log(process.env.NEXT_PUBLIC_DB_URI_ORIGIN);
-    // console.log(process.env.NODE_ENV);
-    console.log(databaseURI);
+    testDb();
   }, [])
+
+  const testDb = async () => {
+    await axios.get('/api/user/test')
+        .then((res) => { console.log(res.data.message) })
+        .catch(err => { console.log(err.response.data.message) });
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -87,14 +91,14 @@ const Onboarding = ({ products }) => {
       newData = { ...newData, fullname: `${newData.firstname} ${newData.lastname}` };
     }
     setHideButton(true);
-    console.log(newData);
+    // console.log(newData);
     setLoading(true);
     e.preventDefault();
     if (newData) {
       const responseData2 = await axios.post('/api/user', newData)
-        .then((res) => { console.log(res); return res.data })
-        .catch(err => { console.log(err.response.data); return err.response.data });
-      console.log(responseData2);
+        .then((res) => { return res.data })
+        .catch(err => { return err.response.data });
+      // console.log(responseData2);
       setResponseData(responseData2);
       setLoading(false);
       setHideButton(false);
