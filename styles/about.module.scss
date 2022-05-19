@@ -120,13 +120,13 @@
                     @include media("<phone") {
                         width: 100%;
                     }
+                    
+                                        @include media("<custom-view-2") {
+                                            width: 80%;
+                                        }
 
-                    @include media(">=phone", "<=desktop") {
+                    @include media(">=phone", "<=tablet") {
                         width: 100%;
-                    }
-
-                    @include media("<custom-view-2") {
-                        width: 80%;
                     }
 
                     p {
