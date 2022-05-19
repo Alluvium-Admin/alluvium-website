@@ -18,6 +18,7 @@
   @include media(">=phone", "<=custom-view-1") {
     padding: 40px 0px 0px 0px;
   }
+
   @media screen and (max-width: 576px) {
     display: block;
     // padding-top: 30px;
@@ -49,48 +50,48 @@
       padding-bottom: 30px;
     }
 
-    .sideBarContent{
-      
-    h1 {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 682;
-      font-size: 38px;
-      line-height: 46px;
-      text-decoration-line: underline;
-      text-transform: capitalize;
-      color: #FFFFFF;
-      margin-bottom: 30px;
+    .sideBarContent {
 
-    @media screen and (max-width: 576px) {
-      font-size: 37px;
-    }
+      h1 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 682;
+        font-size: 38px;
+        line-height: 46px;
+        text-decoration-line: underline;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        margin-bottom: 30px;
 
-    }
+        @media screen and (max-width: 576px) {
+          font-size: 37px;
+        }
 
-    .demands {
-      background: rgba(255, 255, 255, 0.54);
-      padding: 20px;
+      }
 
-      .demand {
-        display: flex;
-        align-items: flex-start;
-        // justify-content: space-around;
+      .demands {
+        background: rgba(255, 255, 255, 0.54);
+        padding: 20px;
 
-        .demandText {
-          font-family: 'Montserrat';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 24px;
-          margin: 0;
-          text-transform: uppercase;
-          // font-variant: small-caps;
-          color: #000000;
-          margin-left: 20px;
+        .demand {
+          display: flex;
+          align-items: flex-start;
+          // justify-content: space-around;
+
+          .demandText {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0;
+            text-transform: uppercase;
+            // font-variant: small-caps;
+            color: #000000;
+            margin-left: 20px;
+          }
         }
       }
-    }
     }
 
     .sideTitle {
@@ -145,8 +146,9 @@
     @include media(">=phone", "<=custom-view-1") {
       padding: 40px 0px 0px 0px;
     }
+
     @media screen and (max-width: 576px) {
-    width: 100%;
+      width: 100%;
     }
 
     .header {
@@ -247,6 +249,122 @@
           }
 
           @include media(">=phone", "<=custom-view-1") {
+            width: 90%;
+          }
+        }
+      }
+
+      // @include media(">=custom-view-1","<=custom-view-2"){
+      //     // padding: 6px;
+      //     font-size: 12px;
+      //     // margin: 0 0.5rem 1rem 0.5rem;
+      // }
+      button {
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 0;
+        font-weight: 900;
+        font-size: larger;
+        transition: 0.5s;
+
+        &:hover {
+          font-size: x-large;
+          color: white;
+          cursor: pointer;
+        }
+
+        @include media("<phone") {
+          width: 6%;
+        }
+
+        @include media(">=phone", "<=custom-view-1") {
+          width: 6%;
+        }
+      }
+    }
+
+    .feedback {
+      position: fixed;
+      z-index: 210;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(217, 217, 217, 0.56);
+
+      .feedbackData {
+        max-width: 60vw;
+        padding: 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+
+        @include media(">=tablet", "<desktop") {
+          margin-top: 50px;
+          // max-width: 100%;
+        }
+
+        @include media(">phone", "<tablet") {
+          margin-top: 50px;
+          max-width: 94%;
+        }
+        
+        @include media("<=phone") {
+          margin-top: 50px;
+          max-width: 90%;
+          padding: 20px;
+        }
+
+        h3 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 49px;
+          text-align: center;
+          font-variant: small-caps;
+          
+          color: #009DC2;
+          
+        @include media(">phone", "<tablet") {
+          font-size: 10vw;
+        }
+
+          @include media("<=phone") {
+            font-size: 9vw;
+            line-height: 36px;
+          }
+        }
+
+        button {
+          background: #009BC0;
+          border-radius: 6.72px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 26.88px;
+          line-height: 33px;
+          text-align: center;
+          font-variant: small-caps;
+          color: #ffffff;
+          margin-top: 20px;
+
+          @include media(">=phone", "<=custom-view-1") {
+            width: 90%;
+          }
+
+          @include media("<=tablet") {
+            width: 200px;
+            // width: 40%;
+          }
+
+          @include media("<phone") {
             width: 90%;
           }
         }
