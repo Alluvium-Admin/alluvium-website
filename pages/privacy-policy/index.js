@@ -1,3 +1,5 @@
+// ensure all pages have Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import type { NextPage } from "next";
 import Head from "next/head";
 import Navigation from '../../components/navigation';

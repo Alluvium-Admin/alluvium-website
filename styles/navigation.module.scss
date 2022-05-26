@@ -28,7 +28,7 @@
     .contactUsButton {
         padding: 10px;
         background-color: #132230;
-        color: #fff;
+        color: #fff !important;
         margin-right: 0.4rem;
         text-align: center;
         border-radius: 5px;
@@ -114,6 +114,12 @@
 
     ul {
         list-style: none;
+        margin: inherit !important;
+        li{
+            p{
+                margin: inherit !important;
+            }
+        }
     }
 
     .desktopMenu {
