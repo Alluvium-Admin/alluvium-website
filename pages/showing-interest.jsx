@@ -133,7 +133,7 @@ const Onboarding = ({ products }) => {
           <div className={styles.sideBarContent}>
             <h1 style={{ marginTop: '0px' }}>What we ask ?</h1>
             <Demands demands={OurDemands} />
-            <h1 style={{ marginTop: '50px' }}>What we offer ?</h1>
+            <h1 style={{ marginTop: '50px' }}>What you get ?</h1>
             <Demands demands={OurOffers} />
           </div>
         </div>

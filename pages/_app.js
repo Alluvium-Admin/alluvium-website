@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import { ToastProvider } from 'react-toast-notifications';
 
 
+
 function MyApp({ Component, pageProps }) {
 
   useEffect(()=>{
