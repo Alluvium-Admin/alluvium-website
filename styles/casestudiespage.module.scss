@@ -1,9 +1,110 @@
 .casestudiesPage{
+    
+            
+        .hero {
+            // padding: 50px 0px 0px 0px;
+            // padding-top: 70rem;
+            position: relative;
+            background-image: url('/assets/case-studies/caseStudyWelcome.svg');
+            background-size: 100vw auto;
+            background-repeat: no-repeat;
+            // background-position: 0 -100px;
+            min-height: 67vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            
+            @media screen and (max-width: 1100px) {
+                min-height: 68vw;
+            }
 
+            @media screen and (max-width: 769px) {
+                min-height: 65vw;
+                // padding-top: 40rem;
+                // margin-top: 20rem;
+            }
+            @media screen and (max-width: 576px) {
+                background-size: 800px !important;
+                // background-color: red;
+                background-position: -50px 100px;
+                min-height: 650px;
+                background-size: contain;
+                padding-top: 0rem;
+                // margin-top: 20rem;
+            }
+            // background-color: #212121;
+            .us {
+                position: absolute;
+                top: 70px;
+                right: 8vw;
+                @media screen and (max-width: 1600px) {
+                    // top: 50px;
+                    right: 6vw;
+                }
+                @media screen and (max-width: 1200px) {
+                    top: 50px;
+                    right: 3vw;
+                }
+                @media screen and (max-width: 1100px) {
+                    top: 4vw;
+                    right: 3vw;
+                }
+                @media screen and (max-width: 576px) {
+                    top: 50px;
+                    // width: 100%;
+                    right: 10px;
+                }
+    
+                h1 {
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 3.5vw;
+                    line-height: 120%;
+                    text-transform: capitalize;
+                    color: #FFFFFF;
+                    display: block;
+                    text-shadow: 0px 0px 4px #009BC0;
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: #009BC0;
+                    @media screen and (max-width: 1600px) {
+                        display: inline;
+                        // font-size: 54px;
+                    }
+                    @media screen and (max-width: 1100px) {
+                        font-size: 4.6vw;
+                        line-height: 120%;
+                    }
+                    @media screen and (max-width: 576px) {
+                        text-shadow: 0px 3px 2px #009BC0;
+                        -webkit-text-stroke-width: 1px;
+                        font-size: 42px;
+                        display: block;
+                        // text-align: center;
+                    }
+                }
+            }
+    
+            .img {
+                position: absolute;
+                width: 80px;
+                background-color: #009BC0;
+                top: 50%;
+                right: 48%;
+                // text-align: center;
+            }
+        }
+    
+    
     main{
         display: flex;
         flex-direction: column;
-        margin: 8rem 1rem 3rem 1rem;
+        align-items: center;
+        margin: 3rem 1rem 3rem 1rem; 
+        background: none;     
+        
+        @media screen and (min-width: 769px) {
+            margin: 6rem 1rem;
+        }
 
         .casestudiesPageTitle{
             font-weight: 600;
@@ -14,21 +115,34 @@
         }
 
         .casestudiesPageDesc{
-            width: 85%;
+            width: 65%;
             font-weight: normal;
             font-size: 16px;
             line-height: 28px;
             text-align: center;
-            color: rgba(0, 0, 0, 0.76);
-            margin: 2rem 0;
+            color: #132230;
+            margin: 0 2rem 0 0;
             align-self: center;
+            @media screen and (max-width: 576px) {
+                width: 90%;
+                font-size: 25px;
+                line-height: 30px;
+            }
+        @media screen and (min-width: 769px) {
+            font-size: 28px;
+            line-height: 38px;
         }
+        
+    }
 
         .casestudiesList{
             display: flex;
             flex-wrap: wrap;
             padding: 2rem 3rem;
-
+            @media screen and (max-width: 576px) {
+                justify-content: center;
+            }
+            
         }
     }
 }
