@@ -26,3 +26,13 @@ a {
 ul{
   padding: inherit !important;
 }
+
+.bg-pri {
+  background-color: #009BC0;
+  color: white;
+}
+
+.bg-sec{
+  background-color: #223D55 ;
+  color: white;
+}
