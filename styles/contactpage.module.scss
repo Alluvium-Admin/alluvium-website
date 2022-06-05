@@ -1,16 +1,177 @@
 @import "lib/breakpoints";
 
-.contactPage{
-    .contactUsPage{
+.contactPage {
+    .hero {
+        // padding: 50px 0px 0px 0px;
+        // padding-top: 70rem;
+        position: relative;
+        background-image: url('/assets/contact/contactBG.png');
+        background-size: 100vw auto;
+        background-repeat: no-repeat;
+        // background-position: 0 -100px;
+        min-height: 67vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @media screen and (max-width: 1100px) {
+            min-height: 68vw;
+        }
+
+        @media screen and (max-width: 769px) {
+            min-height: 65vw;
+            // padding-top: 40rem;
+            // margin-top: 20rem;
+        }
+
+        @media screen and (max-width: 576px) {
+            background-size: 800px !important;
+            // background-color: red;
+            background-position: -50px 100px;
+            min-height: 650px;
+            background-size: contain;
+            padding-top: 0rem;
+            // margin-top: 20rem;
+        }
+
+        // background-color: #212121;
+        .us {
+            position: absolute;
+            top: 70px;
+            right: 8vw;
+
+            @media screen and (max-width: 1600px) {
+                // top: 50px;
+                right: 6vw;
+            }
+
+            @media screen and (max-width: 1200px) {
+                top: 50px;
+                right: 3vw;
+            }
+
+            @media screen and (max-width: 1100px) {
+                top: 4vw;
+                right: 3vw;
+            }
+
+            @media screen and (max-width: 576px) {
+                top: 50px;
+                // width: 100%;
+                right: 10px;
+            }
+
+            h1 {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 3.5vw;
+                line-height: 120%;
+                text-transform: capitalize;
+                color: #FFFFFF;
+                display: block;
+                text-shadow: 0px 0px 4px #009BC0;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: #009BC0;
+
+                @media screen and (max-width: 1600px) {
+                    display: inline;
+                    // font-size: 54px;
+                }
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 4.6vw;
+                    line-height: 120%;
+                }
+
+                @media screen and (max-width: 576px) {
+                    text-shadow: 0px 3px 2px #009BC0;
+                    -webkit-text-stroke-width: 1px;
+                    font-size: 32px;
+                    display: block;
+                    // text-align: center;
+                }
+            }
+        }
+
+        .img {
+            position: absolute;
+            width: 80px;
+            background-color: #009BC0;
+            top: 50%;
+            right: 48%;
+            // text-align: center;
+        }
+    }
+
+    
+
+    .contactus {
+        height: 100%;
+        width: 100%;
+        border: none;
+        height: 690px;
+
+    }
+
+    .main {
+        width: 60rem;
+        margin: 0 auto;
+
+
+        @media screen and (max-width: 769px) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 90%;
+        }
+
+
+    }
+
+    h2 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 120%;
+        /* identical to box height, or 30px */
+
+        text-transform: capitalize;
+
+        color: #132230;
+    }
+
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: capitalize;
+        color: #223D55;
+    }
+
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        text-align: center;
+        color: #223D55;
+    }
+
+    .contactUsPage {
         display: flex;
         flex-direction: column;
         margin: 0.5rem 1rem;
 
-        @include media("<phone"){
+        @include media("<phone") {
             margin: 0.5rem 0;
         }
 
-        @include media(">=phone","<=tablet"){
+        @include media(">=phone", "<=tablet") {
             margin: 0.5rem;
         }
 
@@ -19,104 +180,109 @@
         //     z-index: 0 !important;
         // }
 
-        .contactDetails{
+        .contactDetails {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             margin: 2rem 0;
             padding: 0.5rem;
 
-            @include media("<phone"){
-                flex-direction: column;
-                text-align: center;
-            }
-    
-            @include media(">=phone","<=tablet"){
+            @include media("<phone") {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .emailContact{
+            @include media(">=phone", "<=tablet") {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .emailContact {
                 max-width: 400px;
 
-                @include media("<phone"){
+                @include media("<phone") {
                     max-width: unset;
                 }
-        
-                @include media(">=phone","<=tablet"){
+
+                @include media(">=phone", "<=tablet") {
                     max-width: unset;
                 }
-                h3{
+
+                h3 {
                     font-style: normal;
                     font-weight: bold;
                     font-size: 30px;
                     line-height: 137.5%;
 
-                    @include media("<phone"){
-                        font-size:20px;
+                    @include media("<phone") {
+                        font-size: 20px;
                     }
-            
-                    @include media(">=phone","<=tablet"){
-                        font-size:28px;
+
+                    @include media(">=phone", "<=tablet") {
+                        font-size: 28px;
                     }
                 }
-                p{
+
+                p {
                     font-style: normal;
                     font-weight: 300;
                     font-size: 18px;
                     line-height: 100%;
                     margin-top: 2rem;
 
-                    @include media("<phone"){
+                    @include media("<phone") {
                         font-size: 16px;
                         margin-top: 1rem;
                     }
-            
-                    @include media(">=phone","<=tablet"){
+
+                    @include media(">=phone", "<=tablet") {
                         font-size: 18px;
                         margin-top: 1rem;
                     }
 
-                    a{
+                    a {
                         text-decoration: underline;
-                        
-                        &:hover{
+
+                        &:hover {
                             text-decoration: none;
                         }
                     }
                 }
-                
+
             }
-            .mailingAddress{
+
+            .mailingAddress {
                 display: flex;
                 flex-direction: column;
                 max-width: 250px;
 
-                @include media("<phone"){
+                @include media("<phone") {
                     max-width: unset;
                     margin: 1rem 0;
                 }
-        
-                @include media(">=phone","<=tablet"){
+
+                @include media(">=phone", "<=tablet") {
                     max-width: unset;
                     margin: 1rem 0;
                 }
-                h3{
+
+                h3 {
                     font-style: normal;
                     font-weight: bold;
                     font-size: 30px;
                     line-height: 130%;
 
-                    @include media("<phone"){
+                    @include media("<phone") {
                         font-size: 20px;
                     }
-            
-                    @include media(">=phone","<=tablet"){
+
+                    @include media(">=phone", "<=tablet") {
                         font-size: 28px;
                     }
-                    
+
                 }
-                p{
+
+                p {
                     font-style: normal;
                     font-weight: 300;
                     font-size: 18px;
@@ -124,30 +290,31 @@
                     margin: 0.5rem 0;
                     max-width: 80%;
 
-                    @include media("<phone"){
+                    @include media("<phone") {
                         font-size: 16px;
                     }
-            
-                    @include media(">=phone","<=tablet"){
+
+                    @include media(">=phone", "<=tablet") {
                         font-size: 18px;
                     }
                 }
-                a{
+
+                a {
                     font-style: normal;
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 150%;
                     text-decoration: underline;
 
-                    @include media("<phone"){
+                    @include media("<phone") {
                         font-size: 16px;
                     }
-            
-                    @include media(">=phone","<=tablet"){
+
+                    @include media(">=phone", "<=tablet") {
                         font-size: 18px;
                     }
 
-                    &:hover{
+                    &:hover {
                         text-decoration: none;
                     }
                 }
