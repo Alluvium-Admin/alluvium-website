@@ -3,22 +3,30 @@
 .faq{
     display: flex;
     flex-direction: column;
-    background: #F6F6F6;
-    border: 0.5px solid #00000065;
-    padding: 0.5rem;
+    // background: #F6F6F6;
+    // border: 0.5px solid #00000065;
+    padding: 0.5rem 10.5rem;
     margin: 1.5rem 0;
     cursor: pointer;
     transition: 0.2s;
 
+    @include media("<phone"){
+        padding: 0px;
+    }
+
+    @include media(">=phone","<=custom-view-3"){
+        padding: 0px;
+    }
+
     &:hover{
         background: #e0e0e0;
-        border-color: #000;
+        // border-color: #000;
     }
 
     .faqTitle{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        // justify-content: space-between;
         padding: 1.5rem;
         align-items: center;
 
@@ -35,6 +43,8 @@
             font-weight: 600;
             font-size: 30px;
             line-height: 50px;
+            padding-left: 20px;
+            color: #223D55;
 
             @include media("<phone"){
                 font-size:18px;
@@ -81,6 +91,7 @@
             font-size: 18px;
             line-height: 35px;
         }
+
     }
 
     .showFaqBody{
@@ -93,6 +104,10 @@
         padding: 1rem 1.5rem;
         transition: 0.3s;
 
+        p{
+            color: #223D55;
+        }
+        
         @include media("<phone"){
             font-size: 16px;
             line-height: 30px;
@@ -102,6 +117,8 @@
             font-size: 18px;
             line-height: 35px;
         }
+
+       
     }
 
     

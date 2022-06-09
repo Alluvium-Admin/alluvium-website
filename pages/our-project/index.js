@@ -22,14 +22,8 @@ const OurProject = ({products}) => {
 	  	<section className="">
         	<Navigation products={products}/>
         </section>
-	  	{/* <section className={styles.welcome}>
-			<div>
-				<h1>Our Project</h1>
-			</div>
-		</section> */}
-        
         <section>
-          <div className=""><BannerRotate image="assets/our-project/our-project.png" title="Our Project" text="" styles={styles} /></div>
+          <BannerRotate bg="url(assets/our-project/banner.png)" title="Our Project" text=""/>
         </section>
 		<section className={styles.project}>
 			<div className="container pb-5">

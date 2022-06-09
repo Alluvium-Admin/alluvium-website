@@ -8,16 +8,17 @@
         .title{
             font-style: normal;
             font-weight: bold;
-            font-size: 65px;
+            font-size: 30px;
             line-height: 125.5%;
             text-align: center;
+            color: #132230;
 
             @include media("<phone"){
-                font-size: 40px;
+                font-size: 35px;
             }
         
             @include media(">=phone","<=tablet"){
-                font-size: 60px;
+                font-size: 40px;
             }
         }
     }

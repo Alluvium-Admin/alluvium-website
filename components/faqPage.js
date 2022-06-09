@@ -11,28 +11,26 @@ export default function FaqPage({faqs}){
         }))
     } 
     return(
-        <section className={styles.faqPage}>
-          <div className={styles.supportPageHeader}>
-            <h4 className={styles.title}>
-              Frequently Asked Questions
-            </h4>
-          </div>
-          <div className={styles.faqCollection} data-aos-delay="300" data-aos="fade-down">
-            {
-              faqs.map((faq,index)=>{
-                return(
-                  <Faq 
-                    id={ faq.id } 
-                    title={ faq.question } 
-                    body={ faq.answer } 
-                    key={ index }
-                    faqState={ faqState }
-                    toggleFaq={ toggleFaq }
-                  />
-                )
-              })
-            }
-          </div>
-        </section>
+		<section className={styles.faqPage}>
+			<div className={styles.supportPageHeader}>
+				<h4 className={styles.title}>How can we help you? </h4>
+			</div>
+			<div className={styles.faqCollection} data-aos-delay="300" data-aos="fade-down">
+				{
+				faqs.map((faq,index)=>{
+					return(
+					<Faq 
+						id={ faq.id } 
+						title={ faq.question } 
+						body={ faq.answer } 
+						key={ index }
+						faqState={ faqState }
+						toggleFaq={ toggleFaq }
+					/>
+					)
+				})
+				}
+			</div>
+		</section>
     )
 }
